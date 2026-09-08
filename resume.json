@@ -1,0 +1,146 @@
+{
+  "basics": {
+    "name": "Kyle M. Anderson",
+    "email": "TheKyleAnderson72@gmail.com",
+    "phone": "(630) 995-1529",
+    "summary": "Technical professional with software development, systems integration, project management, and client-support experience. Builds and supports software platforms, connects business systems through integrations, improves delivery workflows, and translates operational needs into practical technical solutions.",
+    "location": {
+      "region": "WI",
+      "countryCode": "US",
+      "city": "Menomonee Falls"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "AlienCow72",
+        "url": "https://github.com/AlienCow72"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "kyle-anderson-mke",
+        "url": "https://www.linkedin.com/in/kyle-anderson-mke/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "DSTax Technologies",
+      "location": "Warrenville, IL",
+      "position": "Manager",
+      "startDate": "2020-05",
+      "summary": "Manager serving as a technical lead and lead developer for a tax-integration platform, with responsibilities spanning integration development, project coordination, client support, troubleshooting, implementation assistance, and documentation.",
+      "highlights": [
+        "Served as Lead Developer and Project Manager ",
+        "Develop integrations between financial platforms and tax providers.",
+        "Supported integrations with Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
+        "Led the transition from Version 1 to Version 2 of the tax-integration platform.",
+        "Broadened tax-provider and financial-platform support.",
+        "Improved UI/UX.",
+        "Optimized asynchronous operations to improve performance and throughput.",
+        "Migrated production workloads from DigitalOcean to AWS.",
+        "Worked clients and partners to gather requirements, troubleshoot technical issues, and design custom solutions."
+      ]
+    },
+    {
+      "name": "Colectivo Coffee Roasters",
+      "location": "Milwaukee, WI",
+      "position": "Warehouse Associate",
+      "startDate": "2019-06",
+      "endDate": "2020-05",
+      "highlights": [
+        "Fulfilled orders for more than 1000 restaurant and store clients.",
+        "Updated invoices for inventory changes to help maintain accurate records.",
+        "Partnered with the IT department to install and troubleshoot new point-of-sale nodes.",
+        "Assisted with training new hires"
+      ]
+    },
+    {
+      "name": "Komatsu Mining Corp. (Joy Global)",
+      "location": "Milwaukee, WI",
+      "position": "Facilities Management Intern",
+      "startDate": "2016-05",
+      "endDate": "2018-12",
+      "highlights": [
+        "Analyzed asset and facilities databases, identifying more than $10 million in previously unidentified asset value that informed the sale of unused assets before Komatsu's acquisition of Joy Global.",
+        "Evaluated, selected, and implemented a global mapping platform that provided facility information to employees and customers.",
+        "Initiated web automations that reduced manual database-maintenance work.",
+        "Managed SharePoint sites and data and designed data-input forms to improve accessibility, reduce errors, and promote cross-department information sharing."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Wisconsin–Milwaukee",
+      "area": "Information Technology Management",
+      "studyType": "Bachelor of Business Administration",
+      "startDate": "2017",
+      "endDate": "2020",
+      "courses": []
+    },
+    {
+      "institution": "Milwaukee School of Engineering",
+      "area": "Industrial Engineering and Supply Chain/Operations Management",
+      "studyType": "Coursework",
+      "startDate": "2014",
+      "endDate": "2016",
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages & Frameworks",
+      "keywords": [
+        "Python",
+        "Django",
+        "Flask",
+        "PHP",
+        "C#",
+        "C",
+        "Bash"
+      ]
+    },
+    {
+      "name": "Integrations & Web",
+      "keywords": [
+        "REST APIs",
+        "NGINX"
+      ]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "keywords": [
+        "AWS",
+        "DigitalOcean",
+        "Docker",
+        "Git",
+        "GitLab",
+        "GitLab CI/CD"
+      ]
+    },
+    {
+      "name": "Databases",
+      "keywords": [
+        "Microsoft SQL Server",
+        "PostgreSQL",
+        "SQLite"
+      ]
+    },
+    {
+      "name": "Platforms & Tools",
+      "keywords": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "SharePoint",
+        "Microsoft 365 Enterprise"
+      ]
+    }
+  ],
+  "projects": [],
+  "volunteer": [],
+  "certificates": [],
+  "publications": [],
+  "languages": [],
+  "interests": [],
+  "references": []
+}
