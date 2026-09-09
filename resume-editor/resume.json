@@ -32,6 +32,7 @@
       "highlights": [
         "Served as Lead Developer and Project Manager.",
         "Managed internal development projects and client-coordinated work, sharing integration updates, reporting status, and responding to questions and requests.",
+        "Supported end-to-end integration implementations, including requirements gathering, setup, troubleshooting, and go-live support.",
         "Develop integrations between financial platforms and tax providers.",
         "Supported integrations with Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
         "Led the transition from Version 1 to Version 2 of the tax-integration platform.",
@@ -39,8 +40,7 @@
         "Improved UI/UX.",
         "Optimized asynchronous operations to improve performance and throughput.",
         "Migrated production workloads from DigitalOcean to AWS.",
-        "Created and maintained client integration guides and knowledge-base articles.",
-        "Supported end-to-end integration implementations, including requirements gathering, setup, troubleshooting, and go-live support."
+        "Created and maintained client integration guides and knowledge-base articles."
       ]
     },
     {
@@ -74,18 +74,16 @@
     {
       "institution": "University of Wisconsin–Milwaukee",
       "area": "Information Technology Management",
-      "studyType": "Bachelor of Business Administration",
+      "studyType": "BBA",
       "startDate": "2017",
-      "endDate": "2020",
-      "courses": []
+      "endDate": "2020"
     },
     {
       "institution": "Milwaukee School of Engineering",
       "area": "Industrial Engineering and Supply Chain/Operations Management",
-      "studyType": "Coursework",
+      "studyType": "Studied",
       "startDate": "2014",
-      "endDate": "2016",
-      "courses": []
+      "endDate": "2016"
     }
   ],
   "skills": [
@@ -133,12 +131,5 @@
         "Microsoft 365 Enterprise"
       ]
     }
-  ],
-  "projects": [],
-  "volunteer": [],
-  "certificates": [],
-  "publications": [],
-  "languages": [],
-  "interests": [],
-  "references": []
+  ]
 }

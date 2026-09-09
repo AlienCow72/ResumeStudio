@@ -6,7 +6,7 @@ import signal
 import subprocess
 import time
 
-from server import Handler, ThreadingHTTPServer
+from server import Handler, ThreadingHTTPServer, STORE
 
 ROOT = Path(__file__).resolve().parent
 PORT = 8765
@@ -45,6 +45,7 @@ def is_editor(pid):
 
 
 def main():
+    STORE.initialize()
     existing = listeners()
     if any(not is_editor(pid) for pid in existing):
         raise RuntimeError('Port 8765 belongs to another application; it was not stopped.')
