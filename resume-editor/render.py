@@ -5,6 +5,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import tempfile
+import threading
 from datetime import datetime
 
 ROOT = Path(__file__).resolve().parent
@@ -88,3 +89,44 @@ def pdf(data,levels=None):
         result=subprocess.run([node,str(ROOT/'pdf.cjs'),str(source),str(output),chrome],capture_output=True,timeout=60)
         if result.returncode or not output.exists():raise RuntimeError('PDF rendering failed: '+result.stderr.decode(errors='replace')[-500:])
         return output.read_bytes()
+
+
+_preview_lock = threading.Lock()
+
+def pdf_preview(data, levels=None):
+    """Rasterize the actual export PDF for consistent previews in any browser."""
+    import json
+    with _preview_lock:
+        return _pdf_preview_cached(json.dumps(data), json.dumps(levels or {}))
+
+
+from functools import lru_cache
+
+@lru_cache(maxsize=4)
+def _pdf_preview_cached(data_json, levels_json):
+    import base64
+    import io
+    import json
+    try:
+        import pypdfium2 as pdfium
+    except ImportError:
+        raise RuntimeError('PDF preview requires pypdfium2 and Pillow. Install them with: python3 -m pip install pypdfium2 Pillow')
+    content = pdf(json.loads(data_json), json.loads(levels_json))
+    pages = []
+    document = pdfium.PdfDocument(content)
+    try:
+        for index in range(len(document)):
+            page = document[index]
+            bitmap = None
+            try:
+                width, height = page.get_size()
+                bitmap = page.render(scale=1.3)
+                stream = io.BytesIO()
+                bitmap.to_pil().save(stream, format='PNG')
+                pages.append({'image': 'data:image/png;base64,' + base64.b64encode(stream.getvalue()).decode(), 'width': width, 'height': height})
+            finally:
+                if bitmap is not None: bitmap.close()
+                page.close()
+    finally:
+        document.close()
+    return {'pageCount': len(pages), 'pages': pages, 'paper': 'US Letter (8.5 × 11 in)'}

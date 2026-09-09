@@ -1,1 +1,3 @@
-# Python standard library only. PDF export requires Google Chrome.
+# PDF previews; PDF export also requires Chrome, Node.js, and Playwright.
+pypdfium2
+Pillow

@@ -38,3 +38,7 @@ Python uses the standard library. PDF export additionally requires Google Chrome
 The server binds only to 127.0.0.1. Resume content is not sent to an external service. Tests use temporary copies: `python3 -m unittest test_server -v` from this directory.
 
 The objective uses the standard JSON Resume `basics.summary` field. `basics.profiles` contains account links such as GitHub and LinkedIn.
+
+## Preview modes
+
+The preview has HTML and PDF tabs. PDF shows rasterized pages from the actual export, with the US Letter page count and a notice when it exceeds one page. It updates after edits, without saving. PDF preview requires `pypdfium2` and `Pillow` (included in the Codex Python runtime); otherwise install them in the Python environment running the server.

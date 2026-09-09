@@ -6,7 +6,7 @@ const $=id=>document.getElementById(id),copy=v=>structuredClone(v),title=k=>k.re
 const nodeFor=v=>{const n={id:crypto.randomUUID()};if(Array.isArray(v))n.children=v.map(nodeFor);else if(v&&typeof v==='object')n.children=Object.fromEntries(Object.entries(v).map(([k,x])=>[k,nodeFor(x)]));return n};
 const version=()=>state.versions.find(v=>v.id===active);
 function status(message,error=false){$('status').textContent=message;$('status').className=error?'error':''}
-function mark(){dirty=true;status('Unsaved changes');clearTimeout(timer);timer=setTimeout(preview,250)}
+function mark(){dirty=true;status('Unsaved changes');++previewVersion;if(previewMode==='pdf'){previewStatus('PDF changes pending…');$('pdfPages').classList.add('stale')}clearTimeout(timer);timer=setTimeout(preview,previewMode==='pdf'?700:250)}
 function button(text,fn,label){const b=document.createElement('button');b.textContent=text;b.onclick=fn;if(label){b.setAttribute('aria-label',label);b.title=label}return b}
 function pack(value,node){
   if(Array.isArray(value)){const pairs=value.map((v,i)=>pack(v,node.children[i])).filter(Boolean);return pairs.length?[pairs.map(p=>p[0]),{id:node.id,children:pairs.map(p=>p[1])}]:null}
@@ -15,7 +15,27 @@ function pack(value,node){
 }
 function payload(){if(active!=='master')return {data:baseline.data,state:{...state,tree:baseline.state.tree},revision,active};const [d,t]=pack(data,state.tree)||[{}, {id:state.tree.id,children:{}}];return {data:d,state:{...state,tree:t},revision,active}}
 async function request(path){const r=await fetch('/api/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload())});if(!r.ok)throw Error((await r.json()).error||'Request failed');return r}
-async function preview(){if(!state)return;const seq=++previewVersion;try{const r=await request('preview');const source=await r.text();if(seq===previewVersion)$('preview').srcdoc=source}catch(e){status(e.message,true)}}
+let previewMode='html',pdfInFlight=false,pdfQueued=false;
+function previewStatus(message,className=''){const el=$('previewStatus');el.textContent=message;el.className=className}
+async function preview(){
+  if(!state)return;
+  const seq=++previewVersion,mode=previewMode;
+  if(mode==='pdf'&&pdfInFlight){pdfQueued=true;return}
+  try{
+    if(mode==='html'){
+      previewStatus('HTML layout · select PDF to check printed page count');
+      const r=await request('preview');const source=await r.text();if(seq===previewVersion&&previewMode===mode)$('preview').srcdoc=source;
+    }else{
+      pdfInFlight=true;pdfQueued=false;$('pdfPages').classList.add('stale');$('pdfPanel').setAttribute('aria-busy','true');previewStatus('Rendering PDF pages…');
+      const r=await request('preview/pdf');const result=await r.json();if(seq!==previewVersion||previewMode!==mode)return;
+      const pages=$('pdfPages');pages.replaceChildren();result.pages.forEach((page,i)=>{const figure=document.createElement('figure'),image=document.createElement('img'),caption=document.createElement('figcaption');image.src=page.image;image.alt=`Resume PDF page ${i+1} of ${result.pageCount}`;image.width=page.width;image.height=page.height;caption.textContent=`Page ${i+1} of ${result.pageCount}`;figure.append(image,caption);pages.append(figure)});pages.classList.remove('stale');
+      previewStatus(result.pageCount===1?'1 page · '+result.paper:`${result.pageCount} pages · ${result.paper} · Longer than one page`,result.pageCount>1?'overflow':'');
+    }
+  }catch(e){if(seq===previewVersion&&previewMode===mode){previewStatus(e.message,'error');if(mode==='pdf')$('pdfPages').replaceChildren()}}
+  finally{if(mode==='pdf'){pdfInFlight=false;$('pdfPanel').removeAttribute('aria-busy');if(pdfQueued&&previewMode==='pdf'){pdfQueued=false;preview()}}}
+}
+function setPreviewMode(mode){previewMode=mode;clearTimeout(timer);for(const kind of ['html','pdf']){const selected=kind===mode;$(kind+'Tab').setAttribute('aria-selected',String(selected));$(kind+'Tab').tabIndex=selected?0:-1;$(kind+'Panel').hidden=!selected}preview()}
+for(const mode of ['html','pdf']){const tab=$(mode+'Tab');tab.onclick=()=>setPreviewMode(mode);tab.onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const next=e.key==='Home'?'html':e.key==='End'?'pdf':mode==='html'?'pdf':'html';setPreviewMode(next);$(next+'Tab').focus()}}}
 function accept(result){data=result.data;state=result.state;revision=result.revision;baseline=copy({data,state});dirty=false;if(active!=='master'&&!version())active='master';status(result.warning||'All changes saved')}
 async function save(){if(busy)return false;busy=true;$('save').disabled=true;$('editPane').inert=true;document.querySelector('.version-picker').inert=true;$('export').disabled=true;try{const r=await request('save');accept(await r.json());render();status('Saved · backup created');return true}catch(e){status(e.message,true);return false}finally{busy=false;$('save').disabled=false;$('editPane').inert=false;document.querySelector('.version-picker').inert=false;$('export').disabled=false}}
 function choose(message,options){return new Promise(resolve=>{const dialog=document.createElement('dialog');const text=document.createElement('p');text.textContent=message;dialog.append(text);const choices=document.createElement('div');choices.className='choices';for(const option of options)choices.append(button(option,()=>{dialog.close();dialog.remove();resolve(option)}));dialog.append(choices);dialog.oncancel=e=>{e.preventDefault();dialog.close();dialog.remove();resolve('Cancel')};document.body.append(dialog);dialog.showModal()})}

@@ -48,7 +48,7 @@ def blocks(data, levels=None):
                 else: out.append(('p',label(k)+': '+flat(v)))
     return out
 
-from render import html_doc, pdf
+from render import html_doc, pdf, pdf_preview
 
 def markdown(data,levels=None):
     return '\n\n'.join(('  '*int(k[2:])+'- ' if k.startswith('li') else {'h1':'# ','h2':'## ','h3':'### '}.get(k,''))+str(v).replace('<','&lt;') for k,v in blocks(data,levels))+'\n'
@@ -81,6 +81,7 @@ class Handler(BaseHTTPRequestHandler):
                 self.respond(200,json.dumps(result));return
             selected,levels=project(data,state,active)
             if self.path=='/api/preview':self.respond(200,html_doc(selected,levels),'text/html; charset=utf-8')
+            elif self.path=='/api/preview/pdf':self.respond(200,json.dumps(pdf_preview(selected,levels)))
             elif self.path.startswith('/api/export/'):
                 kind=self.path.rsplit('/',1)[1]
                 content,mime={'json':(lambda:json.dumps(selected,ensure_ascii=False,indent=2)+'\n','application/json'),'md':(lambda:markdown(selected,levels),'text/markdown; charset=utf-8'),'html':(lambda:html_doc(selected,levels),'text/html; charset=utf-8'),'pdf':(lambda:pdf(selected,levels),'application/pdf')}[kind]
