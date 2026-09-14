@@ -32,9 +32,9 @@ def role(e,ongoing=False,depths=None):
     company=e.get('name') if e.get('position') else e.get('organization','')
     out='<article class="role"><div class="role-head"><div><h3>'+esc(position)+'</h3>'
     if company: out+='<p class="company">'+esc(company)+'</p>'
-    out+='</div><p class="date">'+dates(e,ongoing)+'</p>'
+    out+='</div><div class="role-meta"><p class="date">'+dates(e,ongoing)+'</p>'
     if e.get('location'): out+='<p class="location">'+esc(e['location'])+'</p>'
-    out+='</div>'
+    out+='</div></div>'
     for k in ['summary','description','reference']:
         if e.get(k):out+='<p class="role-summary">'+esc(e[k])+'</p>'
     if e.get('highlights'):out+=highlight_list(e['highlights'],depths or [])
