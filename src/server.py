@@ -5,9 +5,8 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-SOURCE = ROOT / 'resume.json'
 from versions import Store, LOCK, validate as validate_version, project
-STORE = Store(ROOT)
+STORE = Store(ROOT.parent)
 TITLES = {'work':'Experience', 'education':'Education', 'basics':'Objective', 'volunteer':'Volunteering'}
 def label(s):
     import re

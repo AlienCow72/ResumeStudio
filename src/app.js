@@ -46,7 +46,7 @@ function check(node,label,blocked=false){const input=document.createElement('inp
 function ensure(obj,n,key,value){if(!(key in obj)){obj[key]=copy(value);n.children[key]=nodeFor(obj[key])}return n.children[key]}
 function refreshHeader(){
   const select=$('version');select.replaceChildren();for(const [id,name]of [['master','Master — All information'],...state.versions.map(v=>[v.id,v.name])]){const option=document.createElement('option');option.value=id;option.textContent=name;select.append(option)}select.value=active;select.disabled=false;
-  $('destination').textContent='resume-editor/'+(active==='master'?'resume.json':`resume-${active}.json`);
+  $('destination').textContent=(active==='master'?'data/resume.json':`output/resume-${active}.json`);
   for(const id of ['renameVersion','deleteVersion'])$(id).disabled=active==='master';
   $('save').textContent=active==='master'?'Save master':'Save version';
   $('editMaster').hidden=active==='master';
