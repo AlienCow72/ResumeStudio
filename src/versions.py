@@ -97,15 +97,25 @@ def project(data,state,active='master'):
     return result,levels
 
 class Store:
-    def __init__(self,root):self.root=Path(root);self.source=self.root/'resume.json';self.settings=self.root/'versions.json'
+    def __init__(self,root):
+        self.root=Path(root)
+        self.data=self.root/'data'
+        self.output=self.root/'output'
+        self.source=self.data/'resume.json'
+        self.settings=self.data/'versions.json'
     def initialize(self):
         with LOCK:
-            if not self.source.exists():shutil.copy2(self.root.parent/'resume.json',self.source)
+            self.data.mkdir(parents=True,exist_ok=True)
+            self.output.mkdir(parents=True,exist_ok=True)
+            if not self.source.exists():
+                if self.settings.exists():
+                    raise ValueError('Master is missing. Restore data/resume.json and data/versions.json from the same backup.')
+                shutil.copy2(self.data/'originals'/'resume.json',self.source)
             if not self.settings.exists():
                 data=json.loads(self.source.read_text())
                 self.write(self.settings,encoded({'schemaVersion':1,'tree':tree(data),'versions':[],'masterHash':hashlib.sha256(self.source.read_bytes()).hexdigest()}))
     def write(self,path,body):
-        fd,name=tempfile.mkstemp(dir=self.root)
+        fd,name=tempfile.mkstemp(dir=path.parent)
         try:
             with os.fdopen(fd,'wb') as f:f.write(body);f.flush();os.fsync(f.fileno())
             os.replace(name,path)
@@ -130,10 +140,10 @@ class Store:
             if active!='master' and (data!=old['data'] or state['tree']!=old['state']['tree']):raise ValueError('Edit master content in Master, then save before switching versions.')
             payload=encoded(data);state=copy.deepcopy(state);state['masterHash']=hashlib.sha256(payload).hexdigest()
             writes={self.source:payload,self.settings:encoded(state)}
-            for v in state['versions']:writes[self.root/f'resume-{v["id"]}.json']=encoded(project(data,state,v['id'])[0])
-            removed={self.root/f'resume-{v["id"]}.json' for v in old['state']['versions']}-{p for p in writes}
+            for v in state['versions']:writes[self.output/f'resume-{v["id"]}.json']=encoded(project(data,state,v['id'])[0])
+            removed={self.output/f'resume-{v["id"]}.json' for v in old['state']['versions']}-{p for p in writes}
             previous={p:p.read_bytes() if p.exists() else None for p in set(writes)|removed}
-            backup=self.root/'backups'/datetime.now().strftime('%Y%m%d-%H%M%S-%f');backup.mkdir(parents=True)
+            backup=self.data/'backups'/datetime.now().strftime('%Y%m%d-%H%M%S-%f');backup.mkdir(parents=True)
             for p,body in previous.items():
                 if body is not None:(backup/p.name).write_bytes(body)
             try:
