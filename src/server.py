@@ -7,6 +7,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 from versions import Store, LOCK, validate as validate_version, project
 STORE = Store(ROOT.parent)
+from jobs import JobStore, DuplicateJob
+JOBS = JobStore(ROOT.parent)
+_generation_services = {}
+def generation():
+    from generation import GenerationService
+    with LOCK:
+        key=(id(JOBS),id(STORE))
+        if key not in _generation_services:_generation_services[key]=GenerationService(JOBS,STORE)
+        return _generation_services[key]
 TITLES = {'work':'Experience', 'education':'Education', 'basics':'Objective', 'volunteer':'Volunteering'}
 def label(s):
     import re
@@ -60,10 +69,27 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         try:
             if self.path=='/': self.respond(200,(ROOT/'index.html').read_bytes(),'text/html; charset=utf-8')
+            elif self.path in ('/jobs', '/jobs/'):
+                self.respond(200,(ROOT/'jobs.html').read_bytes(),'text/html; charset=utf-8')
+            elif self.path in ('/jobs.js', '/jobs.css', '/application-review.js'):
+                self.respond(200,(ROOT/self.path[1:]).read_bytes(),'text/javascript; charset=utf-8' if self.path.endswith('.js') else 'text/css; charset=utf-8')
+            elif self.path=='/api/jobs':
+                self.respond(200,json.dumps({'jobs':[{**job,'generation':generation().state(job['id'])} for job in JOBS.list()]}))
+            elif self.path.startswith('/api/jobs/') and '/drafts/' in self.path:
+                import application_drafts
+                parts=self.path.strip('/').split('/')
+                if len(parts)!=5 or parts[3]!='drafts':raise ValueError('Invalid draft URL.')
+                self.respond(200,json.dumps(application_drafts.read(generation(),parts[2],parts[4])))
+            elif self.path.startswith('/api/jobs/') and '/files/' in self.path:
+                parts=self.path.strip('/').split('/')
+                if len(parts)!=6 or parts[3]!='files':raise ValueError('Invalid document URL.')
+                body,mime,filename=generation().download(parts[2],parts[4],parts[5])
+                self.respond(200,body,mime,filename)
             elif self.path=='/app.js': self.respond(200,(ROOT/'app.js').read_bytes(),'text/javascript; charset=utf-8')
             elif self.path=='/api/resume':
                 with LOCK:self.respond(200,json.dumps(STORE.load()))
             else:self.respond(404,'{}')
+        except FileNotFoundError:self.respond(404,json.dumps({'error':'This file is not ready or does not exist.'}))
         except Exception as e:self.respond(400,json.dumps({'error':str(e)}))
     def do_POST(self):
         try:
@@ -73,6 +99,41 @@ class Handler(BaseHTTPRequestHandler):
             length=int(self.headers.get('Content-Length',0))
             if not 0<length<=5_000_000:raise ValueError('Request must be under 5 MB.')
             request=json.loads(self.rfile.read(length))
+            if not isinstance(request,dict):raise ValueError('Request must be an object.')
+            if self.path.startswith('/api/jobs/') and self.path.rsplit('/',1)[-1] in ('save-drafts','preview-drafts','download-application'):
+                import application_drafts
+                parts=self.path.strip('/').split('/')
+                if len(parts)!=4:raise ValueError('Invalid draft action URL.')
+                identifier,action=parts[2],parts[3]
+                service=generation();run_id=request.get('runId')
+                if action=='download-application':
+                    body,filename=application_drafts.bundle(service,identifier,run_id,request.get('revision'))
+                    self.respond(200,body,'application/zip',filename)
+                elif action=='save-drafts':
+                    result=application_drafts.save(service,identifier,run_id,request.get('draft'),request.get('revision'))
+                    self.respond(200,json.dumps(result))
+                else:self.respond(200,json.dumps(application_drafts.preview(service,identifier,run_id,request.get('draft'))))
+                return
+            if self.path.startswith('/api/jobs/') and self.path.rsplit('/',1)[-1] in ('generate','cancel'):
+                parts=self.path.strip('/').split('/')
+                if len(parts)!=4:raise ValueError('Invalid generation URL.')
+                identifier=parts[2]
+                result=generation().cancel(identifier) if parts[3]=='cancel' else generation().start(identifier,request.get('sourceText',''),request.get('regenerate') is True)
+                self.respond(202,json.dumps(result));return
+            if self.path=='/api/jobs' or self.path.startswith('/api/jobs/'):
+                identifier=None if self.path=='/api/jobs' else self.path[len('/api/jobs/'):]
+                job=request.get('job')
+                auto=not identifier and request.get('generate') is not False
+                if auto and isinstance(job,dict):
+                    job={**job,'company':job.get('company') or 'Pending extraction','title':job.get('title') or 'New application'}
+                result=JOBS.save(job,identifier,request.get('revision'),request.get('allowDuplicate') is True)
+                if auto:
+                    try:result['generation']=generation().start(result['id'],request.get('sourceText',''))
+                    except Exception as error:
+                        result['generation']={'status':'failed','files':[],'message':str(error)}
+                        JOBS.write(JOBS.path(result['id']).parent/'generation.json',result['generation'])
+                else:result['generation']=generation().state(result['id'])
+                self.respond(200 if identifier else 201,json.dumps(result));return
             data=request['data'];state=request.get('state');active=request.get('active','master')
             validate_version(data,state)
             if self.path=='/api/save':
@@ -87,7 +148,9 @@ class Handler(BaseHTTPRequestHandler):
                 name='resume' if active=='master' else 'resume-'+active
                 self.respond(200,content(),mime,name+'.'+kind)
             else:self.respond(404,'{}')
+        except DuplicateJob as e:self.respond(409,json.dumps({'error':str(e),'duplicates':[{'id':j['id'],'company':j['company'],'title':j['title']} for j in e.jobs]}))
         except FileExistsError as e:self.respond(409,json.dumps({'error':str(e)}))
+        except FileNotFoundError:self.respond(404,json.dumps({'error':'Job not found. Reload the board.'}))
         except Exception as e:self.respond(400,json.dumps({'error':str(e)}))
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--port',type=int,default=8765);args=parser.parse_args()

@@ -1,0 +1,30 @@
+{
+  "runId": "a968d18099d04f2594fe5a50631fecbc",
+  "createdAt": "2026-09-16T02:47:15.261881+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cv.json",
+    "cover-letter.md",
+    "resume.pdf",
+    "cv.pdf",
+    "cover-letter.pdf"
+  ],
+  "sourceUrl": "https://careers.wecenergygroup.com/job/Milwaukee-IT-Cloud-Web-Application-Platform-Engineer-WI-53203/1429333800/",
+  "previous": null,
+  "masterHash": "34100eb84e11f44abbb14b6abd53e9d97b7b6d1c4de111462ee17ca377aed77b",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Documents ready. Review before applying.",
+  "error": "",
+  "updatedAt": "2026-09-16T02:49:36.990205+00:00",
+  "reviewNotes": "Résumé prioritizes AWS migration, application performance, implementation support, and project coordination for a 1–2 page target; final pagination depends on rendering. CV retains all work history, education, skills, and achievements. The master supports a bachelor's degree and relevant cloud experience but does not establish 2+ years specifically in infrastructure or AWS development. Terraform/IaC, shared-module governance, Azure, FinOps, CNAPP, Front Door/ALB/WAF, enterprise-scale production support, formal incident response/root-cause analysis, and rotating on-call experience are not documented. Work authorization and sponsorship eligibility require confirmation. Syntax and field types were reviewed without tools; no automated validation was performed."
+}

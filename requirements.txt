@@ -1,3 +1,5 @@
 # PDF previews; PDF export also requires Chrome, Node.js, and Playwright.
 pypdfium2
 Pillow
+jsonschema>=4.18,<5
+certifi

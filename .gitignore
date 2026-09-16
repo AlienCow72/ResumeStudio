@@ -5,3 +5,4 @@ node_modules/
 .DS_Store
 data/backups/*
 !data/backups/.gitkeep
+data/jobs/*/backups/

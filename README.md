@@ -12,38 +12,119 @@ data/
   resume.json        Active master résumé
   versions.json      Version selections, stable IDs, and formatting settings
   backups/           Timestamped save backups (ignored by Git)
+  jobs/              Application records and per-job backups
   originals/         Preserved original JSON and Markdown source documents
 README.md            Setup and usage
 start.command        macOS launcher
-requirements.txt     Python preview dependencies
+requirements.txt     Python application dependencies
 ```
 
 ## Setup and development
 
 Double-click `start.command`, or run `./start.command` from the repository root.
+The launcher creates a local `.venv` and installs `requirements.txt` on first
+launch (internet required). It checks dependencies on subsequent launches and
+installs updates when requirements change. The shared Codex runtime is not modified.
 To run the server directly without opening a browser:
 
 ```sh
-python3 src/server.py --port 8765
+.venv/bin/python3 src/server.py --port 8765
 ```
 
 Python uses the standard library for editing and HTML/JSON/Markdown exports.
 PDF export additionally requires Google Chrome, Node.js, and Playwright. The
 installed Codex runtime is used when available. Otherwise install Playwright
 with `npm install --no-save --package-lock=false playwright` at the repository
-root and install PDF preview dependencies with
+root. For manual setup, install Python application dependencies with
 `python3 -m pip install -r requirements.txt` in your Python environment.
 Set `RESUME_CHROME` to use another Chromium executable.
 
 Run tests from the repository root:
 
 ```sh
-PYTHONPATH=src python3 -m unittest discover -s tests -v
+PYTHONPATH=src .venv/bin/python3 -m unittest discover -s tests -v
 ```
 
 Paths resolve relative to the application files, so the server can also be
 started from another working directory using its absolute path. The server
-binds only to 127.0.0.1. Resume content is not sent to an external service.
+binds only to 127.0.0.1. Editing and rendering stay local. Application generation
+sends the captured posting and a snapshot of your master résumé to OpenAI
+through your ChatGPT-signed-in Codex CLI.
+
+## Job tracker
+
+Open **Job tracker** from the editor header, or visit http://127.0.0.1:8765/jobs.
+Add a posting link and choose **Save & generate**. Company and role are extracted
+automatically when left blank. Optional notes
+and an application date are editable from each card's title or **View details**.
+Search matches company, role, and notes.
+
+The board has three stages: **Applying**, **Waiting on response**, and
+**Interview**. Use each card's stage selector to move it. **Mark applied** moves
+a job to Waiting on response and fills today's date if no application date is
+recorded. Selecting Waiting on response has the same date behavior. You can
+correct the date in job details. Stage changes are recorded in the detail view.
+These actions track your progress; they do not submit an application.
+
+Records persist in `data/jobs/<id>/application.json`, independently of the
+master résumé. Each edit backs up the previous record in that job's `backups/`
+directory and rejects stale saves from another tab. Use **Refresh** to reload
+the board. Duplicate posting links are flagged; you can open the existing job
+or explicitly save a separate application. Requisition query parameters are
+preserved when comparing links.
+
+Generation runs in the background in this order:
+
+1. Retrieve the public posting and use the bundled `json-job-description` skill
+   to create and validate `job-description.json`.
+2. Only after the description is saved, automatically generate job-specific résumé
+   JSON using `json-resume`, plus a job-specific cover letter. Candidate
+   facts come from the saved master snapshot. The master is never overwritten.
+3. Stop at editable drafts. Open **Review & edit documents** on the job card.
+   Edit résumé fields and cover-letter text with live HTML previews. **Save drafts**
+   saves application-specific changes; neither saving nor previewing renders PDFs.
+4. Click **Download application ZIP** after review. The app saves any current edits,
+   then renders PDFs and downloads exactly `job-description.json`, `resume.pdf`,
+   and `cover-letter.pdf` in one ZIP. The cover-letter header uses the reviewed
+   résumé contact details. PDFs are created only for this explicit download.
+
+Drafts are saved atomically in each run's `draft.json`, with revision conflict
+checks and backups under `draft-history/`. Generated originals and the master
+remain intact. Manual corrections are checked against the résumé schema; users
+can intentionally correct facts. A rendering failure preserves the saved draft;
+retry the download without generating new content. Older runs with existing PDFs
+also open in the draft editor; downloads render from the current reviewed draft.
+
+Existing tracked jobs have a **Generate documents** button. For blocked or
+JavaScript-only postings, open **Paste posting text**, supply the full description,
+and choose **Retry generation**. Cancellation retains saved progress. Retrying
+an interrupted/failed run reuses its saved posting and document data, including
+the original master snapshot; a download failure does not consume another AI run.
+**Generate new set** takes a fresh master snapshot and preserves older run files.
+If the posting link changes, generate a new set; the tracker flags files based
+on the previous link. Older run files remain on disk.
+
+Install [Codex CLI](https://learn.chatgpt.com/docs/cli) and run `codex login` to
+sign in with ChatGPT. `codex login status` must report ChatGPT authentication.
+The app uses non-interactive `codex exec`, with saved subscription authentication,
+no shell tools, a read-only sandbox, and no API-key billing fallback. Subscription
+usage limits apply. Install the Python requirements with
+`python3 -m pip install -r requirements.txt`; Chrome, Node, and Playwright are
+required for PDFs as described above. Each AI step has a ten-minute timeout;
+one application is processed at a time.
+
+Run data lives in `data/jobs/<id>/runs/<run-id>/`: captured source text/metadata,
+the master snapshot, validated job and résumé JSON, cover-letter text, editable drafts,
+and a progress manifest. PDFs are rendered in memory when downloading the ZIP. `generation.json` identifies the latest run. Old runs
+are retained; generated files are not tied to later changes in the master.
+Schemas and skill snapshots are pinned in `src/generation_resources/`, with the
+upstream schema commit recorded in `provenance.json`. The job schema is a draft.
+Automated schema and identity/date/skill checks complement review; they do not
+prove every generated prose claim is supported.
+
+The broader [roadmap](docs/job-application-roadmap.md) also covers attaching exact document revisions to application submissions.
+See the [numbered workflow](docs/application-workflow.md) to refer to individual
+steps when discussing changes.
 
 ## Master and versions
 
