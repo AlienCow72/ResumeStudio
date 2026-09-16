@@ -48,6 +48,22 @@ class DraftTests(unittest.TestCase):
         self.renderer.assert_not_called();self.assertEqual(self.master.source.read_bytes(),self.original)
         self.assertEqual(len(list((self.folder/'draft-history').glob('*.json'))),1)
 
+    def test_pdf_preview_matches_export_without_saving(self):
+        draft=self.read();draft['coverLetter']='Unsaved preview text'
+        before={path: path.read_bytes() for path in self.folder.rglob('*') if path.is_file()}
+        with patch.object(drafts, 'pdf_pages', side_effect=lambda content: {'pdf':content}):
+            resume=drafts.preview(self.service,self.job['id'],self.run,draft,'resume')
+            letter=drafts.preview(self.service,self.job['id'],self.run,draft,'coverLetter')
+        self.assertIn(b'Unsaved preview text',letter['pdf'])
+        self.assertEqual(before,{path:path.read_bytes() for path in self.folder.rglob('*') if path.is_file()})
+        saved=self.save(draft)
+        body,_=drafts.bundle(self.service,self.job['id'],self.run,saved['revision'])
+        with zipfile.ZipFile(io.BytesIO(body)) as archive:
+            self.assertEqual(resume['pdf'],archive.read('resume.pdf'))
+            self.assertEqual(letter['pdf'],archive.read('cover-letter.pdf'))
+        with self.assertRaises(ValueError):
+            drafts.preview(self.service,self.job['id'],self.run,draft,'invalid')
+
     def test_zip_contains_exact_files_with_latest_edits(self):
         draft=self.read();draft['resume']['basics']['summary']='Reviewed résumé';draft['coverLetter']='Reviewed cover letter.'
         saved=self.save(draft)
@@ -100,6 +116,10 @@ class DraftTests(unittest.TestCase):
                 data={'runId':self.run,'revision':draft['revision'],'draft':draft}
                 with post('preview-drafts',data) as response:self.assertIn('HTTP-reviewed',json.load(response)['coverLetter'])
                 self.renderer.assert_not_called()
+                with patch.object(drafts, 'pdf_pages', return_value={'pageCount':1,'pages':[]}):
+                    with post('preview-drafts',{**data,'document':'coverLetter'}) as response:
+                        self.assertEqual(json.load(response)['pageCount'],1)
+                self.assertIn('HTTP-reviewed',self.renderer.call_args.args[0])
                 with post('save-drafts',data) as response:saved=json.load(response)
                 with post('download-application',{'runId':self.run,'revision':saved['revision']}) as response:
                     self.assertEqual(response.headers['Content-Type'],'application/zip')

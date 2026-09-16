@@ -112,7 +112,7 @@ class Handler(BaseHTTPRequestHandler):
                 elif action=='save-drafts':
                     result=application_drafts.save(service,identifier,run_id,request.get('draft'),request.get('revision'))
                     self.respond(200,json.dumps(result))
-                else:self.respond(200,json.dumps(application_drafts.preview(service,identifier,run_id,request.get('draft'))))
+                else:self.respond(200,json.dumps(application_drafts.preview(service,identifier,run_id,request.get('draft'),request.get('document'))))
                 return
             if self.path.startswith('/api/jobs/') and self.path.rsplit('/',1)[-1] in ('generate','cancel'):
                 parts=self.path.strip('/').split('/')

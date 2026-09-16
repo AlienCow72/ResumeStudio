@@ -1,7 +1,7 @@
 (() => {
   const $ = id => document.getElementById(id);
   const el = (tag, text, className) => {const node=document.createElement(tag); if(text !== undefined) node.textContent=text; if(className) node.className=className; return node;};
-  let job, draft, mode='resume', dirty=false, busy=false, timer, sequence=0;
+  let job, draft, mode='resume', dirty=false, busy=false, timer, sequence=0, previewRunning=false, previewPending=false;
   function message(text,error=false) {$('reviewStatus').textContent=text; $('reviewStatus').className=error?'error':'';}
   function button(text,fn) {const node=el('button',text);node.type='button';node.onclick=fn;return node;}
   function setBusy(value) {busy=value; $('reviewEditor').inert=value; for(const id of ['reviewSave','reviewDownload','reviewClose','reviewResume','reviewLetter']) $(id).disabled=value;}
@@ -11,11 +11,37 @@
     if(!response.ok) throw Error((await response.json()).error || 'Unable to complete this action.');
     return response;
   }
-  function changed() {dirty=true; message('Unsaved edits');clearTimeout(timer);++sequence;timer=setTimeout(preview,350);}
+  function changed() {dirty=true; message('Unsaved edits');clearTimeout(timer);++sequence;$('reviewPreviewStatus').textContent='PDF preview out of date · updating…';$('reviewPreview').setAttribute('aria-busy','true');timer=setTimeout(preview,650);}
   async function preview() {
-    const seq=++sequence;
-    try {const response=await request('preview-drafts');const result=await response.json();if(seq===sequence && $('reviewDialog').open) $('reviewPreview').srcdoc=result[mode];}
-    catch(error) {if(seq===sequence) message(error.message,true);}
+    if(!draft || !$('reviewDialog').open) return;
+    if(previewRunning) {previewPending=true;return;}
+    previewRunning=true;previewPending=false;
+    const seq=++sequence, selected=mode;
+    const container=$('reviewPreview');
+    container.setAttribute('aria-busy','true');
+    $('reviewPreviewStatus').textContent='Rendering PDF preview…';
+    try {
+      const response=await request('preview-drafts',{...payload(),document:selected});
+      const result=await response.json();
+      if(seq!==sequence || !$('reviewDialog').open) return;
+      const pages=result.pages.map((page,index)=>{
+        const figure=el('figure'),image=el('img');
+        image.src=page.image;image.width=page.width;image.height=page.height;
+        image.alt=`${selected==='resume'?'Résumé':'Cover letter'}, page ${index+1} of ${result.pageCount}`;
+        figure.append(image,el('figcaption',`Page ${index+1} of ${result.pageCount}`));return figure;
+      });
+      container.replaceChildren(...pages);
+      $('reviewPreviewStatus').textContent=`PDF preview · ${result.pageCount} ${result.pageCount===1?'page':'pages'} · US Letter`;
+    } catch(error) {
+      if(seq===sequence) {
+        container.replaceChildren();
+        $('reviewPreviewStatus').textContent='PDF preview unavailable: '+error.message;
+      }
+    } finally {
+      previewRunning=false;
+      if(seq===sequence) container.setAttribute('aria-busy','false');
+      if(previewPending) {previewPending=false;preview();}
+    }
   }
   const label = key => key.replace(/([a-z])([A-Z])/g,'$1 $2').replace(/^./,c=>c.toUpperCase());
   function empty(value) {if(Array.isArray(value)) return [];if(value && typeof value==='object') return Object.fromEntries(Object.entries(value).map(([k,v])=>[k,empty(v)]));return typeof value==='number'?0:typeof value==='boolean'?false:'';}
@@ -63,7 +89,7 @@
   window.openApplicationReview=async selected=>{
     if(busy) return;
     job=selected;dirty=false;draft=null;mode='resume';++sequence;clearTimeout(timer);
-    $('reviewEditor').replaceChildren();$('reviewPreview').srcdoc='';$('reviewJob').textContent=job.title+' · '+job.company;
+    $('reviewEditor').replaceChildren();$('reviewPreview').replaceChildren();$('reviewJob').textContent=job.title+' · '+job.company;
     $('reviewDialog').showModal();setBusy(true);message('Loading application drafts…');
     try {const response=await fetch(`/api/jobs/${job.id}/drafts/${job.generation.runId}`);const data=await response.json();if(!response.ok)throw Error(data.error);draft=data;render();message('Review and edit both documents. Changes apply only to this application.');preview();}
     catch(error){message(error.message,true);}
@@ -71,7 +97,7 @@
   };
   function close() {if(busy)return;if(dirty && !confirm('Discard unsaved document edits?'))return;dirty=false;++sequence;clearTimeout(timer);$('reviewDialog').close();}
   $('reviewClose').onclick=close;$('reviewDialog').oncancel=event=>{event.preventDefault();close();};
-  for(const [id,next] of [['reviewResume','resume'],['reviewLetter','coverLetter']]) $(id).onclick=()=>{if(!draft)return;mode=next;render();preview();};
+  for(const [id,next] of [['reviewResume','resume'],['reviewLetter','coverLetter']]) $(id).onclick=()=>{if(!draft)return;mode=next;++sequence;clearTimeout(timer);$('reviewPreview').replaceChildren();render();preview();};
   async function save() {
     const response=await request('save-drafts');draft=await response.json();dirty=false;
     const scroll=$('reviewEditor').scrollTop;render();$('reviewEditor').scrollTop=scroll;preview();
