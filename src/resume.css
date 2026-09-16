@@ -47,6 +47,10 @@ p {
   margin: 0;
 }
 
+.page:not(.cover-letter) > header > div {
+  align-self: center;
+}
+
 h1 {
   font-size: 29pt;
   font-weight: 750;
@@ -69,6 +73,7 @@ h1 {
   font-size: 8.7pt;
   line-height: 1.25;
   text-align: right;
+  align-self: center;
 }
 
 .contact a {
@@ -350,14 +355,28 @@ a {
 }
 
 /* Application letters share the résumé identity band and type scale. */
+.cover-letter {
+  display: flex;
+  flex-direction: column;
+}
+
 .cover-letter .letter-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-left: 0;
-  padding: 28px 42px 34px;
+  padding: 28px 42px;
+  text-align: left;
 }
 
 .letter-body p {
   margin-bottom: 14px;
   overflow-wrap: anywhere;
+}
+
+.letter-body p:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 650px) {
@@ -368,6 +387,6 @@ a {
 
 @media print {
   .cover-letter .letter-body {
-    padding: 24px 38px 26px;
+    padding: 24px 38px;
   }
 }

@@ -1,0 +1,186 @@
+{
+  "resume": {
+    "basics": {
+      "name": "Kyle M. Anderson",
+      "email": "TheKyleAnderson72@gmail.com",
+      "phone": "(630) 995-1529",
+      "summary": "Technical professional with experience developing and supporting software platforms, migrating production workloads to AWS, and coordinating integration implementations. Combines technical leadership, application troubleshooting, and documentation with skills in Docker, NGINX, and GitLab CI/CD.",
+      "location": {
+        "region": "WI",
+        "countryCode": "US",
+        "city": "Menomonee Falls"
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "AlienCow72",
+          "url": "https://github.com/AlienCow72"
+        },
+        {
+          "network": "LinkedIn",
+          "username": "kyle-anderson-mke",
+          "url": "https://www.linkedin.com/in/kyle-anderson-mke/"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "DSTax Technologies",
+        "location": "Warrenville, IL",
+        "position": "Manager",
+        "startDate": "2020-05",
+        "summary": "Technical lead and lead developer for a tax-integration platform, with responsibilities spanning development, project coordination, client support, troubleshooting, and documentation.",
+        "highlights": [
+          "Migrated production workloads from DigitalOcean to AWS.",
+          "Led the transition from Version 1 to Version 2 of the tax-integration platform.",
+          "Optimized asynchronous operations to improve performance and throughput.",
+          "Managed internal development projects and client-coordinated work, sharing integration updates and reporting status.",
+          "Supported end-to-end integration implementations, including requirements gathering, setup, troubleshooting, and go-live support.",
+          "Developed integrations between financial platforms and tax providers, broadening platform and provider support.",
+          "Created and maintained client integration guides and knowledge-base articles."
+        ]
+      },
+      {
+        "name": "Colectivo Coffee Roasters",
+        "location": "Milwaukee, WI",
+        "position": "Warehouse Associate",
+        "startDate": "2019-06",
+        "endDate": "2020-05",
+        "highlights": [
+          "Partnered with the IT department to install and troubleshoot new point-of-sale nodes.",
+          "Fulfilled orders for more than 1000 restaurant and store clients."
+        ]
+      },
+      {
+        "name": "Komatsu Mining Corp. (Joy Global)",
+        "location": "Milwaukee, WI",
+        "position": "Facilities Management Intern",
+        "startDate": "2016-05",
+        "endDate": "2018-12",
+        "highlights": [
+          "Evaluated, selected, and implemented a global mapping platform that provided facility information to employees and customers.",
+          "Initiated web automations that reduced manual database-maintenance work.",
+          "Managed SharePoint sites and data and designed data-input forms to improve accessibility, reduce errors, and promote cross-department information sharing."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Wisconsin–Milwaukee",
+        "area": "Information Technology Management",
+        "studyType": "BBA",
+        "startDate": "2017",
+        "endDate": "2020"
+      },
+      {
+        "institution": "Milwaukee School of Engineering",
+        "area": "Industrial Engineering and Supply Chain/Operations Management",
+        "studyType": "Studied",
+        "startDate": "2014",
+        "endDate": "2016"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Cloud, Infrastructure & DevOps",
+        "keywords": [
+          "AWS",
+          "Docker",
+          "NGINX",
+          "GitLab CI/CD",
+          "DigitalOcean"
+        ]
+      },
+      {
+        "name": "Software Development",
+        "keywords": [
+          "Python",
+          "Django",
+          "Flask",
+          "C#"
+        ]
+      },
+      {
+        "name": "Integrations & APIs",
+        "keywords": [
+          "REST APIs"
+        ]
+      },
+      {
+        "name": "Databases",
+        "keywords": [
+          "Microsoft SQL Server",
+          "PostgreSQL",
+          "SQLite"
+        ]
+      },
+      {
+        "name": "Source Control & Collaboration",
+        "keywords": [
+          "Git",
+          "GitLab",
+          "SharePoint",
+          "Microsoft 365 Enterprise"
+        ]
+      }
+    ]
+  },
+  "coverLetter": "Dear Hiring Team,\n\nI am applying for the IT Cloud Web Application Platform Engineer position at WEC Business Services LLC. My experience combines software development, production workload migration, integration implementation, and client support. In my role as Manager at DSTax Technologies, I serve as a technical lead and lead developer for a tax-integration platform. This combination of development and operational responsibilities is relevant to your Cloud Platform team's work deploying and maintaining cloud-based applications and services.\n\nAt DSTax Technologies, I migrated production workloads from DigitalOcean to AWS and led the transition from Version 1 to Version 2 of the tax-integration platform. I also optimized asynchronous operations to improve performance and throughput. Alongside development, I managed internal projects and client-coordinated work, communicated integration updates, and supported implementations from requirements gathering and setup through troubleshooting and go-live. These responsibilities connect application delivery with the practical support needs of the people using the platform.\n\nEarlier, as a Facilities Management Intern at Komatsu Mining Corp. (Joy Global), I evaluated, selected, and implemented a global mapping platform that provided facility information to employees and customers. I initiated web automations that reduced manual database-maintenance work and managed SharePoint sites and data. I also designed data-input forms to improve accessibility, reduce errors, and support information sharing across departments. That work required translating operational needs into usable technical solutions.\n\nI hold a BBA in Information Technology Management from the University of Wisconsin–Milwaukee. My technical skills include AWS, Docker, NGINX, GitLab CI/CD, Python, and REST APIs. I would bring this background in application development, cloud migration, troubleshooting, and documentation to collaboration with WEC's development and infrastructure teams. Thank you for considering my application.\n\nSincerely,\nKyle M. Anderson",
+  "revision": "9b46abbb5212785224d71391941c72540164f0eb1b4c249933017eecdedecea0",
+  "runId": "a968d18099d04f2594fe5a50631fecbc",
+  "reviewNotes": "Résumé prioritizes AWS migration, application performance, implementation support, and project coordination for a 1–2 page target; final pagination depends on rendering. CV retains all work history, education, skills, and achievements. The master supports a bachelor's degree and relevant cloud experience but does not establish 2+ years specifically in infrastructure or AWS development. Terraform/IaC, shared-module governance, Azure, FinOps, CNAPP, Front Door/ALB/WAF, enterprise-scale production support, formal incident response/root-cause analysis, and rotating on-call experience are not documented. Work authorization and sponsorship eligibility require confirmation. Syntax and field types were reviewed without tools; no automated validation was performed.",
+  "jobDescription": {
+    "title": "IT Cloud Web Application Platform Engineer",
+    "company": "WEC Business Services LLC, a subsidiary of WEC Energy Group",
+    "description": "The Infrastructure Consultant for the Cloud Platform team builds and maintains cloud infrastructure for the corporation, carries operational and strategic responsibilities, and collaborates with development teams to deploy and maintain cloud-based applications and services. The position is available in Milwaukee, Pewaukee, or Green Bay, Wisconsin. It currently offers flexibility for a hybrid work arrangement (remote/on-site), with time regularly spent in the office. WEC Energy Group is an electric generation and distribution and natural gas delivery holding company serving 4.7 million customers across the Midwest and offers competitive pay and benefits.",
+    "remote": "Hybrid",
+    "experience": "Part of the Infrastructure Consultant and Senior Infrastructure Consultant job family; experience will determine placement. Minimum 2+ years of IT infrastructure experience.",
+    "locations": [
+      {
+        "city": "Milwaukee",
+        "region": "Wisconsin",
+        "countryCode": "US",
+        "postalCode": "53203"
+      },
+      {
+        "city": "Pewaukee",
+        "region": "Wisconsin",
+        "countryCode": "US",
+        "postalCode": "53188"
+      },
+      {
+        "city": "Green Bay",
+        "region": "Wisconsin",
+        "countryCode": "US",
+        "postalCode": "54307-9001"
+      }
+    ],
+    "salary": "$78,702.26–$135,761.08. The pay range reflects the minimum and maximum for the position at the time of posting and may be modified in the future. The starting salary/pay within the pay range will be based on several factors, as applicable, but not limited to, relevant education, qualifications, certifications, experience, skills, geographic location, shift, travel requirements, collective bargaining agreements, and business and organizational needs. At WEC Energy Group, it is not typical for an individual to be hired at or near the top of the range for their role.",
+    "responsibilities": [
+      "Provision platform as a service and application based services in the cloud.",
+      "Collaborate with development teams for cloud based application hosting.",
+      "Develop Infrastructure as Code (IaC) for managing and provisioning cloud based resources.",
+      "Maintain and govern library for IaC shared modules.",
+      "Collaborate with on-premise infrastructure teams to align infrastructure standards.",
+      "Participate in incident response and root-cause analysis for cloud infrastructure.",
+      "Participate in a 24x7 on-call support role on a rotating basis."
+    ],
+    "qualifications": [
+      "Minimum: Bachelor's Degree.",
+      "Minimum: 2+ years of IT infrastructure experience.",
+      "Preferred: Bachelor’s Degree in Computer Science, Management Information Systems or a related field.",
+      "Preferred: 2+ years of Azure and/or AWS development experience.",
+      "Preferred: Azure, AWS, Azure DevOps, Terraform IaC, FinOps, CI/CD Pipelines, or CNAPP experience.",
+      "Preferred: Azure Front Door, AWS ALB, Web Hosting, or WAF experience.",
+      "Preferred: Production support experience with large enterprise applications.",
+      "WEC Energy Group will only employ those who are legally authorized to work in the United States. Individuals with temporary visas such as E, F-1 with OPT or CPT, H-1, H-2, L-1, B, J or TN, or who need sponsorship for work authorization now or in the future, are not eligible for hire."
+    ],
+    "applicationDeadline": "2026-09-30",
+    "applicationDeadlineConditions": "We reserve the right to modify the application deadline or discontinue accepting applications for any position if deemed necessary.",
+    "equalOpportunityStatement": "WEC Energy Group and its subsidiaries are Equal Opportunity Employers. As a result, all qualified applicants will receive equal employment opportunity without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, protected veteran status or any other protected status. The Company also complies with all applicable federal, state and local laws that require it to take affirmative action.",
+    "requisitionId": "6946",
+    "meta": {
+      "canonical": "https://careers.wecenergygroup.com/job/Milwaukee-IT-Cloud-Web-Application-Platform-Engineer-WI-53203/1429333800/"
+    }
+  }
+}
