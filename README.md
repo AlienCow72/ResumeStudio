@@ -1,6 +1,6 @@
 # Resume Studio
 
-Double-click `start.command` on macOS and open http://127.0.0.1:8765. The launcher stops the existing instance of this editor and restarts on the same port. Keep its terminal open; Control-C stops the server.
+Double-click `start.command` on macOS and open http://127.0.0.1:8765. The launcher stops the existing instance of this editor (including instances in other Git worktrees of this repository) and restarts on the same port. Unrelated applications using the port are left running. Keep its terminal open; Control-C stops the server.
 
 ## Repository layout
 

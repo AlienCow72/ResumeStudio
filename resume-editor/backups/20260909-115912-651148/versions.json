@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "tree": {
+    "id": "583f5e430c7d4134adbbe0dc8f91d496",
+    "children": {
+      "basics": {
+        "id": "8f27551fa6594ec8afbff527d26f583c",
+        "children": {
+          "name": {
+            "id": "04a8b5cc488a460ebfe6d93211cc57c8"
+          },
+          "email": {
+            "id": "f27dfc41434e4a53b7e69ad18327a885"
+          },
+          "phone": {
+            "id": "198ab7b8d91c4d528806661328a1c658"
+          },
+          "summary": {
+            "id": "fdecc7cf880f42baac37eca6b72614c1"
+          },
+          "location": {
+            "id": "d8ef42e0f8b8469eaa5fea72944fb150",
+            "children": {
+              "region": {
+                "id": "ff8470844e6c4c38a2ce10ad5f11be55"
+              },
+              "countryCode": {
+                "id": "076a580e7a8146629589c9288b6231b6"
+              },
+              "city": {
+                "id": "4de4199d26a54248b65c6ce03a79ace0"
+              }
+            }
+          },
+          "profiles": {
+            "id": "792165a598744608b0c1c025eecd6ef6",
+            "children": [
+              {
+                "id": "247fceceac5e43c1a06dc36e7547b2ec",
+                "children": {
+                  "network": {
+                    "id": "bcb2336f21d242a8a47461039920bab3"
+                  },
+                  "username": {
+                    "id": "9b832a058e3b4b61bee92fca8871f5b9"
+                  },
+                  "url": {
+                    "id": "1d0db203e8a94406afb0a31470769570"
+                  }
+                }
+              },
+              {
+                "id": "df11ca815d6443d799e5573e67f292b2",
+                "children": {
+                  "network": {
+                    "id": "847a3794867b48d1817a0084e3f8f0a4"
+                  },
+                  "username": {
+                    "id": "09cfd29b41db4c0bbef7e087fbfe54e3"
+                  },
+                  "url": {
+                    "id": "dd553373f5d84759ae16378a24a654af"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "work": {
+        "id": "d694e1a8d98a454fa948ab28c4176ab8",
+        "children": [
+          {
+            "id": "9c4d9197842e46818524ba18f1cb7af3",
+            "children": {
+              "name": {
+                "id": "bb343f3f02114e55b51208e517702606"
+              },
+              "location": {
+                "id": "83b93059670744c0be63d8462fd0d368"
+              },
+              "position": {
+                "id": "d54599d3889240e79b0c97761fc324d0"
+              },
+              "startDate": {
+                "id": "0d81d4a8064340708b23e7641419a555"
+              },
+              "summary": {
+                "id": "01b2442887184e2d97663e9a90ca5862"
+              },
+              "highlights": {
+                "id": "eb741b67ed5c4ff7a4b44aa14d1d370d",
+                "children": [
+                  {
+                    "id": "aaae966642be4578b54f5781a35fa8c5"
+                  },
+                  {
+                    "id": "e46e04f99466431ca81039dc59894cac"
+                  },
+                  {
+                    "id": "5a43acbdfbbe41b0813442ffc7bb4ffc"
+                  },
+                  {
+                    "id": "80604f227b4f4bc1893c6f263ed75063"
+                  },
+                  {
+                    "id": "e9ce8eec310e4f62a320a043d11b3744"
+                  },
+                  {
+                    "id": "02032f5bee6a488293226056ed74bf71"
+                  },
+                  {
+                    "id": "6d84029133724878965984a6410877fc"
+                  },
+                  {
+                    "id": "e66fff51a4fe4de99c991b7abb68151b"
+                  },
+                  {
+                    "id": "48bd1e3fa654496d81bb27e38eda2e9b"
+                  },
+                  {
+                    "id": "ae2c9f5cffc844629837ae37cec65ab8"
+                  },
+                  {
+                    "id": "4b86263d1f5e4ff7bc1d9aac4f3330bb"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "c4bd20db5a92458192aa64fa179c8e50",
+            "children": {
+              "name": {
+                "id": "6c566316fa5d46c1a1eefda1d569b072"
+              },
+              "location": {
+                "id": "8a765651e027439b858d650fdcbf8953"
+              },
+              "position": {
+                "id": "d3aff0bda0e24a54a3ac6ce0491a328d"
+              },
+              "startDate": {
+                "id": "a9b834281e7f47a3b96562e27926ac76"
+              },
+              "endDate": {
+                "id": "517027b10d434337af94d76d8faf79b1"
+              },
+              "highlights": {
+                "id": "a98452a026d94369bf8dff0f9d75933d",
+                "children": [
+                  {
+                    "id": "bb99e1c565244162ae2ff3d74c2dbc2b"
+                  },
+                  {
+                    "id": "ed265385e17349de9fbca93826e1266d"
+                  },
+                  {
+                    "id": "f58c5546c5ff4d1cb4ac595cf8e06379"
+                  },
+                  {
+                    "id": "d90a3b5b8af44b05a47aa4ef15d9b827"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "be6d8b20680a46eeb263a30c4377d2f8",
+            "children": {
+              "name": {
+                "id": "e599b261dfc847ee8249d8ace6a949e1"
+              },
+              "location": {
+                "id": "b7a59b67eabc4350858782f82a205ff4"
+              },
+              "position": {
+                "id": "a3b47592c59f40c1b6d8c99e50c3b32a"
+              },
+              "startDate": {
+                "id": "2d9950c3cb4a4f7a98789c16a420bf44"
+              },
+              "endDate": {
+                "id": "b7b7abeec1b5487a875db2256425745b"
+              },
+              "highlights": {
+                "id": "a24fedc7606f4d0289623958312d5248",
+                "children": [
+                  {
+                    "id": "88dcb2a1056744cc9ba510a97825070a"
+                  },
+                  {
+                    "id": "b205588cb8f14f19b1afd2ace8aef3ce"
+                  },
+                  {
+                    "id": "d089b435ea77460b961b6f36853aa3c5"
+                  },
+                  {
+                    "id": "5a96de30b63e4ea7978b4b1d7a93c025"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "education": {
+        "id": "ef08b787df874d8bb07ac66858c5271e",
+        "children": [
+          {
+            "id": "a52e764572fd4e67ade61a361ee47f16",
+            "children": {
+              "institution": {
+                "id": "5afe9c3a5fa3408e94653e8cafd8f8e7"
+              },
+              "area": {
+                "id": "613bb20f2cd74f898fcfc8881284ed04"
+              },
+              "studyType": {
+                "id": "2a15eadeda6546f9bcb61929658e095f"
+              },
+              "startDate": {
+                "id": "5f4221c84d8b4527975b43f78fd220d9"
+              },
+              "endDate": {
+                "id": "3e85ba088b91475c93844e530db46cec"
+              }
+            }
+          },
+          {
+            "id": "94d3781ee25a42239cbc13d107839261",
+            "children": {
+              "institution": {
+                "id": "9d3c7b60c40d4b69a298ada04327359d"
+              },
+              "area": {
+                "id": "a3e7e9659ae64a198e2c6b730db2c9cb"
+              },
+              "studyType": {
+                "id": "0e65327fce3f4f87a0898d027259e005"
+              },
+              "startDate": {
+                "id": "9d186c0509ce4a68b2d6be1795797048"
+              },
+              "endDate": {
+                "id": "6a737a54e9cc47a3b118b3ee15b9e580"
+              }
+            }
+          }
+        ]
+      },
+      "skills": {
+        "id": "225ef2ecce56486cbf5732f727364997",
+        "children": [
+          {
+            "id": "78b1881e42bd44fe875cc7ca1a655da9",
+            "children": {
+              "name": {
+                "id": "9183e9e7d21e4cda8f721eeb73b5ffde"
+              },
+              "keywords": {
+                "id": "ee2850783141482a992aea96c0a4b3ff",
+                "children": [
+                  {
+                    "id": "cd7a924b56cd4a36b05e414c2bf9e85e"
+                  },
+                  {
+                    "id": "d075e96317b043e18b46980fa66eb069"
+                  },
+                  {
+                    "id": "71150368ef664343a75c39ebe1f03c63"
+                  },
+                  {
+                    "id": "7476a11fea2c4d9493221c71dc132321"
+                  },
+                  {
+                    "id": "e2b694be02e14a1893188923381b32ee"
+                  },
+                  {
+                    "id": "f89ffbb2f30f466f98977628a34b1f98"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "aa28418b28ee4610bba2bc778def8f65",
+            "children": {
+              "name": {
+                "id": "8bf16801a5884d9bb204625f9e35f013"
+              },
+              "keywords": {
+                "id": "b3e592979f6443e5954379cd54a22196",
+                "children": [
+                  {
+                    "id": "f669dec66e6440fb91dbc1430cf2a87f"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "078b175f28af4449a6f1f82b6bcdc0cf",
+            "children": {
+              "name": {
+                "id": "a53189ba0d004c9ea99e3bd054175018"
+              },
+              "keywords": {
+                "id": "0b205ad84755441bba512e07b224bcf8",
+                "children": [
+                  {
+                    "id": "da57bba075b742fe8a271056fb1072d8"
+                  },
+                  {
+                    "id": "a3707f5a6d03477f86cec9d07c985bb1"
+                  },
+                  {
+                    "id": "5091b4865d434ea182736b5e80ad465e"
+                  },
+                  {
+                    "id": "971290a070574c98a79c87330300f989"
+                  },
+                  {
+                    "id": "5590d2f5d3ef413394a61e83f2380db5"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "e4b45c9a3b304ef286cc970648564f7a",
+            "children": {
+              "name": {
+                "id": "dcf01dd3532342a2b97f61992f04391b"
+              },
+              "keywords": {
+                "id": "38ac1d591fd04a54ae7115b1d12059b2",
+                "children": [
+                  {
+                    "id": "849ce00c10c34198aad7b7041f05d92b"
+                  },
+                  {
+                    "id": "88ed4a18b22b4743a03b62f600ee9ce6"
+                  },
+                  {
+                    "id": "c402926af373434c9477d2d6ba7f7048"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "f94b4d3331934182bc37ba3ffe66e5a1",
+            "children": {
+              "name": {
+                "id": "2ec6300eeee14fa2bdf68132f7f509f9"
+              },
+              "keywords": {
+                "id": "eb7c441d79834f0b8e1bcd34fb700dc7",
+                "children": [
+                  {
+                    "id": "9a0851fc15bc49c9a387831e3ad78efd"
+                  },
+                  {
+                    "id": "0484377309a140ac91a5b13c8ceb14c4"
+                  },
+                  {
+                    "id": "f95beb3f4ca845ffad212db71b6164ac"
+                  },
+                  {
+                    "id": "055095084158445f97efa17d403f4988"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "versions": [
+    {
+      "excluded": [
+        "1d0db203e8a94406afb0a31470769570",
+        "dd553373f5d84759ae16378a24a654af",
+        "792165a598744608b0c1c025eecd6ef6"
+      ],
+      "indent": {
+        "e46e04f99466431ca81039dc59894cac": 1,
+        "e9ce8eec310e4f62a320a043d11b3744": 1,
+        "6d84029133724878965984a6410877fc": 1,
+        "e66fff51a4fe4de99c991b7abb68151b": 1,
+        "48bd1e3fa654496d81bb27e38eda2e9b": 1,
+        "ae2c9f5cffc844629837ae37cec65ab8": 1
+      },
+      "id": "joblinks",
+      "name": "Joblinks"
+    }
+  ],
+  "masterHash": "d4d19bee3e41f6292265d7a577f13430ed04f5113a7be09137a8a5215558f834"
+}

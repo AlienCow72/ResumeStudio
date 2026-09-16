@@ -12,6 +12,21 @@ ROOT = Path(__file__).resolve().parent
 PORT = 8765
 
 
+def editor_roots():
+    """Include other checkouts of this repository, which share the fixed port."""
+    roots = {ROOT}
+    result = subprocess.run(
+        ['git', '-C', str(ROOT.parent), 'worktree', 'list', '--porcelain', '-z'],
+        capture_output=True, text=True,
+    )
+    if result.returncode == 0:
+        roots.update(
+            (Path(field.removeprefix('worktree ')) / 'src').resolve()
+            for field in result.stdout.split('\0') if field.startswith('worktree ')
+        )
+    return roots
+
+
 def listeners():
     result = subprocess.run(
         ['/usr/sbin/lsof', '-nP', f'-iTCP:{PORT}', '-sTCP:LISTEN', '-t'],
@@ -22,7 +37,7 @@ def listeners():
     return {int(pid) for pid in result.stdout.split()}
 
 
-def is_editor(pid):
+def is_editor(pid, roots=None):
     command = subprocess.check_output(
         ['/bin/ps', '-p', str(pid), '-o', 'command='], text=True,
     ).strip()
@@ -34,24 +49,29 @@ def is_editor(pid):
         return False
     # ps does not quote paths containing spaces; accept exact absolute script
     # paths as well as relative arguments resolved against the process cwd.
-    for name in ('server.py', 'launch.py'):
-        script = ROOT / name
-        if str(script) in command:
-            return True
-        for argument in shlex.split(command):
-            if argument.endswith(name) and (cwd / argument).resolve() == script:
+    for root in roots if roots is not None else {ROOT}:
+        for name in ('server.py', 'launch.py'):
+            script = root / name
+            if command.endswith(' ' + str(script)) or ' ' + str(script) + ' ' in command:
                 return True
+            for argument in shlex.split(command):
+                if argument.endswith(name) and (cwd / argument).resolve() == script:
+                    return True
     return False
 
 
 def main():
     STORE.initialize()
     existing = listeners()
-    if any(not is_editor(pid) for pid in existing):
+    roots = editor_roots()
+    if any(not is_editor(pid, roots) for pid in existing):
         raise RuntimeError('Port 8765 belongs to another application; it was not stopped.')
     for pid in existing:
         print(f'Stopping existing resume editor (PID {pid})…', flush=True)
-        os.kill(pid, signal.SIGTERM)
+        try:
+            os.kill(pid, signal.SIGTERM)
+        except ProcessLookupError:
+            pass  # The instance exited between inspection and termination.
     deadline = time.monotonic() + 10
     while listeners():
         if time.monotonic() >= deadline:
