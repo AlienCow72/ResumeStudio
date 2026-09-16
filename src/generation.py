@@ -241,6 +241,11 @@ class GenerationService:
                               'Do not add sections absent from the master. Avoid meta and $schema in résumé outputs. '
                               'The cover letter should address the target role and company, use two grounded examples, be 250–350 words, '
                               'use Dear Hiring Team if no named recipient is known, and end with the candidate name. '
+                              'There should be three sections/paragraphs: Introduction, body, and conclusion.'
+                              'the introduction should briefly state the candidate's interest in the role and relevant background. '
+                              'The body should provide two grounded examples demonstrating the candidate’s qualifications. '
+                              'The conclusion should reiterate interest in the role, including why/what the candidate finds appealing about it, and include a polite closing statement. '
+                              'Do not include statements like "I am the perfect fit" or "I am passionate about this role.","I hold XYZ degree.", "my skills include..."'
                               'Do not include contact information in the letter body because the renderer adds it.\n\n' + skill('json-resume') +
                               '\nPinned résumé schema:\n' + (RESOURCES/'schema.json').read_text() +
                               '\nVERIFIED MASTER:\n' + encoded(master) + '\nJOB DESCRIPTION:\n' + encoded(posting))

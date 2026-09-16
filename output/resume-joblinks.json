@@ -118,6 +118,13 @@
         "SharePoint",
         "Microsoft 365 Enterprise"
       ]
+    },
+    {
+      "name": "AI",
+      "keywords": [
+        "OpenAI / Codex",
+        "Anthropic / Claude Code"
+      ]
     }
   ]
 }
