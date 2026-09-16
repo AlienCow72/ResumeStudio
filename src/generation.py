@@ -12,7 +12,7 @@ from jsonschema import Draft7Validator, FormatChecker
 from codex_generate import CodexRunner, GenerationCancelled
 from jobs import timestamp, url_key
 from postings import capture, PostingUnavailable
-from render import html_doc, pdf_from_html
+from render import contact_html, render_template, html_doc, pdf_from_html
 
 RESOURCES = Path(__file__).parent / 'generation_resources'
 ACTIVE = {'queued', 'extracting', 'writing', 'rendering', 'cancelling'}
@@ -83,10 +83,9 @@ def skill(name):
 def letter_html(letter, master, posting):
     esc = html.escape
     basics = master.get('basics', {})
-    contact = ' · '.join(str(basics[key]) for key in ('email', 'phone', 'url') if basics.get(key))
     paragraphs = ''.join('<p>' + esc(paragraph).replace('\n', '<br>') + '</p>' for paragraph in letter.strip().split('\n\n') if paragraph.strip())
-    return '''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Cover letter</title>
-<style>@page{size:Letter;margin:.7in}*{box-sizing:border-box}body{font:11pt/1.55 Arial,sans-serif;color:#243c45;margin:0}header{border-bottom:2px solid #176b56;padding-bottom:15px;margin-bottom:26px}h1{font-size:23pt;margin:0 0 5px;color:#16394b}header p{font-size:9pt;margin:0;color:#526771}h2{font-size:12pt;margin:0 0 22px;color:#176b56}p{margin:0 0 14px;orphans:3;widows:3;overflow-wrap:anywhere}</style></head><body><header><h1>''' + esc(basics.get('name', '')) + '</h1><p>' + esc(contact) + '</p></header><h2>' + esc(posting['title'] + ' · ' + posting['company']) + '</h2>' + paragraphs + '</body></html>'
+    return render_template('cover-letter.html', name=esc(basics.get('name', '')),
+                           contact=contact_html(basics, include_profiles=False), paragraphs=paragraphs)
 
 
 class GenerationService:

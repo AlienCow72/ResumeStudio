@@ -40,7 +40,7 @@
     <div class="review-header"><div><p class="eyebrow">REVIEW YOUR APPLICATION</p><h2 id="reviewTitle">Application drafts</h2><p id="reviewJob" class="form-intro"></p></div><button id="reviewClose" type="button" aria-label="Close document review">×</button></div>
     <div class="review-tabs"><button id="reviewResume" type="button" aria-pressed="true">Résumé</button><button id="reviewLetter" type="button" aria-pressed="false">Cover letter</button></div>
     <p id="reviewStatus" role="status" aria-live="polite"></p>
-    <div class="review-layout"><section id="reviewEditor" aria-label="Document editor"></section><section class="review-preview"><p>LIVE HTML PREVIEW · PDFs are created only when you download.</p><iframe id="reviewPreview" title="Application document preview" sandbox=""></iframe></section></div>
+    <div class="review-layout"><section id="reviewEditor" aria-label="Document editor"></section><section class="review-preview"><p id="reviewPreviewStatus" role="status">PDF preview</p><div id="reviewPreview" aria-label="Application PDF pages" aria-busy="false"></div></section></div>
     <div class="review-footer"><span>ZIP includes job description JSON, résumé PDF, and cover-letter PDF.</span><button id="reviewSave" type="button">Save drafts</button><button id="reviewDownload" type="button" class="primary">Download application ZIP</button></div>
   </dialog>
   <script src="/application-review.js"></script>

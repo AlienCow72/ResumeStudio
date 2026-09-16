@@ -81,8 +81,9 @@ Generation runs in the background in this order:
    JSON using `json-resume`, plus a job-specific cover letter. Candidate
    facts come from the saved master snapshot. The master is never overwritten.
 3. Stop at editable drafts. Open **Review & edit documents** on the job card.
-   Edit résumé fields and cover-letter text with live HTML previews. **Save drafts**
-   saves application-specific changes; neither saving nor previewing renders PDFs.
+   Edit résumé fields and cover-letter text with live PDF page previews that use
+   the same renderer and print layout as downloads. Previews include unsaved edits
+   and page counts, and do not save files. **Save drafts** saves application-specific changes.
 4. Click **Download application ZIP** after review. The app saves any current edits,
    then renders PDFs and downloads exactly `job-description.json`, `resume.pdf`,
    and `cover-letter.pdf` in one ZIP. The cover-letter header uses the reviewed

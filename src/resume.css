@@ -36,7 +36,7 @@ header {
   gap: 18px;
   padding: 22px 42px 18px;
   color: white;
-  background: var(--ink);
+  background: linear-gradient(110deg, var(--ink) 0%, var(--accent) 100%);
   border-bottom: 4px solid var(--accent);
 }
 
@@ -346,5 +346,28 @@ a {
     content: "";
     display: block;
     clear: both;
+  }
+}
+
+/* Application letters share the résumé identity band and type scale. */
+.cover-letter .letter-body {
+  margin-left: 0;
+  padding: 28px 42px 34px;
+}
+
+.letter-body p {
+  margin-bottom: 14px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 650px) {
+  .cover-letter .letter-body {
+    padding: 24px;
+  }
+}
+
+@media print {
+  .cover-letter .letter-body {
+    padding: 24px 38px 26px;
   }
 }

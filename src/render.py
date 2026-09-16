@@ -6,6 +6,7 @@ import shutil
 import subprocess
 import tempfile
 import threading
+from string import Template
 from datetime import datetime
 
 ROOT = Path(__file__).resolve().parent
@@ -51,18 +52,24 @@ def highlight_list(items,depths):
         result+='<li>'+esc(value);last=depth
     return result+'</li>'+('</ul></li>'*last)+'</ul>'
 
-def html_doc(data,levels=None):
-    levels=levels or {}
-    b=data.get('basics',{})
+def contact_html(b, include_profiles=True):
+    """Escape contact details; each template chooses whether to show profiles."""
     location=b.get('location',{})
     contact=[]
     if location: contact.append(esc(', '.join(str(location[k]) for k in ['address','city','region','postalCode'] if location.get(k)) or text(location)))
     for k in ['phone','email','url']:
         if b.get(k):contact.append(esc(b[k]))
-    contact.extend(esc(text(p)) for p in b.get('profiles',[]))
-    header='<header><div><h1>'+esc(b.get('name','Resume'))+'</h1>'
-    if b.get('label'):header+='<p class="title">'+esc(b['label'])+'</p>'
-    header+='</div><address class="contact">'+'<br>'.join(contact)+'</address></header>'
+    if include_profiles:
+        contact.extend(esc(text(p)) for p in b.get('profiles',[]))
+    return '<br>'.join(contact)
+
+def render_template(template_name, **values):
+    template = Template((ROOT / 'templates' / template_name).read_text())
+    return template.substitute(styles=(ROOT / 'resume.css').read_text(), **values)
+
+def html_doc(data,levels=None):
+    levels=levels or {}
+    b=data.get('basics',{})
     skills=''
     for e in data.get('skills',[]):
         skills+='<div class="skill-group"><h3>'+esc(e.get('name',''))+'</h3><div class="tags">'+''.join('<span class="tag">'+esc(x)+'</span>' for x in e.get('keywords',[]))+'</div>'+extras(e,{'name','keywords'})+'</div>'
@@ -77,7 +84,9 @@ def html_doc(data,levels=None):
         title={'work':'Experience','volunteer':'Volunteering'}.get(key,key.title())
         if not isinstance(entries,list):entries=[entries]
         main+=heading(title,''.join(role(e,key in {'work','volunteer'} and not levels.get(f'{key}/{i}/hidePresent'),levels.get(f'{key}/{i}/highlights',[])) if isinstance(e,dict) else '<p>'+esc(text(e))+'</p>' for i,e in enumerate(entries)))
-    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>'+esc(b.get('name','Resume'))+' — Resume</title><style>'+(ROOT/'resume.css').read_text()+'</style></head><body><article class="page">'+header+'<div class="content"><aside>'+aside+'</aside><main>'+main+'</main></div></article></body></html>'
+    return render_template('resume.html', name=esc(b.get('name','Resume')),
+                           label='<p class="title">'+esc(b['label'])+'</p>' if b.get('label') else '',
+                           contact=contact_html(b), aside=aside, main=main)
 
 def pdf(data,levels=None):
     return pdf_from_html(html_doc(data,levels))
@@ -107,14 +116,25 @@ from functools import lru_cache
 
 @lru_cache(maxsize=4)
 def _pdf_preview_cached(data_json, levels_json):
+    import json
+    return pdf_pages(pdf(json.loads(data_json), json.loads(levels_json)))
+
+
+_raster_lock = threading.Lock()
+
+def pdf_pages(content):
+    """Rasterize PDF bytes; PDFium must not be used concurrently."""
+    with _raster_lock:
+        return _pdf_pages(content)
+
+
+def _pdf_pages(content):
     import base64
     import io
-    import json
     try:
         import pypdfium2 as pdfium
     except ImportError:
         raise RuntimeError('PDF preview requires pypdfium2 and Pillow. Install them with: python3 -m pip install pypdfium2 Pillow')
-    content = pdf(json.loads(data_json), json.loads(levels_json))
     pages = []
     document = pdfium.PdfDocument(content)
     try:

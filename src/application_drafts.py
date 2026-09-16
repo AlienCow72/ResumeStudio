@@ -9,6 +9,7 @@ import zipfile
 
 from generation import encoded, html_doc, letter_html, validate_schema
 from jobs import timestamp, url_key
+from render import pdf_pages
 
 
 def folder_for(service, identifier, run_id):
@@ -77,12 +78,19 @@ def save(service, identifier, run_id, data, revision):
         return read(service, identifier, run_id)
 
 
-def preview(service, identifier, run_id, data):
+def preview(service, identifier, run_id, data, document=None):
     clean = validate(data)
     folder = folder_for(service, identifier, run_id)
     posting = json.loads((folder/'job-description.json').read_text())
-    return {'resume': html_doc(clean['resume']),
-            'coverLetter': letter_html(clean['coverLetter'], clean['resume'], posting)}
+    if document not in (None, 'resume', 'coverLetter'):
+        raise ValueError('Choose a résumé or cover letter to preview.')
+    documents = {'resume': html_doc(clean['resume']),
+                 'coverLetter': letter_html(clean['coverLetter'], clean['resume'], posting)}
+    if document is not None:
+        # Render unsaved edits using the exact same HTML and renderer as export.
+        # PDF bytes exist only in memory; preview never saves drafts or exports.
+        return pdf_pages(service.renderer(documents[document]))
+    return documents
 
 
 def bundle(service, identifier, run_id, revision):
@@ -92,7 +100,7 @@ def bundle(service, identifier, run_id, revision):
         if draft['revision'] != revision:
             raise FileExistsError('The drafts changed before download. Save your latest edits and try again.')
         source_url = service.jobs.read(identifier)['url']
-    # Render an immutable in-memory snapshot. No PDFs are made by save or preview.
+    # Render an immutable in-memory snapshot. Preview and save do not persist PDF files.
     rendered = [service.renderer(html_doc(draft['resume'])),
                 service.renderer(letter_html(draft['coverLetter'], draft['resume'], draft['jobDescription']))]
     with service.lock:
