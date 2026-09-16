@@ -71,10 +71,15 @@ class Handler(BaseHTTPRequestHandler):
             if self.path=='/': self.respond(200,(ROOT/'index.html').read_bytes(),'text/html; charset=utf-8')
             elif self.path in ('/jobs', '/jobs/'):
                 self.respond(200,(ROOT/'jobs.html').read_bytes(),'text/html; charset=utf-8')
-            elif self.path in ('/jobs.js', '/jobs.css'):
+            elif self.path in ('/jobs.js', '/jobs.css', '/application-review.js'):
                 self.respond(200,(ROOT/self.path[1:]).read_bytes(),'text/javascript; charset=utf-8' if self.path.endswith('.js') else 'text/css; charset=utf-8')
             elif self.path=='/api/jobs':
                 self.respond(200,json.dumps({'jobs':[{**job,'generation':generation().state(job['id'])} for job in JOBS.list()]}))
+            elif self.path.startswith('/api/jobs/') and '/drafts/' in self.path:
+                import application_drafts
+                parts=self.path.strip('/').split('/')
+                if len(parts)!=5 or parts[3]!='drafts':raise ValueError('Invalid draft URL.')
+                self.respond(200,json.dumps(application_drafts.read(generation(),parts[2],parts[4])))
             elif self.path.startswith('/api/jobs/') and '/files/' in self.path:
                 parts=self.path.strip('/').split('/')
                 if len(parts)!=6 or parts[3]!='files':raise ValueError('Invalid document URL.')
@@ -95,6 +100,20 @@ class Handler(BaseHTTPRequestHandler):
             if not 0<length<=5_000_000:raise ValueError('Request must be under 5 MB.')
             request=json.loads(self.rfile.read(length))
             if not isinstance(request,dict):raise ValueError('Request must be an object.')
+            if self.path.startswith('/api/jobs/') and self.path.rsplit('/',1)[-1] in ('save-drafts','preview-drafts','download-application'):
+                import application_drafts
+                parts=self.path.strip('/').split('/')
+                if len(parts)!=4:raise ValueError('Invalid draft action URL.')
+                identifier,action=parts[2],parts[3]
+                service=generation();run_id=request.get('runId')
+                if action=='download-application':
+                    body,filename=application_drafts.bundle(service,identifier,run_id,request.get('revision'))
+                    self.respond(200,body,'application/zip',filename)
+                elif action=='save-drafts':
+                    result=application_drafts.save(service,identifier,run_id,request.get('draft'),request.get('revision'))
+                    self.respond(200,json.dumps(result))
+                else:self.respond(200,json.dumps(application_drafts.preview(service,identifier,run_id,request.get('draft'))))
+                return
             if self.path.startswith('/api/jobs/') and self.path.rsplit('/',1)[-1] in ('generate','cancel'):
                 parts=self.path.strip('/').split('/')
                 if len(parts)!=4:raise ValueError('Invalid generation URL.')

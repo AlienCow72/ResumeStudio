@@ -5,7 +5,6 @@
   let jobs = [], editing = null, changed = false, saving = false, loading = false;
   const pending = new Set();
   const generationActive = state => ['queued','extracting','writing','rendering','cancelling'].includes(state?.status);
-  const fileLabels = {'job-description.json':'Job description JSON','resume.pdf':'Résumé PDF','cover-letter.pdf':'Cover letter PDF','resume.json':'Résumé JSON','cover-letter.md':'Cover letter text'};
   const element = (tag, className, text) => {const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) node.textContent = text; return node;};
   function button(text, action, className) {const node = element('button', className, text); node.type = 'button'; node.onclick = action; return node;}
   function status(text, error = false) {$('status').textContent = text; $('status').className = error ? 'error' : '';}
@@ -123,28 +122,14 @@
   load();
   setInterval(() => {if (!saving && jobs.some(job => generationActive(job.generation))) load(true);}, 2000);
 
-  function downloadLinks(job, generation, compact = false) {
-    const container = element('div', 'document-links');
-    const primary = ['resume.pdf', 'cover-letter.pdf', 'job-description.json'];
-    for (const name of compact ? primary : Object.keys(fileLabels)) {
-      if (!generation.files?.includes(name)) continue;
-      const link = element('a', 'document-link', '↓ ' + fileLabels[name]);
-      link.href = `/api/jobs/${job.id}/files/${generation.runId}/${name}`; link.download = '';
-      container.append(link);
-    }
-    return container;
-  }
   function generationPanel(job, detail = false) {
     const state = job.generation || {status:'not_started'}, panel = element('div', 'generation-panel');
     const active = generationActive(state);
-    const labels = {not_started:'Prepare application documents',queued:'Queued',extracting:'1 / 3 · Job description',writing:'2 / 3 · Writing documents',rendering:'3 / 3 · Creating PDFs',ready:'Application documents ready',needs_input:'Posting text needed',failed:'Generation needs attention',cancelled:'Generation cancelled',interrupted:'Generation interrupted',cancelling:'Cancelling…'};
+    const labels = {not_started:'Prepare application documents',queued:'Queued',extracting:'1 / 2 · Job description',writing:'2 / 2 · Writing drafts',rendering:'Finishing previous run',ready:'Drafts ready for review',needs_input:'Posting text needed',failed:'Generation needs attention',cancelled:'Generation cancelled',interrupted:'Generation interrupted',cancelling:'Cancelling…'};
     panel.append(element('p', 'generation-heading ' + (active ? 'running' : ''), labels[state.status] || state.status));
     if (state.message) panel.append(element('p', 'generation-message', state.message));
     if (state.sourceChanged) panel.append(element('p', 'error', 'These files use the previous posting link. Generate a new set for this link.'));
-    if (state.files?.length) panel.append(downloadLinks(job, state, !detail));
-    if (state.previous && state.status !== 'ready') {
-      const previous = element('details'); previous.append(element('summary', '', 'Previous completed documents'), downloadLinks(job, state.previous)); panel.append(previous);
-    }
+    if (state.status === 'ready') panel.append(button('Review & edit documents', () => window.openApplicationReview(job), 'primary'));
     if (detail && state.reviewNotes) {const review = element('details'); review.append(element('summary', '', 'Tailoring notes & qualification gaps'), element('p', 'review-notes', state.reviewNotes)); panel.append(review);}
     const actions = element('div', 'generation-actions');
     if (active) actions.append(button('Cancel generation', () => runGeneration(job, 'cancel')));
@@ -168,7 +153,7 @@
       const latest = jobs.find(item => item.id === job.id) || job;
       replace({...latest, generation});
       if ($('jobDialog').open && editing?.id === job.id) {detailGeneration({...latest, generation}); $('formError').textContent = '';}
-      status(action === 'cancel' ? 'Cancellation requested.' : 'Generation started. Downloads will appear here as files become ready.');
+      status(action === 'cancel' ? 'Cancellation requested.' : 'Generation started. Drafts will be available for review when ready.');
     } catch (error) {if (detail) $('formError').textContent = error.message; else status(error.message, true);}
     finally {pending.delete(job.id); render();}
   }

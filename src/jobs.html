@@ -17,7 +17,7 @@
     <div class="toolbar"><label class="search"><span class="sr-only">Search jobs</span><input type="search" id="search" placeholder="Search company, role, or notes…"></label><span id="jobCount"></span><button id="refresh" class="quiet">↻ Refresh</button></div>
     <p id="status" role="status" aria-live="polite">Loading applications…</p>
     <div id="board" class="board" aria-label="Application stages"></div>
-    <p class="roadmap-note">Posting → job description JSON → tailored résumé &amp; cover letter. Generation uses your ChatGPT-signed-in Codex CLI. Review generated documents before applying.</p>
+    <p class="roadmap-note">Posting → job description JSON → tailored résumé &amp; cover letter. Generation uses your ChatGPT-signed-in Codex CLI. Review and edit drafts, then download your application ZIP.</p>
   </main>
   <dialog id="jobDialog" aria-labelledby="dialogTitle">
     <form id="jobForm">
@@ -36,6 +36,14 @@
       <div class="form-actions"><button id="cancelDialog" type="button">Cancel</button><button id="submitJob" class="primary" type="submit">Save job</button></div>
     </form>
   </dialog>
+  <dialog id="reviewDialog" aria-labelledby="reviewTitle">
+    <div class="review-header"><div><p class="eyebrow">REVIEW YOUR APPLICATION</p><h2 id="reviewTitle">Application drafts</h2><p id="reviewJob" class="form-intro"></p></div><button id="reviewClose" type="button" aria-label="Close document review">×</button></div>
+    <div class="review-tabs"><button id="reviewResume" type="button" aria-pressed="true">Résumé</button><button id="reviewLetter" type="button" aria-pressed="false">Cover letter</button></div>
+    <p id="reviewStatus" role="status" aria-live="polite"></p>
+    <div class="review-layout"><section id="reviewEditor" aria-label="Document editor"></section><section class="review-preview"><p>LIVE HTML PREVIEW · PDFs are created only when you download.</p><iframe id="reviewPreview" title="Application document preview" sandbox=""></iframe></section></div>
+    <div class="review-footer"><span>ZIP includes job description JSON, résumé PDF, and cover-letter PDF.</span><button id="reviewSave" type="button">Save drafts</button><button id="reviewDownload" type="button" class="primary">Download application ZIP</button></div>
+  </dialog>
+  <script src="/application-review.js"></script>
   <script src="/jobs.js"></script>
 </body>
 </html>

@@ -4,8 +4,7 @@ Date: 2026-09-15. Implemented: tracker, posting capture and schema validation,
 subscription-backed generation, automatic résumé/cover-letter generation
 after posting JSON, PDF/source downloads, progress, cancellation, checkpointed
 retry, and preserved generation runs. A live WEC application exercised the full
-pipeline. Job-specific draft editing/preview and attaching an exact document
-revision to “Mark applied” remain future work. The design below records the
+pipeline. Job-specific draft editing and HTML preview are implemented. Generation stops at drafts; explicit download saves edits, renders PDFs, and returns one application ZIP. Attaching an exact document revision to “Mark applied” remains future work. The design below records the
 broader roadmap; current usage is documented in the README.
 
 ## Intended experience

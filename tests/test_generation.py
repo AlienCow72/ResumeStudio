@@ -67,9 +67,9 @@ class GenerationTests(unittest.TestCase):
         self.service.start(self.job['id'])
         state = self.finish()
         self.assertEqual(state['status'],'ready',state)
-        self.assertEqual(set(state['files']), {'job-description.json', 'resume.json', 'cover-letter.md', 'resume.pdf', 'cover-letter.pdf'})
+        self.assertEqual(set(state['files']), {'job-description.json', 'resume.json', 'cover-letter.md'})
         self.assertEqual(self.runner.call_count,2)
-        self.assertEqual(self.renderer.call_count,2)
+        self.renderer.assert_not_called()
         for name in state['files']:
             body,mime,filename = self.service.download(self.job['id'],state['runId'],name)
             self.assertTrue(body)
@@ -112,19 +112,6 @@ class GenerationTests(unittest.TestCase):
         folder=self.service.base(self.job['id'])/'runs'/second['runId']
         self.assertEqual((folder/'source.txt').read_text(),SOURCE)
 
-    def test_pdf_failure_retry_reuses_completed_ai_work(self):
-        self.renderer.side_effect = RuntimeError('Chrome unavailable')
-        initial = self.service.start(self.job['id'])
-        state = self.finish()
-        self.assertEqual(state['status'],'failed')
-        self.assertIn('resume.json',state['files'])
-        self.renderer.side_effect = None
-        self.service.start(self.job['id'])
-        state = self.finish()
-        self.assertEqual(state['status'],'ready')
-        self.assertEqual(state['runId'],initial['runId'])
-        self.assertEqual(self.runner.call_count,2)
-
     def test_document_failure_does_not_repeat_extraction(self):
         def fail_documents(prompt, keys, cancel):
             if 'documentJson' in keys:return self.respond(prompt,keys,cancel)
@@ -141,7 +128,7 @@ class GenerationTests(unittest.TestCase):
     def test_regeneration_retains_old_files_and_detects_changed_source(self):
         self.service.start(self.job['id'])
         old = self.finish()
-        old_pdf = self.service.download(self.job['id'],old['runId'],'resume.pdf')[0]
+        old_json = self.service.download(self.job['id'],old['runId'],'resume.json')[0]
         saved = self.jobs.read(self.job['id'])
         self.jobs.save({'url':'https://example.com/another-job'},saved['id'],saved['revision'])
         self.assertTrue(self.service.state(self.job['id'])['sourceChanged'])
@@ -149,7 +136,7 @@ class GenerationTests(unittest.TestCase):
         current = self.finish()
         self.assertNotEqual(old['runId'],current['runId'])
         self.assertEqual(current['previous']['runId'],old['runId'])
-        self.assertEqual(self.service.download(self.job['id'],old['runId'],'resume.pdf')[0],old_pdf)
+        self.assertEqual(self.service.download(self.job['id'],old['runId'],'resume.json')[0],old_json)
 
     def test_cancel_and_restart_recovery(self):
         began = threading.Event()
@@ -194,13 +181,13 @@ class GenerationTests(unittest.TestCase):
                 state=self.finish()
                 self.assertEqual(state['status'],'ready')
                 self.assertEqual(self.jobs.read(created['id'])['company'],'Hiring Company')
-                url=base+f'/api/jobs/{created["id"]}/files/{state["runId"]}/resume.pdf'
+                url=base+f'/api/jobs/{created["id"]}/files/{state["runId"]}/resume.json'
                 with urlopen(url) as response:
-                    self.assertEqual(response.headers['Content-Type'],'application/pdf')
-                    self.assertIn('resume.pdf',response.headers['Content-Disposition'])
-                    self.assertTrue(response.read().startswith(b'%PDF'))
+                    self.assertEqual(response.headers['Content-Type'],'application/json')
+                    self.assertIn('resume.json',response.headers['Content-Disposition'])
+                    self.assertEqual(json.load(response)['basics']['name'],'Test Person')
                 with self.assertRaises(HTTPError) as error:
-                    urlopen(url.replace('resume.pdf','master-snapshot.json'))
+                    urlopen(url.replace('resume.json','master-snapshot.json'))
                 self.assertEqual(error.exception.code,400)
             finally:http.shutdown();http.server_close()
 

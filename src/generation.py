@@ -17,20 +17,19 @@ from render import html_doc, pdf_from_html
 RESOURCES = Path(__file__).parent / 'generation_resources'
 ACTIVE = {'queued', 'extracting', 'writing', 'rendering', 'cancelling'}
 FILES = {'job-description.json': 'application/json', 'resume.json': 'application/json',
-         'cover-letter.md': 'text/markdown; charset=utf-8',
-         'resume.pdf': 'application/pdf', 'cover-letter.pdf': 'application/pdf'}
+         'cover-letter.md': 'text/markdown; charset=utf-8'}
 
 
 def encoded(value):
     return json.dumps(value, ensure_ascii=False, indent=2) + '\n'
 
 
-def validate_schema(value, filename):
+def validate_schema(value, filename, label='Generated document'):
     schema = json.loads((RESOURCES / filename).read_text())
     errors = list(Draft7Validator(schema, format_checker=FormatChecker()).iter_errors(value))
     if errors:
         error = errors[0]
-        raise ValueError(f'Generated document did not pass schema validation at {"/".join(map(str, error.path)) or "root"}. Retry generation.')
+        raise ValueError(f'{label} did not pass schema validation at {"/".join(map(str, error.path)) or "root"}. Check the document fields.')
     if not isinstance(value, dict):
         raise ValueError('Generated document must be a JSON object.')
 
@@ -110,6 +109,8 @@ class GenerationService:
             if state['status'] in ACTIVE and identifier not in self.workers:
                 state.update(status='interrupted', message='Generation was interrupted by a restart. Retry to continue.')
                 self.persist(identifier, state)
+            if state['status'] == 'ready':
+                state['message'] = 'Drafts ready. Review and edit before downloading.'
             if state.get('sourceUrl'):
                 state['sourceChanged'] = url_key(state['sourceUrl']) != url_key(self.jobs.read(identifier)['url'])
             state['files'] = [name for name in state.get('files', []) if name in FILES]
@@ -258,15 +259,7 @@ class GenerationService:
                 self.jobs.write(folder/'resume.json', documents['resume'])
                 self.write_text(folder/'cover-letter.md', documents['coverLetter'] + '\n')
                 state['reviewNotes'] = documents['reviewNotes']
-                for name, content in [('resume', html_doc(documents['resume'])),
-                                      ('cover-letter', letter_html(documents['coverLetter'], master, posting))]:
-                    checkpoint('rendering', 'Creating ' + name.replace('-', ' ') + ' PDF…')
-                    if not (folder / (name + '.pdf')).exists():
-                        pdf = self.renderer(content)
-                        temporary = folder / (name + '.pdf.tmp')
-                        temporary.write_bytes(pdf)
-                        temporary.replace(folder / (name + '.pdf'))
-                checkpoint('ready', 'Documents ready. Review before applying.')
+                checkpoint('ready', 'Drafts ready. Review and edit before downloading.')
         except GenerationCancelled:
             state.update(status='cancelled', message='Generation cancelled. Retry to continue from saved progress.')
         except PostingUnavailable as error:
