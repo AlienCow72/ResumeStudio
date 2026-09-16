@@ -30,6 +30,21 @@ body {
   box-shadow: 0 12px 38px rgba(19, 43, 58, 0.16);
 }
 
+/* Paint the sidebar independently of the amount of résumé content. */
+.page:not(.cover-letter) {
+  position: relative;
+  isolation: isolate;
+}
+
+.page:not(.cover-letter)::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 29%;
+  background: #f4f8f8;
+  z-index: -1;
+}
+
 header {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -229,6 +244,9 @@ li::marker {
 }
 
 @media (max-width: 650px) {
+  .page:not(.cover-letter)::before {
+    display: none;
+  }
   .page {
     margin: 0;
     box-shadow: none;
@@ -330,13 +348,10 @@ a {
     display: block;
     position: relative;
   }
-  .content::before {
-    content: "";
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: 29%;
-    background: #f4f8f8;
-    z-index: 0;
+  .page:not(.cover-letter)::before {
+    /* Fixed backgrounds repeat through the bottom of every PDF page. */
+    display: block;
+    position: fixed;
   }
   aside {
     float: left;
