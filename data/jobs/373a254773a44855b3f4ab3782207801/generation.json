@@ -1,0 +1,26 @@
+{
+  "runId": "36240eb09d0c447f88b76c83e9e2aa9b",
+  "createdAt": "2026-09-17T15:22:33.177573+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://openbrand.com/newsroom/blog/jobs/senior-devops-cloud-infrastructure-engineer",
+  "previous": null,
+  "masterHash": "db14e635bd52d5dea7c29b54246ec7ae21300ecf7142043925d643127de816d1",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-09-17T15:24:52.710763+00:00",
+  "reviewNotes": "Emphasized production migration to AWS, platform transition, performance improvements, automation, implementation support, and documentation. The master does not establish five years of dedicated DevOps or production infrastructure ownership, deep AWS service expertise, infrastructure as code, Kubernetes, advanced Linux administration, observability, on-call response, disaster recovery, cloud cost optimization, security controls, or acquisition-related infrastructure separation. Docker, GitLab CI/CD, and AI tools are listed skills without detailed operational examples. Education is a BBA rather than the specified BS; equivalent practical experience is an allowed alternative."
+}

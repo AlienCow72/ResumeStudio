@@ -1,0 +1,138 @@
+{
+  "resume": {
+    "basics": {
+      "name": "Kyle M. Anderson",
+      "email": "TheKyleAnderson72@gmail.com",
+      "phone": "(630) 995-1529",
+      "summary": "Technical professional with experience migrating production workloads to AWS, leading tax-integration platform development, and automating manual work. Combines software development and systems integration with implementation support, troubleshooting, project coordination, and technical documentation.",
+      "location": {
+        "region": "WI",
+        "countryCode": "US",
+        "city": "Menomonee Falls"
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "AlienCow72",
+          "url": "https://github.com/AlienCow72"
+        },
+        {
+          "network": "LinkedIn",
+          "username": "kyle-anderson-mke",
+          "url": "https://www.linkedin.com/in/kyle-anderson-mke/"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "DSTax Technologies",
+        "location": "Warrenville, IL",
+        "position": "Manager",
+        "startDate": "2020-05",
+        "summary": "Technical lead and lead developer for a tax-integration platform, with responsibilities spanning development, project coordination, client support, troubleshooting, and documentation.",
+        "highlights": [
+          "Migrated production workloads from DigitalOcean to AWS.",
+          "Led the transition from Version 1 to Version 2 of the tax-integration platform.",
+          "Optimized asynchronous operations to improve performance and throughput.",
+          "Developed integrations between financial platforms and tax providers, broadening platform and provider support.",
+          "Supported end-to-end integration implementations, including requirements gathering, setup, troubleshooting, and go-live support.",
+          "Managed internal development projects and client-coordinated work, communicating integration updates, reporting status, and responding to questions and requests.",
+          "Created and maintained client integration guides and knowledge-base articles."
+        ]
+      },
+      {
+        "name": "Colectivo Coffee Roasters",
+        "location": "Milwaukee, WI",
+        "position": "Warehouse Associate",
+        "startDate": "2019-06",
+        "endDate": "2020-05",
+        "highlights": [
+          "Partnered with the IT department to install and troubleshoot new point-of-sale nodes."
+        ]
+      },
+      {
+        "name": "Komatsu Mining Corp. (Joy Global)",
+        "location": "Milwaukee, WI",
+        "position": "Facilities Management Intern",
+        "startDate": "2016-05",
+        "endDate": "2018-12",
+        "highlights": [
+          "Initiated web automations that reduced manual database-maintenance work.",
+          "Evaluated, selected, and implemented a global mapping platform that provided facility information to employees and customers.",
+          "Managed SharePoint sites and data and designed data-input forms to improve accessibility, reduce errors, and promote cross-department information sharing."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Wisconsin–Milwaukee",
+        "area": "Information Technology Management",
+        "studyType": "BBA",
+        "startDate": "2017",
+        "endDate": "2020"
+      },
+      {
+        "institution": "Milwaukee School of Engineering",
+        "area": "Industrial Engineering and Supply Chain/Operations Management",
+        "studyType": "Studied",
+        "startDate": "2014",
+        "endDate": "2016"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Cloud, Infrastructure & DevOps",
+        "keywords": [
+          "AWS",
+          "Docker",
+          "GitLab CI/CD",
+          "NGINX",
+          "DigitalOcean"
+        ]
+      },
+      {
+        "name": "Software Development",
+        "keywords": [
+          "Python",
+          "Django",
+          "Flask",
+          "PHP",
+          "C#",
+          "C"
+        ]
+      },
+      {
+        "name": "Source Control & Collaboration",
+        "keywords": [
+          "Git",
+          "GitLab",
+          "SharePoint",
+          "Microsoft 365 Enterprise"
+        ]
+      },
+      {
+        "name": "Databases",
+        "keywords": [
+          "PostgreSQL",
+          "Microsoft SQL Server",
+          "SQLite"
+        ]
+      },
+      {
+        "name": "Integrations & APIs",
+        "keywords": [
+          "REST APIs"
+        ]
+      },
+      {
+        "name": "AI",
+        "keywords": [
+          "OpenAI / Codex",
+          "Anthropic / Claude Code"
+        ]
+      }
+    ]
+  },
+  "coverLetter": "Dear Hiring Team,\n\nI am applying for the Senior DevOps / Cloud Infrastructure Engineer role at OpenBrand. My background combines software development, systems integration, production workload migration, and implementation support. At DSTax Technologies, I serve as a technical lead and lead developer for a tax-integration platform, with responsibilities extending to project coordination, troubleshooting, and documentation. OpenBrand’s emphasis on migrating production systems and improving the infrastructure behind its data platform offers a clear connection to that work, particularly where technical changes require coordination with the people who depend on the platform.\n\nTwo examples illustrate the experience I would bring. At DSTax Technologies, I migrated production workloads from DigitalOcean to AWS and led the transition from Version 1 to Version 2 of the tax-integration platform. My work also included optimizing asynchronous operations to improve performance and throughput, supporting implementations from requirements gathering through go-live, and creating client integration guides and knowledge-base articles. These responsibilities connected platform development with implementation needs and ongoing troubleshooting. Earlier, at Komatsu Mining Corp. (Joy Global), I initiated web automations that reduced manual database-maintenance work and evaluated, selected, and implemented a global mapping platform for employees and customers. I also managed SharePoint sites and data and designed input forms to reduce errors and improve information sharing across departments. That work required translating operational needs into practical systems and making information more accessible to their users.\n\nI would welcome the opportunity to contribute to OpenBrand’s infrastructure consolidation and subsequent platform improvements. The role’s combination of migration, automation, documentation, and collaboration offers a way to build on my experience while contributing to the operation of a growing data business. Thank you for considering my application; I would appreciate the opportunity to discuss how my background aligns with your team’s priorities.\nSincerely,\nKyle M. Anderson",
+  "reviewNotes": "Emphasized production migration to AWS, platform transition, performance improvements, automation, implementation support, and documentation. The master does not establish five years of dedicated DevOps or production infrastructure ownership, deep AWS service expertise, infrastructure as code, Kubernetes, advanced Linux administration, observability, on-call response, disaster recovery, cloud cost optimization, security controls, or acquisition-related infrastructure separation. Docker, GitLab CI/CD, and AI tools are listed skills without detailed operational examples. Education is a BBA rather than the specified BS; equivalent practical experience is an allowed alternative."
+}

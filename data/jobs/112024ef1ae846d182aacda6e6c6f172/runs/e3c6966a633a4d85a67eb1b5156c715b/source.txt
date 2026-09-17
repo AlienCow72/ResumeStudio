@@ -1,0 +1,745 @@
+Full Stack Developer - OpenBrand
+
+Contact
+
+Client Log in
+
+Solutions
+
+Market Measurement ➜
+
+Market Share & Consumer Insights Data
+
+Competitive Intelligence ➜
+
+Pricing, Promotions, Assortment
+
+& Availability Insights
+
+Economic Solutions ➜
+
+Retail Sales, Pricing & Shipment
+
+Forecasting and Demand Intelligence
+
+Market Intelligence Portal ➜
+
+The all-in-one dashboard that delivers market understanding without disparate sources
+
+Pro Insights ➜
+
+Uncover who your actual Pros are, the customers they serve, where they buy, and which segments can drive your growth.
+
+Use Cases
+
+For Retailers ➜
+
+Turn real-time pricing, demand, and competitive insights into better assortment, inventory, and margin decisions across your business.
+
+Learn more
+
+See our retailer solutions »
+
+Retail Pricing Intelligence
+
+Leakage Analysis
+
+Line Review Data
+
+For Brands ➜
+
+Gain full market visibility into pricing, demand, and consumer behavior to identify opportunities and drive stronger, more profitable growth.
+
+Learn more
+
+See our manufacturer solutions »
+
+Line Review Data
+
+Brand Leakage Analysis
+
+Seasonal Promotions & Pricing
+
+Stronger Line Reviews ➜
+
+Improve line review outcomes with market data-backed recommendations
+
+Industries
+
+Consumer Electronics
+
+Hand Tools
+
+Health, Beauty & Wellness
+
+Kitchen & Bath
+
+Lawn & Garden
+
+Major Appliances
+
+Mattresses & Furniture
+
+Outdoor Cooking
+
+Outdoor Power Equipment
+
+Paint & Stain
+
+Power Tools
+
+Print
+
+Small Appliances
+
+Tires
+
+Why OpenBrand
+
+How Our Data Stands Out
+
+OpenBrand combines six primary data sources – including four proprietary streams – to deliver real-time, full-funnel visibility into the durables market. Our purpose-built models capture pricing, demand, and consumer behavior shifts that traditional retail data misses.
+
+Learn more
+
+Why OpenBrand ➜
+
+Get a Free Infographic ➜
+
+OB Leadership ➜
+
+About Us ➜
+
+Get in Touch
+Contact us »
+
+Data & Insights
+
+MarketSignal Dashboards ➜
+
+Category-level quarterly data dashboards, no paid subscription.
+
+Blogs & Research
+
+•All Content
+
+•Use Cases
+
+•Analyst Reports
+
+•Home Appliances
+
+•OPE & Parts
+
+•Competitive Intelligence
+
+•State of Durables
+
+•Year In Review Insights
+
+•OB Data & Solutions
+
+OpenBrand CPI
+See the latest shift →
+
+Current change
+
++0.83%
+
+Subscribe to Durables Brief
+Monthly insights, right to your inbox »
+
+State of Durables
+Watch now »
+
+Schedule Demo
+
+Search
+
+Careers
+
+Full Stack Developer
+
+September 1, 2026
+
+Apply with your resume below.
+
+Location: Chicago, IL area — Hybrid / regular in-person collaboration preferred
+
+Company Overview
+
+OpenBrand is building the technology and data foundation that helps brands understand, measure, and act on competitive intelligence. As we expand our engineering organization, we are accelerating the integration of Comperemedia and delivering a broader modernization of our platform and cloud infrastructure.
+
+We are looking for two high-ownership Full Stack Developers to join this delivery-focused effort. These roles will work directly on business-critical integration surfaces, modern application experiences, cloud ingestion pipelines, and AWS migration initiatives.
+
+Role Overview
+
+As a Full Stack Developer, you will own end-to-end delivery across key elements of the Comperemedia integration and platform buildout, including Portal/Auth/AppShell, Survey Manager 2.0, and MDP/Everest cloud-ingestion pipelines.
+
+This is a hands-on, execution-oriented role for engineers who use agentic coding tools as a core part of their development workflow—not simply as an occasional assistant. You will use AI-enabled development tools to plan, scaffold, test, migrate, review, and ship software, while retaining full accountability for architecture, security, reliability, and production-quality outcomes.
+
+You will work against a real, time-bound delivery plan, including an October vendor go-live. This is not exploratory R&D: it is an opportunity to contribute directly to a high-priority integration and modernization program.
+
+Key Responsibilities
+
+Full stack product delivery
+
+Own full stack delivery across Comperemedia integration surfaces, including Portal/Auth/AppShell, the Survey Manager 2.0 rebuild, and MDP/Everest cloud-ingestion pipelines.
+
+Build, test, and ship production software across frontend React/TypeScript applications and backend Node.js and Python services.
+
+Take features from planning through deployment, including frontend experience, APIs, data-layer design, testing, observability, and release readiness.
+
+Make sound technical and architectural decisions that balance speed, maintainability, security, and operational reliability.
+
+AI-enabled engineering workflow
+
+Use agentic coding tools as a first-class part of the engineering workflow, including planning, code scaffolding, test generation, migration scripting, documentation, and code review.
+
+Operate multiple AI-agent sessions and use high-context, iterative workflows to accelerate delivery while maintaining engineering judgment and code quality.
+
+Remain accountable for the correctness, security, architecture, and production readiness of all delivered work, regardless of how it is generated.
+
+Report weekly on delivery progress and the relationship between AI-tool spend and delivered output, helping the team continuously tune its budget-to-throughput tradeoff.
+
+Cloud modernization and integration
+
+Support OpenBrand’s AWS platform migration, including efforts to retire an approximately 150-VM legacy footprint.
+
+Help migrate Elasticsearch workloads to RDS and Redshift and convert Kinesis pipelines to MWAA-based orchestration.
+
+Contribute to modernizing legacy services, data flows, and operational processes while minimizing risk to active product and customer workflows.
+
+Partner closely with the DevOps/platform hire and existing COMET, CAT, and DIE teams to coordinate dependencies and delivery.
+
+Collaboration and execution
+
+Work directly with the CTO during the Comperemedia integration and ramp quickly onto the critical delivery path.
+
+Clearly document ownership, dependencies, decisions, and delivery lanes across the workstream.
+
+Collaborate regularly in person with teammates and stakeholders in the Chicago area.
+
+Deliver consistently in a deadline-driven environment with clear business outcomes and integration milestones.
+
+Qualifications
+
+Education & Experience
+
+5+ years of full stack software engineering experience.
+
+Demonstrated experience owning features end to end, from frontend and API development through data-layer implementation and deployment.
+
+A strong track record delivering large-scale cloud integrations, supported by verifiable professional references.
+
+Experience working on complex modernization, migration, or integration initiatives in production environments.
+
+Technical Skills
+
+Strong hands-on experience with React and TypeScript for frontend application development.
+
+Strong backend development experience with Node.js and/or Python.
+
+Deep working knowledge of AWS, including EC2, RDS, Redshift, Kinesis, MWAA, and IAM.
+
+Experience designing, building, testing, and operating production APIs, services, data pipelines, and application infrastructure.
+
+Daily, substantial experience using agentic or AI-assisted coding tools—such as Claude Code, Cursor, Devin, Windsurf, GitHub Copilot, Copilot Workspace, or similar—to deliver high-leverage engineering output.
+
+Comfort using meaningful AI-tooling and compute capacity during active development sprints and explaining how that investment translates into delivery throughput.
+
+Preferred Experience
+
+Experience with legacy-system migration and modernization, including VM consolidation, Elasticsearch migrations, ETL modernization, or workflow-orchestration conversions.
+
+Experience moving data workloads into RDS, Redshift, or comparable managed data platforms.
+
+Familiarity with Model Context Protocol (MCP), custom AI-agent tools, or connectors.
+
+Experience working with cross-functional engineering, platform, data, and product teams on time-sensitive delivery plans.
+
+Chicago-area residency or the ability to participate regularly in in-person collaboration.
+
+What Success Looks Like
+
+You quickly become a reliable owner of a defined delivery lane within the Comperemedia integration.
+
+You help deliver Portal/Auth/AppShell, Survey Manager 2.0, and cloud-ingestion capabilities on schedule and at production quality.
+
+You use AI-enabled engineering workflows to increase throughput without compromising technical judgment, security, or reliability.
+
+You contribute meaningfully to AWS modernization efforts and help reduce legacy-platform complexity.
+
+You communicate progress, risks, ownership, and dependencies clearly and consistently.
+
+Engagement Details
+
+Immediate ramp onto the Comperemedia integration critical path.
+
+Direct collaboration with OpenBrand’s CTO throughout the integration.
+
+Delivery-paced work tied to high-priority platform and vendor-go-live milestones.
+
+Compensation & Benefits
+
+This full-time, exempt position has an anticipated annual base salary range of $140,000–$160,000, depending on relevant experience, skills, qualifications, and location. The role is also eligible for a performance-based bonus.
+
+Medical, dental, vision, and life insurance
+
+Flexible Spending Account (FSA) and Health Reimbursement Arrangement (HRA)
+
+401(k) retirement plan with company matching
+
+Flexible time off
+
+Paid parental leave
+
+Prev
+
+Next
+
+© OpenBrand | 701 Island Ave. | Suite 300 | San Diego, CA 92101
+
+Privacy Policy | Terms of Service | Cookie Policy
+
+Know Why. Win Share.™
+
+Brands we own
+
+Solutions
+
+Market Intelligence Portal
+
+By Product
+
+Market Measurement
+
+Competitive Intelligence
+
+Consumer Price Index
+
+Economic Forecasting
+
+Pro Insights
+
+By Use Case
+
+Line Review Data
+
+Retailer Solutions
+
+Brand Solutions
+
+Retail Leakage
+
+Retail Pricing Intelligence
+
+Industry Coverage
+
+Consumer Electronics
+
+Major Appliances
+
+Outdoor Cooking
+
+Outdoor Power Equipment
+
+Power Tools
+
+Small Appliances
+
+Health, Beauty & Wellness
+
+Information Technology
+
+Public Quarterly Dashboards
+
+CE: Computing
+
+Major Appliances
+
+Outdoor Power Equipment
+
+More
+
+About
+
+Why OpenBrand
+
+Blog
+
+Careers
+
+Contact
+
+Login
+
+The Durables Brief Newsletter
+
+Get an exclusive monthly breakdown of the trends shaping durables
+
+Subscribe Now
+
+Privacy Preference Center
+
+Privacy Preferences
+
+Get the August 2026 OpenBrand CPI report by email
+
+×
+
+Book a Pro Insights discovery call with the OB team
+
+×
+
+Get the July 2026 OpenBrand CPI report by email
+
+×
+
+Get the June 2026 OpenBrand CPI report by email
+
+×
+
+Get the latest Small Appliance market infographic
+
+×
+
+Get the latest Power Tools market infographic
+
+×
+
+Select an industry to unlock a free market infographic
+
+×
+
+Get the May 2026 OpenBrand CPI report by email
+
+×
+
+Request your custom Line Review Readiness Report
+
+×
+
+Download the Line Review Readiness Report to see the data OpenBrand delivers for line reviews
+
+×
+
+Get the latest Outdoor Cooking market infographic
+
+×
+
+Get the April 2026 OpenBrand CPI report by email
+
+×
+
+See how OpenBrand fits your pricing strategy
+
+×
+
+See where shoppers are going – demo OpenBrand's retail leakage data
+
+×
+
+Get the March 2026 OpenBrand CPI report by email
+
+×
+
+Unlock our leakage report to view the lost shopper analysis data available at OpenBrand
+
+×
+
+Submit the form to unlock the retailer leakage report
+
+×
+
+Submit the form to unlock the brand leakage report
+
+×
+
+Get the February 2026 OpenBrand CPI report by email
+
+×
+
+Get the January 2026 OpenBrand CPI report by email
+
+×
+
+Connect with our team to see the latest data for your selected filter
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule a personalized demo of our full data!
+
+×
+
+Connect with our team to see the latest data for your selected filter
+
+Submit now to schedule a personalized demo!
+
+×
+
+See more industry winners – and 2026 insights in a personalized data demo
+
+×
+
+Submit the form below to have the 2025 Notebooks report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Refrigerators report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Printer Hardware report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Headphones report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 MFP Copiers report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Tablets & Detachables report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Ink Supplies report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Desktops report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Ranges report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Laundry report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Floor Care report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 TV report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 smartphone report emailed directly to you!
+
+×
+
+Get the December 2025 OpenBrand CPI report by email
+
+×
+
+Contact us to unlock full access to our Computing market data
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule time a personalized demo of our full data!
+
+×
+
+Get the November 2025 OpenBrand CPI report by email
+
+×
+
+Contact us to unlock full access to the latest Power Tools market data!
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule a personalized demo of our full data!
+
+×
+
+Get the October 2025 OpenBrand CPI report by email
+
+×
+
+Get the September 2025 OpenBrand CPI report by email
+
+×
+
+Contact us to unlock full access to the latest OPE market data!
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule a personalized demo of our full data!
+
+×
+
+Gain access to more shopper and real-time pricing and promotions insights
+
+Submitting this form will redirect you to a scheduling page.
+
+×
+
+Get the August 2025 OpenBrand CPI report by email
+
+×
+
+Submit a question to our team – we look forward to hearing from you!
+
+×
+
+Get the July 2025 OpenBrand CPI report by email
+
+×
+
+Contact us to unlock full access to the latest major appliances market data!
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule a personalized demo of our full data!
+
+×
+
+Discover the appliance data available at OpenBrand in a free market infographic
+
+×
+
+Get the June 2025 OpenBrand CPI report by email
+
+×
+
+Send all 3 earnings call reports to your inbox now!
+
+×
+
+Get the May 2025 OpenBrand CPI report by email
+
+×
+
+Discover the OPE data available at OpenBrand in a free market infographic
+
+×
+
+See how our data is built for helping you win the market. Pressure free.
+
+×
+
+Connect with our Chief Economist on the state of your category, forecast previews, and more
+
+×
+
+Get the March 2025 OpenBrand CPI report by email
+
+×
+
+Get the April 2025 OpenBrand CPI report by email
+
+×
+
+Request a personalized demo of the OpenBrand platform
+
+×
+
+Get the full OpenBrand CPI for February 2025 by email
+
+×
+
+Use the form below to submit a request directly to the OpenBrand analyst team!
+
+×
+
+Apply to be part of OpenBrand's exclusive Insights Accelerator Program
+
+×
+
+Subscribe to upcoming OpenBrand product news and insights
+
+×
+
+Contact us for a demo of our full CPI data offering
+
+Filling out the form will take you to a scheduling page.
+
+×
+
+Submit below to have the OpenBrand CPI for January 2025 emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 headphones market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 notebook market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 MFP copier report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 refrigerators report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 floor care market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 tablet market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 printer supplies report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 desktop market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 ranges report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 laundry report emailed directly to you!
+
+×
+
+Submit the form below to have the full 2025 Year in Review report package emailed to you!
+
+×
+
+Submit the form below to have the 2024 television report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 smartphone report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 printer hardware report emailed directly to you!
+
+×
+
+Select an industry to unlock a free market report
+
+×
+
+Select an industry below to download a competitive market intelligence report
+
+×
+
+Download a free report to discover the market data available at OpenBrand
+
+×
+
+See what OpenBrand delivers: download a health, beauty & wellness insights report
+
+×
+
+Discover the CE intelligence available at OpenBrand in a free market infographic
+
+×
+
+Select an industry below to download a sample analyst report
+
+×
+
+Select an industry below to download a market measurement infographic
+
+×
+
+Select an industry below to download a market measurement infographic
+
+×

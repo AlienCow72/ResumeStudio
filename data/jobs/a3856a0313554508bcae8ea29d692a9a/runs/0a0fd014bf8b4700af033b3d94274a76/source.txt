@@ -1,0 +1,739 @@
+Data Scientist - OpenBrand
+
+Contact
+
+Client Log in
+
+Solutions
+
+Market Measurement ➜
+
+Market Share & Consumer Insights Data
+
+Competitive Intelligence ➜
+
+Pricing, Promotions, Assortment
+
+& Availability Insights
+
+Economic Solutions ➜
+
+Retail Sales, Pricing & Shipment
+
+Forecasting and Demand Intelligence
+
+Market Intelligence Portal ➜
+
+The all-in-one dashboard that delivers market understanding without disparate sources
+
+Pro Insights ➜
+
+Uncover who your actual Pros are, the customers they serve, where they buy, and which segments can drive your growth.
+
+Use Cases
+
+For Retailers ➜
+
+Turn real-time pricing, demand, and competitive insights into better assortment, inventory, and margin decisions across your business.
+
+Learn more
+
+See our retailer solutions »
+
+Retail Pricing Intelligence
+
+Leakage Analysis
+
+Line Review Data
+
+For Brands ➜
+
+Gain full market visibility into pricing, demand, and consumer behavior to identify opportunities and drive stronger, more profitable growth.
+
+Learn more
+
+See our manufacturer solutions »
+
+Line Review Data
+
+Brand Leakage Analysis
+
+Seasonal Promotions & Pricing
+
+Stronger Line Reviews ➜
+
+Improve line review outcomes with market data-backed recommendations
+
+Industries
+
+Consumer Electronics
+
+Hand Tools
+
+Health, Beauty & Wellness
+
+Kitchen & Bath
+
+Lawn & Garden
+
+Major Appliances
+
+Mattresses & Furniture
+
+Outdoor Cooking
+
+Outdoor Power Equipment
+
+Paint & Stain
+
+Power Tools
+
+Print
+
+Small Appliances
+
+Tires
+
+Why OpenBrand
+
+How Our Data Stands Out
+
+OpenBrand combines six primary data sources – including four proprietary streams – to deliver real-time, full-funnel visibility into the durables market. Our purpose-built models capture pricing, demand, and consumer behavior shifts that traditional retail data misses.
+
+Learn more
+
+Why OpenBrand ➜
+
+Get a Free Infographic ➜
+
+OB Leadership ➜
+
+About Us ➜
+
+Get in Touch
+Contact us »
+
+Data & Insights
+
+MarketSignal Dashboards ➜
+
+Category-level quarterly data dashboards, no paid subscription.
+
+Blogs & Research
+
+•All Content
+
+•Use Cases
+
+•Analyst Reports
+
+•Home Appliances
+
+•OPE & Parts
+
+•Competitive Intelligence
+
+•State of Durables
+
+•Year In Review Insights
+
+•OB Data & Solutions
+
+OpenBrand CPI
+See the latest shift →
+
+Current change
+
++0.83%
+
+Subscribe to Durables Brief
+Monthly insights, right to your inbox »
+
+State of Durables
+Watch now »
+
+Schedule Demo
+
+Search
+
+Careers
+
+Data Scientist
+
+July 9, 2026
+
+Apply with your resume below.
+
+Location: Chicago, IL (Hybrid) Preferred and Remote
+
+Company Overview
+
+Be a part of a fast-growing, winning team helping Fortune 1000 consumer brands and retailers leverage AI-driven data insights.
+
+OpenBrand is one of the world’s most respected market intelligence companies. OpenBrand’s data and market research products give manufacturers, retailers, and industry players a competitive edge across a wide range of industries (including IT, consumer electronics, home appliances, health, wellness, beauty, small appliances, and other consumer durables) and help marketing, product, sales, and pricing teams make more informed decisions in a rapidly changing market environment.
+
+Role Overview
+
+This role is a hands-on Data Scientist focused on building, scaling, and maintaining production-grade market insight, market share, media spend estimation, and channel sizing products powered by alternative datasets such as email receipts, clickstream, credit card transaction data, ad/media signals, and external benchmarks.
+
+You will work at the intersection of modeling, data engineering, and operational excellence, with a strong emphasis on:
+
+Designing and maintaining efficient, reliable data pipelines
+
+Implementing robust QA and monitoring processes
+
+Ensuring consistent, explainable, and client-ready outputs
+
+While strong modeling and statistical skills are essential, this role is less R&D-focused and more execution- and delivery-oriented, with ownership over how models and methodologies perform in production over time.
+
+You will collaborate closely with Engineering, Product, and Operations teams to operationalize methodologies, improve data quality, and support ongoing product evolution. This role does not focus on people management, but requires strong judgment, independence, and end-to-end ownership.
+
+Key Responsibilities
+
+Data Products & Modeling
+
+Design, build, and maintain models and analyses that transform alternative data sources (e.g., receipts, clickstream, credit card data) into market share, sales, and competitive insight metrics
+
+Build and validate media spend estimation methodologies that combine observed signals, coverage assumptions, calibration factors, external benchmarks, and uncertainty ranges
+
+Develop channel sizing models that estimate market, brand, retailer, category, and media-channel opportunity from incomplete or biased source data
+
+Translate noisy source signals, such as ad occurrences, receipts, transaction records, clickstream events, panel data, and vendor feeds, into explainable spend, share, and channel-size outputs
+
+Develop and maintain projection, normalization, and estimation methodologies suitable for production use
+
+Combine overlapping and complementary data sources into coherent, scalable estimation frameworks
+
+Develop new analyses and support ongoing model iteration with a strong focus on stability, explainability, and consistency
+
+Data Pipelines & Quality
+
+Partner with Engineering to design and maintain efficient, scalable data pipelines from raw ingestion through client-facing outputs
+
+Define and implement data quality checks, validation rules, and monitoring across the pipeline
+
+Investigate and resolve data anomalies, breaks, or regressions in collaboration with Ops and Engineering
+
+Own the scientific and methodological integrity of production outputs, including documentation and change management
+
+Operational Excellence & Cross-Functional Collaboration
+
+Work closely with Operations teams to ensure smooth ongoing production and delivery of insights
+
+Support Product teams with methodological input for roadmap decisions, client questions, and product enhancements
+
+Perform ad-hoc and exploratory analyses to support client inquiries, data investigations, and internal decision-making
+
+Help establish best practices for reproducibility, QA, and operational handoff of data science work
+
+Qualifications
+
+Education & Experience
+
+5+ years of experience in a Data Science or related analytical role, with significant hands-on responsibility for production data products, analytical models, or decision-support insights
+
+BS or MS degree in a highly analytical field (e.g., Mathematics, Statistics, Physics, Computer Science, Engineering)
+
+Technical Skills
+
+Strong statistical, quantitative, and analytical skills, with experience building and maintaining models in production
+
+Experience with projection, calibration, sampling-bias correction, benchmark reconciliation, and uncertainty quantification for estimation products
+
+Advanced proficiency in Python (pandas, NumPy, scikit-learn or similar)
+
+Strong SQL skills and experience working with large-scale analytical datasets
+
+Experience using Large Language Models (LLMs) (e.g., GPT-based or similar) to improve productivity and efficiency in data science workflows, including tasks such as data exploration, code development, documentation, QA investigation, and analysis support.
+
+Experience designing workflows that are robust, testable, and maintainable over time
+
+Comfort working across the full lifecycle: raw data → modeling → QA → delivery
+
+Preferred Experience
+
+Experience working with alternative datasets, including:
+
+Email or digital receipt data
+
+Clickstream, behavioral, or web-scraped data
+
+Credit card or transaction-level data
+
+Experience building or maintaining Market Share, Market Insights, or Sales Measurement products
+
+Experience with media spend estimation, channel sizing, market sizing, media measurement, or ad intelligence products, including familiarity with CPM, rate cards, campaign measurement, and share-of-voice analysis
+
+Experience correcting for panel coverage, sampling bias, sparse observations, missing channels, and external benchmark calibration
+
+Domain experience in Consumer Durables, Retail Financial Services and/or CPG
+
+Experience collaborating closely with Engineering and Ops teams on production pipelines
+
+Familiarity with cloud-based data platforms and distributed processing (e.g., Snowflake, Spark, AWS)
+
+Pay & Benefits Summary
+
+Medical, Dental, Vision, and Life Insurance
+
+Flexible Spending Account (FSA) and Health Reimbursement Arrangement (HRA)
+
+401(k) Retirement Plan with Company Matching
+
+Flexible Time Off
+
+Paid Parental Leave
+
+Base salary range: $130,000-$150,000 annually
+
+This role is also eligible for an annual discretionary performance bonus, subject to the terms of the applicable bonus plan
+
+Prev
+
+Next
+
+© OpenBrand | 701 Island Ave. | Suite 300 | San Diego, CA 92101
+
+Privacy Policy | Terms of Service | Cookie Policy
+
+Know Why. Win Share.™
+
+Brands we own
+
+Solutions
+
+Market Intelligence Portal
+
+By Product
+
+Market Measurement
+
+Competitive Intelligence
+
+Consumer Price Index
+
+Economic Forecasting
+
+Pro Insights
+
+By Use Case
+
+Line Review Data
+
+Retailer Solutions
+
+Brand Solutions
+
+Retail Leakage
+
+Retail Pricing Intelligence
+
+Industry Coverage
+
+Consumer Electronics
+
+Major Appliances
+
+Outdoor Cooking
+
+Outdoor Power Equipment
+
+Power Tools
+
+Small Appliances
+
+Health, Beauty & Wellness
+
+Information Technology
+
+Public Quarterly Dashboards
+
+CE: Computing
+
+Major Appliances
+
+Outdoor Power Equipment
+
+More
+
+About
+
+Why OpenBrand
+
+Blog
+
+Careers
+
+Contact
+
+Login
+
+The Durables Brief Newsletter
+
+Get an exclusive monthly breakdown of the trends shaping durables
+
+Subscribe Now
+
+Privacy Preference Center
+
+Privacy Preferences
+
+Get the August 2026 OpenBrand CPI report by email
+
+×
+
+Book a Pro Insights discovery call with the OB team
+
+×
+
+Get the July 2026 OpenBrand CPI report by email
+
+×
+
+Get the June 2026 OpenBrand CPI report by email
+
+×
+
+Get the latest Small Appliance market infographic
+
+×
+
+Get the latest Power Tools market infographic
+
+×
+
+Select an industry to unlock a free market infographic
+
+×
+
+Get the May 2026 OpenBrand CPI report by email
+
+×
+
+Request your custom Line Review Readiness Report
+
+×
+
+Download the Line Review Readiness Report to see the data OpenBrand delivers for line reviews
+
+×
+
+Get the latest Outdoor Cooking market infographic
+
+×
+
+Get the April 2026 OpenBrand CPI report by email
+
+×
+
+See how OpenBrand fits your pricing strategy
+
+×
+
+See where shoppers are going – demo OpenBrand's retail leakage data
+
+×
+
+Get the March 2026 OpenBrand CPI report by email
+
+×
+
+Unlock our leakage report to view the lost shopper analysis data available at OpenBrand
+
+×
+
+Submit the form to unlock the retailer leakage report
+
+×
+
+Submit the form to unlock the brand leakage report
+
+×
+
+Get the February 2026 OpenBrand CPI report by email
+
+×
+
+Get the January 2026 OpenBrand CPI report by email
+
+×
+
+Connect with our team to see the latest data for your selected filter
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule a personalized demo of our full data!
+
+×
+
+Connect with our team to see the latest data for your selected filter
+
+Submit now to schedule a personalized demo!
+
+×
+
+See more industry winners – and 2026 insights in a personalized data demo
+
+×
+
+Submit the form below to have the 2025 Notebooks report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Refrigerators report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Printer Hardware report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Headphones report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 MFP Copiers report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Tablets & Detachables report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Ink Supplies report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Desktops report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Ranges report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Laundry report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Floor Care report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 TV report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 smartphone report emailed directly to you!
+
+×
+
+Get the December 2025 OpenBrand CPI report by email
+
+×
+
+Contact us to unlock full access to our Computing market data
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule time a personalized demo of our full data!
+
+×
+
+Get the November 2025 OpenBrand CPI report by email
+
+×
+
+Contact us to unlock full access to the latest Power Tools market data!
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule a personalized demo of our full data!
+
+×
+
+Get the October 2025 OpenBrand CPI report by email
+
+×
+
+Get the September 2025 OpenBrand CPI report by email
+
+×
+
+Contact us to unlock full access to the latest OPE market data!
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule a personalized demo of our full data!
+
+×
+
+Gain access to more shopper and real-time pricing and promotions insights
+
+Submitting this form will redirect you to a scheduling page.
+
+×
+
+Get the August 2025 OpenBrand CPI report by email
+
+×
+
+Submit a question to our team – we look forward to hearing from you!
+
+×
+
+Get the July 2025 OpenBrand CPI report by email
+
+×
+
+Contact us to unlock full access to the latest major appliances market data!
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule a personalized demo of our full data!
+
+×
+
+Discover the appliance data available at OpenBrand in a free market infographic
+
+×
+
+Get the June 2025 OpenBrand CPI report by email
+
+×
+
+Send all 3 earnings call reports to your inbox now!
+
+×
+
+Get the May 2025 OpenBrand CPI report by email
+
+×
+
+Discover the OPE data available at OpenBrand in a free market infographic
+
+×
+
+See how our data is built for helping you win the market. Pressure free.
+
+×
+
+Connect with our Chief Economist on the state of your category, forecast previews, and more
+
+×
+
+Get the March 2025 OpenBrand CPI report by email
+
+×
+
+Get the April 2025 OpenBrand CPI report by email
+
+×
+
+Request a personalized demo of the OpenBrand platform
+
+×
+
+Get the full OpenBrand CPI for February 2025 by email
+
+×
+
+Use the form below to submit a request directly to the OpenBrand analyst team!
+
+×
+
+Apply to be part of OpenBrand's exclusive Insights Accelerator Program
+
+×
+
+Subscribe to upcoming OpenBrand product news and insights
+
+×
+
+Contact us for a demo of our full CPI data offering
+
+Filling out the form will take you to a scheduling page.
+
+×
+
+Submit below to have the OpenBrand CPI for January 2025 emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 headphones market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 notebook market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 MFP copier report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 refrigerators report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 floor care market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 tablet market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 printer supplies report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 desktop market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 ranges report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 laundry report emailed directly to you!
+
+×
+
+Submit the form below to have the full 2025 Year in Review report package emailed to you!
+
+×
+
+Submit the form below to have the 2024 television report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 smartphone report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 printer hardware report emailed directly to you!
+
+×
+
+Select an industry to unlock a free market report
+
+×
+
+Select an industry below to download a competitive market intelligence report
+
+×
+
+Download a free report to discover the market data available at OpenBrand
+
+×
+
+See what OpenBrand delivers: download a health, beauty & wellness insights report
+
+×
+
+Discover the CE intelligence available at OpenBrand in a free market infographic
+
+×
+
+Select an industry below to download a sample analyst report
+
+×
+
+Select an industry below to download a market measurement infographic
+
+×
+
+Select an industry below to download a market measurement infographic
+
+×

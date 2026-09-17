@@ -1,0 +1,26 @@
+{
+  "runId": "0a0fd014bf8b4700af033b3d94274a76",
+  "createdAt": "2026-09-17T15:24:43.740724+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://openbrand.com/newsroom/blog/jobs/data-scientist-2",
+  "previous": null,
+  "masterHash": "db14e635bd52d5dea7c29b54246ec7ae21300ecf7142043925d643127de816d1",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-09-17T15:26:42.882374+00:00",
+  "reviewNotes": "Emphasizes production platform ownership, integration delivery, AWS migration, performance improvements, documentation, and operational database analysis. The master does not establish five years in data science or analytical modeling, production statistical models, estimation and calibration methods, advanced Python analytics libraries, large-scale analytical SQL, alternative-data measurement, or LLM use in data science workflows. The BBA differs from the requested analytical BS/MS background."
+}

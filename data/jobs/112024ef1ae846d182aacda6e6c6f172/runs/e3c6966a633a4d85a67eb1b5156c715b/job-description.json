@@ -1,0 +1,72 @@
+{
+  "title": "Full Stack Developer",
+  "company": "OpenBrand",
+  "type": "Full-time, exempt",
+  "date": "2026-09-01",
+  "description": "OpenBrand is building the technology and data foundation that helps brands understand, measure, and act on competitive intelligence. It is seeking two high-ownership Full Stack Developers to accelerate the Comperemedia integration and modernization of its platform and cloud infrastructure. This hands-on, execution-oriented role owns end-to-end delivery across Portal/Auth/AppShell, Survey Manager 2.0, and MDP/Everest cloud-ingestion pipelines. Engineers use agentic coding tools as a core development workflow to plan, scaffold, test, migrate, review, and ship software, retaining full accountability for architecture, security, reliability, and production-quality outcomes. Work follows a real, time-bound delivery plan, including an October vendor go-live; it is not exploratory R&D. Location: Chicago, IL area — Hybrid / regular in-person collaboration preferred.",
+  "location": {
+    "city": "Chicago",
+    "region": "IL"
+  },
+  "remote": "Hybrid",
+  "salary": "Anticipated annual base salary range of $140,000–$160,000, depending on relevant experience, skills, qualifications, and location. Eligible for a performance-based bonus.",
+  "experience": "5+ years of full stack software engineering experience.",
+  "responsibilities": [
+    "Own full stack delivery across Comperemedia integration surfaces, including Portal/Auth/AppShell, the Survey Manager 2.0 rebuild, and MDP/Everest cloud-ingestion pipelines.",
+    "Build, test, and ship production software across frontend React/TypeScript applications and backend Node.js and Python services.",
+    "Take features from planning through deployment, including frontend experience, APIs, data-layer design, testing, observability, and release readiness.",
+    "Make sound technical and architectural decisions that balance speed, maintainability, security, and operational reliability.",
+    "Use agentic coding tools as a first-class part of the engineering workflow, including planning, code scaffolding, test generation, migration scripting, documentation, and code review.",
+    "Operate multiple AI-agent sessions and use high-context, iterative workflows to accelerate delivery while maintaining engineering judgment and code quality.",
+    "Remain accountable for the correctness, security, architecture, and production readiness of all delivered work, regardless of how it is generated.",
+    "Report weekly on delivery progress and the relationship between AI-tool spend and delivered output, helping the team continuously tune its budget-to-throughput tradeoff.",
+    "Support OpenBrand’s AWS platform migration, including efforts to retire an approximately 150-VM legacy footprint.",
+    "Help migrate Elasticsearch workloads to RDS and Redshift and convert Kinesis pipelines to MWAA-based orchestration.",
+    "Contribute to modernizing legacy services, data flows, and operational processes while minimizing risk to active product and customer workflows.",
+    "Partner closely with the DevOps/platform hire and existing COMET, CAT, and DIE teams to coordinate dependencies and delivery.",
+    "Work directly with the CTO during the Comperemedia integration and ramp quickly onto the critical delivery path.",
+    "Clearly document ownership, dependencies, decisions, and delivery lanes across the workstream.",
+    "Collaborate regularly in person with teammates and stakeholders in the Chicago area.",
+    "Deliver consistently in a deadline-driven environment with clear business outcomes and integration milestones."
+  ],
+  "qualifications": [
+    "5+ years of full stack software engineering experience.",
+    "Demonstrated experience owning features end to end, from frontend and API development through data-layer implementation and deployment.",
+    "A strong track record delivering large-scale cloud integrations, supported by verifiable professional references.",
+    "Experience working on complex modernization, migration, or integration initiatives in production environments.",
+    "Strong hands-on experience with React and TypeScript for frontend application development.",
+    "Strong backend development experience with Node.js and/or Python.",
+    "Deep working knowledge of AWS, including EC2, RDS, Redshift, Kinesis, MWAA, and IAM.",
+    "Experience designing, building, testing, and operating production APIs, services, data pipelines, and application infrastructure.",
+    "Daily, substantial experience using agentic or AI-assisted coding tools—such as Claude Code, Cursor, Devin, Windsurf, GitHub Copilot, Copilot Workspace, or similar—to deliver high-leverage engineering output.",
+    "Comfort using meaningful AI-tooling and compute capacity during active development sprints and explaining how that investment translates into delivery throughput.",
+    "Preferred: Experience with legacy-system migration and modernization, including VM consolidation, Elasticsearch migrations, ETL modernization, or workflow-orchestration conversions.",
+    "Preferred: Experience moving data workloads into RDS, Redshift, or comparable managed data platforms.",
+    "Preferred: Familiarity with Model Context Protocol (MCP), custom AI-agent tools, or connectors.",
+    "Preferred: Experience working with cross-functional engineering, platform, data, and product teams on time-sensitive delivery plans.",
+    "Preferred: Chicago-area residency or the ability to participate regularly in in-person collaboration."
+  ],
+  "successCriteria": [
+    "Quickly become a reliable owner of a defined delivery lane within the Comperemedia integration.",
+    "Help deliver Portal/Auth/AppShell, Survey Manager 2.0, and cloud-ingestion capabilities on schedule and at production quality.",
+    "Use AI-enabled engineering workflows to increase throughput without compromising technical judgment, security, or reliability.",
+    "Contribute meaningfully to AWS modernization efforts and help reduce legacy-platform complexity.",
+    "Communicate progress, risks, ownership, and dependencies clearly and consistently."
+  ],
+  "engagementDetails": [
+    "Immediate ramp onto the Comperemedia integration critical path.",
+    "Direct collaboration with OpenBrand’s CTO throughout the integration.",
+    "Delivery-paced work tied to high-priority platform and vendor-go-live milestones."
+  ],
+  "benefits": [
+    "Medical, dental, vision, and life insurance",
+    "Flexible Spending Account (FSA) and Health Reimbursement Arrangement (HRA)",
+    "401(k) retirement plan with company matching",
+    "Flexible time off",
+    "Paid parental leave"
+  ],
+  "applicationInstructions": "Apply with your resume below.",
+  "meta": {
+    "canonical": "https://openbrand.com/newsroom/blog/jobs/full-stack-developer"
+  }
+}

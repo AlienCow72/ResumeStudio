@@ -1,0 +1,771 @@
+Senior DevOps / Cloud Infrastructure Engineer - OpenBrand
+
+Contact
+
+Client Log in
+
+Solutions
+
+Market Measurement ➜
+
+Market Share & Consumer Insights Data
+
+Competitive Intelligence ➜
+
+Pricing, Promotions, Assortment
+
+& Availability Insights
+
+Economic Solutions ➜
+
+Retail Sales, Pricing & Shipment
+
+Forecasting and Demand Intelligence
+
+Market Intelligence Portal ➜
+
+The all-in-one dashboard that delivers market understanding without disparate sources
+
+Pro Insights ➜
+
+Uncover who your actual Pros are, the customers they serve, where they buy, and which segments can drive your growth.
+
+Use Cases
+
+For Retailers ➜
+
+Turn real-time pricing, demand, and competitive insights into better assortment, inventory, and margin decisions across your business.
+
+Learn more
+
+See our retailer solutions »
+
+Retail Pricing Intelligence
+
+Leakage Analysis
+
+Line Review Data
+
+For Brands ➜
+
+Gain full market visibility into pricing, demand, and consumer behavior to identify opportunities and drive stronger, more profitable growth.
+
+Learn more
+
+See our manufacturer solutions »
+
+Line Review Data
+
+Brand Leakage Analysis
+
+Seasonal Promotions & Pricing
+
+Stronger Line Reviews ➜
+
+Improve line review outcomes with market data-backed recommendations
+
+Industries
+
+Consumer Electronics
+
+Hand Tools
+
+Health, Beauty & Wellness
+
+Kitchen & Bath
+
+Lawn & Garden
+
+Major Appliances
+
+Mattresses & Furniture
+
+Outdoor Cooking
+
+Outdoor Power Equipment
+
+Paint & Stain
+
+Power Tools
+
+Print
+
+Small Appliances
+
+Tires
+
+Why OpenBrand
+
+How Our Data Stands Out
+
+OpenBrand combines six primary data sources – including four proprietary streams – to deliver real-time, full-funnel visibility into the durables market. Our purpose-built models capture pricing, demand, and consumer behavior shifts that traditional retail data misses.
+
+Learn more
+
+Why OpenBrand ➜
+
+Get a Free Infographic ➜
+
+OB Leadership ➜
+
+About Us ➜
+
+Get in Touch
+Contact us »
+
+Data & Insights
+
+MarketSignal Dashboards ➜
+
+Category-level quarterly data dashboards, no paid subscription.
+
+Blogs & Research
+
+•All Content
+
+•Use Cases
+
+•Analyst Reports
+
+•Home Appliances
+
+•OPE & Parts
+
+•Competitive Intelligence
+
+•State of Durables
+
+•Year In Review Insights
+
+•OB Data & Solutions
+
+OpenBrand CPI
+See the latest shift →
+
+Current change
+
++0.83%
+
+Subscribe to Durables Brief
+Monthly insights, right to your inbox »
+
+State of Durables
+Watch now »
+
+Schedule Demo
+
+Search
+
+Careers
+
+Senior DevOps / Cloud Infrastructure Engineer
+
+August 28, 2026
+
+Apply with your resume below.
+
+Location: Hybrid (Chicago, IL)
+
+Company Overview
+
+Be a part of a fast-growing, winning team helping Fortune 1000 consumer brands and retailers leverage AI-driven data insights.
+
+OpenBrand is one of the world’s most respected market intelligence companies. OpenBrand’s data and market research products give manufacturers, retailers, and industry players a competitive edge across a wide range of industries (including IT, consumer electronics, home appliances, health, wellness, beauty, small appliances, and other consumer durables) and help marketing, product, sales, and pricing teams make more informed decisions in a rapidly changing market environment.
+
+Role Overview
+
+This is a permanent, hands-on Senior DevOps / Cloud Infrastructure Engineer role owning the cloud infrastructure, delivery pipelines, and operational reliability behind OpenBrand’s production data platform — the AWS estate, CI/CD and package tooling, observability, and incident response.
+
+You will work at the intersection of cloud architecture, automation, and operational excellence, with a strong emphasis on:
+
+Owning the AWS estate end to end — architecture, cost, performance, and resilience
+
+Building and maintaining reliable CI/CD pipelines, package dependencies, and deployment automation
+
+Establishing real operating control — deploy, observe, troubleshoot, and recover — across the full platform
+
+Executing infrastructure migrations cleanly, on schedule, and without customer or data disruption
+
+This is a build-and-run role, not a purely advisory one. You will own infrastructure end to end — design it, automate it, deploy it, monitor it, and improve it — with real accountability for uptime, cost, and delivery velocity.
+
+Your first year is an integration year. OpenBrand has grown through acquisition, and the near-term priority is consolidating inherited platform infrastructure onto OpenBrand standards — separating cloud accounts, proving out monitoring and recovery, and retiring legacy dependencies. Success here means being effective inside imperfect inherited systems: making production safe and observable first, then modernizing deliberately.
+
+What comes after is the larger half of the job. Once consolidation is complete, this role owns the platform’s forward roadmap — cloud cost re-architecture, moving workloads onto managed and containerized services, deepening automation and observability, and scaling the infrastructure behind a growing data business. We are hiring an owner for the platform, not a migration.
+
+You will collaborate closely with Engineering, Data, Security, and IT teams, reporting to the VP of DevOps. This role does not focus on people management, but requires strong judgment, independence, and end-to-end ownership.
+
+Key Responsibilities
+
+Cloud Infrastructure & Cost Optimization
+
+Own the AWS environment across production, QA, and shared services accounts — including account strategy, IAM, networking, EKS/ECS/Lambda, S3, logging, and billing structure
+
+Lead right-sizing and re-architecture of a large EC2 footprint, moving workloads to appropriate instance families, purchase models, and managed services
+
+Build and maintain infrastructure as code (Terraform, CloudFormation, or equivalent) so environments are reproducible and reviewable
+
+Own DNS, certificates, and CDN configuration, including renewal automation and domain transitions
+
+Establish cost visibility — tagging standards, allocation reporting, budgets, and anomaly alerting — and drive measurable reductions in cloud spend
+
+Plan and execute data center and legacy workload decommissioning, including migration sequencing and rollback planning
+
+Design for resilience: multi-AZ posture, documented recovery objectives, and tested backup restores — validated by actual recovery, not by the presence of a backup job
+
+Own capacity planning and the infrastructure roadmap as the business grows — evaluating managed services, containerization, and architectural changes on their operational and cost merits
+
+CI/CD, Observability & Platform Reliability
+
+Design, maintain, and improve CI/CD pipelines (GitLab CI, GitHub Actions, or equivalent) from commit through production deployment, including runner fleets and build environments
+
+Containerize and orchestrate services; manage image registries, build caching, and artifact promotion across environments
+
+Own package and artifact dependencies — ECR, JFrog, npm, PyPI, and private mirrors — so builds are reproducible and not silently dependent on external or third-party infrastructure
+
+Implement observability — metrics, logging, tracing, dashboards, and actionable alerting (Grafana, Sentry, CloudWatch, or similar) — so failures are detected before customers see them
+
+Own the incident-response path: alert routing and escalation (Opsgenie, PagerDuty, or similar), on-call rotation, P1/P2 severity definitions, and post-incident review
+
+Write and test runbooks for critical services, so restart and troubleshooting steps are proven rather than assumed
+
+Automate away manual toil: provisioning, patching, certificate rotation, secrets distribution, and routine operational tasks
+
+Manage secrets and shared credentials through proper tooling (AWS Secrets Manager, vault-style platforms) rather than ad-hoc practice, including key rotation and access removal after workload transfer
+
+Integration, Consolidation & Cross-Functional Collaboration
+
+Execute infrastructure separation and integration work arising from acquisitions — account transfers, network segmentation, identity migration, and consolidation onto OpenBrand standards
+
+Build the infrastructure dependency map: what must run on day one, what is shared, what migrates, what gets replaced, and what retires — with owners and target dates
+
+Produce objective evidence of operating independence: validated deploys, working monitoring, tested restores, and an exercised incident path — not just credentialed access
+
+Partner with Data Engineering to keep production data pipelines and analytical platforms (Snowflake, OpenSearch, Airflow, or equivalent) reliable through periods of change, where infrastructure touches data movement
+
+Partner with Security and Compliance on IAM design, access reviews, endpoint and network posture, and SOC 2 evidence collection
+
+Document environments, runbooks, and topology so operational knowledge does not sit with one person
+
+Support Engineering and Product teams with infrastructure input to roadmap decisions and delivery planning
+
+Communicate infrastructure risk clearly to non-technical stakeholders, and help establish best practices for change management, reproducibility, and operational handoff
+
+Qualifications
+
+Education & Experience
+
+5+ years of experience in DevOps, Site Reliability, Cloud Operations, or Platform Engineering, with significant hands-on responsibility for production infrastructure
+
+BS degree in a technical field (e.g., Computer Science, Computer Engineering, Information Systems) or equivalent practical experience
+
+Technical Skills
+
+Deep, hands-on AWS production operations experience across IAM, VPC/networking, EKS/ECS/Lambda, EC2, S3, RDS, logging, backup/DR, and account strategy
+
+Strong proficiency with infrastructure as code (Terraform preferred) and Kubernetes deployment models (Helm, jsonnet, or equivalent)
+
+Advanced proficiency in Linux administration and scripting (Python, Bash, or equivalent)
+
+Demonstrated experience building and operating CI/CD pipelines for containerized services, including runners, Docker/ECR, and private package management (JFrog, npm, PyPI, artifact mirroring)
+
+Practical experience with monitoring and observability platforms (Grafana, Prometheus, Sentry, CloudWatch, Datadog, or similar), plus real on-call and incident-response experience — treating monitoring as operational response, not dashboard creation
+
+Working knowledge of networking fundamentals — routing, VPN, DNS, certificates, firewall rules, and network segmentation
+
+Security hygiene: secrets management, key rotation, root/admin ownership, least privilege, and access removal
+
+Proven ability to stabilize and operate inherited or legacy production systems while modernizing them incrementally
+
+Ability to write clear, usable runbooks and communicate technical risk to non-technical stakeholders
+
+Experience using Large Language Models (LLMs) (e.g., GPT-based or similar) to improve productivity and efficiency in engineering workflows, including tasks such as scripting, infrastructure code review, documentation, troubleshooting, and runbook development
+
+Experience designing workflows that are robust, testable, and maintainable over time
+
+Comfort working across the full lifecycle: design → automation → deployment → monitoring → iteration
+
+Preferred Experience
+
+Experience with M&A carve-out, platform migration, cloud account separation, or data center exit programs
+
+Experience driving material AWS cost reduction through right-sizing, reserved capacity, or re-architecture
+
+Data-platform infrastructure exposure: Snowflake, OpenSearch/Elasticsearch, dbt, MWAA/Airflow, Spark, S3 data lakes
+
+Frontend platform and shared-service exposure: identity, OAuth, SSO, module federation / app-shell architectures, CDN, DNS, and certificate management
+
+Experience supporting SOC 2 or comparable compliance programs, including audit evidence and control automation
+
+Experience with identity and access platforms (Okta, Entra ID, Google Workspace) and SSO/MFA rollout
+
+Experience with GitLab CI and container registries in a multi-team environment
+
+Experience with SD-WAN or managed network platforms (e.g., Meraki) and site-to-cloud connectivity
+
+Experience operating in a private-equity-backed or high-growth environment where speed and cost discipline both matter
+
+Benefits Summary
+
+Medical, Dental, Vision, and Life Insurance
+
+Flexible Spending Account (FSA) and Health Reimbursement Arrangement (HRA)
+
+401(k) Retirement Plan with Company Matching
+
+Flexible Time Off
+
+Paid Parental Leave
+
+Base salary range: $120,000-$140,000 annually
+
+This role is also eligible for an annual discretionary performance bonus, subject to the terms of the applicable bonus plan
+
+Prev
+
+Next
+
+© OpenBrand | 701 Island Ave. | Suite 300 | San Diego, CA 92101
+
+Privacy Policy | Terms of Service | Cookie Policy
+
+Know Why. Win Share.™
+
+Brands we own
+
+Solutions
+
+Market Intelligence Portal
+
+By Product
+
+Market Measurement
+
+Competitive Intelligence
+
+Consumer Price Index
+
+Economic Forecasting
+
+Pro Insights
+
+By Use Case
+
+Line Review Data
+
+Retailer Solutions
+
+Brand Solutions
+
+Retail Leakage
+
+Retail Pricing Intelligence
+
+Industry Coverage
+
+Consumer Electronics
+
+Major Appliances
+
+Outdoor Cooking
+
+Outdoor Power Equipment
+
+Power Tools
+
+Small Appliances
+
+Health, Beauty & Wellness
+
+Information Technology
+
+Public Quarterly Dashboards
+
+CE: Computing
+
+Major Appliances
+
+Outdoor Power Equipment
+
+More
+
+About
+
+Why OpenBrand
+
+Blog
+
+Careers
+
+Contact
+
+Login
+
+The Durables Brief Newsletter
+
+Get an exclusive monthly breakdown of the trends shaping durables
+
+Subscribe Now
+
+Privacy Preference Center
+
+Privacy Preferences
+
+Get the August 2026 OpenBrand CPI report by email
+
+×
+
+Book a Pro Insights discovery call with the OB team
+
+×
+
+Get the July 2026 OpenBrand CPI report by email
+
+×
+
+Get the June 2026 OpenBrand CPI report by email
+
+×
+
+Get the latest Small Appliance market infographic
+
+×
+
+Get the latest Power Tools market infographic
+
+×
+
+Select an industry to unlock a free market infographic
+
+×
+
+Get the May 2026 OpenBrand CPI report by email
+
+×
+
+Request your custom Line Review Readiness Report
+
+×
+
+Download the Line Review Readiness Report to see the data OpenBrand delivers for line reviews
+
+×
+
+Get the latest Outdoor Cooking market infographic
+
+×
+
+Get the April 2026 OpenBrand CPI report by email
+
+×
+
+See how OpenBrand fits your pricing strategy
+
+×
+
+See where shoppers are going – demo OpenBrand's retail leakage data
+
+×
+
+Get the March 2026 OpenBrand CPI report by email
+
+×
+
+Unlock our leakage report to view the lost shopper analysis data available at OpenBrand
+
+×
+
+Submit the form to unlock the retailer leakage report
+
+×
+
+Submit the form to unlock the brand leakage report
+
+×
+
+Get the February 2026 OpenBrand CPI report by email
+
+×
+
+Get the January 2026 OpenBrand CPI report by email
+
+×
+
+Connect with our team to see the latest data for your selected filter
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule a personalized demo of our full data!
+
+×
+
+Connect with our team to see the latest data for your selected filter
+
+Submit now to schedule a personalized demo!
+
+×
+
+See more industry winners – and 2026 insights in a personalized data demo
+
+×
+
+Submit the form below to have the 2025 Notebooks report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Refrigerators report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Printer Hardware report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Headphones report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 MFP Copiers report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Tablets & Detachables report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Ink Supplies report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Desktops report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Ranges report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Laundry report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 Floor Care report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 TV report emailed directly to you!
+
+×
+
+Submit the form below to have the 2025 smartphone report emailed directly to you!
+
+×
+
+Get the December 2025 OpenBrand CPI report by email
+
+×
+
+Contact us to unlock full access to our Computing market data
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule time a personalized demo of our full data!
+
+×
+
+Get the November 2025 OpenBrand CPI report by email
+
+×
+
+Contact us to unlock full access to the latest Power Tools market data!
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule a personalized demo of our full data!
+
+×
+
+Get the October 2025 OpenBrand CPI report by email
+
+×
+
+Get the September 2025 OpenBrand CPI report by email
+
+×
+
+Contact us to unlock full access to the latest OPE market data!
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule a personalized demo of our full data!
+
+×
+
+Gain access to more shopper and real-time pricing and promotions insights
+
+Submitting this form will redirect you to a scheduling page.
+
+×
+
+Get the August 2025 OpenBrand CPI report by email
+
+×
+
+Submit a question to our team – we look forward to hearing from you!
+
+×
+
+Get the July 2025 OpenBrand CPI report by email
+
+×
+
+Contact us to unlock full access to the latest major appliances market data!
+
+Full data access is part of OpenBrand’s paid subscription. Submit now to schedule a personalized demo of our full data!
+
+×
+
+Discover the appliance data available at OpenBrand in a free market infographic
+
+×
+
+Get the June 2025 OpenBrand CPI report by email
+
+×
+
+Send all 3 earnings call reports to your inbox now!
+
+×
+
+Get the May 2025 OpenBrand CPI report by email
+
+×
+
+Discover the OPE data available at OpenBrand in a free market infographic
+
+×
+
+See how our data is built for helping you win the market. Pressure free.
+
+×
+
+Connect with our Chief Economist on the state of your category, forecast previews, and more
+
+×
+
+Get the March 2025 OpenBrand CPI report by email
+
+×
+
+Get the April 2025 OpenBrand CPI report by email
+
+×
+
+Request a personalized demo of the OpenBrand platform
+
+×
+
+Get the full OpenBrand CPI for February 2025 by email
+
+×
+
+Use the form below to submit a request directly to the OpenBrand analyst team!
+
+×
+
+Apply to be part of OpenBrand's exclusive Insights Accelerator Program
+
+×
+
+Subscribe to upcoming OpenBrand product news and insights
+
+×
+
+Contact us for a demo of our full CPI data offering
+
+Filling out the form will take you to a scheduling page.
+
+×
+
+Submit below to have the OpenBrand CPI for January 2025 emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 headphones market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 notebook market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 MFP copier report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 refrigerators report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 floor care market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 tablet market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 printer supplies report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 desktop market report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 ranges report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 laundry report emailed directly to you!
+
+×
+
+Submit the form below to have the full 2025 Year in Review report package emailed to you!
+
+×
+
+Submit the form below to have the 2024 television report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 smartphone report emailed directly to you!
+
+×
+
+Submit the form below to have the 2024 printer hardware report emailed directly to you!
+
+×
+
+Select an industry to unlock a free market report
+
+×
+
+Select an industry below to download a competitive market intelligence report
+
+×
+
+Download a free report to discover the market data available at OpenBrand
+
+×
+
+See what OpenBrand delivers: download a health, beauty & wellness insights report
+
+×
+
+Discover the CE intelligence available at OpenBrand in a free market infographic
+
+×
+
+Select an industry below to download a sample analyst report
+
+×
+
+Select an industry below to download a market measurement infographic
+
+×
+
+Select an industry below to download a market measurement infographic
+
+×

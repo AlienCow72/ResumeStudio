@@ -1,0 +1,60 @@
+{
+  "title": "Data Scientist",
+  "company": "OpenBrand",
+  "date": "2026-07-09",
+  "description": "OpenBrand is a market intelligence company helping Fortune 1000 consumer brands and retailers use AI-driven data insights. Its data and market research products support manufacturers, retailers, and industry players across IT, consumer electronics, home appliances, health, wellness, beauty, small appliances, and other consumer durables, helping marketing, product, sales, and pricing teams make informed decisions. This hands-on Data Scientist role builds, scales, and maintains production-grade market insight, market share, media spend estimation, and channel sizing products powered by alternative datasets such as email receipts, clickstream, credit card transaction data, ad/media signals, and external benchmarks. The role combines modeling, data engineering, and operational excellence, emphasizing efficient, reliable pipelines, robust QA and monitoring, and consistent, explainable, client-ready outputs. Strong modeling and statistical skills are essential, but the role is less R&D-focused and more execution- and delivery-oriented, with ownership of model and methodology performance in production over time. The Data Scientist collaborates with Engineering, Product, and Operations to operationalize methodologies, improve data quality, and support product evolution. The role does not focus on people management and requires strong judgment, independence, and end-to-end ownership.",
+  "location": {
+    "city": "Chicago",
+    "region": "IL"
+  },
+  "workArrangement": "Chicago, IL (Hybrid) Preferred and Remote",
+  "salary": "Base salary range: $130,000-$150,000 annually. This role is also eligible for an annual discretionary performance bonus, subject to the terms of the applicable bonus plan.",
+  "experience": "5+ years of experience in a Data Science or related analytical role, with significant hands-on responsibility for production data products, analytical models, or decision-support insights.",
+  "responsibilities": [
+    "Design, build, and maintain models and analyses that transform alternative data sources (e.g., receipts, clickstream, credit card data) into market share, sales, and competitive insight metrics.",
+    "Build and validate media spend estimation methodologies that combine observed signals, coverage assumptions, calibration factors, external benchmarks, and uncertainty ranges.",
+    "Develop channel sizing models that estimate market, brand, retailer, category, and media-channel opportunity from incomplete or biased source data.",
+    "Translate noisy source signals, such as ad occurrences, receipts, transaction records, clickstream events, panel data, and vendor feeds, into explainable spend, share, and channel-size outputs.",
+    "Develop and maintain projection, normalization, and estimation methodologies suitable for production use.",
+    "Combine overlapping and complementary data sources into coherent, scalable estimation frameworks.",
+    "Develop new analyses and support ongoing model iteration with a strong focus on stability, explainability, and consistency.",
+    "Partner with Engineering to design and maintain efficient, scalable data pipelines from raw ingestion through client-facing outputs.",
+    "Define and implement data quality checks, validation rules, and monitoring across the pipeline.",
+    "Investigate and resolve data anomalies, breaks, or regressions in collaboration with Ops and Engineering.",
+    "Own the scientific and methodological integrity of production outputs, including documentation and change management.",
+    "Work closely with Operations teams to ensure smooth ongoing production and delivery of insights.",
+    "Support Product teams with methodological input for roadmap decisions, client questions, and product enhancements.",
+    "Perform ad-hoc and exploratory analyses to support client inquiries, data investigations, and internal decision-making.",
+    "Help establish best practices for reproducibility, QA, and operational handoff of data science work."
+  ],
+  "qualifications": [
+    "5+ years of experience in a Data Science or related analytical role, with significant hands-on responsibility for production data products, analytical models, or decision-support insights.",
+    "BS or MS degree in a highly analytical field (e.g., Mathematics, Statistics, Physics, Computer Science, Engineering).",
+    "Strong statistical, quantitative, and analytical skills, with experience building and maintaining models in production.",
+    "Experience with projection, calibration, sampling-bias correction, benchmark reconciliation, and uncertainty quantification for estimation products.",
+    "Advanced proficiency in Python (pandas, NumPy, scikit-learn or similar).",
+    "Strong SQL skills and experience working with large-scale analytical datasets.",
+    "Experience using Large Language Models (LLMs) (e.g., GPT-based or similar) to improve productivity and efficiency in data science workflows, including tasks such as data exploration, code development, documentation, QA investigation, and analysis support.",
+    "Experience designing workflows that are robust, testable, and maintainable over time.",
+    "Comfort working across the full lifecycle: raw data → modeling → QA → delivery.",
+    "Strong judgment, independence, and end-to-end ownership.",
+    "Preferred: Experience working with alternative datasets, including email or digital receipt data; clickstream, behavioral, or web-scraped data; and credit card or transaction-level data.",
+    "Preferred: Experience building or maintaining Market Share, Market Insights, or Sales Measurement products.",
+    "Preferred: Experience with media spend estimation, channel sizing, market sizing, media measurement, or ad intelligence products, including familiarity with CPM, rate cards, campaign measurement, and share-of-voice analysis.",
+    "Preferred: Experience correcting for panel coverage, sampling bias, sparse observations, missing channels, and external benchmark calibration.",
+    "Preferred: Domain experience in Consumer Durables, Retail Financial Services and/or CPG.",
+    "Preferred: Experience collaborating closely with Engineering and Ops teams on production pipelines.",
+    "Preferred: Familiarity with cloud-based data platforms and distributed processing (e.g., Snowflake, Spark, AWS)."
+  ],
+  "benefits": [
+    "Medical, Dental, Vision, and Life Insurance",
+    "Flexible Spending Account (FSA) and Health Reimbursement Arrangement (HRA)",
+    "401(k) Retirement Plan with Company Matching",
+    "Flexible Time Off",
+    "Paid Parental Leave"
+  ],
+  "applicationInstructions": "Apply with your resume below.",
+  "meta": {
+    "canonical": "https://openbrand.com/newsroom/blog/jobs/data-scientist-2"
+  }
+}

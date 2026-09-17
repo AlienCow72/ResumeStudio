@@ -1,0 +1,273 @@
+IT Cloud Web Application Platform Engineer Job Details | Career finder
+
+By continuing to use and navigate this website, you are agreeing to the use of cookies.
+
+Accept
+
+Close
+
+Skip to main content
+
+All jobs
+
+Our companies
+
+Michigan Gas Utilities
+
+Minnesota Energy Resources
+
+People Gas
+
+North Shore Gas
+
+We Energies
+
+Wisconsin Public Service
+
+Featured careers
+
+Corporate
+
+Customer service
+
+Engineering
+
+Information technology
+
+Power generation and operations
+
+Students, internships and co-ops
+
+Technical and skilled labor
+
+Working with us
+
+Sign in / Sign up
+
+All jobs
+
+Our companies
+
+Michigan Gas Utilities
+
+Minnesota Energy Resources
+
+People Gas
+
+North Shore Gas
+
+We Energies
+
+Wisconsin Public Service
+
+Featured careers
+
+Corporate
+
+Customer service
+
+Engineering
+
+Information technology
+
+Power generation and operations
+
+Students, internships and co-ops
+
+Technical and skilled labor
+
+Working with us
+
+Sign in / Sign up
+
+All jobs
+
+Our companies
+
+Michigan Gas Utilities
+
+Minnesota Energy Resources
+
+North Shore Gas
+
+People Gas
+
+We Energies
+
+Wisconsin Public Service
+
+Featured careers
+
+Corporate
+
+Customer service
+
+Engineering
+
+Information technology
+
+Power generation and operations
+
+Students, internships and co-ops
+
+Technical and skilled labor
+
+Working with us
+
+Careers overview
+
+Benefits
+
+Diversity and inclusion
+
+Employment testing
+
+Selection process
+
+Sign in / Sign up
+
+Search by keyword (title, company, location, etc.)
+
+Show more options
+
+Loading...
+
+Company
+
+All
+
+Featured careers
+
+All
+
+Employment category
+
+All
+
+Select how often (in days) to receive an alert:
+
+Create alert »
+
+×
+
+Select how often (in days) to receive an alert:
+
+Apply now »
+
+IT Cloud Web Application Platform Engineer
+
+WEC Business Services LLC, a subsidiary of WEC Energy Group, is seeking an IT Cloud Web Application Platform Engineer in our Milwaukee, Wisconsin, Pewaukee, Wisconsin, or Green Bay, Wisconsin location. This position currently offers flexibility for a hybrid work arrangement (remote/on-site) with time regularly spent in the office.
+
+This position is part of a job family (Infrastructure Consultant and Senior Infrastructure Consultant) where experience will be the determining factor.
+
+About Us
+
+WEC Energy Group is one of the nation’s largest electric generation and distribution and natural gas delivery holding companies serving 4.7 million customers across the Midwest. We are committed to providing clean, reliable, and affordable energy in an environmentally sustainable manner. Customers are the heart of our business, and we work every day to help grow and support communities where we provide vital energy services.
+
+As a Fortune 500 company, we value and develop our employees who are making a difference in a mission that matters. We don’t just offer a job; we provide fulfilling careers where safety and well-being are paramount. Join our team and experience first-hand our commitment to your success. We offer competitive pay and benefits to recognize your hard work and dedication.
+
+If you’re talented, energetic and ready for a career with a future, we want you on our team. We are powered by a diverse and inclusive workforce fueled by the pride in what we do. If you're driven by the passion to change lives, this is the place for you.
+
+Job Summary
+
+Infrastructure Consultant for the Cloud Platform team is responsible for building and maintaining cloud infrastructure for the corporation. The Cloud Platform Engineer carries both operational and strategic responsibilities. The Cloud Platform Engineer collaborates with development teams to deploy and maintain cloud-based applications and services.
+
+Job Responsibilities
+
+Provision platform as a service and application based services in the cloud
+
+Collaborate with development teams for cloud based application hosting
+
+Develop Infrastructure as Code (IaC) for managing and provisioning cloud based resources
+
+Maintain and govern library for IaC shared modules
+
+Collaborate with on-premise infrastructure teams to align infrastructure standards
+
+Participate in incident response and root-cause analysis for cloud infrastructure
+
+Participate in a 24x7 on-call support role on a rotating basis
+
+Minimum Qualifications
+
+Bachelor's Degree
+
+2+ years of IT infrastructure experience
+
+Preferred Qualifications
+
+Bachelor’s Degree in Computer Science, Management Information Systems or a related field
+
+2+ years of Azure and/or AWS development experience
+
+Azure, AWS, Azure DevOps, Terraform IaC, FinOps, CI/CD Pipelines, or CNAPP experience
+
+Azure Front Door, AWS ALB, Web Hosting, or WAF experience
+
+Production support experience with large enterprise applications
+
+End Date: 09/30/2026
+
+Pay Range Minimum: $78,702.26
+
+Pay Range Maximum: $135,761.08
+
+The pay range reflects the minimum and maximum for the position at the time of posting and may be modified in the future. The starting salary/pay within the pay range will be based on several factors, as applicable, but not limited to, relevant education, qualifications, certifications, experience, skills, geographic location, shift, travel requirements, collective bargaining agreements, and business and organizational needs. At WEC Energy Group, it is not typical for an individual to be hired at or near the top of the range for their role.
+
+WEC Energy Group benefits
+
+We reserve the right to modify the application deadline or discontinue accepting applications for any position if deemed necessary.
+
+Learn more at Careers
+
+WEC Energy Group will only employ those who are legally authorized to work in the United States. Individuals with temporary visas such as E, F-1 with OPT or CPT, H-1, H-2, L-1, B, J or TN, or who need sponsorship for work authorization now or in the future, are not eligible for hire.
+
+WEC Energy Group and its subsidiaries are Equal Opportunity Employers. As a result, all qualified applicants will receive equal employment opportunity without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, protected veteran status or any other protected status. The Company also complies with all applicable federal, state and local laws that require it to take affirmative action.
+
+EEO/AA policies and statements
+
+Location:
+
+Milwaukee, WI, US, 53203
+
+Pewaukee, WI, US, 53188
+
+Green Bay, WI, US, 54307-9001
+
+Company:
+
+WEC Energy Group (WEC)
+
+Req ID:
+
+6946
+
+Nearest Major Market: Milwaukee
+
+Apply now »
+
+Find similar jobs:
+
+Information technology
+
+wecenergygroup.com
+
+Career finder home
+
+All jobs
+
+Job locations
+
+Working with us
+
+Contact us
+
+Opens in a new tab.
+
+Opens in a new tab.
+
+Opens in a new tab.
+
+Opens in a new tab.
+
+© WEC Energy Group

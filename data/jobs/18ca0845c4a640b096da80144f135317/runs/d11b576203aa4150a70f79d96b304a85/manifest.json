@@ -1,6 +1,6 @@
 {
-  "runId": "ae02166614244b709e524284aa9cf831",
-  "createdAt": "2026-09-16T16:37:05.511556+00:00",
+  "runId": "d11b576203aa4150a70f79d96b304a85",
+  "createdAt": "2026-09-16T16:29:39.281276+00:00",
   "files": [
     "job-description.json",
     "resume.json",
@@ -8,7 +8,7 @@
   ],
   "sourceUrl": "https://careers.wecenergygroup.com/job/Milwaukee-IT-Cloud-Web-Application-Platform-Engineer-WI-53203/1429333800/",
   "previous": {
-    "runId": "d11b576203aa4150a70f79d96b304a85",
+    "runId": "a968d18099d04f2594fe5a50631fecbc",
     "files": [
       "job-description.json",
       "resume.json",
@@ -28,6 +28,6 @@
   "status": "ready",
   "message": "Drafts ready. Review and edit before downloading.",
   "error": "",
-  "updatedAt": "2026-09-16T16:38:41.765163+00:00",
-  "reviewNotes": "Emphasized AWS migration, platform upgrades, performance optimization, implementation support, and documentation. The master does not establish two years of infrastructure or AWS development experience, enterprise application scale, IaC/Terraform, Azure, FinOps, CNAPP, ALB/WAF, formal incident response, or rotating on-call experience. U.S. work authorization and sponsorship eligibility are unspecified."
+  "updatedAt": "2026-09-16T16:31:16.332707+00:00",
+  "reviewNotes": "Emphasized AWS migration, platform upgrades, performance improvements, implementation support, documentation, and relevant infrastructure skills. The master does not establish two years specifically in infrastructure or AWS development, enterprise application scale, Azure, Terraform/IaC, shared-module governance, FinOps, CNAPP, Azure Front Door, AWS ALB, WAF, formal incident response/root-cause analysis, or rotating on-call experience. U.S. work authorization and sponsorship eligibility are unspecified."
 }

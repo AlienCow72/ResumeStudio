@@ -1,0 +1,26 @@
+{
+  "runId": "e3c6966a633a4d85a67eb1b5156c715b",
+  "createdAt": "2026-09-17T15:20:38.434508+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://openbrand.com/newsroom/blog/jobs/full-stack-developer",
+  "previous": null,
+  "masterHash": "db14e635bd52d5dea7c29b54246ec7ae21300ecf7142043925d643127de816d1",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-09-17T15:22:40.426831+00:00",
+  "reviewNotes": "Emphasized integration ownership, platform modernization, AWS migration, asynchronous performance improvements, implementation support, and delivery communication. Retained relevant Python, infrastructure, database, and AI-tool skills. The master does not establish React, TypeScript, Node.js, named AWS-service depth, large-scale cloud integrations with professional references, or five years specifically spanning full stack engineering. Daily agentic workflows, multiple-agent operation, AI-spend reporting, MCP, and the specified data-pipeline migrations are undocumented. Regular Chicago-area availability is unconfirmed."
+}
