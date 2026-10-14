@@ -54,11 +54,22 @@ class JobTests(unittest.TestCase):
         self.store.save({'notes': 'Separate application'}, separate['id'], separate['revision'])
         self.assertEqual(len(self.store.list()), 3)
 
+    def test_description_survives_reload_updates_and_can_be_cleared(self):
+        text = '  Platform Engineer\n\nResponsibilities:\n• Build integrations.\n'
+        job = self.store.save({**SAMPLE, 'sourceText': text})
+        self.assertEqual(JobStore(self.root).read(job['id'])['sourceText'], text)
+        updated = self.store.save({'stage': 'interview'}, job['id'], job['revision'])
+        self.assertEqual(updated['sourceText'], text)
+        cleared = self.store.save({'sourceText': ''}, job['id'], updated['revision'])
+        self.assertEqual(JobStore(self.root).read(job['id'])['sourceText'], '')
+        backups = (self.store.path(job['id']).parent / 'backups').glob('*.json')
+        self.assertTrue(any(json.loads(path.read_text())['sourceText'] == text for path in backups))
+
     def test_invalid_inputs_and_path_traversal(self):
         for update in [{'url': 'javascript:alert(1)'}, {'url': 'https://user:pass@example.com'},
                        {'url': 'https://example.com:wrong'}, {'company': '  '}, {'title': []},
                        {'stage': 'offered'}, {'appliedOn': '2026-02-30'}, {'appliedOn': False},
-                       {'notes': 'x' * 20001}]:
+                       {'notes': 'x' * 20001}, {'sourceText': None}, {'sourceText': 'x' * 120001}]:
             with self.subTest(update=list(update)):
                 with self.assertRaises(ValueError):
                     self.store.save({**SAMPLE, **update})
@@ -105,11 +116,16 @@ class JobTests(unittest.TestCase):
             try:
                 for path in ['/jobs', '/jobs.js', '/jobs.css']:
                     with urlopen(base + path) as response: self.assertEqual(response.status, 200)
-                with post('/api/jobs', {'job': SAMPLE}) as response:
+                with post('/api/jobs', {'job': SAMPLE, 'sourceText': 'Original description\n'}) as response:
                     self.assertEqual(response.status, 201)
                     job = json.load(response)
+                    self.assertEqual(job['sourceText'], 'Original description\n')
+                with post('/api/jobs/' + job['id'], {'job': SAMPLE, 'revision': job['revision'], 'sourceText': 'Updated description\n'}) as response:
+                    job = json.load(response)
                 with urlopen(base + '/api/jobs') as response:
-                    self.assertEqual(len(json.load(response)['jobs']), 1)
+                    jobs = json.load(response)['jobs']
+                    self.assertEqual(len(jobs), 1)
+                    self.assertEqual(jobs[0]['sourceText'], 'Updated description\n')
                 with self.assertRaises(HTTPError) as error:
                     post('/api/jobs', {'job': SAMPLE})
                 self.assertEqual(error.exception.code, 409)

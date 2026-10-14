@@ -1,0 +1,36 @@
+CLA is a top 10 national professional services firm where our purpose is to create opportunities every day, for our clients, our people, and our communities through industry-focused wealth advisory, digital, audit, tax, consulting, and outsourcing services. Even with more than 8,500 people, 130 U.S. locations, and a global reach, we promise to know you and help you.
+
+CLA is dedicated to building a culture that invites different beliefs and perspectives to the table, so we can truly know and help our clients, communities, and each other.
+
+CLA is growing and seeking to hire an experienced Framework Developer Senior to join our talented Information Technology team. The position offers growth, flexibility and a collaborative work environment.
+
+In this position you should have the following; excellent interpersonal skills with the ability to communicate at all levels. Strong problem solving and creative skills and the ability to exercise sound judgment. Most important, demonstrate a high level of integrity and dependability with a strong sense of urgency and results-orientation.
+
+This role combines the functions of a developer with framework engineering responsibilities for all CLA environments. In addition, this role will work on the strategy and vision for the Framework Engineering Team. This role ensures efficient development, stable framework design, and thorough monitoring and tooling.
+
+How you’ll create opportunities in this Framework Developer Senior role: 
+
+Design and development of core application frameworks to support business needs.
+Collaborate with cross-functional teams, including business analysts, project managers, and other developers, to define technical requirements and deliver effective solutions.
+Implement and advocate for best practices in coding standards, architectural patterns, and development methodologies.
+Support and collaborate with team members, sharing knowledge and providing technical guidance when needed.
+Perform code reviews and ensure the quality, performance, and security of application frameworks.
+Research, evaluate and integrate new technologies and tools to enhance development efficiency and system capabilities.
+Ensure compliance with organizational policies, industry standards, and regulatory requirements.
+What you will need:
+
+4 years of relevant experience required
+6 years of relevant experience preferred
+Bachelor's degree or a combination of relevant experience and training may be considered in lieu of a degree.
+Technical Competencies:
+
+Proficiency with version control systems such as Git and command line interface
+Proficiency in scripting languages (e.g., Bash, PowerShell) and YAML markup
+Proficiency in programming languages (e.g., Python, JavaScript/TypeScript, C#
+Experience with cloud platforms such as AWS, Azure, or GC
+Proficiency in CI/CD tools such as Azure Pipelines, GitHub Actions, or Jenkin
+Hands-on experience with containerization technologies (e.g., Docker, Kubernetes
+Familiarity with configuration management tools (e.g., Terraform, Ansible, Chef, Puppet)
+Familiarity with Azure Boards or similar work management systems such as Jira or GitLab Issues
+Strong understanding of cloud computing and containerization technologies
+Solid grasp of Continuous Integration/Continuous Deployment (CI/CD) tools.

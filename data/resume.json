@@ -3,7 +3,7 @@
     "name": "Kyle M. Anderson",
     "email": "TheKyleAnderson72@gmail.com",
     "phone": "(630) 995-1529",
-    "summary": "Technical professional with software development, systems integration, project management, and client-support experience. Builds and supports software platforms, connects business systems through integrations, improves delivery workflows, and translates operational needs into practical technical solutions.",
+    "summary": "Technical professional with software development, systems integration, project management, and client-support experience. Builds and supports software platforms, connects business systems, improves delivery workflows, and translates operational needs into practical technical solutions.",
     "location": {
       "region": "WI",
       "countryCode": "US",
@@ -20,7 +20,8 @@
         "username": "kyle-anderson-mke",
         "url": "https://www.linkedin.com/in/kyle-anderson-mke/"
       }
-    ]
+    ],
+    "url": "https://kyleanderson.online"
   },
   "work": [
     {
@@ -40,7 +41,7 @@
         "Improved UI/UX.",
         "Optimized asynchronous operations to improve performance and throughput.",
         "Migrated production workloads from DigitalOcean to AWS.",
-        "Created and maintained client integration guides and knowledge-base articles."
+        "Created and maintained client guides and knowledge-base articles."
       ]
     },
     {

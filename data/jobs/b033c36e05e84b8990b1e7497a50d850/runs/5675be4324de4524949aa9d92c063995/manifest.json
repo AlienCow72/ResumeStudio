@@ -1,0 +1,21 @@
+{
+  "runId": "5675be4324de4524949aa9d92c063995",
+  "createdAt": "2026-09-25T14:42:36.244717+00:00",
+  "files": [],
+  "sourceUrl": "https://careers.molsoncoors.com/us/en/job/39081/Sr-Software-Engineer-Salesfore",
+  "previous": null,
+  "masterHash": "3a7b94ae2717f0f865211afc5c51034fec316d5fdf96b2ef09227677bdf36ea2",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "needs_input",
+  "message": "The page states that this job has been filled. Please provide the full text of an active posting; the embedded structured data appears to describe a closed posting.",
+  "error": "The page states that this job has been filled. Please provide the full text of an active posting; the embedded structured data appears to describe a closed posting.",
+  "updatedAt": "2026-09-25T14:42:43.997761+00:00"
+}

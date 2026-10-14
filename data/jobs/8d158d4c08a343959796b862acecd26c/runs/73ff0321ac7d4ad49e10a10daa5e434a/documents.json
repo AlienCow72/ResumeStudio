@@ -1,0 +1,133 @@
+{
+  "resume": {
+    "basics": {
+      "name": "Kyle M. Anderson",
+      "email": "TheKyleAnderson72@gmail.com",
+      "phone": "(630) 995-1529",
+      "url": "https://portfolio.kyleanderson.online",
+      "summary": "Technical professional with experience in application support, software development, systems integration, and project coordination. Serves as technical lead for a tax-integration platform, supporting requirements gathering, troubleshooting, implementation, and client communication, with experience migrating production workloads to AWS.",
+      "location": {
+        "region": "WI",
+        "countryCode": "US",
+        "city": "Menomonee Falls"
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "AlienCow72",
+          "url": "https://github.com/AlienCow72"
+        },
+        {
+          "network": "LinkedIn",
+          "username": "kyle-anderson-mke",
+          "url": "https://www.linkedin.com/in/kyle-anderson-mke/"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "DSTax Technologies",
+        "location": "Warrenville, IL",
+        "position": "Manager",
+        "startDate": "2020-05",
+        "summary": "Technical lead and lead developer for a tax-integration platform, with responsibilities spanning project coordination, client support, troubleshooting, implementation assistance, and documentation.",
+        "highlights": [
+          "Supported end-to-end integration implementations, including requirements gathering, setup, troubleshooting, and go-live support.",
+          "Managed internal development projects and client-coordinated work, communicating integration updates, reporting status, and responding to questions and requests.",
+          "Migrated production workloads from DigitalOcean to AWS.",
+          "Led the transition from Version 1 to Version 2 of the tax-integration platform, broadening tax-provider and financial-platform support and improving UI/UX.",
+          "Developed integrations between financial platforms and tax providers, supporting platforms including Acumatica, Chargebee, Sage Intacct, WooCommerce, and Magento/Adobe Commerce, and providers including Thomson Reuters, Vertex, Sovos, and SureTax.",
+          "Optimized asynchronous operations to improve performance and throughput.",
+          "Created and maintained client guides and knowledge-base articles."
+        ]
+      },
+      {
+        "name": "Colectivo Coffee Roasters",
+        "location": "Milwaukee, WI",
+        "position": "Warehouse Associate",
+        "startDate": "2019-06",
+        "endDate": "2020-05",
+        "highlights": [
+          "Partnered with the IT department to install and troubleshoot new point-of-sale nodes.",
+          "Fulfilled orders for more than 1000 restaurant and store clients and updated invoices for inventory changes to help maintain accurate records."
+        ]
+      },
+      {
+        "name": "Komatsu Mining Corp. (Joy Global)",
+        "location": "Milwaukee, WI",
+        "position": "Facilities Management Intern",
+        "startDate": "2016-05",
+        "endDate": "2018-12",
+        "highlights": [
+          "Evaluated, selected, and implemented a global mapping platform that provided facility information to employees and customers.",
+          "Initiated web automations that reduced manual database-maintenance work.",
+          "Managed SharePoint sites and data and designed data-input forms to improve accessibility, reduce errors, and promote cross-department information sharing."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Wisconsin–Milwaukee",
+        "area": "Information Technology Management",
+        "studyType": "BBA",
+        "startDate": "2017",
+        "endDate": "2020"
+      },
+      {
+        "institution": "Milwaukee School of Engineering",
+        "area": "Industrial Engineering and Supply Chain/Operations Management",
+        "studyType": "Studied",
+        "startDate": "2014",
+        "endDate": "2016"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Cloud, Infrastructure & DevOps",
+        "keywords": [
+          "AWS",
+          "DigitalOcean",
+          "Docker",
+          "NGINX",
+          "GitLab CI/CD"
+        ]
+      },
+      {
+        "name": "Integrations & APIs",
+        "keywords": [
+          "REST APIs"
+        ]
+      },
+      {
+        "name": "Databases",
+        "keywords": [
+          "Microsoft SQL Server",
+          "PostgreSQL",
+          "SQLite"
+        ]
+      },
+      {
+        "name": "Software Development",
+        "keywords": [
+          "Python",
+          "Django",
+          "Flask",
+          "PHP",
+          "C#",
+          "C"
+        ]
+      },
+      {
+        "name": "Source Control & Collaboration",
+        "keywords": [
+          "Git",
+          "GitLab",
+          "SharePoint",
+          "Microsoft 365 Enterprise"
+        ]
+      }
+    ]
+  },
+  "coverLetter": "Dear Hiring Team,\n\nI am applying for the Sr IT Application Support Specialist position at Molson Coors. My background combines software development, systems integration, project coordination, and client support, with responsibilities that extend from gathering requirements through troubleshooting and go-live assistance. As Manager at DSTax Technologies, I serve as a technical lead and lead developer for a tax-integration platform. That combination of technical delivery and ongoing support is relevant to your team's responsibility for applications supporting critical business operations.\n\nAt DSTax Technologies, I supported end-to-end integration implementations connecting financial platforms and tax providers. This work included requirements gathering, setup, troubleshooting, and go-live support, alongside managing internal development projects and client-coordinated work. I shared integration updates, reported status, responded to client questions, and created client guides and knowledge-base articles. I also led the platform's transition from Version 1 to Version 2 and migrated production workloads from DigitalOcean to AWS. These responsibilities provide a practical foundation for coordinating application changes and communicating support needs. In a second example, at Komatsu Mining Corp. (Joy Global), I evaluated, selected, and implemented a global mapping platform that made facility information available to employees and customers. I also managed SharePoint sites and data, designed data-input forms to improve accessibility and reduce errors, and introduced web automations that reduced manual database maintenance. This work connected application delivery with the information needs of business users.\n\nI would welcome the opportunity to bring this experience to Molson Coors. The role's combination of application support, production transitions, and collaboration with business stakeholders closely aligns with the work described above. I look forward to discussing how that background could contribute to your application support team. Thank you for your consideration.\nSincerely,\nKyle M. Anderson",
+  "reviewNotes": "Emphasized application support, AWS migration, implementation delivery, documentation, and stakeholder communication. Omitted less relevant accomplishments and AI skills. The master does not establish managed service provider oversight, SLA reporting, formal incident/root-cause or change-control processes, patch management, SAP RISE, Azure, or AWS certification. Dedicated service-delivery tenure and the scope of ongoing AWS application operations are not explicit."
+}

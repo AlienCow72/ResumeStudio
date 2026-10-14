@@ -1,0 +1,26 @@
+{
+  "runId": "2236b0c538c1480a91bc0c5f0a1955a9",
+  "createdAt": "2026-09-19T14:52:25.414488+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://www.kpmguscareers.com/jobdetail/?jobId=137325-A&srcCat=URG+Outreach&specSrc&specSrc=DiversityJobs.com",
+  "previous": null,
+  "masterHash": "33b4dd72992a7a432f507693c99dcb544c74f2c784bf665645a0bf09704f8104",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-09-19T14:54:30.915934+00:00",
+  "reviewNotes": "Emphasized requirements gathering, client coordination, UI/UX improvements, documentation, technology selection, and workflow automation. The master supports related technical experience since 2020 but does not establish five years specifically in product or UX design. Wireframes, user journeys, interactive prototypes, discovery workshop facilitation, Figma, Miro, Power Platform, Lovable, Microsoft Copilot, and formal Agile or human-centered design practices are not documented. Listed AI tools do not establish AI-assisted prototyping experience. U.S. work authorization and sponsorship eligibility are unspecified."
+}

@@ -56,6 +56,10 @@ def fields(data):
         result[key] = value.strip()
     if not result['company'] or not result['title']:
         raise ValueError('Company and role are required.')
+    source_text = data.get('sourceText', '')
+    if not isinstance(source_text, str) or len(source_text) > 120000:
+        raise ValueError('Job description must be text under 120001 characters.')
+    result['sourceText'] = source_text
     result['url'] = posting_url(data.get('url'))
     result['stage'] = data.get('stage', 'applying')
     if result['stage'] not in STAGES:

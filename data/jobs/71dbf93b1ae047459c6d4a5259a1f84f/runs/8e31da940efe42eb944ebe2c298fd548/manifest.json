@@ -1,0 +1,26 @@
+{
+  "runId": "8e31da940efe42eb944ebe2c298fd548",
+  "createdAt": "2026-09-25T15:03:50.483023+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://careers.molsoncoors.com/us/en/job/39646/BI-Analytics-Manager-Palantir-Foundry",
+  "previous": null,
+  "masterHash": "203c00f0dd90d5355315289eeec684eea45c89c7b2479161a15ef34178a2ea2d",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-09-25T15:10:45.877555+00:00",
+  "reviewNotes": "Emphasized technical leadership, client coordination, implementation support, financial-system integrations, and business data analysis. Retained warehouse and manufacturing-company experience for operational relevance. The master does not establish eight years in data and analytics, Palantir Foundry experience, Spark/PySpark, SAP/S4/HANA, ontology governance, ERP writeback webhooks, TypeScript/Vega, or Foundry application development. Project cost estimation, third-party BI delivery oversight, indirect-report management, and the specified full-life-cycle lead requirement are also not established."
+}

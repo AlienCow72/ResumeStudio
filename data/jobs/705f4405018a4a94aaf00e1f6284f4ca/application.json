@@ -1,0 +1,25 @@
+{
+  "company": "KPMG",
+  "title": "Senior Associate, Product & Solution Design",
+  "notes": "",
+  "sourceText": "",
+  "url": "https://www.kpmguscareers.com/jobdetail/?jobId=137325-A&srcCat=URG+Outreach&specSrc&specSrc=DiversityJobs.com",
+  "stage": "waiting",
+  "appliedOn": "2026-09-21",
+  "schemaVersion": 1,
+  "id": "705f4405018a4a94aaf00e1f6284f4ca",
+  "createdAt": "2026-09-19T14:52:25.402209+00:00",
+  "updatedAt": "2026-09-21T15:01:56.155260+00:00",
+  "history": [
+    {
+      "at": "2026-09-19T14:52:25.402209+00:00",
+      "from": null,
+      "to": "applying"
+    },
+    {
+      "at": "2026-09-21T15:01:56.155260+00:00",
+      "from": "applying",
+      "to": "waiting"
+    }
+  ]
+}

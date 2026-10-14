@@ -1,0 +1,26 @@
+{
+  "runId": "ef7370e8fce841108e816347e18fc56b",
+  "createdAt": "2026-09-18T15:43:47.024013+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://cliftonlarsonallen.wd115.myworkdayjobs.com/en-US/CLA/job/Tampa-FL/Framework-Developer-Senior_R17568?source=APPLICANT_SOURCE-3-42",
+  "previous": null,
+  "masterHash": "33b4dd72992a7a432f507693c99dcb544c74f2c784bf665645a0bf09704f8104",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-09-18T15:45:13.351528+00:00",
+  "reviewNotes": "Emphasized platform modernization, asynchronous performance, AWS migration, technical leadership, requirements gathering, and technology evaluation. Retained relevant programming, Git, Docker, and GitLab CI/CD skills. The master does not establish direct core-framework engineering, code review, security or compliance ownership, monitoring, command-line proficiency, Bash/PowerShell, YAML, configuration management, or work-tracking systems such as Azure Boards or GitLab Issues."
+}

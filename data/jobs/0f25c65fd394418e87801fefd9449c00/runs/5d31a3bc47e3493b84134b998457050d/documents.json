@@ -1,0 +1,134 @@
+{
+  "resume": {
+    "basics": {
+      "name": "Kyle M. Anderson",
+      "email": "TheKyleAnderson72@gmail.com",
+      "phone": "(630) 995-1529",
+      "url": "https://portfolio.kyleanderson.online",
+      "summary": "Technical lead and lead developer with experience coordinating client implementations, managing development projects, and enhancing a tax-integration platform. Connects business requirements with technical delivery through systems integration, user-experience improvements, troubleshooting, and implementation documentation.",
+      "location": {
+        "region": "WI",
+        "countryCode": "US",
+        "city": "Menomonee Falls"
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "AlienCow72",
+          "url": "https://github.com/AlienCow72"
+        },
+        {
+          "network": "LinkedIn",
+          "username": "kyle-anderson-mke",
+          "url": "https://www.linkedin.com/in/kyle-anderson-mke/"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "DSTax Technologies",
+        "location": "Warrenville, IL",
+        "position": "Manager",
+        "startDate": "2020-05",
+        "summary": "Serve as technical lead, lead developer, and project manager for a tax-integration platform, coordinating development and client implementations.",
+        "highlights": [
+          "Manage internal development projects and client-coordinated work, sharing integration updates, reporting status, and responding to questions and requests.",
+          "Support end-to-end integration implementations, including requirements gathering, setup, troubleshooting, and go-live support.",
+          "Led the transition from Version 1 to Version 2 of the tax-integration platform, broadening tax-provider and financial-platform support and improving UI/UX.",
+          "Develop integrations between financial platforms and tax providers, with supported platforms including Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
+          "Optimized asynchronous operations to improve performance and throughput.",
+          "Migrated production workloads from DigitalOcean to AWS.",
+          "Created and maintained client guides and knowledge-base articles."
+        ]
+      },
+      {
+        "name": "Colectivo Coffee Roasters",
+        "location": "Milwaukee, WI",
+        "position": "Warehouse Associate",
+        "startDate": "2019-06",
+        "endDate": "2020-05",
+        "highlights": [
+          "Fulfilled orders for more than 1000 restaurant and store clients.",
+          "Updated invoices for inventory changes to help maintain accurate records.",
+          "Partnered with the IT department to install and troubleshoot new point-of-sale nodes."
+        ]
+      },
+      {
+        "name": "Komatsu Mining Corp. (Joy Global)",
+        "location": "Milwaukee, WI",
+        "position": "Facilities Management Intern",
+        "startDate": "2016-05",
+        "endDate": "2018-12",
+        "highlights": [
+          "Evaluated, selected, and implemented a global mapping platform that provided facility information to employees and customers.",
+          "Analyzed asset and facilities databases, identifying more than $10 million in previously unidentified asset value that informed the sale of unused assets before Komatsu's acquisition of Joy Global.",
+          "Initiated web automations that reduced manual database-maintenance work.",
+          "Managed SharePoint sites and data and designed data-input forms to improve accessibility, reduce errors, and promote cross-department information sharing."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Wisconsin–Milwaukee",
+        "area": "Information Technology Management",
+        "studyType": "BBA",
+        "startDate": "2017",
+        "endDate": "2020"
+      },
+      {
+        "institution": "Milwaukee School of Engineering",
+        "area": "Industrial Engineering and Supply Chain/Operations Management",
+        "studyType": "Studied",
+        "startDate": "2014",
+        "endDate": "2016"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Integrations & APIs",
+        "keywords": [
+          "REST APIs"
+        ]
+      },
+      {
+        "name": "Source Control & Collaboration",
+        "keywords": [
+          "SharePoint",
+          "Microsoft 365 Enterprise",
+          "Git",
+          "GitLab"
+        ]
+      },
+      {
+        "name": "Cloud, Infrastructure & DevOps",
+        "keywords": [
+          "AWS",
+          "DigitalOcean",
+          "Docker",
+          "NGINX",
+          "GitLab CI/CD"
+        ]
+      },
+      {
+        "name": "Databases",
+        "keywords": [
+          "Microsoft SQL Server",
+          "PostgreSQL",
+          "SQLite"
+        ]
+      },
+      {
+        "name": "Software Development",
+        "keywords": [
+          "Python",
+          "Django",
+          "Flask",
+          "PHP",
+          "C#"
+        ]
+      }
+    ]
+  },
+  "coverLetter": "Dear Hiring Team,\nI am applying for the Senior Manager Product Solution Owner position at Molson Coors. My background combines technical leadership, software development, systems integration, and client implementation support. At DSTax Technologies, I serve as a technical lead and lead developer while managing development projects and coordinating with clients. That experience connects closely with the role’s focus on translating business needs into technology delivery and improving the customer experience.\n\nAt DSTax Technologies, I led the transition from Version 1 to Version 2 of a tax-integration platform, broadening support for financial platforms and tax providers while improving UI/UX. My responsibilities also span requirements gathering, setup, troubleshooting, and go-live support, alongside communicating project status and responding to client requests. This work provides a practical foundation for connecting customer requirements with implementation decisions and ongoing platform improvements. A second example comes from Komatsu Mining Corp. (Joy Global), where I evaluated, selected, and implemented a global mapping platform that made facility information available to employees and customers. I also managed SharePoint sites and data and designed input forms to improve accessibility, reduce errors, and support information sharing across departments. These experiences demonstrate how I approach technology delivery through both the underlying systems and the needs of the people using them.\n\nThe opportunity to help Molson Coors transform its wholesaler ordering process offers a clear connection to my integration and implementation background. The role’s combination of customer experience, business coordination, and sustained product improvement is particularly relevant to the work I have undertaken. I would welcome a conversation about how that experience could contribute to your team’s delivery goals. Thank you for considering my application.\nSincerely,\nKyle M. Anderson",
+  "reviewNotes": "Emphasized platform transition leadership, client coordination, requirements gathering, implementation support, and UI/UX improvements. Retained order-fulfillment and manufacturing-context experience. The master does not establish formal product roadmap, backlog, budget, OKR, or UAT ownership; agile and waterfall implementation; cross-functional product-team leadership in manufacturing or consumer products; or SAP, Salesforce.com, o9 Solutions, and digital marketing experience."
+}

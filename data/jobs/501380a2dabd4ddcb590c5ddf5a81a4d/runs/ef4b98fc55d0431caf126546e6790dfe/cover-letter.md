@@ -1,0 +1,10 @@
+Dear Hiring Team,
+
+I am applying for the Python Engineer (Django) role at FreeWheel, a Comcast company. My background combines software development, systems integration, project coordination, and client support. At DSTax Technologies, I serve as a Manager with technical lead and lead developer responsibilities for a tax-integration platform. That work involves connecting business systems and supporting implementations from requirements gathering through go-live. The Buyer Cloud App team's focus on APIs, support tools, and scalable services offers a clear connection to this experience and to my technical background with Python, Django, PHP, and REST APIs.
+
+Two examples illustrate how my experience relates to the role. At DSTax Technologies, I led the transition from Version 1 to Version 2 of the tax-integration platform, broadening support for financial platforms and tax providers and improving UI/UX. I also optimized asynchronous operations to improve performance and throughput and migrated production workloads from DigitalOcean to AWS. These responsibilities connect to FreeWheel's emphasis on application updates, deployment, and operational performance. In a second example, I supported end-to-end integration implementations through requirements gathering, setup, troubleshooting, and go-live support. I coordinated internal development and client work, communicated integration updates and project status, and created client guides and knowledge-base articles. This experience is relevant to translating business requirements into working integrations, resolving technical issues, and helping people use software effectively.
+
+I would welcome the opportunity to contribute this development and implementation experience to FreeWheel's Python Engineer role. The combination of API development, application integration, and ongoing operational support makes the position a compelling continuation of my work on business software platforms. Thank you for considering my application; I would appreciate the opportunity to discuss how my experience relates to the team's needs.
+
+Sincerely,
+Kyle M. Anderson

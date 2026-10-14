@@ -1,0 +1,26 @@
+{
+  "runId": "73ff0321ac7d4ad49e10a10daa5e434a",
+  "createdAt": "2026-09-25T15:06:36.419250+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://careers.molsoncoors.com/us/en/job/39115/Sr-IT-Application-Support-Specialist",
+  "previous": null,
+  "masterHash": "203c00f0dd90d5355315289eeec684eea45c89c7b2479161a15ef34178a2ea2d",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-09-25T15:15:58.551724+00:00",
+  "reviewNotes": "Emphasized application support, AWS migration, implementation delivery, documentation, and stakeholder communication. Omitted less relevant accomplishments and AI skills. The master does not establish managed service provider oversight, SLA reporting, formal incident/root-cause or change-control processes, patch management, SAP RISE, Azure, or AWS certification. Dedicated service-delivery tenure and the scope of ongoing AWS application operations are not explicit."
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Sr IT Application Support Specialist",
+  "company": "Molson Coors",
+  "description": "The Sr IT Application Support Specialist works in Milwaukee, WI as part of the Information Technology team, reporting to the Sr. Mgr of Apps Support. Within the Platforms & Enterprise Technology organization, this role is responsible for internal and third-party-delivered IT application support services within a business unit in a mixed cloud environment utilizing AWS, SAP RISE and Azure. The role ensures efficient and effective IT services delivered through multiple managed service providers, supporting critical business operations and make-ship-sell beer processes. Molson Coors operates a portfolio of beer, seltzers, spirits and non-alcohol brands and values collaboration and diverse perspectives and experiences.",
+  "location": {
+    "city": "Milwaukee",
+    "region": "WI"
+  },
+  "remote": "Hybrid",
+  "workArrangement": "Flexible work programs that support work-life balance, including a hybrid work model of 4 days in the office.",
+  "salary": "$96,600.00 - $126,700.00 (posting salary range) + 15% target short term incentive + $23,000 on average spent on benefits per employee, including but not limited to health, dental, vision, retirement with above market employer match, wellness incentives and EAP + paid time off (including holidays, vacation days and sick days).",
+  "compensationConditions": "The posting salary range is what Molson Coors, in good faith, believes it would pay for this role at the time of posting. Actual pay is based on non-discriminatory factors including but not limited to required work location, previous work experience, skill set and internal equity. Molson Coors is committed to paying people fairly and equitably for the work they do.",
+  "experience": "At least 6 years of experience in IT, 2-4 years in application operations, development or delivery, and 1-2 years in service delivery type roles.",
+  "responsibilities": [
+    "Oversee third parties to ensure the effective running of IT applications in a business unit, including monitoring, analysis and reporting of application service provider performance versus SLAs, and ensuring consistent adherence to and proper execution of agreed policies and procedures by all parties.",
+    "Address service delivery application outages and incidents, and ensure proactive plans are in place to identify and fix root cause analysis findings, following agreed change control and release management processes.",
+    "Coordinate with environment management in the patching and maintenance of the application portfolio under management.",
+    "Educate and work closely with key regional IT and business stakeholders to understand their application support needs and activities, and communicate on critical application issues.",
+    "Act as the key escalation point person for IT service delivery concerns from the business and IT management for a Business Unit.",
+    "Ensure all business unit impacts are identified, discussed and communicated to the appropriate leadership teams as part of the service delivery and reporting cycle.",
+    "Share responsibility for managing, monitoring and prioritizing business unit application enhancement requests, patches and upgrades.",
+    "Work closely with project teams, application and service transition management to ensure new services, applications and projects brought into the production environment are supportable and do not adversely impact the Business Unit's critical core processes and systems."
+  ],
+  "qualifications": [
+    "Bachelor’s degree in Information Technology OR equivalent experience.",
+    "At least 6 years of experience in IT, 2-4 years in application operations, development or delivery, and 1-2 years in service delivery type roles.",
+    "Experience supporting complex systems in an AWS Cloud environment.",
+    "AWS cloud certification (preferred).",
+    "Extensive experience managing outside service providers, plus application development and delivery technical skills.",
+    "Ability to communicate persuasively and effectively, both orally and in writing.",
+    "Understanding of solution delivery processes, with knowledge of the solution development lifecycle and typical problems associated with the implementation of information technology solutions (preferred).",
+    "Experience with SAP and/or Application Management in the cloud (strongly preferred).",
+    "Love a challenge and complete complex projects quickly and adeptly through an understanding of business priorities.",
+    "Build relationships and collaborate to achieve the desired outcome.",
+    "Take accountability for results, act with integrity and honor commitments.",
+    "Have a thirst for learning and seek ways to learn and help one another grow.",
+    "Exhibit the company’s core values."
+  ],
+  "benefits": [
+    "Flexible work programs supporting work-life balance, including a hybrid work model of 4 days in the office.",
+    "Company commitment to People and Planet, with stretch goals around key priorities.",
+    "Community involvement, including charitable donations and opportunities to work together to build parks.",
+    "Engagement with Business Resource Groups, which can provide volunteer opportunities, leadership experience and networking throughout the organization.",
+    "Career growth and development centered around First Choice Learning opportunities.",
+    "Total Rewards program including a competitive base salary, incentive plans, parental leave, health, dental, vision, retirement plan options with incredible employer match, generous paid time off plans, a Wellness Program and an Employee Assistance Program (EAP).",
+    "On-site Pub, access to brand clothing and swag, top events, and free beer and beverages.",
+    "Work in a fast-paced and innovative company with colleagues and partners from diverse backgrounds and experiences."
+  ],
+  "requisitionId": "39115",
+  "jobPostingGrade": "11",
+  "equalOpportunityStatement": "Molson Coors is an equal opportunity employer. Applications are invited from candidates of all backgrounds, race, color, religion, sex, national origin, age, disability, veteran status or any other characteristic.",
+  "accommodations": "If you have a disability and believe you need a reasonable accommodation during the application or recruitment processes, please e-mail jobs@molsoncoors.com.",
+  "meta": {
+    "canonical": "https://careers.molsoncoors.com/us/en/job/39115/Sr-IT-Application-Support-Specialist"
+  }
+}

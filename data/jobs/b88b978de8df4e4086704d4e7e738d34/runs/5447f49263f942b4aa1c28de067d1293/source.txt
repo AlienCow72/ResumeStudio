@@ -1,0 +1,53 @@
+Job Description
+
+Position Responsibilities:
+
+Design, develop, test, and deploy enterprise AI applications and services
+Develop scalable architectures that integrate AI capabilities into existing business systems and workflows
+Design and implement agentic AI patterns that can reason, retrieve enterprise data, trigger workflows, and support business actions
+Define reusable agent frameworks for priority use cases across in Supply Chain, ROP, Call Center, and Operations
+Mentor and coach developers, analysts, and technical team members on AI engineering best practices
+Collaborate with business stakeholders to understand challenges and identify AI opportunities
+Other projects or duties as assigned
+Required Education and Experience:
+
+Bachelor's Degree in Computer Science, Engineering, Data Science, Information Technology, or related discipline with 4 to 6 years of experience in software engineering, data engineering, machine learning, or AI development or High School Diploma/General Education Degree (GED) with 7 to 9 plus years of specific experience
+3+ years of hands-on experience implementing AI and machine learning solutions in production environments.
+Experience designing enterprise-scale applications and cloud-based architectures.
+Experience with Python, SQL, REST APIs, Git and DevOps practices, Machine Learning frameworks (TensorFlow, PyTorch, Scikit-Learn), Large Language Models (OpenAI, Azure OpenAI, Anthropic, Gemini, etc.), Prompt Engineering, and Retrieval-Augmented Generation (RAG)
+Experience with Vector Databases, Cloud Platforms (Azure, AWS, Google Cloud), CI/CD and Infrastructure Automation, Data Modeling and Data Engineering fundamentals, Microsoft Graph API, Cosmos DB or equivalent vector / operational data stores, GitHub Copilot and modern DevOps practices, and Snowflake or enterprise data platform integration
+Preferred Education and Experience:
+
+Bachelor’s Degree
+Experience with the following:
+Azure AI Foundry
+Microsoft Copilot Studio
+Microsoft Fabric
+Snowflake
+Databricks
+LangChain
+Semantic Kernel
+Docker
+Kubernetes
+MLflow
+LlamaIndex
+Agent Frameworks and Autonomous AI Systems
+
+Benefits
+
+At the Reyes Family of Businesses, our Total Rewards Strategy prioritizes the holistic well-being of our employees. This position offers a comprehensive benefits package that includes Medical, Dental, Vision coverage, Paid Time Off, Retirement Benefits, and complimentary Health Screenings.
+
+Equal Opportunity Employee & Physical Demands
+
+Reyes Holdings and its businesses are equal opportunity employers. Company policy prohibits discrimination and harassment against any applicant or employee based on race, color, religion, sex, pregnancy or pregnancy-related medical conditions, marital status, sexual orientation, gender identity or expression, age, national origin, citizenship, disability, genetic information, military or veteran status, or any other basis protected by applicable law. In addition, the Company is committed to providing reasonable accommodation to applicants and employees in accordance with applicable law. Requests for accommodation should be directed to your point of contact in the Talent Acquisition or Human Resources departments.
+
+Background Check and Drug Screening
+
+Offers of employment are contingent upon successful completion of a background check and drug screening.
+
+Pay Transparency
+
+Our compensation philosophy embraces diverse factors for fair pay decisions, valuing skills, experience, and the needs of our business. Moreover, this role may have the opportunity to participate in a discretionary incentive program, subject to program rules.
+Illinois AI Notice
+
+The Company uses tools powered by artificial intelligence (AI) to assist with recruitment and hiring. AI tools do not make final employment decisions for the Company; human recruiters and managers remain responsible for all decisions. For details about our use of AI, please refer to our Illinois-AI-Notice

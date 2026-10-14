@@ -1,0 +1,26 @@
+{
+  "runId": "ef4b98fc55d0431caf126546e6790dfe",
+  "createdAt": "2026-10-09T22:31:30.978254+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://jobs.comcast.com/job/-/-/45483/101581741232?source=directemp_at",
+  "previous": null,
+  "masterHash": "85416459430bed299f9b2c130bf237e33bd92dd61340750dcfaa68c06aa48ad7",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-10-09T22:32:32.319672+00:00",
+  "reviewNotes": "Emphasized integration development, platform upgrades, asynchronous performance, AWS migration, troubleshooting, and client coordination. Selected relevant technical skills and shortened earlier roles. The master does not establish two years of Python/Django experience, Django-specific REST API development, Kubernetes/EKS, production scale, AdTech experience, code reviews, QA collaboration, or junior-engineer mentoring. Chicago onsite attendance and variable-schedule availability are unconfirmed."
+}

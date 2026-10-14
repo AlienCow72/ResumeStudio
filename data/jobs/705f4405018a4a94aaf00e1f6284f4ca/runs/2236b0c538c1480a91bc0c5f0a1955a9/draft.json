@@ -1,0 +1,126 @@
+{
+  "resume": {
+    "basics": {
+      "name": "Kyle M. Anderson",
+      "email": "TheKyleAnderson72@gmail.com",
+      "phone": "(630) 995-1529",
+      "summary": "Technical professional with experience translating operational needs into practical software solutions through requirements gathering, systems integration, and project coordination. Leads development of a tax-integration platform, improves UI/UX, and supports clients from implementation through go-live, with additional experience in workflow automation and enterprise information sharing.",
+      "location": {
+        "region": "WI",
+        "countryCode": "US",
+        "city": "Menomonee Falls"
+      }
+    },
+    "work": [
+      {
+        "name": "DSTax Technologies",
+        "location": "Warrenville, IL",
+        "position": "Manager",
+        "startDate": "2020-05",
+        "summary": "Technical lead and lead developer for a tax-integration platform, combining development, project management, client support, and documentation.",
+        "highlights": [
+          "Supported end-to-end integration implementations, including requirements gathering, setup, troubleshooting, and go-live support.",
+          "Managed internal development projects and client-coordinated work, communicating integration updates, reporting status, and responding to questions and requests.",
+          "Led the transition from Version 1 to Version 2 of the tax-integration platform and improved UI/UX.",
+          "Developed integrations between financial platforms and tax providers, broadening platform and provider support.",
+          "Supported integrations with Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
+          "Created and maintained client guides and knowledge-base articles.",
+          "Optimized asynchronous operations to improve performance and throughput."
+        ]
+      },
+      {
+        "name": "Colectivo Coffee Roasters",
+        "location": "Milwaukee, WI",
+        "position": "Warehouse Associate",
+        "startDate": "2019-06",
+        "endDate": "2020-05",
+        "highlights": [
+          "Partnered with the IT department to install and troubleshoot new point-of-sale nodes.",
+          "Updated invoices for inventory changes to help maintain accurate records and assisted with training new hires."
+        ]
+      },
+      {
+        "name": "Komatsu Mining Corp. (Joy Global)",
+        "location": "Milwaukee, WI",
+        "position": "Facilities Management Intern",
+        "startDate": "2016-05",
+        "endDate": "2018-12",
+        "highlights": [
+          "Evaluated, selected, and implemented a global mapping platform that provided facility information to employees and customers.",
+          "Managed SharePoint sites and data and designed data-input forms to improve accessibility, reduce errors, and promote cross-department information sharing.",
+          "Initiated web automations that reduced manual database-maintenance work.",
+          "Analyzed asset and facilities databases, identifying more than $10 million in previously unidentified asset value that informed the sale of unused assets before Komatsu's acquisition of Joy Global."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Wisconsin–Milwaukee",
+        "area": "Information Technology Management",
+        "studyType": "BBA",
+        "startDate": "2017",
+        "endDate": "2020"
+      },
+      {
+        "institution": "Milwaukee School of Engineering",
+        "area": "Industrial Engineering and Supply Chain/Operations Management",
+        "studyType": "Studied",
+        "startDate": "2014",
+        "endDate": "2016"
+      }
+    ],
+    "skills": [
+      {
+        "name": "AI",
+        "keywords": [
+          "OpenAI / Codex",
+          "Anthropic / Claude Code"
+        ]
+      },
+      {
+        "name": "Software Development",
+        "keywords": [
+          "Python",
+          "Django",
+          "Flask",
+          "PHP",
+          "C#"
+        ]
+      },
+      {
+        "name": "Integrations & APIs",
+        "keywords": [
+          "REST APIs"
+        ]
+      },
+      {
+        "name": "Source Control & Collaboration",
+        "keywords": [
+          "SharePoint",
+          "Microsoft 365 Enterprise",
+          "Git",
+          "GitLab"
+        ]
+      },
+      {
+        "name": "Databases",
+        "keywords": [
+          "Microsoft SQL Server",
+          "PostgreSQL",
+          "SQLite"
+        ]
+      },
+      {
+        "name": "Cloud, Infrastructure & DevOps",
+        "keywords": [
+          "AWS",
+          "Docker",
+          "GitLab CI/CD"
+        ]
+      }
+    ]
+  },
+  "coverLetter": "Dear Hiring Team,\n\nI am applying for the Senior Associate, Product & Solution Design position at KPMG. My background combines software development, systems integration, requirements gathering, and client support, with responsibility for connecting operational needs to working software. As a Manager at DSTax Technologies, I serve as a technical lead and lead developer for a tax-integration platform. The Digital Office’s emphasis on understanding business needs and partnering with technical teams to deliver practical solutions closely aligns with that experience.\n\nAt DSTax Technologies, I supported integration implementations from requirements gathering and setup through troubleshooting and go-live. I also managed internal development projects and client-coordinated work, sharing updates, reporting status, and responding to questions and requests. Leading the platform’s transition from Version 1 to Version 2 and improving its UI/UX gave me experience with both technical delivery and the user-facing aspects of a business application. Creating client guides and knowledge-base articles complemented that work by explaining the platform to the people using it. At Komatsu Mining Corp. (Joy Global), I evaluated, selected, and implemented a global mapping platform that made facility information available to employees and customers. I also managed SharePoint sites and data, designed data-input forms to improve accessibility and reduce errors, and initiated web automations that reduced manual database maintenance. These efforts connected information access, workflow improvement, and technology selection to operational needs.\n\nI would welcome the opportunity to bring this implementation perspective to KPMG’s Product & Solution Design team. The role’s connection between stakeholder discovery, evolving requirements, and buildable digital solutions offers a clear extension of my work translating business needs into practical technical outcomes. Thank you for considering my application; I would appreciate the opportunity to discuss how my experience could support the LRMC Digital product portfolio.\nSincerely,\nKyle M. Anderson",
+  "reviewNotes": "Emphasized requirements gathering, client coordination, UI/UX improvements, documentation, technology selection, and workflow automation. The master supports related technical experience since 2020 but does not establish five years specifically in product or UX design. Wireframes, user journeys, interactive prototypes, discovery workshop facilitation, Figma, Miro, Power Platform, Lovable, Microsoft Copilot, and formal Agile or human-centered design practices are not documented. Listed AI tools do not establish AI-assisted prototyping experience. U.S. work authorization and sponsorship eligibility are unspecified.",
+  "savedAt": "2026-09-21T15:01:48.533495+00:00"
+}

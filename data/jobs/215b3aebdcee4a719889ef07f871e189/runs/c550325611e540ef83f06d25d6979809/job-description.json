@@ -1,0 +1,50 @@
+{
+  "title": "Manager, Software Engineering",
+  "company": "Molson Coors",
+  "description": "Hands-on technical leadership role based in the Milwaukee, WI office, working closely with MCBC delivery teams to configure, develop, and optimize Commercial Technology solutions. The role covers the entire solution delivery lifecycle, including design, build, testing, deployment, and support. This manager mentors technical leads, develops junior engineers, partners with engineering team members outside the US, supports stakeholders, and helps shape global engineering standards and practices. The role applies broad and deep hands-on software delivery experience to solve complex technical problems and ensure high-quality business solutions. Molson Coors has a portfolio of beer, seltzers, spirits, and non-alcohol brands and values diverse perspectives, collaboration, continuous improvement, and innovation.",
+  "location": {
+    "city": "Milwaukee",
+    "region": "Wisconsin"
+  },
+  "remote": "Hybrid",
+  "workArrangement": "Flexible work programs that support work life balance, including a hybrid work model of 4 days in the office.",
+  "salary": "$126,500.00 - $166,100.00 posting salary range + 15% target short term incentive + $23,000 on average spent on benefits per employee, including but not limited to health, dental, vision, retirement with above market employer match, wellness incentives and EAP + paid time off (including holidays, vacation days and sick days).",
+  "compensationConditions": "The posting salary range is what Molson Coors, in good faith, believes it would pay for this role at the time of posting. Actual pay is based on non-discriminatory factors including, but not limited to, required work location, previous work experience, skill set, and internal equity. Molson Coors is committed to paying people fairly and equitably for the work they do.",
+  "responsibilities": [
+    "Engage with and provide technical leadership to software delivery teams to ensure on-time, high-quality, stable delivery of software solutions that meet business requirements throughout the entire Software Development Lifecycle, covering design, build, testing, deployment, and support.",
+    "Lead software engineers effectively, ensuring a culture of curiosity and problem solving and that team members feel motivated and empowered by their work.",
+    "Perform people management activities for a small team of IT professionals, including goal setting, people development, performance management, and career management.",
+    "Work with external developers and engineers to ensure outsourced technical work meets standards and requirements.",
+    "Stay current with the latest trends and best practices in SaaS applications, configurations, and software engineering for the sales and marketing arena.",
+    "Provide leadership and oversight for the configuration, development, and optimization of Commercial Technology solutions.",
+    "Mentor technical leads and develop junior engineering resources, fostering continuous improvement and innovation.",
+    "Partner with engineering team members based outside the US, support stakeholders, and help shape global engineering standards and practices.",
+    "Develop technical solutions for the business and solve complex technical problems using broad and deep hands-on technical delivery experience."
+  ],
+  "qualifications": [
+    "Bachelor’s degree and a minimum of 5 years of experience developing on cloud and Software-as-a-Service platforms for Sales and Marketing applications.",
+    "At least 2 years of experience successfully managing a team, including direct supervisory and performance management responsibility.",
+    "Proven track record successfully working across all phases of the Software Development Lifecycle to deliver high-quality technology solutions for the business.",
+    "Strong interpersonal and leadership skills, with the ability to create strong team culture, establish engineering practices and standards, and influence and guide engineering teams.",
+    "Experience working and leading teams using agile development methodologies and tools.",
+    "Strong analytical and problem solving skills, with the ability to troubleshoot and resolve complex technical issues.",
+    "Excellent verbal and written communication skills, with comfort speaking to Sr. Director+ stakeholders in technology and business roles.",
+    "Ability to collaborate with team members and stakeholders, both technical and non-technical, including internal and third-party/vendor resources.",
+    "Exhibit the company’s core values."
+  ],
+  "benefits": [
+    "Flexible work programs supporting work life balance, including a hybrid work model of 4 days in the office.",
+    "Engagement with Employee Resource Groups offering potential volunteer opportunities, leadership experience, and networking throughout the organization.",
+    "Career growth and development centered around First Choice Learning opportunities.",
+    "Total Rewards program including a competitive base salary, incentive plans, parental leave, health, dental, vision, a 401k option with an incredible employer match, generous paid time off plans, a Wellness Program, and an Employee Assistance Program (EAP).",
+    "On-site Pub, access to brand clothing and swag, top events, and free beer and beverages.",
+    "Community involvement, including charitable donations and activities such as building parks.",
+    "Work in a fast-paced, innovative company with colleagues and partners from diverse backgrounds and experiences."
+  ],
+  "equalOpportunity": "Molson Coors is an equal opportunity employer and invites applications from candidates of all backgrounds, race, color, religion, sex, national origin, age, disability, veteran status, or any other characteristic.",
+  "accommodations": "If you have a disability and believe you need a reasonable accommodation during the application or recruitment processes, email jobs@molsoncoors.com.",
+  "meta": {
+    "canonical": "https://careers.molsoncoors.com/us/en/job/39990/Manager-Software-Engineering",
+    "requisitionId": "39990"
+  }
+}

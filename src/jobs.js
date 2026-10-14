@@ -84,7 +84,7 @@
     $('formIntro').textContent = job ? 'Update details, generate documents, and download your application files.' : 'Add a posting link. We’ll extract it and prepare your application documents.';
     $('generationNotice').hidden = !!job; $('submitJob').textContent = job ? 'Save job' : 'Save & generate';
     $('postingTextSection').open = job?.generation?.status === 'needs_input';
-    $('postingText').value = ''; detailGeneration(job);
+    $('postingText').value = job?.sourceText || ''; detailGeneration(job);
     for (const [key, id] of Object.entries({url:'jobUrl',company:'jobCompany',title:'jobTitle',stage:'jobStage',appliedOn:'jobApplied',notes:'jobNotes'})) $(id).value = job?.[key] || (key === 'stage' ? 'applying' : '');
     $('historySection').hidden = !job; $('historySection').open = false; $('history').replaceChildren();
     if (job) for (const event of job.history) $('history').append(element('li', '', `${displayDate(event.at)} · ${event.from ? stages[event.from] + ' → ' : 'Added to '}${stages[event.to]}`));
@@ -146,7 +146,7 @@
   async function runGeneration(job, action, detail = false, regenerate = false) {
     if (pending.has(job.id) || saving) return;
     if (detail && $('jobUrl').value.trim() !== job.url) {$('formError').textContent = 'Save the new posting link before generating documents.'; return;}
-    const sourceText = detail ? $('postingText').value : '';
+    const sourceText = detail ? $('postingText').value : (job.sourceText || '');
     pending.add(job.id);
     try {
       const generation = await api(`/api/jobs/${job.id}/${action}`, {sourceText, regenerate});

@@ -118,17 +118,19 @@ class Handler(BaseHTTPRequestHandler):
                 parts=self.path.strip('/').split('/')
                 if len(parts)!=4:raise ValueError('Invalid generation URL.')
                 identifier=parts[2]
-                result=generation().cancel(identifier) if parts[3]=='cancel' else generation().start(identifier,request.get('sourceText',''),request.get('regenerate') is True)
+                result=generation().cancel(identifier) if parts[3]=='cancel' else generation().start(identifier,request.get('sourceText',JOBS.read(identifier).get('sourceText','')),request.get('regenerate') is True)
                 self.respond(202,json.dumps(result));return
             if self.path=='/api/jobs' or self.path.startswith('/api/jobs/'):
                 identifier=None if self.path=='/api/jobs' else self.path[len('/api/jobs/'):]
                 job=request.get('job')
+                if isinstance(job,dict) and 'sourceText' in request:
+                    job={**job,'sourceText':request['sourceText']}
                 auto=not identifier and request.get('generate') is not False
                 if auto and isinstance(job,dict):
                     job={**job,'company':job.get('company') or 'Pending extraction','title':job.get('title') or 'New application'}
                 result=JOBS.save(job,identifier,request.get('revision'),request.get('allowDuplicate') is True)
                 if auto:
-                    try:result['generation']=generation().start(result['id'],request.get('sourceText',''))
+                    try:result['generation']=generation().start(result['id'],result['sourceText'])
                     except Exception as error:
                         result['generation']={'status':'failed','files':[],'message':str(error)}
                         JOBS.write(JOBS.path(result['id']).parent/'generation.json',result['generation'])

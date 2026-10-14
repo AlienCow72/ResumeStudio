@@ -1,0 +1,26 @@
+{
+  "runId": "05c5dd361e7a4b98a8f11ffc0ca97256",
+  "createdAt": "2026-09-25T15:06:35.235306+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://careers.molsoncoors.com/us/en/job/39081/Sr-Software-Engineer-Salesfore",
+  "previous": null,
+  "masterHash": "203c00f0dd90d5355315289eeec684eea45c89c7b2479161a15ef34178a2ea2d",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-09-25T15:14:18.233333+00:00",
+  "reviewNotes": "Emphasized technical leadership, end-to-end integrations, e-commerce platforms, performance optimization, AWS migration, and stakeholder communication. The master does not establish Salesforce experience, expert proficiency in three languages, formal engineer coaching or design-standard ownership, Director-level communication, or broad CRM and marketing-platform experience. DevOps tools are listed, but detailed practices are not documented."
+}

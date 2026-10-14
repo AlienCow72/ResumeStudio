@@ -1,0 +1,103 @@
+{
+  "title": "Python Engineer (Django) - Chicago - ONSITE 2X Week- FreeWheel",
+  "company": "FreeWheel, a Comcast company",
+  "type": "Full Time",
+  "date": "2026-10-05",
+  "description": "FreeWheel provides comprehensive advertising platforms for publishers, advertisers, and media buyers, enabling transactions across screens, data types, and sales channels. It has offices in nine countries. Its advertising buying platform powers hundreds of Demand Side Platforms (DSPs) and processes trillions of transactions to satisfy millions of dollars in advertising campaigns each month. Buyer Cloud (formerly Beeswax) builds and maintains services to set up, configure, manage, monitor, and execute DSP digital real-time bidding campaigns. The App team focuses on APIs, support tools, and ad serving systems that enable efficient and scalable programmatic advertising operations. The Backend Python Developer will design, develop, and integrate scalable solutions that meet business needs and address complex, ambiguous challenges, contributing throughout the Software Development Life Cycle (SDLC), including requirements analysis, development, testing, deployment, and application integration. The role champions code quality, operational excellence, and system reliability, mentors and supports engineers, participates actively in code reviews, provides meaningful feedback, and drives engineering best practices. The title specifies onsite work twice per week in Chicago.",
+  "location": {
+    "city": "Chicago",
+    "region": "Illinois",
+    "countryCode": "US",
+    "postalCode": "60654"
+  },
+  "remote": "Hybrid",
+  "salary": "Illinois Pay Range: $109,759.26 - $164,638.89. Comcast intends to offer the selected candidate base pay within this range, dependent on job-related, non-discriminatory factors such as experience.",
+  "experience": "Relevant Work Experience: 5-7 Years. The ideal skillset includes 2+ years of experience working with Python and Django.",
+  "responsibilities": [
+    "Collaborate with cross-functional teams to design, develop, and integrate innovative software solutions that align with business needs.",
+    "Conduct analysis of system requirements and customize applications to ensure optimal functionality.",
+    "Assist with the software update process for existing applications and roll-outs of software releases.",
+    "Mentor junior engineers, fostering a culture of technical excellence and shared knowledge within the team.",
+    "Engage with Quality Assurance to verify that software meets technical specifications and deliver high-quality, reliable applications.",
+    "Troubleshoot and resolve complex technical issues in software applications and systems.",
+    "Synthesize market research and industry trends to inform project strategies and enhance product offerings.",
+    "Conduct training sessions for operational staff to ensure effective use of internally developed applications.",
+    "Participate throughout the SDLC in requirements analysis, development, testing, deployment, and application integration.",
+    "Champion code quality, operational excellence, and system reliability; actively participate in code reviews, provide meaningful feedback, and drive engineering best practices.",
+    "Consistent exercise of independent judgment and discretion in matters of significance.",
+    "Regular, consistent and punctual attendance. Must be able to work nights and weekends, variable schedule(s) as necessary.",
+    "Other duties and responsibilities as assigned.",
+    "Understand the Operating Principles and make them the guidelines for how you do your job.",
+    "Own the customer experience: think and act in ways that put customers first, give them seamless digital options at every touchpoint, and make them promoters of the products and services.",
+    "Be enthusiastic learners, users and advocates of the company's technology, products and services, especially digital tools and experiences.",
+    "Win as a team by working together and being open to new ideas.",
+    "Be an active part of the Net Promoter System by joining huddles, making call backs, and helping elevate opportunities to do better for customers.",
+    "Drive results and growth.",
+    "Support a culture of inclusion in how you work and lead.",
+    "Do what's right for each other, customers, investors and communities."
+  ],
+  "qualifications": [
+    "Ideal skillset: 2+ years of experience working with Python and Django.",
+    "Ideal skillset: Experience creating/developing RESTful APIs using Django.",
+    "Ideal skillset: Experience with PHP.",
+    "Ideal skillset: Experience with Kubernetes/EKS and AWS, owning production deployments at scale for critical backend services.",
+    "Ideal skillset: Bachelor's degree in Computer Science or relatable technical field or experience equivalent.",
+    "Bonus points: AdTech or Advertising industry experience.",
+    "Education: Bachelor's Degree. While possessing the stated degree is preferred, Comcast also may consider applicants who hold some combination of coursework and experience, or who have extensive related professional experience.",
+    "Relevant Work Experience: 5-7 Years."
+  ],
+  "skills": [
+    {
+      "name": "Back-End Development"
+    },
+    {
+      "name": "Collaboration"
+    },
+    {
+      "name": "Design"
+    },
+    {
+      "name": "Python"
+    },
+    {
+      "name": "Django"
+    },
+    {
+      "name": "RESTful APIs"
+    },
+    {
+      "name": "PHP"
+    },
+    {
+      "name": "Kubernetes/EKS"
+    },
+    {
+      "name": "AWS"
+    }
+  ],
+  "workSchedule": "Onsite twice per week in Chicago, as stated in the title. Regular, consistent and punctual attendance is required. Must be able to work nights and weekends and variable schedules as necessary.",
+  "benefits": [
+    "Base pay is one part of Comcast's Total Rewards. Most sales positions are eligible for a Commission under an applicable plan, while most non-sales positions are eligible for a Bonus.",
+    "Comcast provides benefits to eligible employees, with options, expert guidance and always-on tools to support employees physically, financially and emotionally through major milestones and everyday life.",
+    "Paid time off to relax, recover from illness, or care for others' needs.",
+    "Physical wellbeing benefits and support programs for employees and loved ones.",
+    "Financial wellbeing benefits with personalized support for current and future needs.",
+    "Emotional wellbeing benefits.",
+    "Life events and family support benefits.",
+    "Compensation and benefits summary: https://jobs.comcast.com/benefits"
+  ],
+  "applicationWindow": "The application window is 30 days from the date the job is posted, unless the number of applicants requires it to close sooner or later.",
+  "equalOpportunityStatement": "Comcast is an equal opportunity workplace. We will consider all qualified applicants for employment without regard to race, color, religion, age, sex, sexual orientation, gender identity, national origin, disability, veteran status, genetic information, or any other basis protected by applicable law.",
+  "employmentPolicies": [
+    "Comcast participates in the E-VERIFY PROGRAM in its hiring practices to achieve a lawful workforce.",
+    "Comcast is a drug-free workplace."
+  ],
+  "accommodations": "For accommodations for any part of the application or interview process, contact TalentAccommodations@comcast.com. Inquiries regarding employment application status, resume submittal, open positions and other general inquiries will not receive a response through this contact; visit the FAQ page for more information.",
+  "disclaimer": "This information has been designed to indicate the general nature and level of work performed by employees in this role. It is not designed to contain or be interpreted as a comprehensive inventory of all duties, responsibilities and qualifications.",
+  "meta": {
+    "canonical": "https://jobs.comcast.com/job/-/-/45483/101581741232?source=directemp_at",
+    "jobId": "R443360",
+    "category": "Computer Engineering",
+    "industry": "FreeWheel Engineering"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "runId": "f7ae7333eecd4e9aba47a0084ffb3686",
+  "createdAt": "2026-10-07T18:33:52.935774+00:00",
+  "files": [],
+  "sourceUrl": "https://jobportal.reyesholdings.com/mb/jobs/36219?lang=en-US",
+  "previous": null,
+  "masterHash": "85416459430bed299f9b2c130bf237e33bd92dd61340750dcfaa68c06aa48ad7",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "needs_input",
+  "message": "The extracted posting is incomplete. Paste the full job description to continue.",
+  "error": "The extracted posting is incomplete. Paste the full job description to continue.",
+  "updatedAt": "2026-10-07T18:34:40.711511+00:00"
+}

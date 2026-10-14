@@ -1,0 +1,26 @@
+{
+  "runId": "63929eaba566450b9ad353a59045de6b",
+  "createdAt": "2026-09-25T15:05:30.576484+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://careers.molsoncoors.com/us/en/job/39940/Tax-Technology-Manager",
+  "previous": null,
+  "masterHash": "203c00f0dd90d5355315289eeec684eea45c89c7b2479161a15ef34178a2ea2d",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-09-25T15:12:30.029222+00:00",
+  "reviewNotes": "Emphasized tax integration leadership, platform modernization, implementation support, automation, and data quality. The master does not establish multinational tax compliance or reporting expertise, Corptax/ONESOURCE administration, SAP, dashboard development, formal controls governance, or direct people management and coaching. Tax technology experience dates to May 2020, but the required multinational corporation or public accounting context is not established."
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Sr. Software Engineer",
+  "company": "Molson Coors",
+  "description": "The Sr. Software Engineer works in Milwaukee, WI, with 4 days a week in the office, as part of the Information Technology team reporting to the Senior Manager, Software Engineering. This experienced technologist guides technology work by collaborating with commercial leaders, product managers, and solution architects to understand technical needs and conceive effective solutions within Salesforce and across the MCBC technology stack. The role works with solution and enterprise architecture to review and set design standards and develops other software engineers on the team. Success means solving business problems with technology in practical, creative ways.",
+  "location": {
+    "city": "Milwaukee",
+    "region": "WI"
+  },
+  "remote": "Hybrid",
+  "salary": "$109,100.00 - $143,200.00 posting salary range + 15% target short term incentive + $23,000 on average spent on benefits per employee + paid time off (including holidays, vacation days and sick days). The salary range reflects what Molson Coors, in good faith, believes it would pay for this role at the time of posting. Actual pay is based on non-discriminatory factors including required work location, previous work experience, skill set and internal equity.",
+  "experience": "5+ years of experience in software engineering or a related discipline; experience in the Consumer Packaged Goods (CPG) industry is a plus.",
+  "responsibilities": [
+    "Work closely with product owners and teams to understand their problems and business processes and use design thinking to creatively conceive end-to-end solutions that deliver business value and enable development by the delivery team.",
+    "Either directly or working with developers, configure Software-as-a-Service (SaaS) applications, such as Salesforce, to meet the specific needs of sales and marketing teams. Ensure solutions are minimally customized, use standard approaches, and are optimized for performance and usability.",
+    "Conduct in-depth analysis of requirements to understand desired functionality, then guide engineers in decomposing solutions and identifying dependencies to ensure end-products meet standards and requirements.",
+    "Use full-stack programming skills, knowledge, and experience to troubleshoot and remediate complex issues, including software performance and optimization.",
+    "Escalate issues and risks in a timely manner to keep leadership and stakeholders informed.",
+    "Guide, coach, and review the work of other engineers on the delivery team, applying technical expertise to support successful solution delivery and reinforcing best practices throughout the SDLC: plan, design, build, test, deploy, and maintain.",
+    "Manage projects and processes for a single delivery team, navigating high complexity problems and solutions across multiple domains.",
+    "Influence team members through technical leadership and share learnings with the broader organization.",
+    "Stay current with the latest trends and best practices in SaaS applications, configurations, and software engineering for the sales and marketing arena.",
+    "Work with solution and enterprise architecture to review and set design standards and develop other software engineers within the team."
+  ],
+  "qualifications": [
+    "Bachelor's degree in computer science or engineering OR equivalent experience.",
+    "5+ years of experience in software engineering or a related discipline; experience in the Consumer Packaged Goods (CPG) industry is a plus.",
+    "Salesforce experience.",
+    "Experience building end-to-end solutions across commercial platforms including CRM, pricing and promotional management, direct-to-consumer marketing, e-commerce, and content management and syndication.",
+    "Ability to apply methods such as design thinking to understand business problems and create simple/elegant solutions, minimizing complexity and customization.",
+    "Proven track record of working with DevOps practices and tools.",
+    "Expert proficiency in three or more programming languages and associated development tools, with the ability to rapidly learn additional languages and tooling.",
+    "Accountability for engineering outcomes, acting with integrity and honoring commitments.",
+    "Strong analytical and problem-solving skills with the ability to troubleshoot and resolve complex technical issues.",
+    "Proactive and curious, with a drive to understand systems and how they elegantly support business processes.",
+    "Excellent verbal and written communication skills, with comfort speaking to and challenging stakeholders at the Director and Sr. Director level.",
+    "Ability to collaborate with team members and stakeholders, both technical and non-technical.",
+    "Ability to complete complex projects quickly and adeptly through understanding business priorities."
+  ],
+  "benefits": [
+    "Flexible work programs supporting work life balance, including a hybrid work model of 4 days in the office.",
+    "Participation in the Total Rewards program with a competitive base salary, incentive plans, parental leave, health, dental, vision, a 401k option with employer match, generous paid time off plans, a Wellness Program, and an Employee Assistance Program (EAP).",
+    "$23,000 on average spent on benefits per employee, including but not limited to health, dental, vision, retirement with above market employer match, wellness incentives and EAP.",
+    "Paid time off includes holidays, vacation days and sick days.",
+    "Engagement with a variety of Employee Resource Groups that can provide volunteer opportunities, leadership experience, and networking throughout the organization.",
+    "Career growth and development centered around First Choice Learning opportunities.",
+    "On-site Pub, access to brand clothing and swag, top events, and free beer and beverages.",
+    "Community involvement through charitable donations and activities such as building parks.",
+    "Work within a fast-paced and innovative company with colleagues and partners from diverse backgrounds and experiences."
+  ],
+  "requisitionId": "39081",
+  "jobPostingGrade": "11",
+  "equalOpportunity": "Molson Coors is an equal opportunity employer and invites applications from candidates of all backgrounds, race, color, religion, sex, national origin, age, disability, veteran status or any other characteristic.",
+  "accommodations": "If you have a disability and believe you need a reasonable accommodation during the application or recruitment processes, email jobs@molsoncoors.com.",
+  "meta": {
+    "canonical": "https://careers.molsoncoors.com/us/en/job/39081/Sr-Software-Engineer-Salesfore"
+  }
+}

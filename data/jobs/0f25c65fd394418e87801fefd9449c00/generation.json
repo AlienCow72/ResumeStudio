@@ -1,0 +1,26 @@
+{
+  "runId": "5d31a3bc47e3493b84134b998457050d",
+  "createdAt": "2026-09-25T15:03:47.029772+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://careers.molsoncoors.com/us/en/job/39898/Sr-Mgr-Product-Solution-Owner",
+  "previous": null,
+  "masterHash": "203c00f0dd90d5355315289eeec684eea45c89c7b2479161a15ef34178a2ea2d",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-09-25T15:08:59.465522+00:00",
+  "reviewNotes": "Emphasized platform transition leadership, client coordination, requirements gathering, implementation support, and UI/UX improvements. Retained order-fulfillment and manufacturing-context experience. The master does not establish formal product roadmap, backlog, budget, OKR, or UAT ownership; agile and waterfall implementation; cross-functional product-team leadership in manufacturing or consumer products; or SAP, Salesforce.com, o9 Solutions, and digital marketing experience."
+}

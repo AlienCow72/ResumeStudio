@@ -1,0 +1,26 @@
+{
+  "runId": "c550325611e540ef83f06d25d6979809",
+  "createdAt": "2026-09-25T15:03:44.851677+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://careers.molsoncoors.com/us/en/job/39990/Manager-Software-Engineering",
+  "previous": null,
+  "masterHash": "203c00f0dd90d5355315289eeec684eea45c89c7b2479161a15ef34178a2ea2d",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-09-25T15:07:11.839475+00:00",
+  "reviewNotes": "Emphasized technical leadership, platform modernization, cloud migration, implementation support, and stakeholder communication. The master does not establish direct supervisory or performance-management responsibility, five years developing sales and marketing SaaS applications, agile team leadership, formal testing ownership, engineering mentorship, outsourced development oversight, international team leadership, or Sr. Director+ communication."
+}

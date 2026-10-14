@@ -1,0 +1,58 @@
+{
+  "title": "Data Platform Manager",
+  "company": "Molson Coors",
+  "description": "Working in Milwaukee, WI, the Data Platform Manager leads the evolution of Molson Coors' enterprise data platform, driving strategy, engineering excellence, and operational maturity of the Databricks ecosystem. The role combines people leadership with hands-on technical expertise, guiding engineers and shaping scalable, secure, high-performing data solutions supporting revenue management, supply chain, manufacturing, and commercial functions. The role reports to the Senior Manager Data Platforms & Engineering and works closely with process owners, product owners, and business users to accelerate innovation through modern data engineering practices, platform automation, and cloud-native technologies that enable analytics, machine learning, and data-driven decision making across the enterprise.",
+  "location": {
+    "city": "Milwaukee",
+    "region": "WI"
+  },
+  "remote": "Hybrid",
+  "workArrangement": "Flexible work programs that support work life balance, including a hybrid work model of 4 days in the office.",
+  "salary": "$126,500.00 - $166,100.00 (posting salary range) + 15% target short term incentive + $23,000 on average spent on benefits per employee, including but not limited to health, dental, vision, retirement with above market employer match, wellness incentives and EAP + paid time off (including holidays, vacation days and sick days).",
+  "compensationConditions": "Molson Coors is committed to paying people fairly and equitably for the work they do. The posting salary range is what the company, in good faith, believes it would pay for this role at the time of posting. Actual pay is based on non-discriminatory factors including, but not limited to, required work location, previous work experience, skill set, and internal equity.",
+  "responsibilities": [
+    "Lead a team of talented colleagues and support their growth and development through career discussions and consistent one on one conversations.",
+    "Serve as a hands-on technical leader and trusted advisor, providing architectural direction, engineering oversight, and best-practice guidance to engineering teams across the organization.",
+    "Build and support large-scale data processing capabilities that enable real-time and batch data ingestion, analytics, reporting, machine learning, and operational decision-making across the enterprise.",
+    "Oversee the development, scaling, and optimization of data pipelines from internal and external sources, ensuring high levels of data quality, availability, and performance.",
+    "Develop tools and services that improve data discovery, lineage, governance, resiliency, security, and privacy compliance across the data platform.",
+    "Define and build out DevOps capabilities, including automated testing, CI/CD deployment pipelines, monitoring, observability, and infrastructure automation to improve reliability, speed of delivery, and operational efficiency.",
+    "Support the implementation, enhancement, and ongoing operation of the Databricks platform, ensuring the environment is scalable, well-governed, and optimized for enterprise workloads.",
+    "Drive adoption of data engineering standards, architectural principles, and operational best practices that improve platform stability, quality, and engineering effectiveness.",
+    "Collaborate with enterprise architects, infrastructure teams, and technology partners to enhance platform capabilities and support evolving business and technical requirements.",
+    "Lead the design, architecture, and delivery of modern data products and solutions that support key business capabilities across revenue management, supply chain, manufacturing, commercial, and other strategic functions.",
+    "Partner closely with business stakeholders, product owners, architects, and data science teams to translate complex business requirements into scalable data and analytics solutions.",
+    "Evaluate emerging technologies, prototype new approaches, and implement solutions that improve the efficiency, scalability, and performance of the data ecosystem."
+  ],
+  "qualifications": [
+    "Authentic leadership; value and respect differences and believe diversity with inclusion is the key to collaboration and a winning team culture.",
+    "Bachelor’s degree in computer science, IT, data mathematics, or related field OR equivalent experience (4+ years).",
+    "At least 8 years of experience in cloud data architecture, data and ML engineering.",
+    "Experience managing and developing engineering teams while remaining hands-on as an active contributor and technical lead, ideally including product owner responsibilities.",
+    "At least 8 years of overall technology experience that includes at least 6 years of hands-on software development, data engineering, and systems architecture.",
+    "At least 5 years of experience with Data Lake Infrastructure, Data Warehousing, and Data Analytics tools; hands-on Databricks experience is strongly preferred.",
+    "Experience applying DevOps and DataOps principles.",
+    "Experience building/operating highly available, distributed systems of data extraction, ingestion, and processing of large data sets.",
+    "Strong programming skills in Python and SQL.",
+    "Strong analytical and data modeling skills.",
+    "Deep understanding of database technology and analytic platform data use.",
+    "Complete complex projects quickly and adeptly with an understanding of business priorities.",
+    "Build relationships and collaborate to get to the desired outcome.",
+    "A thirst for learning; always look for ways to learn and help one another grow."
+  ],
+  "benefits": [
+    "Flexible work programs supporting work life balance, including a hybrid work model of 4 days in the office.",
+    "A company that cares about People and Planet and has set stretch goals around its key priorities.",
+    "Community involvement, including charitable donations and working together to build parks; giving back to the community is part of the company culture.",
+    "Engagement with a variety of Employee Resource Groups, which can provide volunteer opportunities, leadership experience, and networking through the organization.",
+    "Career growth and development centered around First Choice Learning opportunities.",
+    "Participation in the Total Rewards program with a competitive base salary, incentive plans, parental leave, health, dental, vision, a 401k option with incredible employer match, generous paid time off plans, an engaging Wellness Program, and an Employee Assistance Program (EAP) with resources.",
+    "On site Pub, access to brand clothing and swag, top events, and free beer and beverages.",
+    "Work within a fast paced and innovative company, meeting passionate colleagues and partners with diverse backgrounds and experiences."
+  ],
+  "equalOpportunity": "Molson Coors is an equal opportunity employer. It invites applications from candidates of all backgrounds, race, color, religion, sex, national origin, age, disability, veteran status or any other characteristic.",
+  "reasonableAccommodation": "If you have a disability and believe you need a reasonable accommodation during the application or recruitment processes, please e-mail jobs@molsoncoors.com.",
+  "meta": {
+    "canonical": "https://careers.molsoncoors.com/us/en/job/40113/Data-Platform-Manager"
+  }
+}

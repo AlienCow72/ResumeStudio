@@ -1,0 +1,57 @@
+{
+  "title": "Business Intelligence and Analytics Manager - Palantir Foundry",
+  "company": "Molson Coors",
+  "description": "Based in Milwaukee, WI, this role is part of the global Data, Analytics and AI team. The manager leads internal and external resources to deliver business intelligence and analytics solutions, acts as a strategic consultant to business leaders, and ensures existing solutions are fully leveraged and used correctly. The role requires strong business relationships, working through complex situations, and translating intricate IT ideas for business leaders across the company.",
+  "location": {
+    "city": "Milwaukee",
+    "region": "WI"
+  },
+  "remote": "Hybrid",
+  "workArrangement": "Flexible work programs that support work life balance, including a hybrid work model of 4 days in the office.",
+  "salary": "$126,500.00 - $166,100.00 posting salary range + 15% target short term incentive + $23,000 on average spent on benefits per employee + paid time off (including holidays, vacation days and sick days). The posting salary range reflects what Molson Coors, in good faith, believes it would pay for this role at the time of posting. Actual pay is based on non-discriminatory factors including required work location, previous work experience, skill set and internal equity.",
+  "responsibilities": [
+    "Manage project teams consisting of internal and external resources in large IT programs, as well as supporting smaller projects and value-add enhancements generally in the Palantir Foundry platform.",
+    "Collaborate with business leaders to understand business strategies, tactics, and plans, setting shared goals to plan and deliver business intelligence, data and analytics initiatives to address business needs.",
+    "Lead the design, development, deployment, and transition of data analytics solutions, partnering with backend engineers, product owners, and business stakeholders to deliver tangible progress that business leaders can see and react to.",
+    "Provide functional and technical subject matter expertise to colleagues such as Enterprise Architects, Information Technology Business Partners, and Business Stakeholders.",
+    "Build and maintain Spark/PySpark data pipelines within Palantir Foundry, including data ingestion, transformation, and normalization from enterprise source systems (SAP, S4/HANA, and related operational databases).",
+    "Define, develop and govern ontology models, object types, actions and link types aligned to business requirements and data architecture standards.",
+    "Perform data integration and validation activities including source system connectivity, data quality validation across pipeline stages, and end-to-end data lineage verification.",
+    "Create and maintain Webhooks for writeback to ERP applications.",
+    "Build and iterate frontend applications, dashboards, and user-facing modules within the Palantir Foundry ecosystem (Workshop, Contour, or Carbon as applicable), translating ambiguous or evolving business requests into clear, usable interfaces.",
+    "Develop advanced visual components including interactive charts and data visualizations using TypeScript and tools such as Vega or comparable libraries."
+  ],
+  "qualifications": [
+    "A bachelor’s degree and a minimum of 8 years of experience in the data and analytics field, or in lieu of a degree, 12 years of experience related to data and analytics.",
+    "Advanced knowledge and technical skills in Palantir Foundry and related toolsets, including 2 years of experience with Palantir Foundry.",
+    "At least one full life-cycle system implementation or three full life-cycle major system change initiatives, serving in the lead role.",
+    "Previous experience estimating project costs for any size project.",
+    "Experience overseeing the development of business intelligence, data or analytics solutions using third-party providers and managing indirect reports.",
+    "Direct, hands-on experience designing and developing business intelligence or analytics solutions.",
+    "Familiarity with agile and/or DevOps ways of working.",
+    "Knowledge of SAP and experience in supply chain/manufacturing.",
+    "Exhibit Molson Coors core values."
+  ],
+  "benefits": [
+    "Flexible work programs that support work life balance, including a hybrid work model of 4 days in the office.",
+    "Engagement with a variety of Employee Resource Groups, which can provide volunteer opportunities, leadership experience, and networking through the organization.",
+    "Career growth and development centered around First Choice Learning opportunities.",
+    "Total Rewards program including a competitive base salary, incentive plans, parental leave, health, dental, vision, a 401k option with employer match, generous paid time off plans, a Wellness Program, and an Employee Assistance Program (EAP).",
+    "$23,000 on average spent on benefits per employee, including but not limited to health, dental, vision, retirement with above market employer match, wellness incentives and EAP.",
+    "Paid time off including holidays, vacation days and sick days.",
+    "On-site Pub, access to brand clothing and swag, top events, and free beer and beverages."
+  ],
+  "companyCulture": [
+    "Molson Coors has a portfolio of beer, seltzers, spirits, and non-alcohol brands and seeks curious, tenacious individuals who are willing to fail forward.",
+    "The company values and respects unique perspectives and experiences, collaborates as a team, and celebrates each other’s successes.",
+    "Commitment to People and Planet, with stretch goals around key priorities.",
+    "Community involvement through charitable donations and activities such as building parks.",
+    "A fast-paced and innovative company with passionate colleagues and partners from diverse backgrounds and experiences."
+  ],
+  "equalOpportunity": "Molson Coors is an equal opportunity employer. It invites applications from candidates of all backgrounds, race, color, religion, sex, national origin, age, disability, veteran status or any other characteristic.",
+  "accommodations": "If you have a disability and believe you need a reasonable accommodation during the application or recruitment processes, email jobs@molsoncoors.com.",
+  "meta": {
+    "canonical": "https://careers.molsoncoors.com/us/en/job/39646/BI-Analytics-Manager-Palantir-Foundry",
+    "requisitionId": "39646"
+  }
+}

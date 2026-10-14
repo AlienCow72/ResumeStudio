@@ -1,0 +1,132 @@
+{
+  "resume": {
+    "basics": {
+      "name": "Kyle M. Anderson",
+      "email": "TheKyleAnderson72@gmail.com",
+      "phone": "(630) 995-1529",
+      "url": "https://kyleanderson.online",
+      "summary": "Technical professional with software development, systems integration, and client-support experience, serving as technical lead and lead developer for a tax-integration platform. Background includes requirements gathering, application upgrades, asynchronous performance improvements, and production migration to AWS, with Python, Django, PHP, and REST APIs among technical skills.",
+      "location": {
+        "region": "WI",
+        "countryCode": "US",
+        "city": "Menomonee Falls"
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "AlienCow72",
+          "url": "https://github.com/AlienCow72"
+        },
+        {
+          "network": "LinkedIn",
+          "username": "kyle-anderson-mke",
+          "url": "https://www.linkedin.com/in/kyle-anderson-mke/"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "DSTax Technologies",
+        "location": "Warrenville, IL",
+        "position": "Manager",
+        "startDate": "2020-05",
+        "summary": "Technical lead and lead developer for a tax-integration platform, coordinating development projects and supporting client implementations.",
+        "highlights": [
+          "Developed integrations between financial platforms and tax providers, including Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
+          "Supported end-to-end integration implementations, including requirements gathering, setup, troubleshooting, and go-live support.",
+          "Led the transition from Version 1 to Version 2 of the tax-integration platform, broadening tax-provider and financial-platform support and improving UI/UX.",
+          "Optimized asynchronous operations to improve performance and throughput.",
+          "Migrated production workloads from DigitalOcean to AWS.",
+          "Managed internal development projects and client-coordinated work, sharing integration updates, reporting status, and responding to questions and requests.",
+          "Created and maintained client guides and knowledge-base articles."
+        ]
+      },
+      {
+        "name": "Colectivo Coffee Roasters",
+        "location": "Milwaukee, WI",
+        "position": "Warehouse Associate",
+        "startDate": "2019-06",
+        "endDate": "2020-05",
+        "highlights": [
+          "Partnered with the IT department to install and troubleshoot new point-of-sale nodes.",
+          "Fulfilled orders for more than 1000 restaurant and store clients.",
+          "Assisted with training new hires."
+        ]
+      },
+      {
+        "name": "Komatsu Mining Corp. (Joy Global)",
+        "location": "Milwaukee, WI",
+        "position": "Facilities Management Intern",
+        "startDate": "2016-05",
+        "endDate": "2018-12",
+        "highlights": [
+          "Evaluated, selected, and implemented a global mapping platform that provided facility information to employees and customers.",
+          "Initiated web automations that reduced manual database-maintenance work.",
+          "Managed SharePoint sites and data and designed data-input forms to improve accessibility, reduce errors, and promote cross-department information sharing."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Wisconsin–Milwaukee",
+        "area": "Information Technology Management",
+        "studyType": "BBA",
+        "startDate": "2017",
+        "endDate": "2020"
+      },
+      {
+        "institution": "Milwaukee School of Engineering",
+        "area": "Industrial Engineering and Supply Chain/Operations Management",
+        "studyType": "Studied",
+        "startDate": "2014",
+        "endDate": "2016"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Software Development",
+        "keywords": [
+          "Python",
+          "Django",
+          "PHP",
+          "Flask"
+        ]
+      },
+      {
+        "name": "Integrations & APIs",
+        "keywords": [
+          "REST APIs"
+        ]
+      },
+      {
+        "name": "Cloud, Infrastructure & DevOps",
+        "keywords": [
+          "AWS",
+          "Docker",
+          "GitLab CI/CD",
+          "NGINX",
+          "DigitalOcean"
+        ]
+      },
+      {
+        "name": "Databases",
+        "keywords": [
+          "PostgreSQL",
+          "Microsoft SQL Server",
+          "SQLite"
+        ]
+      },
+      {
+        "name": "Source Control & Collaboration",
+        "keywords": [
+          "Git",
+          "GitLab",
+          "SharePoint",
+          "Microsoft 365 Enterprise"
+        ]
+      }
+    ]
+  },
+  "coverLetter": "Dear Hiring Team,\n\nI am applying for the Python Engineer (Django) role at FreeWheel, a Comcast company. My background combines software development, systems integration, project coordination, and client support. At DSTax Technologies, I serve as a Manager with technical lead and lead developer responsibilities for a tax-integration platform. That work involves connecting business systems and supporting implementations from requirements gathering through go-live. The Buyer Cloud App team's focus on APIs, support tools, and scalable services offers a clear connection to this experience and to my technical background with Python, Django, PHP, and REST APIs.\n\nTwo examples illustrate how my experience relates to the role. At DSTax Technologies, I led the transition from Version 1 to Version 2 of the tax-integration platform, broadening support for financial platforms and tax providers and improving UI/UX. I also optimized asynchronous operations to improve performance and throughput and migrated production workloads from DigitalOcean to AWS. These responsibilities connect to FreeWheel's emphasis on application updates, deployment, and operational performance. In a second example, I supported end-to-end integration implementations through requirements gathering, setup, troubleshooting, and go-live support. I coordinated internal development and client work, communicated integration updates and project status, and created client guides and knowledge-base articles. This experience is relevant to translating business requirements into working integrations, resolving technical issues, and helping people use software effectively.\n\nI would welcome the opportunity to contribute this development and implementation experience to FreeWheel's Python Engineer role. The combination of API development, application integration, and ongoing operational support makes the position a compelling continuation of my work on business software platforms. Thank you for considering my application; I would appreciate the opportunity to discuss how my experience relates to the team's needs.\n\nSincerely,\nKyle M. Anderson",
+  "reviewNotes": "Emphasized integration development, platform upgrades, asynchronous performance, AWS migration, troubleshooting, and client coordination. Selected relevant technical skills and shortened earlier roles. The master does not establish two years of Python/Django experience, Django-specific REST API development, Kubernetes/EKS, production scale, AdTech experience, code reviews, QA collaboration, or junior-engineer mentoring. Chicago onsite attendance and variable-schedule availability are unconfirmed."
+}

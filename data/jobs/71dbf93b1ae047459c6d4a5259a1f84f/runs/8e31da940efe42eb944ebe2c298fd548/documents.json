@@ -1,0 +1,134 @@
+{
+  "resume": {
+    "basics": {
+      "name": "Kyle M. Anderson",
+      "email": "TheKyleAnderson72@gmail.com",
+      "phone": "(630) 995-1529",
+      "url": "https://portfolio.kyleanderson.online",
+      "summary": "Technical professional with experience leading software development, coordinating integration projects, and translating operational needs into technical solutions. Background includes financial-platform integrations, end-to-end implementation support, business data analysis, and client documentation.",
+      "location": {
+        "region": "WI",
+        "countryCode": "US",
+        "city": "Menomonee Falls"
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "AlienCow72",
+          "url": "https://github.com/AlienCow72"
+        },
+        {
+          "network": "LinkedIn",
+          "username": "kyle-anderson-mke",
+          "url": "https://www.linkedin.com/in/kyle-anderson-mke/"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "DSTax Technologies",
+        "location": "Warrenville, IL",
+        "position": "Manager",
+        "startDate": "2020-05",
+        "summary": "Technical lead, lead developer, and project manager for a tax-integration platform, with responsibilities spanning development, client coordination, implementation support, and documentation.",
+        "highlights": [
+          "Managed internal development projects and client-coordinated work, sharing integration updates, reporting status, and responding to questions and requests.",
+          "Supported end-to-end integration implementations, including requirements gathering, setup, troubleshooting, and go-live support.",
+          "Developed integrations between financial platforms and tax providers, supporting systems including Acumatica, Chargebee, Sage Intacct, and Vertex.",
+          "Led the transition from Version 1 to Version 2 of the tax-integration platform, broadened platform and provider support, and improved UI/UX.",
+          "Optimized asynchronous operations to improve performance and throughput.",
+          "Migrated production workloads from DigitalOcean to AWS.",
+          "Created and maintained client guides and knowledge-base articles."
+        ]
+      },
+      {
+        "name": "Colectivo Coffee Roasters",
+        "location": "Milwaukee, WI",
+        "position": "Warehouse Associate",
+        "startDate": "2019-06",
+        "endDate": "2020-05",
+        "highlights": [
+          "Fulfilled orders for more than 1000 restaurant and store clients.",
+          "Updated invoices for inventory changes to help maintain accurate records.",
+          "Partnered with the IT department to install and troubleshoot new point-of-sale nodes."
+        ]
+      },
+      {
+        "name": "Komatsu Mining Corp. (Joy Global)",
+        "location": "Milwaukee, WI",
+        "position": "Facilities Management Intern",
+        "startDate": "2016-05",
+        "endDate": "2018-12",
+        "highlights": [
+          "Analyzed asset and facilities databases, identifying more than $10 million in previously unidentified asset value that informed the sale of unused assets before Komatsu's acquisition of Joy Global.",
+          "Evaluated, selected, and implemented a global mapping platform that provided facility information to employees and customers.",
+          "Initiated web automations that reduced manual database-maintenance work.",
+          "Managed SharePoint sites and data and designed data-input forms to improve accessibility, reduce errors, and promote cross-department information sharing."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Wisconsin–Milwaukee",
+        "area": "Information Technology Management",
+        "studyType": "BBA",
+        "startDate": "2017",
+        "endDate": "2020"
+      },
+      {
+        "institution": "Milwaukee School of Engineering",
+        "area": "Industrial Engineering and Supply Chain/Operations Management",
+        "studyType": "Studied",
+        "startDate": "2014",
+        "endDate": "2016"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Integrations & APIs",
+        "keywords": [
+          "REST APIs"
+        ]
+      },
+      {
+        "name": "Software Development",
+        "keywords": [
+          "Python",
+          "Django",
+          "Flask",
+          "PHP",
+          "C#"
+        ]
+      },
+      {
+        "name": "Databases",
+        "keywords": [
+          "Microsoft SQL Server",
+          "PostgreSQL",
+          "SQLite"
+        ]
+      },
+      {
+        "name": "Cloud, Infrastructure & DevOps",
+        "keywords": [
+          "GitLab CI/CD",
+          "AWS",
+          "Docker",
+          "NGINX",
+          "DigitalOcean"
+        ]
+      },
+      {
+        "name": "Source Control & Collaboration",
+        "keywords": [
+          "Git",
+          "GitLab",
+          "SharePoint",
+          "Microsoft 365 Enterprise"
+        ]
+      }
+    ]
+  },
+  "coverLetter": "Dear Hiring Team,\n\nI am interested in the Business Intelligence and Analytics Manager - Palantir Foundry position at Molson Coors. My background combines technical leadership, systems integration, project coordination, and business data analysis. At DSTax Technologies, I serve as a Manager with lead developer and project management responsibilities for a tax-integration platform. The role’s emphasis on translating business needs into usable solutions connects directly with my experience coordinating technical delivery and helping clients implement and understand integrations.\n\nTwo examples illustrate that connection. At DSTax Technologies, I led the transition from Version 1 to Version 2 of the tax-integration platform, broadened financial-platform and tax-provider support, and improved UI/UX. My responsibilities also included managing internal development and client-coordinated work, communicating status, and supporting implementations from requirements gathering through setup, troubleshooting, and go-live. This work required connecting implementation details with client needs and providing guides and knowledge-base articles to support ongoing use. Earlier, at Komatsu Mining Corp. (Joy Global), I analyzed asset and facilities databases and identified more than $10 million in previously unidentified asset value. Those findings informed the sale of unused assets before Komatsu’s acquisition of Joy Global. I also evaluated, selected, and implemented a global mapping platform that made facility information available to employees and customers, providing another example of turning operational data into a useful business resource.\n\nI would welcome the opportunity to discuss how this integration and delivery background could contribute to Molson Coors’ global Data, Analytics and AI team. The position’s combination of business collaboration, hands-on development, and responsibility for making solutions useful in daily operations is particularly appealing because it connects with the work described above. Thank you for considering my application.\nSincerely,\nKyle M. Anderson",
+  "reviewNotes": "Emphasized technical leadership, client coordination, implementation support, financial-system integrations, and business data analysis. Retained warehouse and manufacturing-company experience for operational relevance. The master does not establish eight years in data and analytics, Palantir Foundry experience, Spark/PySpark, SAP/S4/HANA, ontology governance, ERP writeback webhooks, TypeScript/Vega, or Foundry application development. Project cost estimation, third-party BI delivery oversight, indirect-report management, and the specified full-life-cycle lead requirement are also not established."
+}

@@ -1,0 +1,424 @@
+JobPosting structured data:
+[{"@context": "http://schema.org", "@type": "JobPosting", "baseSalary": {"@type": "MonetaryAmount", "currency": "", "value": {"@type": "QuantitativeValue", "unitText": ""}}, "datePosted": "2026-10-05", "description": "FreeWheel, a Comcast company, provides comprehensive ad platforms for publishers, advertisers, and media buyers. Powered by premium video content, robust data, and advanced technology, we’re making it easier for buyers and sellers to transact across all screens, data types, and sales channels. As a global company, we have offices in nine countries and can insert advertisements around the world.</br><p><b>Job Summary</b></p>FreeWheel’s mission is to build great advertising software. We offer the most extensible and transparent advertising buying platform in the world, operating at a massive global scale. We don’t just operate a Demand Side Platform (DSP) – we are the platform that powers hundreds of DSPs! As a result, we process trillions of transactions to satisfy millions of dollars’ worth of advertising campaigns every month. Our employees enjoy a culture of transparency and one with many challenging problems to solve. We value moving fast, building high-quality reliable software, and supporting each other in the service of driving success for our customers’ businesses.  Buyer Cloud (formerly Beeswax) is responsible for building and maintaining the services necessary to set up, configure, manage, monitor, and execute DSP digital real-time bidding campaigns. The App team focuses on APIs, support tools, and ad serving systems, supporting FreeWheel Engineering by enabling efficient and scalable programmatic advertising operations.  We are seeking a Backend Python Developer to join our team. You will design, develop, and integrate scalable solutions that meet business needs and address complex, ambiguous challenges. As a key contributor throughout the Software Development Life Cycle (SDLC), you will participate in requirements analysis, development, testing, deployment, and application integration.  You will champion code quality, operational excellence, and system reliability while mentoring and supporting other engineers. The role requires active participation in code reviews, providing meaningful feedback, and driving engineering best practices across the team.<p></p><p><b>Job Description</b></p><p><b>Responsibilities:</b></p><ul><li>Collaborating with cross-functional teams to design, develop, and integrate innovative software solutions that align with business needs</li><li>Conducting analysis of system requirements and the customization of applications to ensure optimal functionality</li><li>Assisting with the software update process for existing applications and roll-outs of software releases</li><li>Mentoring junior engineers, fostering a culture of technical excellence and shared knowledge within the team</li><li>Engaging with Quality Assurance to verify that software meets technical specifications and delivering high-quality, reliable applications</li><li>Troubleshooting and resolving complex technical issues in software applications and systems</li><li>Synthesizing market research and industry trends to inform project strategies and enhance product offerings</li><li>Conducting training sessions for operational staff to ensure effective use of internally developed applications</li><li>Consistent exercise of independent judgment and discretion in matters of significance.</li><li>Regular, consistent and punctual attendance. Must be able to work nights and weekends, variable schedule(s) as necessary.</li><li>Other duties and responsibilities as assigned.</li></ul><br /><p><b>The Ideal Skillset:</b></p><ul><li>2&#43; Years of experience working with Python and Django.</li><li>Experience creating/developing RESTful API&#39;s using Django.</li><li>Experience with PHP</li><li>Experience with Kubernetes/EKS, AWS, owning production deployments at scale for critical backend services.</li><li>Bachelor&#39;s degree in Computer Science or relatable technical field or experience equivalent</li></ul><br /><p><b>BONUS POINTS:</b></p><ul><li>AdTech or Advertising industry experience<br /><br /></li></ul><p><b>Employees at all levels are expected to:</b></p><ul><li>Understand our Operating Principles; make them the guidelines for how you do your job.</li><li>Own the customer experience think and act in ways that put our customers first, give them seamless digital options at every touchpoint, and make them promoters of our products and services.</li><li>Know your stuff be enthusiastic learners, users and advocates of our game-changing technology, products and services, especially our digital tools and experiences.</li><li>Win as a team make big things happen by working together and being open to new ideas.</li><li>Be an active part of the Net Promoter System a way of working that brings more employee and customer feedback into the company by joining huddles, making call backs and helping us elevate opportunities to do better for our customers.</li><li>Drive results and growth.</li><li>Support a culture of inclusion in how you work and lead.</li><li>Do what&#39;s right for each other, our customers, investors and our communities.</li></ul><p><br /><b>Disclaimer:</b> This information has been designed to indicate the general nature and level of work performed by employees in this role. It is not designed to contain or be interpreted as a comprehensive inventory of all duties, responsibilities and qualifications.</p><p>Comcast is an equal opportunity workplace.  We will consider all qualified applicants for employment without regard to race, color, religion, age, sex, sexual orientation, gender identity, national origin, disability, veteran status, genetic information, or any other basis protected by applicable law.</p></br><p><b>Skills:</b></p><p>Back-End Development; Collaboration; Design</p><br/><p><b>Salary:</b></p><p>Illinois Pay Range: $109,759.26 - $164,638.89</p><p>Comcast intends to offer the selected candidate base pay within this range, dependent on job-related, non-discriminatory factors such as experience. The application window is 30 days from the date job is posted, unless the number of applicants requires it to close sooner or later.</p><br/><br><br/><br><p>Base pay is one part of the Total Rewards that Comcast provides to compensate and recognize employees for their work. Most sales positions are eligible for a Commission under the terms of an applicable plan, while most non-sales positions are eligible for a Bonus. Additionally, Comcast provides best-in-class Benefits to eligible employees. We believe that benefits should connect you to the support you need when it matters most, and should help you care for those who matter most. That’s why we provide an array of options, expert guidance and always-on tools, that are personalized to meet the needs of your reality - to help support you physically, financially and emotionally through the big milestones and in your everyday life. Please visit the  <a href='https://jobs.comcast.com/benefits'>compensation and benefits summary </a> on our careers site for more details.</p><br/><p><b>Education</b></p><p>Bachelor's Degree</p><p>While possessing the stated degree is preferred, Comcast also may consider applicants who hold some combination of coursework and experience, or who have extensive related professional experience.</p><p><b>Relevant Work Experience</b></p><p>5-7 Years</p>", "employmentType": "Full Time", "identifier": {"@type": "PropertyValue", "name": "Job ID", "value": "R443360"}, "industry": "FreeWheel Engineering", "title": "Python Engineer (Django) - Chicago - ONSITE 2X Week- FreeWheel", "url": "https://jobs.comcast.com/job/chicago/python-engineer-django-chicago-onsite-2x-week-freewheel/45483/101581741232", "directApply": false, "hiringOrganization": {"@type": "Organization", "name": "Freewheel", "logo": "https://tbcdn.talentbrew.com/company/45483/img/logo/comcast_150.png"}, "jobLocation": [{"@type": "Place", "address": {"@type": "PostalAddress", "addressLocality": "Chicago", "addressRegion": "Illinois", "addressCountry": "US", "streetAddress": "", "postalCode": "60654"}}]}]
+
+Page text:
+Python Engineer (Django) - Chicago - ONSITE 2X Week- FreeWheel and jobs at Comcast
+
+Skip to main content
+
+Recruitment Fraud
+
+We are aware of fraudulent recruitment activities that may involve individuals impersonating Comcast recruiters or employees. To help protect yourself, please be aware Comcast recruiters will only contact candidates from an @comcast.com or @cable.comcast.com email address.
+
+If you receive a message from a different email domain claiming to be from Comcast, please use caution and report it directly through the platform where you were contacted.
+
+For more information, visit the Fraud Section of the FAQ page.
+
+Saved Jobs
+(0)
+
+Current Employees
+
+Candidates
+
+Menu
+
+Search Jobs
+
+Job Opportunities
+
+Life @ Comcast
+
+Benefits
+
+Early Career
+
+FAQs
+
+Saved Jobs
+(0)
+
+Current Employees
+
+Candidates
+
+Search Jobs
+
+Search Jobs
+
+Search Jobs
+
+Search Jobs by Keyword
+
+Location
+
+Radius
+select radius
+5 miles
+15 miles
+25 miles
+35 miles
+50 miles
+
+Search Jobs
+
+Python Engineer (Django) - Chicago - ONSITE 2X Week- FreeWheel
+
+Chicago, Illinois
+
+Apply Now Save Job
+
+Jump To:
+
+Overview
+
+Success Profile
+
+Benefits
+
+Responsibilities
+
+Hear From Our People
+
+Career Path
+
+Culture
+
+More About Comcast
+
+Overview
+
+Make your mark at Comcast -- a Fortune 30 global media and technology company. Become part of our award-winning, international engineering team that turns big ideas into cutting-edge products, platforms, and solutions that our customers love. We create space to innovate, and we recognize, reward, and invest in your ideas, while ensuring you can proudly bring your authentic self to the workplace. You’ll do the best work of your career right here.
+
+Success Profile
+
+What makes a successful Python Engineer (Django) - Chicago - ONSITE 2X Week- FreeWheel at Comcast? Check out these top traits and explore role-specific skills in the job description below.
+
+Results-driven
+
+Adaptable
+
+Inventive
+
+Entrepreneurial
+
+Team Player
+
+Problem-Solver
+
+Benefits
+
+We’re proud to offer comprehensive benefits to help support you physically, financially and emotionally through the big milestones and in your everyday life.
+
+Paid Time off
+
+We know how important it can be to spend time away from work to relax, recover from illness, or take time to care for others needs.
+
+Physical Wellbeing
+
+We offer a range of benefits and support programs to ensure that you and your loved ones get the care you need.
+
+Financial Wellbeing
+
+These benefits give you personalized support designed entirely around your unique needs today and for the future.
+
+Emotional Wellbeing
+
+No matter how you’re feeling or what you’re dealing with, there are benefits to help when you need it, in the way that works for you.
+
+Life Events + Family Support
+
+Benefits that support you no matter where you are in life’s journey.
+
+See All Benefits
+
+Responsibilities
+
+Python Engineer (Django) - Chicago - ONSITE 2X Week- FreeWheel
+
+Location Chicago, Illinois
+
+Req ID R443360
+
+Job Type Full Time
+
+Category Computer Engineering
+
+Date posted 10/05/2026
+
+Apply Now
+Save Job
+
+FreeWheel, a Comcast company, provides comprehensive ad platforms for publishers, advertisers, and media buyers. Powered by premium video content, robust data, and advanced technology, we’re making it easier for buyers and sellers to transact across all screens, data types, and sales channels. As a global company, we have offices in nine countries and can insert advertisements around the world.
+Job Summary
+FreeWheel’s mission is to build great advertising software. We offer the most extensible and transparent advertising buying platform in the world, operating at a massive global scale. We don’t just operate a Demand Side Platform (DSP) – we are the platform that powers hundreds of DSPs! As a result, we process trillions of transactions to satisfy millions of dollars’ worth of advertising campaigns every month. Our employees enjoy a culture of transparency and one with many challenging problems to solve. We value moving fast, building high-quality reliable software, and supporting each other in the service of driving success for our customers’ businesses.
+
+Buyer Cloud (formerly Beeswax) is responsible for building and maintaining the services necessary to set up, configure, manage, monitor, and execute DSP digital real-time bidding campaigns. The App team focuses on APIs, support tools, and ad serving systems, supporting FreeWheel Engineering by enabling efficient and scalable programmatic advertising operations.
+
+We are seeking a Backend Python Developer to join our team. You will design, develop, and integrate scalable solutions that meet business needs and address complex, ambiguous challenges. As a key contributor throughout the Software Development Life Cycle (SDLC), you will participate in requirements analysis, development, testing, deployment, and application integration.
+
+You will champion code quality, operational excellence, and system reliability while mentoring and supporting other engineers. The role requires active participation in code reviews, providing meaningful feedback, and driving engineering best practices across the team.
+
+Job Description
+
+Responsibilities:
+
+Collaborating with cross-functional teams to design, develop, and integrate innovative software solutions that align with business needs
+
+Conducting analysis of system requirements and the customization of applications to ensure optimal functionality
+
+Assisting with the software update process for existing applications and roll-outs of software releases
+
+Mentoring junior engineers, fostering a culture of technical excellence and shared knowledge within the team
+
+Engaging with Quality Assurance to verify that software meets technical specifications and delivering high-quality, reliable applications
+
+Troubleshooting and resolving complex technical issues in software applications and systems
+
+Synthesizing market research and industry trends to inform project strategies and enhance product offerings
+
+Conducting training sessions for operational staff to ensure effective use of internally developed applications
+
+Consistent exercise of independent judgment and discretion in matters of significance.
+
+Regular, consistent and punctual attendance. Must be able to work nights and weekends, variable schedule(s) as necessary.
+
+Other duties and responsibilities as assigned.
+
+The Ideal Skillset:
+
+2+ Years of experience working with Python and Django.
+
+Experience creating/developing RESTful API's using Django.
+
+Experience with PHP
+
+Experience with Kubernetes/EKS, AWS, owning production deployments at scale for critical backend services.
+
+Bachelor's degree in Computer Science or relatable technical field or experience equivalent
+
+BONUS POINTS:
+
+AdTech or Advertising industry experience
+
+Employees at all levels are expected to:
+
+Understand our Operating Principles; make them the guidelines for how you do your job.
+
+Own the customer experience think and act in ways that put our customers first, give them seamless digital options at every touchpoint, and make them promoters of our products and services.
+
+Know your stuff be enthusiastic learners, users and advocates of our game-changing technology, products and services, especially our digital tools and experiences.
+
+Win as a team make big things happen by working together and being open to new ideas.
+
+Be an active part of the Net Promoter System a way of working that brings more employee and customer feedback into the company by joining huddles, making call backs and helping us elevate opportunities to do better for our customers.
+
+Drive results and growth.
+
+Support a culture of inclusion in how you work and lead.
+
+Do what's right for each other, our customers, investors and our communities.
+
+Disclaimer: This information has been designed to indicate the general nature and level of work performed by employees in this role. It is not designed to contain or be interpreted as a comprehensive inventory of all duties, responsibilities and qualifications.
+
+Comcast is an equal opportunity workplace. We will consider all qualified applicants for employment without regard to race, color, religion, age, sex, sexual orientation, gender identity, national origin, disability, veteran status, genetic information, or any other basis protected by applicable law.
+
+Skills:
+
+Back-End Development; Collaboration; Design
+
+Salary:
+
+Illinois Pay Range: $109,759.26 - $164,638.89
+
+Comcast intends to offer the selected candidate base pay within this range, dependent on job-related, non-discriminatory factors such as experience. The application window is 30 days from the date job is posted, unless the number of applicants requires it to close sooner or later.
+
+Base pay is one part of the Total Rewards that Comcast provides to compensate and recognize employees for their work. Most sales positions are eligible for a Commission under the terms of an applicable plan, while most non-sales positions are eligible for a Bonus. Additionally, Comcast provides best-in-class Benefits to eligible employees. We believe that benefits should connect you to the support you need when it matters most, and should help you care for those who matter most. That’s why we provide an array of options, expert guidance and always-on tools, that are personalized to meet the needs of your reality - to help support you physically, financially and emotionally through the big milestones and in your everyday life. Please visit the compensation and benefits summary on our careers site for more details.
+
+Education
+
+Bachelor's Degree
+
+While possessing the stated degree is preferred, Comcast also may consider applicants who hold some combination of coursework and experience, or who have extensive related professional experience.
+
+Relevant Work Experience
+
+5-7 Years
+
+Apply Now
+Save Job
+
+Share this job
+
+Facebook
+
+X
+
+LinkedIn
+
+Email
+
+Hear from our people
+
+“Comcast brings to the table the leading edge in the technology, so that sets the baseline for the features that are available to our customers”
+
+Albert Vice President, Product Management
+
+“I mean, that's one of the best things about working here is that there have been very few times when I've been set, when I've been told, No, you can't do this.”
+
+Greg Engineer
+
+“It is incredibly rewarding to see the work that we've done impact people in such a meaningful way, and we're bringing joy to people's lives.”
+
+Faisal Executive Director, Machine Learning
+
+Previous Slide
+
+Next Slide
+
+Culture
+
+At Comcast you can have work/life balance in an inclusive environment where you can be your authentic self.
+
+Comcast provides many opportunities to build skills and grow in your career and a top-notch benefits, time off and perks package.
+
+We are committed to delivering reliable, effortless experiences to our customers no matter how they choose to interact with us.
+
+You will build personal relationships on a growing team that while making Xfinity a best-in-class, most-loved brand.
+
+More About Comcast
+
+Comcast Unveils Industry-First Gateway Designed for Apartment Buildings Enabling ‘Instant’ Connectiity for Residents
+
+Comcast has launched a new, innovative gateway with Tri-Band WiFi 6E technology that delivers faster speeds, lower latency, and ‘Instant On’ connectivity to apartment residents.
+
+Xfinity Mobile, Comcast Business Mobile Customers Unlock PowerBoost – Delivering WiFi Speeds of Up to a Gig – with the New Samsung Galaxy S25 Series
+
+Android fans have something to celebrate now that the new Samsung Galaxy S25 Series can unlock PowerBoost – a unique feature that delivers speeds of up to 1 gigabit-per-second (Gbps) over WiFi to Xfinity Mobile and Comcast Business Mobile customers.
+
+Network Innovation Delivering Business Solutions at Scale
+
+Comcast Business is hyper scaling the availability of its Dedicated Internet connectivity solution, which provides business customers with unparalleled speeds, 99.99 percent uptime, and proactive network monitoring.
+
+Tech Engineering in Action
+
+Previous Slide
+
+Next Slide
+
+Jobs For You
+
+Featured Jobs
+
+Recently Viewed Jobs
+
+Saved Jobs
+
+View All of Our Available Opportunities
+
+No Recently Viewed Jobs
+View All Jobs
+
+No Saved Jobs
+View All Jobs
+
+Talent Community
+
+Join our talent community so we can get to know you better, learn more about your skills and experience, and how they could align with future open positions at Comcast.
+
+Sign Up Here
+
+Job Alerts
+
+Sign up for Job Alerts to be the first to know about new opportunities. After signing up or logging in to Workday, select Job Alerts in the top right corner to create a new alert or edit an existing one.
+
+Get Started
+
+Sign up for job alerts
+
+Don’t see what you’re looking for? Tell us what you’re interested in and we’ll notify you about new opportunities.
+
+Email Address
+
+First Name
+
+Last Name
+Select your interestsChoose a category and/or location from the auto-suggestions and click “Add.”
+Category
+
+Location
+Add
+Computer Engineering, Chicago, Illinois, United StatesRemove
+
+Remove
+
+Confirm Email
+
+By submitting your information, you acknowledge that you have read our privacy policy and consent to receive email communication from Comcast.
+
+Subscribe
+
+Got a Question?
+
+Check our FAQs or connect with @ComcastCareers.
+
+Facebook
+
+X
+
+LinkedIn
+
+Glassdoor
+
+YouTube
+
+Instagram
+
+Comcast Careers
+
+Job Opportunities
+
+Life @ Comcast
+
+Benefits
+
+Early Career
+
+FAQ
+
+Search Jobs
+
+Talent Community
+
+Other Career Options at Comcast
+
+NBCUniversal Careers
+
+Universal Studios Hollywood Careers
+
+Universal Studios Orlando Careers
+
+Sky Careers
+
+Comcast Corporate
+
+Comcast Corporate
+
+Terms
+
+Candidate Privacy
+
+CA Notice
+
+Comcast Policy on EEO
+
+Do Not Sell My Personal Information
+
+Motion Settings
+
+Sitemap
+
+Comcast is an equal opportunity workplace. We will consider all qualified applicants for employment without regard to race, color, religion, age, sex, sexual orientation, gender identity, national origin, disability, veteran status, genetic information, or any other basis protected by applicable law. Comcast endeavors to make our career site accessible to any and all users. If you would like to contact us regarding accommodations for any part of the application or interview process, please contact TalentAccommodations@comcast.com. Any inquiries regarding employment application status, resume submittal, open positions and any other general inquiries will not receive a response so please visit our FAQ page for more information.
+Comcast participates in the E-VERIFY PROGRAM in our hiring practices to achieve a lawful workforce. Comcast is a drug-free workplace.
+
+Cookie Settings
