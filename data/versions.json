@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "tree": {
     "id": "583f5e430c7d4134adbbe0dc8f91d496",
     "children": {
@@ -126,6 +126,12 @@
                   },
                   {
                     "id": "4b86263d1f5e4ff7bc1d9aac4f3330bb"
+                  },
+                  {
+                    "id": "db205bfa53614940bf81cec50b998adf"
+                  },
+                  {
+                    "id": "ecd47f53ebe64fd3b31ad5ba6a43c1ca"
                   }
                 ]
               }
@@ -163,6 +169,9 @@
                   },
                   {
                     "id": "d90a3b5b8af44b05a47aa4ef15d9b827"
+                  },
+                  {
+                    "id": "98f755c3a0314e5fa16ed4bb6890b878"
                   }
                 ]
               }
@@ -405,20 +414,543 @@
       "excluded": [
         "09cfd29b41db4c0bbef7e087fbfe54e3",
         "9b832a058e3b4b61bee92fca8871f5b9",
-        "792165a598744608b0c1c025eecd6ef6"
+        "792165a598744608b0c1c025eecd6ef6",
+        "db205bfa53614940bf81cec50b998adf",
+        "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+        "98f755c3a0314e5fa16ed4bb6890b878"
       ],
-      "indent": {
-        "e46e04f99466431ca81039dc59894cac": 1,
-        "e9ce8eec310e4f62a320a043d11b3744": 1,
-        "6d84029133724878965984a6410877fc": 1,
-        "e66fff51a4fe4de99c991b7abb68151b": 1,
-        "48bd1e3fa654496d81bb27e38eda2e9b": 1,
-        "ae2c9f5cffc844629837ae37cec65ab8": 1,
-        "5a43acbdfbbe41b0813442ffc7bb4ffc": 1
-      },
+      "indent": {},
       "id": "joblinks",
-      "name": "Joblinks"
+      "name": "Joblinks",
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "id": "job-ef4b98fc55d0431caf126546e6790dfe",
+      "name": "FreeWheel, a Comcast company — Python Engineer (Django) - Chicago ef4b98fc",
+      "excluded": [
+        "aaae966642be4578b54f5781a35fa8c5",
+        "80604f227b4f4bc1893c6f263ed75063",
+        "e9ce8eec310e4f62a320a043d11b3744",
+        "02032f5bee6a488293226056ed74bf71",
+        "6d84029133724878965984a6410877fc",
+        "e66fff51a4fe4de99c991b7abb68151b",
+        "ed265385e17349de9fbca93826e1266d",
+        "d90a3b5b8af44b05a47aa4ef15d9b827",
+        "e2b694be02e14a1893188923381b32ee",
+        "f89ffbb2f30f466f98977628a34b1f98",
+        "5787ef4b-4dd8-42b9-ba03-3ee848b10ae5",
+        "bb99e1c565244162ae2ff3d74c2dbc2b",
+        "dd553373f5d84759ae16378a24a654af",
+        "1d0db203e8a94406afb0a31470769570"
+      ],
+      "indent": {},
+      "wording": {
+        "db205bfa53614940bf81cec50b998adf": "db205bfa53614940bf81cec50b998adf",
+        "5a43acbdfbbe41b0813442ffc7bb4ffc": "5a43acbdfbbe41b0813442ffc7bb4ffc",
+        "ecd47f53ebe64fd3b31ad5ba6a43c1ca": "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+        "48bd1e3fa654496d81bb27e38eda2e9b": "48bd1e3fa654496d81bb27e38eda2e9b",
+        "ae2c9f5cffc844629837ae37cec65ab8": "ae2c9f5cffc844629837ae37cec65ab8",
+        "e46e04f99466431ca81039dc59894cac": "e46e04f99466431ca81039dc59894cac",
+        "4b86263d1f5e4ff7bc1d9aac4f3330bb": "4b86263d1f5e4ff7bc1d9aac4f3330bb",
+        "f58c5546c5ff4d1cb4ac595cf8e06379": "f58c5546c5ff4d1cb4ac595cf8e06379",
+        "bb99e1c565244162ae2ff3d74c2dbc2b": "bb99e1c565244162ae2ff3d74c2dbc2b",
+        "98f755c3a0314e5fa16ed4bb6890b878": "98f755c3a0314e5fa16ed4bb6890b878",
+        "b205588cb8f14f19b1afd2ace8aef3ce": "b205588cb8f14f19b1afd2ace8aef3ce",
+        "d089b435ea77460b961b6f36853aa3c5": "d089b435ea77460b961b6f36853aa3c5",
+        "5a96de30b63e4ea7978b4b1d7a93c025": "5a96de30b63e4ea7978b4b1d7a93c025"
+      },
+      "prose": {
+        "01b2442887184e2d97663e9a90ca5862": "Technical lead and lead developer for a tax-integration platform, coordinating development projects and supporting client implementations."
+      },
+      "order": {
+        "792165a598744608b0c1c025eecd6ef6": [
+          "247fceceac5e43c1a06dc36e7547b2ec",
+          "df11ca815d6443d799e5573e67f292b2"
+        ],
+        "eb741b67ed5c4ff7a4b44aa14d1d370d": [
+          "db205bfa53614940bf81cec50b998adf",
+          "5a43acbdfbbe41b0813442ffc7bb4ffc",
+          "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+          "48bd1e3fa654496d81bb27e38eda2e9b",
+          "ae2c9f5cffc844629837ae37cec65ab8",
+          "e46e04f99466431ca81039dc59894cac",
+          "4b86263d1f5e4ff7bc1d9aac4f3330bb"
+        ],
+        "a98452a026d94369bf8dff0f9d75933d": [
+          "f58c5546c5ff4d1cb4ac595cf8e06379",
+          "bb99e1c565244162ae2ff3d74c2dbc2b",
+          "98f755c3a0314e5fa16ed4bb6890b878"
+        ],
+        "a24fedc7606f4d0289623958312d5248": [
+          "b205588cb8f14f19b1afd2ace8aef3ce",
+          "d089b435ea77460b961b6f36853aa3c5",
+          "5a96de30b63e4ea7978b4b1d7a93c025"
+        ],
+        "d694e1a8d98a454fa948ab28c4176ab8": [
+          "9c4d9197842e46818524ba18f1cb7af3",
+          "c4bd20db5a92458192aa64fa179c8e50",
+          "be6d8b20680a46eeb263a30c4377d2f8"
+        ],
+        "ef08b787df874d8bb07ac66858c5271e": [
+          "a52e764572fd4e67ade61a361ee47f16",
+          "94d3781ee25a42239cbc13d107839261"
+        ],
+        "ee2850783141482a992aea96c0a4b3ff": [
+          "cd7a924b56cd4a36b05e414c2bf9e85e",
+          "d075e96317b043e18b46980fa66eb069",
+          "7476a11fea2c4d9493221c71dc132321",
+          "71150368ef664343a75c39ebe1f03c63"
+        ],
+        "b3e592979f6443e5954379cd54a22196": [
+          "f669dec66e6440fb91dbc1430cf2a87f"
+        ],
+        "0b205ad84755441bba512e07b224bcf8": [
+          "da57bba075b742fe8a271056fb1072d8",
+          "5091b4865d434ea182736b5e80ad465e",
+          "5590d2f5d3ef413394a61e83f2380db5",
+          "971290a070574c98a79c87330300f989",
+          "a3707f5a6d03477f86cec9d07c985bb1"
+        ],
+        "38ac1d591fd04a54ae7115b1d12059b2": [
+          "88ed4a18b22b4743a03b62f600ee9ce6",
+          "849ce00c10c34198aad7b7041f05d92b",
+          "c402926af373434c9477d2d6ba7f7048"
+        ],
+        "eb7c441d79834f0b8e1bcd34fb700dc7": [
+          "9a0851fc15bc49c9a387831e3ad78efd",
+          "0484377309a140ac91a5b13c8ceb14c4",
+          "f95beb3f4ca845ffad212db71b6164ac",
+          "055095084158445f97efa17d403f4988"
+        ],
+        "225ef2ecce56486cbf5732f727364997": [
+          "78b1881e42bd44fe875cc7ca1a655da9",
+          "aa28418b28ee4610bba2bc778def8f65",
+          "078b175f28af4449a6f1f82b6bcdc0cf",
+          "e4b45c9a3b304ef286cc970648564f7a",
+          "f94b4d3331934182bc37ba3ffe66e5a1"
+        ]
+      },
+      "reviewStatus": "unreviewed",
+      "summaryOverride": "Technical professional with software development, systems integration, and client-support experience, serving as technical lead and lead developer for a tax-integration platform. Background includes requirements gathering, application upgrades, asynchronous performance improvements, and production migration to AWS, with Python, Django, PHP, and REST APIs among technical skills.",
+      "provenance": {
+        "jobId": "501380a2dabd4ddcb590c5ddf5a81a4d",
+        "runId": "ef4b98fc55d0431caf126546e6790dfe",
+        "sourceHighlights": []
+      }
+    },
+    {
+      "id": "job-89c4ee94a19e4b109d2f0078d16dd798",
+      "name": "Reyes — Lead AI Engineer 89c4ee94",
+      "excluded": [
+        "aaae966642be4578b54f5781a35fa8c5",
+        "80604f227b4f4bc1893c6f263ed75063",
+        "e9ce8eec310e4f62a320a043d11b3744",
+        "02032f5bee6a488293226056ed74bf71",
+        "6d84029133724878965984a6410877fc",
+        "e66fff51a4fe4de99c991b7abb68151b",
+        "ed265385e17349de9fbca93826e1266d",
+        "d90a3b5b8af44b05a47aa4ef15d9b827",
+        "98f755c3a0314e5fa16ed4bb6890b878",
+        "88dcb2a1056744cc9ba510a97825070a"
+      ],
+      "indent": {},
+      "wording": {
+        "db205bfa53614940bf81cec50b998adf": "db205bfa53614940bf81cec50b998adf",
+        "ecd47f53ebe64fd3b31ad5ba6a43c1ca": "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+        "48bd1e3fa654496d81bb27e38eda2e9b": "48bd1e3fa654496d81bb27e38eda2e9b",
+        "ae2c9f5cffc844629837ae37cec65ab8": "ae2c9f5cffc844629837ae37cec65ab8",
+        "e46e04f99466431ca81039dc59894cac": "e46e04f99466431ca81039dc59894cac",
+        "5a43acbdfbbe41b0813442ffc7bb4ffc": "5a43acbdfbbe41b0813442ffc7bb4ffc",
+        "4b86263d1f5e4ff7bc1d9aac4f3330bb": "4b86263d1f5e4ff7bc1d9aac4f3330bb",
+        "f58c5546c5ff4d1cb4ac595cf8e06379": "f58c5546c5ff4d1cb4ac595cf8e06379",
+        "bb99e1c565244162ae2ff3d74c2dbc2b": "bb99e1c565244162ae2ff3d74c2dbc2b",
+        "b205588cb8f14f19b1afd2ace8aef3ce": "b205588cb8f14f19b1afd2ace8aef3ce",
+        "d089b435ea77460b961b6f36853aa3c5": "d089b435ea77460b961b6f36853aa3c5",
+        "5a96de30b63e4ea7978b4b1d7a93c025": "5a96de30b63e4ea7978b4b1d7a93c025"
+      },
+      "prose": {
+        "01b2442887184e2d97663e9a90ca5862": "Technical lead and lead developer for a tax-integration platform, coordinating development projects and supporting client implementations."
+      },
+      "order": {
+        "792165a598744608b0c1c025eecd6ef6": [
+          "247fceceac5e43c1a06dc36e7547b2ec",
+          "df11ca815d6443d799e5573e67f292b2"
+        ],
+        "eb741b67ed5c4ff7a4b44aa14d1d370d": [
+          "db205bfa53614940bf81cec50b998adf",
+          "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+          "48bd1e3fa654496d81bb27e38eda2e9b",
+          "ae2c9f5cffc844629837ae37cec65ab8",
+          "e46e04f99466431ca81039dc59894cac",
+          "5a43acbdfbbe41b0813442ffc7bb4ffc",
+          "4b86263d1f5e4ff7bc1d9aac4f3330bb"
+        ],
+        "a98452a026d94369bf8dff0f9d75933d": [
+          "f58c5546c5ff4d1cb4ac595cf8e06379",
+          "bb99e1c565244162ae2ff3d74c2dbc2b"
+        ],
+        "a24fedc7606f4d0289623958312d5248": [
+          "b205588cb8f14f19b1afd2ace8aef3ce",
+          "d089b435ea77460b961b6f36853aa3c5",
+          "5a96de30b63e4ea7978b4b1d7a93c025"
+        ],
+        "d694e1a8d98a454fa948ab28c4176ab8": [
+          "9c4d9197842e46818524ba18f1cb7af3",
+          "c4bd20db5a92458192aa64fa179c8e50",
+          "be6d8b20680a46eeb263a30c4377d2f8"
+        ],
+        "ef08b787df874d8bb07ac66858c5271e": [
+          "a52e764572fd4e67ade61a361ee47f16",
+          "94d3781ee25a42239cbc13d107839261"
+        ],
+        "ee2850783141482a992aea96c0a4b3ff": [
+          "cd7a924b56cd4a36b05e414c2bf9e85e",
+          "d075e96317b043e18b46980fa66eb069",
+          "71150368ef664343a75c39ebe1f03c63",
+          "7476a11fea2c4d9493221c71dc132321",
+          "e2b694be02e14a1893188923381b32ee",
+          "f89ffbb2f30f466f98977628a34b1f98"
+        ],
+        "b3e592979f6443e5954379cd54a22196": [
+          "f669dec66e6440fb91dbc1430cf2a87f"
+        ],
+        "0b205ad84755441bba512e07b224bcf8": [
+          "da57bba075b742fe8a271056fb1072d8",
+          "5091b4865d434ea182736b5e80ad465e",
+          "5590d2f5d3ef413394a61e83f2380db5",
+          "971290a070574c98a79c87330300f989",
+          "a3707f5a6d03477f86cec9d07c985bb1"
+        ],
+        "38ac1d591fd04a54ae7115b1d12059b2": [
+          "849ce00c10c34198aad7b7041f05d92b",
+          "88ed4a18b22b4743a03b62f600ee9ce6",
+          "c402926af373434c9477d2d6ba7f7048"
+        ],
+        "eb7c441d79834f0b8e1bcd34fb700dc7": [
+          "9a0851fc15bc49c9a387831e3ad78efd",
+          "0484377309a140ac91a5b13c8ceb14c4",
+          "f95beb3f4ca845ffad212db71b6164ac",
+          "055095084158445f97efa17d403f4988"
+        ],
+        "0358e0f0-9777-494e-b355-e7369947c056": [
+          "80a70ebe-46d6-4598-ba0a-5ec7d8591f05",
+          "cfc42b1c-f7ba-4b82-8d86-caf54df3c224"
+        ],
+        "225ef2ecce56486cbf5732f727364997": [
+          "78b1881e42bd44fe875cc7ca1a655da9",
+          "aa28418b28ee4610bba2bc778def8f65",
+          "078b175f28af4449a6f1f82b6bcdc0cf",
+          "e4b45c9a3b304ef286cc970648564f7a",
+          "f94b4d3331934182bc37ba3ffe66e5a1",
+          "5787ef4b-4dd8-42b9-ba03-3ee848b10ae5"
+        ]
+      },
+      "reviewStatus": "unreviewed",
+      "summaryOverride": "Technical professional with software development, systems integration, project management, and client-support experience. Serves as technical lead and lead developer for a tax-integration platform, with experience connecting business systems, improving asynchronous performance, and migrating production workloads to AWS.",
+      "provenance": {
+        "jobId": "b88b978de8df4e4086704d4e7e738d34",
+        "runId": "89c4ee94a19e4b109d2f0078d16dd798",
+        "sourceHighlights": [
+          [
+            "db205bfa53614940bf81cec50b998adf"
+          ],
+          [
+            "ecd47f53ebe64fd3b31ad5ba6a43c1ca"
+          ],
+          [
+            "48bd1e3fa654496d81bb27e38eda2e9b"
+          ],
+          [
+            "ae2c9f5cffc844629837ae37cec65ab8"
+          ],
+          [
+            "e46e04f99466431ca81039dc59894cac"
+          ],
+          [
+            "5a43acbdfbbe41b0813442ffc7bb4ffc"
+          ],
+          [
+            "4b86263d1f5e4ff7bc1d9aac4f3330bb"
+          ],
+          [
+            "f58c5546c5ff4d1cb4ac595cf8e06379"
+          ],
+          [
+            "bb99e1c565244162ae2ff3d74c2dbc2b"
+          ],
+          [
+            "b205588cb8f14f19b1afd2ace8aef3ce"
+          ],
+          [
+            "d089b435ea77460b961b6f36853aa3c5"
+          ],
+          [
+            "5a96de30b63e4ea7978b4b1d7a93c025"
+          ]
+        ]
+      }
     }
   ],
-  "masterHash": "85416459430bed299f9b2c130bf237e33bd92dd61340750dcfaa68c06aa48ad7"
+  "masterHash": "fc43338fdda2febd9d42e684b6103acab690c8754099a80a629f920c1f6621c2",
+  "highlights": {
+    "aaae966642be4578b54f5781a35fa8c5": {
+      "defaultWording": "aaae966642be4578b54f5781a35fa8c5",
+      "wordings": [
+        {
+          "id": "aaae966642be4578b54f5781a35fa8c5",
+          "text": "Served as Lead Developer and Project Manager.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "e46e04f99466431ca81039dc59894cac": {
+      "defaultWording": "e46e04f99466431ca81039dc59894cac",
+      "wordings": [
+        {
+          "id": "e46e04f99466431ca81039dc59894cac",
+          "text": "Managed internal development projects and client-coordinated work, sharing integration updates, reporting status, and responding to questions and requests.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "5a43acbdfbbe41b0813442ffc7bb4ffc": {
+      "defaultWording": "5a43acbdfbbe41b0813442ffc7bb4ffc",
+      "wordings": [
+        {
+          "id": "5a43acbdfbbe41b0813442ffc7bb4ffc",
+          "text": "Supported end-to-end integration implementations, including requirements gathering, setup, troubleshooting, and go-live support.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "80604f227b4f4bc1893c6f263ed75063": {
+      "defaultWording": "80604f227b4f4bc1893c6f263ed75063",
+      "wordings": [
+        {
+          "id": "80604f227b4f4bc1893c6f263ed75063",
+          "text": "Develop integrations between financial platforms and tax providers.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "e9ce8eec310e4f62a320a043d11b3744": {
+      "defaultWording": "e9ce8eec310e4f62a320a043d11b3744",
+      "wordings": [
+        {
+          "id": "e9ce8eec310e4f62a320a043d11b3744",
+          "text": "Supported integrations with Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "02032f5bee6a488293226056ed74bf71": {
+      "defaultWording": "02032f5bee6a488293226056ed74bf71",
+      "wordings": [
+        {
+          "id": "02032f5bee6a488293226056ed74bf71",
+          "text": "Led the transition from Version 1 to Version 2 of the tax-integration platform.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "6d84029133724878965984a6410877fc": {
+      "defaultWording": "6d84029133724878965984a6410877fc",
+      "wordings": [
+        {
+          "id": "6d84029133724878965984a6410877fc",
+          "text": "Broadened tax-provider and financial-platform support.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "e66fff51a4fe4de99c991b7abb68151b": {
+      "defaultWording": "e66fff51a4fe4de99c991b7abb68151b",
+      "wordings": [
+        {
+          "id": "e66fff51a4fe4de99c991b7abb68151b",
+          "text": "Improved UI/UX.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "48bd1e3fa654496d81bb27e38eda2e9b": {
+      "defaultWording": "48bd1e3fa654496d81bb27e38eda2e9b",
+      "wordings": [
+        {
+          "id": "48bd1e3fa654496d81bb27e38eda2e9b",
+          "text": "Optimized asynchronous operations to improve performance and throughput.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "ae2c9f5cffc844629837ae37cec65ab8": {
+      "defaultWording": "ae2c9f5cffc844629837ae37cec65ab8",
+      "wordings": [
+        {
+          "id": "ae2c9f5cffc844629837ae37cec65ab8",
+          "text": "Migrated production workloads from DigitalOcean to AWS.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "4b86263d1f5e4ff7bc1d9aac4f3330bb": {
+      "defaultWording": "4b86263d1f5e4ff7bc1d9aac4f3330bb",
+      "wordings": [
+        {
+          "id": "4b86263d1f5e4ff7bc1d9aac4f3330bb",
+          "text": "Created and maintained client guides and knowledge-base articles.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "bb99e1c565244162ae2ff3d74c2dbc2b": {
+      "defaultWording": "bb99e1c565244162ae2ff3d74c2dbc2b",
+      "wordings": [
+        {
+          "id": "bb99e1c565244162ae2ff3d74c2dbc2b",
+          "text": "Fulfilled orders for more than 1000 restaurant and store clients.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "ed265385e17349de9fbca93826e1266d": {
+      "defaultWording": "ed265385e17349de9fbca93826e1266d",
+      "wordings": [
+        {
+          "id": "ed265385e17349de9fbca93826e1266d",
+          "text": "Updated invoices for inventory changes to help maintain accurate records.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "f58c5546c5ff4d1cb4ac595cf8e06379": {
+      "defaultWording": "f58c5546c5ff4d1cb4ac595cf8e06379",
+      "wordings": [
+        {
+          "id": "f58c5546c5ff4d1cb4ac595cf8e06379",
+          "text": "Partnered with the IT department to install and troubleshoot new point-of-sale nodes.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "d90a3b5b8af44b05a47aa4ef15d9b827": {
+      "defaultWording": "d90a3b5b8af44b05a47aa4ef15d9b827",
+      "wordings": [
+        {
+          "id": "d90a3b5b8af44b05a47aa4ef15d9b827",
+          "text": "Assisted with training new hires",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "88dcb2a1056744cc9ba510a97825070a": {
+      "defaultWording": "88dcb2a1056744cc9ba510a97825070a",
+      "wordings": [
+        {
+          "id": "88dcb2a1056744cc9ba510a97825070a",
+          "text": "Analyzed asset and facilities databases, identifying more than $10 million in previously unidentified asset value that informed the sale of unused assets before Komatsu's acquisition of Joy Global.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "b205588cb8f14f19b1afd2ace8aef3ce": {
+      "defaultWording": "b205588cb8f14f19b1afd2ace8aef3ce",
+      "wordings": [
+        {
+          "id": "b205588cb8f14f19b1afd2ace8aef3ce",
+          "text": "Evaluated, selected, and implemented a global mapping platform that provided facility information to employees and customers.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "d089b435ea77460b961b6f36853aa3c5": {
+      "defaultWording": "d089b435ea77460b961b6f36853aa3c5",
+      "wordings": [
+        {
+          "id": "d089b435ea77460b961b6f36853aa3c5",
+          "text": "Initiated web automations that reduced manual database-maintenance work.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "5a96de30b63e4ea7978b4b1d7a93c025": {
+      "defaultWording": "5a96de30b63e4ea7978b4b1d7a93c025",
+      "wordings": [
+        {
+          "id": "5a96de30b63e4ea7978b4b1d7a93c025",
+          "text": "Managed SharePoint sites and data and designed data-input forms to improve accessibility, reduce errors, and promote cross-department information sharing.",
+          "reviewStatus": "reviewed"
+        }
+      ]
+    },
+    "db205bfa53614940bf81cec50b998adf": {
+      "defaultWording": "db205bfa53614940bf81cec50b998adf",
+      "wordings": [
+        {
+          "id": "db205bfa53614940bf81cec50b998adf",
+          "text": "Developed integrations between financial platforms and tax providers, including Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
+          "reviewStatus": "unreviewed",
+          "provenance": {
+            "sourceHighlights": [],
+            "jobId": "501380a2dabd4ddcb590c5ddf5a81a4d",
+            "runId": "ef4b98fc55d0431caf126546e6790dfe"
+          }
+        }
+      ]
+    },
+    "ecd47f53ebe64fd3b31ad5ba6a43c1ca": {
+      "defaultWording": "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+      "wordings": [
+        {
+          "id": "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+          "text": "Led the transition from Version 1 to Version 2 of the tax-integration platform, broadening tax-provider and financial-platform support and improving UI/UX.",
+          "reviewStatus": "unreviewed",
+          "provenance": {
+            "sourceHighlights": [],
+            "jobId": "501380a2dabd4ddcb590c5ddf5a81a4d",
+            "runId": "ef4b98fc55d0431caf126546e6790dfe"
+          }
+        }
+      ]
+    },
+    "98f755c3a0314e5fa16ed4bb6890b878": {
+      "defaultWording": "98f755c3a0314e5fa16ed4bb6890b878",
+      "wordings": [
+        {
+          "id": "98f755c3a0314e5fa16ed4bb6890b878",
+          "text": "Assisted with training new hires.",
+          "reviewStatus": "unreviewed",
+          "provenance": {
+            "sourceHighlights": [],
+            "jobId": "501380a2dabd4ddcb590c5ddf5a81a4d",
+            "runId": "ef4b98fc55d0431caf126546e6790dfe"
+          }
+        }
+      ]
+    }
+  },
+  "masterIndent": {
+    "aaae966642be4578b54f5781a35fa8c5": 0,
+    "e46e04f99466431ca81039dc59894cac": 1,
+    "5a43acbdfbbe41b0813442ffc7bb4ffc": 1,
+    "80604f227b4f4bc1893c6f263ed75063": 0,
+    "e9ce8eec310e4f62a320a043d11b3744": 1,
+    "02032f5bee6a488293226056ed74bf71": 0,
+    "6d84029133724878965984a6410877fc": 1,
+    "e66fff51a4fe4de99c991b7abb68151b": 1,
+    "48bd1e3fa654496d81bb27e38eda2e9b": 1,
+    "ae2c9f5cffc844629837ae37cec65ab8": 1,
+    "4b86263d1f5e4ff7bc1d9aac4f3330bb": 0,
+    "bb99e1c565244162ae2ff3d74c2dbc2b": 0,
+    "ed265385e17349de9fbca93826e1266d": 0,
+    "f58c5546c5ff4d1cb4ac595cf8e06379": 0,
+    "d90a3b5b8af44b05a47aa4ef15d9b827": 0,
+    "88dcb2a1056744cc9ba510a97825070a": 0,
+    "b205588cb8f14f19b1afd2ace8aef3ce": 0,
+    "d089b435ea77460b961b6f36853aa3c5": 0,
+    "5a96de30b63e4ea7978b4b1d7a93c025": 0,
+    "db205bfa53614940bf81cec50b998adf": 0,
+    "ecd47f53ebe64fd3b31ad5ba6a43c1ca": 0,
+    "98f755c3a0314e5fa16ed4bb6890b878": 0
+  }
 }

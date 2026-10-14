@@ -10,7 +10,7 @@ from urllib.request import Request, urlopen
 
 import server
 from codex_generate import CodexRunner, GenerationCancelled
-from generation import GenerationService, validate_resume, validate_schema
+from generation import GenerationService, validate_resume, validate_schema, validate_posting
 from jobs import JobStore
 from postings import PostingUnavailable, capture, extract_text, public_addresses
 from versions import Store
@@ -53,7 +53,8 @@ class GenerationTests(unittest.TestCase):
         self.assertIn('json-resume', prompt)
         # Application generation must not precede validated posting persistence.
         self.assertTrue(list(self.service.base(self.job['id']).glob('runs/*/job-description.json')))
-        return {'resumeJson':json.dumps(MASTER),'coverLetter':LETTER,'reviewNotes':'Emphasized integration experience.','error':''}
+        ident=self.master.load()['state']['tree']['children']['work']['children'][0]['children']['highlights']['children'][0]['id']
+        return {'resumeJson':json.dumps(MASTER),'highlightSources':json.dumps({'work/0/highlights/0':[ident]}),'coverLetter':LETTER,'reviewNotes':'Emphasized integration experience.','error':''}
 
     def finish(self):
         worker = self.service.workers.get(self.job['id'])
@@ -67,6 +68,8 @@ class GenerationTests(unittest.TestCase):
         self.service.start(self.job['id'])
         state = self.finish()
         self.assertEqual(state['status'],'ready',state)
+        self.assertTrue(state['versionId'].startswith('job-'))
+        self.assertEqual(state['reviewStatus'],'unreviewed')
         self.assertEqual(set(state['files']), {'job-description.json', 'resume.json', 'cover-letter.md'})
         self.assertEqual(self.runner.call_count,2)
         self.renderer.assert_not_called()
@@ -78,6 +81,74 @@ class GenerationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.service.download(self.job['id'],'../','master-snapshot.json')
         self.assertEqual(self.service.start(self.job['id'])['runId'],state['runId'])
+
+    def test_invalid_generated_source_references_can_retry_writing(self):
+        original=self.runner.side_effect
+        def invalid_sources(prompt,keys,cancel):
+            result=original(prompt,keys,cancel)
+            if 'resumeJson' in keys:result['highlightSources']=json.dumps({'work/0/highlights/0':['fake-id']})
+            return result
+        self.runner.side_effect=invalid_sources;self.service.start(self.job['id']);state=self.finish()
+        self.assertEqual(state['status'],'failed');self.assertNotIn('resume.json',state['files'])
+        self.assertFalse((self.service.base(self.job['id'])/'runs'/state['runId']/'documents.json').exists())
+        self.runner.side_effect=original;self.service.start(self.job['id']);state=self.finish()
+        self.assertEqual(state['status'],'ready');self.assertEqual(self.fetcher.call_count,1)
+
+    def test_source_change_during_generation_retains_files_and_pauses_import(self):
+        original=self.runner.side_effect
+        def concurrent_change(prompt,keys,cancel):
+            result=original(prompt,keys,cancel)
+            if 'resumeJson' in keys:
+                loaded=self.master.load();loaded['data']['basics']['summary']='Changed concurrently'
+                self.master.save(loaded['data'],loaded['state'],loaded['revision'],'master')
+            return result
+        self.runner.side_effect=concurrent_change
+        self.service.start(self.job['id']);state=self.finish()
+        self.assertEqual(state['status'],'ready');self.assertIn('importError',state)
+        self.assertNotIn('versionId',state);self.assertIn('resume.json',state['files'])
+        from studio_import import import_run
+        result=import_run(self.service,self.job['id'],state['runId'],acknowledge=True)
+        self.assertTrue(import_run(self.service,self.job['id'],state['runId'])['alreadyImported'])
+        self.assertTrue(result['versionId'])
+
+    def test_pasted_posting_without_company_uses_saved_company(self):
+        original=self.runner.side_effect
+        def missing_company(prompt,keys,cancel):
+            if 'documentJson' in keys:
+                return {'documentJson':json.dumps({**POSTING,'company':''}),'error':''}
+            return original(prompt,keys,cancel)
+        self.runner.side_effect=missing_company
+        self.service.start(self.job['id'],SOURCE);state=self.finish()
+        self.assertEqual(state['status'],'ready',state)
+        posting=json.loads((self.service.base(self.job['id'])/'runs'/state['runId']/'job-description.json').read_text())
+        self.assertEqual(posting['company'],self.job['company'])
+        self.fetcher.assert_not_called()
+
+    def test_placeholder_company_reports_missing_field_without_guessing(self):
+        self.job=self.jobs.save({'company':'Pending extraction'},self.job['id'],self.job['revision'])
+        original=self.runner.side_effect
+        def missing_company(prompt,keys,cancel):
+            if 'documentJson' in keys:
+                supplied=prompt.split('USER-PROVIDED JOB DETAILS:\n',1)[1].split('\nSource URL:',1)[0]
+                self.assertNotIn('company',json.loads(supplied))
+                return {'documentJson':json.dumps({key:value for key,value in POSTING.items() if key!='company'}),'error':''}
+            return original(prompt,keys,cancel)
+        self.runner.side_effect=missing_company;self.service.start(self.job['id'],SOURCE);state=self.finish()
+        self.assertEqual(state['status'],'needs_input');self.assertIn('Company is missing',state['error'])
+        self.assertIn('Enter Company',state['error']);self.assertEqual(self.runner.call_count,1)
+
+    def test_explicit_labels_fill_missing_names_and_do_not_override_source(self):
+        posting=validate_posting({'description':POSTING['description']}, {'title':'Lead AI Engineer','company':'Reyes'})
+        self.assertEqual(posting['title'],'Lead AI Engineer');self.assertEqual(posting['company'],'Reyes')
+        self.assertEqual(posting['meta']['fieldSources'],{'title':'job_details','company':'job_details'})
+        posting=validate_posting(copy.deepcopy(POSTING),{'title':'Entered title','company':'Entered company'})
+        self.assertEqual(posting['company'],POSTING['company']);self.assertEqual(posting['title'],POSTING['title'])
+        with self.assertRaises(PostingUnavailable) as error:
+            validate_posting({'description':POSTING['description']},{'title':'New application','company':'Pending extraction'})
+        self.assertIn('Role and Company are missing',str(error.exception))
+        with self.assertRaises(PostingUnavailable) as error:
+            validate_posting({'description':'Too short'},{'title':'Engineer','company':'Employer'})
+        self.assertIn('substantive job description',str(error.exception))
 
     def test_blocked_capture_can_resume_with_pasted_text(self):
         self.fetcher.side_effect = PostingUnavailable('Paste posting text.')
@@ -172,7 +243,8 @@ class GenerationTests(unittest.TestCase):
                 original = self.runner.side_effect
                 def respond_new(prompt,keys,cancel):
                     if 'documentJson' not in keys:
-                        return {'resumeJson':json.dumps(MASTER),'coverLetter':LETTER,'reviewNotes':'','error':''}
+                        ident=self.master.load()['state']['tree']['children']['work']['children'][0]['children']['highlights']['children'][0]['id']
+                        return {'resumeJson':json.dumps(MASTER),'highlightSources':json.dumps({'work/0/highlights/0':[ident]}),'coverLetter':LETTER,'reviewNotes':'','error':''}
                     return original(prompt,keys,cancel)
                 self.runner.side_effect=respond_new
                 with urlopen(request) as response: created=json.load(response)

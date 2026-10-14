@@ -10,6 +10,7 @@ import zipfile
 from generation import encoded, html_doc, letter_html, validate_schema
 from jobs import timestamp, url_key
 from render import pdf_pages
+from versions import LOCK, project
 
 
 def folder_for(service, identifier, run_id):
@@ -23,13 +24,18 @@ def folder_for(service, identifier, run_id):
 
 
 def read(service, identifier, run_id):
-    with service.lock:
+    with service.lock, LOCK:
         folder = folder_for(service, identifier, run_id)
         path = folder/'draft.json'
         source = path if path.exists() else folder/'documents.json'
         raw = source.read_bytes()
         data = json.loads(raw)
-        return {'resume': data['resume'], 'coverLetter': data['coverLetter'],
+        loaded=service.master.load()
+        version=next((v for v in loaded['state']['versions'] if v.get('provenance',{}).get('jobId')==identifier and v.get('provenance',{}).get('runId')==run_id),None)
+        resume,levels=project(loaded['data'],loaded['state'],version['id']) if version else (data['resume'],{})
+        if version: raw+=loaded['revision'].encode()
+        return {'resume': resume, 'levels':levels, 'versionId':version['id'] if version else None,
+                'studioRevision':loaded['revision'], 'reviewStatus':version.get('reviewStatus','unreviewed') if version else 'unreviewed', 'coverLetter': data['coverLetter'],
                 'revision': hashlib.sha256(raw).hexdigest(), 'runId': run_id,
                 'reviewNotes': data.get('reviewNotes', ''),
                 'jobDescription': json.loads((folder/'job-description.json').read_text())}
@@ -63,28 +69,35 @@ def check_current(service, identifier, run_id):
 
 
 def save(service, identifier, run_id, data, revision):
-    clean = validate(data)
-    with service.lock:
+    with service.lock, LOCK:
         check_current(service, identifier, run_id)
         old = read(service, identifier, run_id)
         if old['revision'] != revision:
             raise FileExistsError('These drafts changed in another tab. Your edits are still here; reopen the drafts to load the latest version.')
+        if old.get('versionId') and data.get('resume')!=old['resume']:
+            raise FileExistsError('Edit the linked résumé in Studio. Your cover-letter edits are retained; reconcile with the saved Studio version.')
+        clean=validate({**data,'resume':old['resume']} if old.get('versionId') else data)
+        if old.get('versionId'):clean.pop('resume')
         folder = folder_for(service, identifier, run_id)
         clean['reviewNotes'] = old['reviewNotes']
         clean['savedAt'] = timestamp()
-        service.jobs.write(folder/'draft-history'/(uuid.uuid4().hex+'.json'), old)
-        # One authoritative file keeps résumé and cover letter saves atomic.
+        history={k:v for k,v in old.items() if k in ('coverLetter','reviewNotes','revision','runId')} if old.get('versionId') else old
+        service.jobs.write(folder/'draft-history'/(uuid.uuid4().hex+'.json'), history)
+        # Studio owns linked résumés; this file stores their cover letters.
         service.jobs.write(folder/'draft.json', clean)
         return read(service, identifier, run_id)
 
 
 def preview(service, identifier, run_id, data, document=None):
-    clean = validate(data)
+    with service.lock, LOCK:
+        current=read(service,identifier,run_id)
+        clean = validate({**data,'resume':current['resume']} if current.get('versionId') else data)
+        levels=current['levels']
     folder = folder_for(service, identifier, run_id)
     posting = json.loads((folder/'job-description.json').read_text())
     if document not in (None, 'resume', 'coverLetter'):
         raise ValueError('Choose a résumé or cover letter to preview.')
-    documents = {'resume': html_doc(clean['resume']),
+    documents = {'resume': html_doc(clean['resume'],levels),
                  'coverLetter': letter_html(clean['coverLetter'], clean['resume'], posting)}
     if document is not None:
         # Render unsaved edits using the exact same HTML and renderer as export.
@@ -94,16 +107,16 @@ def preview(service, identifier, run_id, data, document=None):
 
 
 def bundle(service, identifier, run_id, revision):
-    with service.lock:
+    with service.lock, LOCK:
         check_current(service, identifier, run_id)
         draft = read(service, identifier, run_id)
         if draft['revision'] != revision:
             raise FileExistsError('The drafts changed before download. Save your latest edits and try again.')
         source_url = service.jobs.read(identifier)['url']
     # Render an immutable in-memory snapshot. Preview and save do not persist PDF files.
-    rendered = [service.renderer(html_doc(draft['resume'])),
+    rendered = [service.renderer(html_doc(draft['resume'],draft['levels'])),
                 service.renderer(letter_html(draft['coverLetter'], draft['resume'], draft['jobDescription']))]
-    with service.lock:
+    with service.lock, LOCK:
         check_current(service, identifier, run_id)
         if read(service, identifier, run_id)['revision'] != revision or url_key(service.jobs.read(identifier)['url']) != url_key(source_url):
             raise FileExistsError('The application changed during PDF rendering. Save and download the latest version.')

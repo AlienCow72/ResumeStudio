@@ -126,10 +126,9 @@ class JobTests(unittest.TestCase):
                     jobs = json.load(response)['jobs']
                     self.assertEqual(len(jobs), 1)
                     self.assertEqual(jobs[0]['sourceText'], 'Updated description\n')
-                with self.assertRaises(HTTPError) as error:
-                    post('/api/jobs', {'job': SAMPLE})
-                self.assertEqual(error.exception.code, 409)
-                self.assertEqual(json.load(error.exception)['duplicates'][0]['id'], job['id'])
+                with post('/api/jobs', {'job': SAMPLE}) as response:
+                    self.assertEqual(response.status,200)
+                    self.assertEqual(json.load(response)['id'],job['id'])
                 with post('/api/jobs/' + job['id'], {'job': {'stage': 'interview'}, 'revision': job['revision']}) as response:
                     self.assertEqual(json.load(response)['stage'], 'interview')
                 with self.assertRaises(HTTPError) as error:

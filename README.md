@@ -59,8 +59,10 @@ automatically when left blank. Optional notes
 and an application date are editable from each card's title or **View details**.
 Search matches company, role, and notes.
 
-The board has three stages: **Applying**, **Waiting on response**, and
-**Interview**. Use each card's stage selector to move it. **Mark applied** moves
+The board has four stages: **Applying**, **Waiting on response**, **Interview**,
+and **Rejected**. Rejected means the employer declined the application. Moving
+a job back to another stage retains its dates, documents, and stage history.
+Use each card's stage selector to move it. **Mark applied** moves
 a job to Waiting on response and fills today's date if no application date is
 recorded. Selecting Waiting on response has the same date behavior. You can
 correct the date in job details. Stage changes are recorded in the detail view.
@@ -79,22 +81,31 @@ Generation runs in the background in this order:
    to create and validate `job-description.json`.
 2. Only after the description is saved, automatically generate job-specific résumé
    JSON using `json-resume`, plus a job-specific cover letter. Candidate
-   facts come from the saved master snapshot. The master is never overwritten.
-3. Stop at editable drafts. Open **Review & edit documents** on the job card.
-   Edit résumé fields and cover-letter text with live PDF page previews that use
-   the same renderer and print layout as downloads. Previews include unsaved edits
-   and page counts, and do not save files. **Save drafts** saves application-specific changes.
-4. Click **Download application ZIP** after review. The app saves any current edits,
-   then renders PDFs and downloads exactly `job-description.json`, `resume.pdf`,
-   and `cover-letter.pdf` in one ZIP. The cover-letter header uses the reviewed
-   résumé contact details. PDFs are created only for this explicit download.
+   facts come from the saved master snapshot, including stable Studio IDs. Original
+   master wording is retained; rewrites become alternatives and combined/unmatched
+   points become separate unreviewed highlights.
+3. Successful generation automatically creates an **unreviewed Studio version**
+   linked to the job and run. **Open résumé in Studio** edits that shared version.
+   **Review & edit documents** previews its current saved content and edits the
+   cover letter. Mark the résumé reviewed in Studio and save to approve its
+   selected unreviewed wordings. Downloads remain available before review.
+4. **Download application ZIP** saves cover-letter edits, takes a consistent
+   snapshot of the saved Studio projection, and renders exactly
+   `job-description.json`, `resume.pdf`, and `cover-letter.pdf`. The letter header
+   uses that résumé's contact details. PDFs are rendered in memory.
 
-Drafts are saved atomically in each run's `draft.json`, with revision conflict
-checks and backups under `draft-history/`. Generated originals and the master
-remain intact. Manual corrections are checked against the résumé schema; users
-can intentionally correct facts. A rendering failure preserves the saved draft;
-retry the download without generating new content. Older runs with existing PDFs
-also open in the draft editor; downloads render from the current reviewed draft.
+Cover letters remain in each run's `draft.json`, with revision checks and
+`draft-history/` backups. Linked résumés are saved in Studio, with no exported
+revision archive. A concurrent Studio or cover-letter save rejects a stale
+save/download. **Reconcile saved Studio content** keeps unsaved letter text.
+A rendering failure preserves saved content; retry without generating again.
+
+Older runs are retained and are **not** imported during migration. Use
+**Preview import into Studio** to inspect a historical résumé before importing.
+This uses its latest saved draft, otherwise its generated original. Ambiguous
+entry matches require choosing a master entry. Changed or missing source content
+pauses automatic import, preserving generated files; review and acknowledge the
+changes in the import preview. Import retries reuse the same run's version.
 
 Existing tracked jobs have a **Generate documents** button. For blocked or
 JavaScript-only postings, open **Paste posting text**, supply the full description,
@@ -117,7 +128,8 @@ one application is processed at a time.
 Run data lives in `data/jobs/<id>/runs/<run-id>/`: captured source text/metadata,
 the master snapshot, validated job and résumé JSON, cover-letter text, editable drafts,
 and a progress manifest. PDFs are rendered in memory when downloading the ZIP. `generation.json` identifies the latest run. Old runs
-are retained; generated files are not tied to later changes in the master.
+are retained as original generation evidence. Linked Studio versions inherit later
+master edits unless a wording, prose, or indentation override is selected.
 Schemas and skill snapshots are pinned in `src/generation_resources/`, with the
 upstream schema commit recorded in `provenance.json`. The job schema is a draft.
 Automated schema and identity/date/skill checks complement review; they do not
@@ -131,8 +143,11 @@ steps when discussing changes.
 
 `data/resume.json` is the complete editable master, including the default
 objective. Keep it together with `data/versions.json`, which stores stable
-field/entry IDs, version names, exclusions, summary overrides, and highlight
-indentation.
+field/entry IDs, version names, exclusions, prose overrides, alternative wordings,
+review/provenance metadata, ordering,
+and master/version highlight indentation. On first load, older settings are
+backed up and migrated automatically. Master indentation is seeded from
+Joblinks; explicit overrides preserve every existing version’s effective layout.
 
 Saving regenerates `output/resume-{version}.json` for every saved version.
 These are portable outputs, not editable sources. Existing `output/resume.html`
@@ -145,17 +160,32 @@ files are absent, first launch copies `data/originals/resume.json` into
 existing master. Backups live in `data/backups/{timestamp}/` and contain the
 previous master, settings, and affected generated JSON files.
 
-Use **Master — All information** to add, edit, remove, or reorder facts. **Advanced JSON** supports custom fields and checks JSON syntax and structure before applying changes; exact matches keep IDs, while rewritten list text is treated as a new item. Use form fields when rewriting highlights or keywords to retain their selections. Stable IDs follow items through form edits and reordering. New items are included by default in every version. Removing a master item removes it from every version.
+Use **Master — All information** to add, edit, remove, or reorder facts. **Advanced JSON** supports custom fields and checks JSON syntax and structure before applying changes; exact matches keep IDs, while rewritten list text is treated as a new item. Use form fields when rewriting highlights or keywords to retain their selections. Stable IDs follow items through form edits and reordering. New highlights start
+unselected in existing versions; other new items retain their previous inclusion
+behavior. Alternative wording leaves existing selections unchanged. Removing a master item removes it from every version.
 
 Use the centered version dropdown and **New / Duplicate / Rename / Delete** buttons to manage versions. Changes are saved explicitly. Switching with unsaved edits offers Save, Discard, or Cancel. Deleting a version does not remove master information.
 
 Within a version:
 
 - Check or uncheck entire sections, entries, fields, highlights, and keywords. Excluded content stays visible but dimmed. Turning a parent back on restores the children's previous selections.
-- Content is read-only. **Edit in Master** switches to the source fields.
+- Select one alternative wording per highlight, or exclude it. **Edit wording
+  for this version** creates or reuses an alternative without changing other
+  versions. Master groups alternatives and shows affected versions before editing
+  shared wording. Shared edits invalidate affected version reviews and require
+  the edited wording to be reviewed again.
 - The objective can use **Customize for this version** or **Reset to master**. A custom objective does not change when the master objective changes.
-- Work highlights have indent/outdent arrows for levels 0–3. Exports use nested bullets; if exclusions remove a parent, indentation is normalized so the first remaining bullet is not orphaned.
+- Headline and entry summaries/descriptions support **Customize for this
+  version**. Arrow controls reorder content within the version.
+- All highlight lists have indentation levels 0–3 in Master and versions.
+  **Reset to master** removes an override. Rendering normalizes orphan children
+  after exclusions without changing saved indentation settings.
 - Highlights, keywords, courses, profiles, and other nested lists are collapsible.
+
+If background import changes saved Studio content, **Reconcile saved changes**
+merges disjoint edits while keeping your draft. Overlapping edits remain in the
+editor for explicit reconciliation. Linked version IDs remain stable when
+renamed; linked versions cannot be deleted.
 
 Saving backs up the prior files, saves the master/settings, and regenerates every named version JSON. Renamed/deleted output filenames are retired after backing them up. Saving rejects stale revisions. Use the UI for master edits: editing `resume.json` externally bypasses stable IDs and is detected. To restore a backup, restore its `resume.json` and `versions.json` together into `data/`. Generated version JSON can be restored into `output/`, or regenerated on the next save.
 
@@ -170,3 +200,9 @@ The objective uses the standard JSON Resume `basics.summary` field. `basics.prof
 ## Preview modes
 
 The preview has HTML and PDF tabs. PDF shows rasterized pages from the actual export, with the US Letter page count and a notice when it exceeds one page. It updates after edits, without saving. PDF preview requires `pypdfium2` and `Pillow` (included in the Codex Python runtime); otherwise install them in the Python environment running the server.
+
+## Local assistant API
+
+Assistants can create, look up, and poll applications through the existing
+loopback API. See [assistant API examples](docs/assistant-api.md) for URL matching,
+idempotency, duplicate applications, generation retries, and Studio import.

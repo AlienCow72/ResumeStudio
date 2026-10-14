@@ -1,0 +1,954 @@
+{
+  "data": {
+    "basics": {
+      "name": "Kyle M. Anderson",
+      "email": "TheKyleAnderson72@gmail.com",
+      "phone": "(630) 995-1529",
+      "summary": "Technical professional with software development, systems integration, project management, and client-support experience. Builds and supports software platforms, connects business systems, improves delivery workflows, and translates operational needs into practical technical solutions.",
+      "location": {
+        "region": "WI",
+        "countryCode": "US",
+        "city": "Menomonee Falls"
+      },
+      "profiles": [
+        {
+          "network": "GitHub",
+          "username": "AlienCow72",
+          "url": "https://github.com/AlienCow72"
+        },
+        {
+          "network": "LinkedIn",
+          "username": "kyle-anderson-mke",
+          "url": "https://www.linkedin.com/in/kyle-anderson-mke/"
+        }
+      ],
+      "url": "https://kyleanderson.online"
+    },
+    "work": [
+      {
+        "name": "DSTax Technologies",
+        "location": "Warrenville, IL",
+        "position": "Manager",
+        "startDate": "2020-05",
+        "summary": "Manager serving as a technical lead and lead developer for a tax-integration platform, with responsibilities spanning integration development, project coordination, client support, troubleshooting, implementation assistance, and documentation.",
+        "highlights": [
+          "Served as Lead Developer and Project Manager.",
+          "Managed internal development projects and client-coordinated work, sharing integration updates, reporting status, and responding to questions and requests.",
+          "Supported end-to-end integration implementations, including requirements gathering, setup, troubleshooting, and go-live support.",
+          "Develop integrations between financial platforms and tax providers.",
+          "Supported integrations with Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
+          "Led the transition from Version 1 to Version 2 of the tax-integration platform.",
+          "Broadened tax-provider and financial-platform support.",
+          "Improved UI/UX.",
+          "Optimized asynchronous operations to improve performance and throughput.",
+          "Migrated production workloads from DigitalOcean to AWS.",
+          "Created and maintained client guides and knowledge-base articles.",
+          "Developed integrations between financial platforms and tax providers, including Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
+          "Led the transition from Version 1 to Version 2 of the tax-integration platform, broadening tax-provider and financial-platform support and improving UI/UX."
+        ]
+      },
+      {
+        "name": "Colectivo Coffee Roasters",
+        "location": "Milwaukee, WI",
+        "position": "Warehouse Associate",
+        "startDate": "2019-06",
+        "endDate": "2020-05",
+        "highlights": [
+          "Fulfilled orders for more than 1000 restaurant and store clients.",
+          "Updated invoices for inventory changes to help maintain accurate records.",
+          "Partnered with the IT department to install and troubleshoot new point-of-sale nodes.",
+          "Assisted with training new hires",
+          "Assisted with training new hires."
+        ]
+      },
+      {
+        "name": "Komatsu Mining Corp. (Joy Global)",
+        "location": "Milwaukee, WI",
+        "position": "Facilities Management Intern",
+        "startDate": "2016-05",
+        "endDate": "2018-12",
+        "highlights": [
+          "Analyzed asset and facilities databases, identifying more than $10 million in previously unidentified asset value that informed the sale of unused assets before Komatsu's acquisition of Joy Global.",
+          "Evaluated, selected, and implemented a global mapping platform that provided facility information to employees and customers.",
+          "Initiated web automations that reduced manual database-maintenance work.",
+          "Managed SharePoint sites and data and designed data-input forms to improve accessibility, reduce errors, and promote cross-department information sharing."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Wisconsin–Milwaukee",
+        "area": "Information Technology Management",
+        "studyType": "BBA",
+        "startDate": "2017",
+        "endDate": "2020"
+      },
+      {
+        "institution": "Milwaukee School of Engineering",
+        "area": "Industrial Engineering and Supply Chain/Operations Management",
+        "studyType": "Studied",
+        "startDate": "2014",
+        "endDate": "2016"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Software Development",
+        "keywords": [
+          "Python",
+          "Django",
+          "Flask",
+          "PHP",
+          "C#",
+          "C"
+        ]
+      },
+      {
+        "name": "Integrations & APIs",
+        "keywords": [
+          "REST APIs"
+        ]
+      },
+      {
+        "name": "Cloud, Infrastructure & DevOps",
+        "keywords": [
+          "AWS",
+          "DigitalOcean",
+          "Docker",
+          "NGINX",
+          "GitLab CI/CD"
+        ]
+      },
+      {
+        "name": "Databases",
+        "keywords": [
+          "Microsoft SQL Server",
+          "PostgreSQL",
+          "SQLite"
+        ]
+      },
+      {
+        "name": "Source Control & Collaboration",
+        "keywords": [
+          "Git",
+          "GitLab",
+          "SharePoint",
+          "Microsoft 365 Enterprise"
+        ]
+      },
+      {
+        "name": "AI",
+        "keywords": [
+          "OpenAI / Codex",
+          "Anthropic / Claude Code"
+        ]
+      }
+    ]
+  },
+  "state": {
+    "schemaVersion": 2,
+    "tree": {
+      "id": "583f5e430c7d4134adbbe0dc8f91d496",
+      "children": {
+        "basics": {
+          "id": "8f27551fa6594ec8afbff527d26f583c",
+          "children": {
+            "name": {
+              "id": "04a8b5cc488a460ebfe6d93211cc57c8"
+            },
+            "email": {
+              "id": "f27dfc41434e4a53b7e69ad18327a885"
+            },
+            "phone": {
+              "id": "198ab7b8d91c4d528806661328a1c658"
+            },
+            "summary": {
+              "id": "fdecc7cf880f42baac37eca6b72614c1"
+            },
+            "location": {
+              "id": "d8ef42e0f8b8469eaa5fea72944fb150",
+              "children": {
+                "region": {
+                  "id": "ff8470844e6c4c38a2ce10ad5f11be55"
+                },
+                "countryCode": {
+                  "id": "076a580e7a8146629589c9288b6231b6"
+                },
+                "city": {
+                  "id": "4de4199d26a54248b65c6ce03a79ace0"
+                }
+              }
+            },
+            "profiles": {
+              "id": "792165a598744608b0c1c025eecd6ef6",
+              "children": [
+                {
+                  "id": "247fceceac5e43c1a06dc36e7547b2ec",
+                  "children": {
+                    "network": {
+                      "id": "bcb2336f21d242a8a47461039920bab3"
+                    },
+                    "username": {
+                      "id": "9b832a058e3b4b61bee92fca8871f5b9"
+                    },
+                    "url": {
+                      "id": "1d0db203e8a94406afb0a31470769570"
+                    }
+                  }
+                },
+                {
+                  "id": "df11ca815d6443d799e5573e67f292b2",
+                  "children": {
+                    "network": {
+                      "id": "847a3794867b48d1817a0084e3f8f0a4"
+                    },
+                    "username": {
+                      "id": "09cfd29b41db4c0bbef7e087fbfe54e3"
+                    },
+                    "url": {
+                      "id": "dd553373f5d84759ae16378a24a654af"
+                    }
+                  }
+                }
+              ]
+            },
+            "url": {
+              "id": "ddb82c42-c57c-4367-afdd-be08908ab8c8"
+            }
+          }
+        },
+        "work": {
+          "id": "d694e1a8d98a454fa948ab28c4176ab8",
+          "children": [
+            {
+              "id": "9c4d9197842e46818524ba18f1cb7af3",
+              "children": {
+                "name": {
+                  "id": "bb343f3f02114e55b51208e517702606"
+                },
+                "location": {
+                  "id": "83b93059670744c0be63d8462fd0d368"
+                },
+                "position": {
+                  "id": "d54599d3889240e79b0c97761fc324d0"
+                },
+                "startDate": {
+                  "id": "0d81d4a8064340708b23e7641419a555"
+                },
+                "summary": {
+                  "id": "01b2442887184e2d97663e9a90ca5862"
+                },
+                "highlights": {
+                  "id": "eb741b67ed5c4ff7a4b44aa14d1d370d",
+                  "children": [
+                    {
+                      "id": "aaae966642be4578b54f5781a35fa8c5"
+                    },
+                    {
+                      "id": "e46e04f99466431ca81039dc59894cac"
+                    },
+                    {
+                      "id": "5a43acbdfbbe41b0813442ffc7bb4ffc"
+                    },
+                    {
+                      "id": "80604f227b4f4bc1893c6f263ed75063"
+                    },
+                    {
+                      "id": "e9ce8eec310e4f62a320a043d11b3744"
+                    },
+                    {
+                      "id": "02032f5bee6a488293226056ed74bf71"
+                    },
+                    {
+                      "id": "6d84029133724878965984a6410877fc"
+                    },
+                    {
+                      "id": "e66fff51a4fe4de99c991b7abb68151b"
+                    },
+                    {
+                      "id": "48bd1e3fa654496d81bb27e38eda2e9b"
+                    },
+                    {
+                      "id": "ae2c9f5cffc844629837ae37cec65ab8"
+                    },
+                    {
+                      "id": "4b86263d1f5e4ff7bc1d9aac4f3330bb"
+                    },
+                    {
+                      "id": "db205bfa53614940bf81cec50b998adf"
+                    },
+                    {
+                      "id": "ecd47f53ebe64fd3b31ad5ba6a43c1ca"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "c4bd20db5a92458192aa64fa179c8e50",
+              "children": {
+                "name": {
+                  "id": "6c566316fa5d46c1a1eefda1d569b072"
+                },
+                "location": {
+                  "id": "8a765651e027439b858d650fdcbf8953"
+                },
+                "position": {
+                  "id": "d3aff0bda0e24a54a3ac6ce0491a328d"
+                },
+                "startDate": {
+                  "id": "a9b834281e7f47a3b96562e27926ac76"
+                },
+                "endDate": {
+                  "id": "517027b10d434337af94d76d8faf79b1"
+                },
+                "highlights": {
+                  "id": "a98452a026d94369bf8dff0f9d75933d",
+                  "children": [
+                    {
+                      "id": "bb99e1c565244162ae2ff3d74c2dbc2b"
+                    },
+                    {
+                      "id": "ed265385e17349de9fbca93826e1266d"
+                    },
+                    {
+                      "id": "f58c5546c5ff4d1cb4ac595cf8e06379"
+                    },
+                    {
+                      "id": "d90a3b5b8af44b05a47aa4ef15d9b827"
+                    },
+                    {
+                      "id": "98f755c3a0314e5fa16ed4bb6890b878"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "be6d8b20680a46eeb263a30c4377d2f8",
+              "children": {
+                "name": {
+                  "id": "e599b261dfc847ee8249d8ace6a949e1"
+                },
+                "location": {
+                  "id": "b7a59b67eabc4350858782f82a205ff4"
+                },
+                "position": {
+                  "id": "a3b47592c59f40c1b6d8c99e50c3b32a"
+                },
+                "startDate": {
+                  "id": "2d9950c3cb4a4f7a98789c16a420bf44"
+                },
+                "endDate": {
+                  "id": "b7b7abeec1b5487a875db2256425745b"
+                },
+                "highlights": {
+                  "id": "a24fedc7606f4d0289623958312d5248",
+                  "children": [
+                    {
+                      "id": "88dcb2a1056744cc9ba510a97825070a"
+                    },
+                    {
+                      "id": "b205588cb8f14f19b1afd2ace8aef3ce"
+                    },
+                    {
+                      "id": "d089b435ea77460b961b6f36853aa3c5"
+                    },
+                    {
+                      "id": "5a96de30b63e4ea7978b4b1d7a93c025"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "education": {
+          "id": "ef08b787df874d8bb07ac66858c5271e",
+          "children": [
+            {
+              "id": "a52e764572fd4e67ade61a361ee47f16",
+              "children": {
+                "institution": {
+                  "id": "5afe9c3a5fa3408e94653e8cafd8f8e7"
+                },
+                "area": {
+                  "id": "613bb20f2cd74f898fcfc8881284ed04"
+                },
+                "studyType": {
+                  "id": "2a15eadeda6546f9bcb61929658e095f"
+                },
+                "startDate": {
+                  "id": "5f4221c84d8b4527975b43f78fd220d9"
+                },
+                "endDate": {
+                  "id": "3e85ba088b91475c93844e530db46cec"
+                }
+              }
+            },
+            {
+              "id": "94d3781ee25a42239cbc13d107839261",
+              "children": {
+                "institution": {
+                  "id": "9d3c7b60c40d4b69a298ada04327359d"
+                },
+                "area": {
+                  "id": "a3e7e9659ae64a198e2c6b730db2c9cb"
+                },
+                "studyType": {
+                  "id": "0e65327fce3f4f87a0898d027259e005"
+                },
+                "startDate": {
+                  "id": "9d186c0509ce4a68b2d6be1795797048"
+                },
+                "endDate": {
+                  "id": "6a737a54e9cc47a3b118b3ee15b9e580"
+                }
+              }
+            }
+          ]
+        },
+        "skills": {
+          "id": "225ef2ecce56486cbf5732f727364997",
+          "children": [
+            {
+              "id": "78b1881e42bd44fe875cc7ca1a655da9",
+              "children": {
+                "name": {
+                  "id": "9183e9e7d21e4cda8f721eeb73b5ffde"
+                },
+                "keywords": {
+                  "id": "ee2850783141482a992aea96c0a4b3ff",
+                  "children": [
+                    {
+                      "id": "cd7a924b56cd4a36b05e414c2bf9e85e"
+                    },
+                    {
+                      "id": "d075e96317b043e18b46980fa66eb069"
+                    },
+                    {
+                      "id": "71150368ef664343a75c39ebe1f03c63"
+                    },
+                    {
+                      "id": "7476a11fea2c4d9493221c71dc132321"
+                    },
+                    {
+                      "id": "e2b694be02e14a1893188923381b32ee"
+                    },
+                    {
+                      "id": "f89ffbb2f30f466f98977628a34b1f98"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "aa28418b28ee4610bba2bc778def8f65",
+              "children": {
+                "name": {
+                  "id": "8bf16801a5884d9bb204625f9e35f013"
+                },
+                "keywords": {
+                  "id": "b3e592979f6443e5954379cd54a22196",
+                  "children": [
+                    {
+                      "id": "f669dec66e6440fb91dbc1430cf2a87f"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "078b175f28af4449a6f1f82b6bcdc0cf",
+              "children": {
+                "name": {
+                  "id": "a53189ba0d004c9ea99e3bd054175018"
+                },
+                "keywords": {
+                  "id": "0b205ad84755441bba512e07b224bcf8",
+                  "children": [
+                    {
+                      "id": "da57bba075b742fe8a271056fb1072d8"
+                    },
+                    {
+                      "id": "a3707f5a6d03477f86cec9d07c985bb1"
+                    },
+                    {
+                      "id": "5091b4865d434ea182736b5e80ad465e"
+                    },
+                    {
+                      "id": "971290a070574c98a79c87330300f989"
+                    },
+                    {
+                      "id": "5590d2f5d3ef413394a61e83f2380db5"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "e4b45c9a3b304ef286cc970648564f7a",
+              "children": {
+                "name": {
+                  "id": "dcf01dd3532342a2b97f61992f04391b"
+                },
+                "keywords": {
+                  "id": "38ac1d591fd04a54ae7115b1d12059b2",
+                  "children": [
+                    {
+                      "id": "849ce00c10c34198aad7b7041f05d92b"
+                    },
+                    {
+                      "id": "88ed4a18b22b4743a03b62f600ee9ce6"
+                    },
+                    {
+                      "id": "c402926af373434c9477d2d6ba7f7048"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "f94b4d3331934182bc37ba3ffe66e5a1",
+              "children": {
+                "name": {
+                  "id": "2ec6300eeee14fa2bdf68132f7f509f9"
+                },
+                "keywords": {
+                  "id": "eb7c441d79834f0b8e1bcd34fb700dc7",
+                  "children": [
+                    {
+                      "id": "9a0851fc15bc49c9a387831e3ad78efd"
+                    },
+                    {
+                      "id": "0484377309a140ac91a5b13c8ceb14c4"
+                    },
+                    {
+                      "id": "f95beb3f4ca845ffad212db71b6164ac"
+                    },
+                    {
+                      "id": "055095084158445f97efa17d403f4988"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "5787ef4b-4dd8-42b9-ba03-3ee848b10ae5",
+              "children": {
+                "name": {
+                  "id": "dc530614-505c-4a39-9983-a34427527584"
+                },
+                "keywords": {
+                  "id": "0358e0f0-9777-494e-b355-e7369947c056",
+                  "children": [
+                    {
+                      "id": "80a70ebe-46d6-4598-ba0a-5ec7d8591f05"
+                    },
+                    {
+                      "id": "cfc42b1c-f7ba-4b82-8d86-caf54df3c224"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "versions": [
+      {
+        "excluded": [
+          "09cfd29b41db4c0bbef7e087fbfe54e3",
+          "9b832a058e3b4b61bee92fca8871f5b9",
+          "792165a598744608b0c1c025eecd6ef6",
+          "db205bfa53614940bf81cec50b998adf",
+          "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+          "98f755c3a0314e5fa16ed4bb6890b878"
+        ],
+        "indent": {},
+        "id": "joblinks",
+        "name": "Joblinks",
+        "reviewStatus": "unreviewed"
+      },
+      {
+        "id": "job-ef4b98fc55d0431caf126546e6790dfe",
+        "name": "FreeWheel, a Comcast company — Python Engineer (Django) - Chicago ef4b98fc",
+        "excluded": [
+          "aaae966642be4578b54f5781a35fa8c5",
+          "80604f227b4f4bc1893c6f263ed75063",
+          "e9ce8eec310e4f62a320a043d11b3744",
+          "02032f5bee6a488293226056ed74bf71",
+          "6d84029133724878965984a6410877fc",
+          "e66fff51a4fe4de99c991b7abb68151b",
+          "ed265385e17349de9fbca93826e1266d",
+          "d90a3b5b8af44b05a47aa4ef15d9b827",
+          "e2b694be02e14a1893188923381b32ee",
+          "f89ffbb2f30f466f98977628a34b1f98",
+          "5787ef4b-4dd8-42b9-ba03-3ee848b10ae5",
+          "bb99e1c565244162ae2ff3d74c2dbc2b",
+          "dd553373f5d84759ae16378a24a654af",
+          "1d0db203e8a94406afb0a31470769570"
+        ],
+        "indent": {},
+        "wording": {
+          "db205bfa53614940bf81cec50b998adf": "db205bfa53614940bf81cec50b998adf",
+          "5a43acbdfbbe41b0813442ffc7bb4ffc": "5a43acbdfbbe41b0813442ffc7bb4ffc",
+          "ecd47f53ebe64fd3b31ad5ba6a43c1ca": "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+          "48bd1e3fa654496d81bb27e38eda2e9b": "48bd1e3fa654496d81bb27e38eda2e9b",
+          "ae2c9f5cffc844629837ae37cec65ab8": "ae2c9f5cffc844629837ae37cec65ab8",
+          "e46e04f99466431ca81039dc59894cac": "e46e04f99466431ca81039dc59894cac",
+          "4b86263d1f5e4ff7bc1d9aac4f3330bb": "4b86263d1f5e4ff7bc1d9aac4f3330bb",
+          "f58c5546c5ff4d1cb4ac595cf8e06379": "f58c5546c5ff4d1cb4ac595cf8e06379",
+          "bb99e1c565244162ae2ff3d74c2dbc2b": "bb99e1c565244162ae2ff3d74c2dbc2b",
+          "98f755c3a0314e5fa16ed4bb6890b878": "98f755c3a0314e5fa16ed4bb6890b878",
+          "b205588cb8f14f19b1afd2ace8aef3ce": "b205588cb8f14f19b1afd2ace8aef3ce",
+          "d089b435ea77460b961b6f36853aa3c5": "d089b435ea77460b961b6f36853aa3c5",
+          "5a96de30b63e4ea7978b4b1d7a93c025": "5a96de30b63e4ea7978b4b1d7a93c025"
+        },
+        "prose": {
+          "01b2442887184e2d97663e9a90ca5862": "Technical lead and lead developer for a tax-integration platform, coordinating development projects and supporting client implementations."
+        },
+        "order": {
+          "792165a598744608b0c1c025eecd6ef6": [
+            "247fceceac5e43c1a06dc36e7547b2ec",
+            "df11ca815d6443d799e5573e67f292b2"
+          ],
+          "eb741b67ed5c4ff7a4b44aa14d1d370d": [
+            "db205bfa53614940bf81cec50b998adf",
+            "5a43acbdfbbe41b0813442ffc7bb4ffc",
+            "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+            "48bd1e3fa654496d81bb27e38eda2e9b",
+            "ae2c9f5cffc844629837ae37cec65ab8",
+            "e46e04f99466431ca81039dc59894cac",
+            "4b86263d1f5e4ff7bc1d9aac4f3330bb"
+          ],
+          "a98452a026d94369bf8dff0f9d75933d": [
+            "f58c5546c5ff4d1cb4ac595cf8e06379",
+            "bb99e1c565244162ae2ff3d74c2dbc2b",
+            "98f755c3a0314e5fa16ed4bb6890b878"
+          ],
+          "a24fedc7606f4d0289623958312d5248": [
+            "b205588cb8f14f19b1afd2ace8aef3ce",
+            "d089b435ea77460b961b6f36853aa3c5",
+            "5a96de30b63e4ea7978b4b1d7a93c025"
+          ],
+          "d694e1a8d98a454fa948ab28c4176ab8": [
+            "9c4d9197842e46818524ba18f1cb7af3",
+            "c4bd20db5a92458192aa64fa179c8e50",
+            "be6d8b20680a46eeb263a30c4377d2f8"
+          ],
+          "ef08b787df874d8bb07ac66858c5271e": [
+            "a52e764572fd4e67ade61a361ee47f16",
+            "94d3781ee25a42239cbc13d107839261"
+          ],
+          "ee2850783141482a992aea96c0a4b3ff": [
+            "cd7a924b56cd4a36b05e414c2bf9e85e",
+            "d075e96317b043e18b46980fa66eb069",
+            "7476a11fea2c4d9493221c71dc132321",
+            "71150368ef664343a75c39ebe1f03c63"
+          ],
+          "b3e592979f6443e5954379cd54a22196": [
+            "f669dec66e6440fb91dbc1430cf2a87f"
+          ],
+          "0b205ad84755441bba512e07b224bcf8": [
+            "da57bba075b742fe8a271056fb1072d8",
+            "5091b4865d434ea182736b5e80ad465e",
+            "5590d2f5d3ef413394a61e83f2380db5",
+            "971290a070574c98a79c87330300f989",
+            "a3707f5a6d03477f86cec9d07c985bb1"
+          ],
+          "38ac1d591fd04a54ae7115b1d12059b2": [
+            "88ed4a18b22b4743a03b62f600ee9ce6",
+            "849ce00c10c34198aad7b7041f05d92b",
+            "c402926af373434c9477d2d6ba7f7048"
+          ],
+          "eb7c441d79834f0b8e1bcd34fb700dc7": [
+            "9a0851fc15bc49c9a387831e3ad78efd",
+            "0484377309a140ac91a5b13c8ceb14c4",
+            "f95beb3f4ca845ffad212db71b6164ac",
+            "055095084158445f97efa17d403f4988"
+          ],
+          "225ef2ecce56486cbf5732f727364997": [
+            "78b1881e42bd44fe875cc7ca1a655da9",
+            "aa28418b28ee4610bba2bc778def8f65",
+            "078b175f28af4449a6f1f82b6bcdc0cf",
+            "e4b45c9a3b304ef286cc970648564f7a",
+            "f94b4d3331934182bc37ba3ffe66e5a1"
+          ]
+        },
+        "reviewStatus": "unreviewed",
+        "summaryOverride": "Technical professional with software development, systems integration, and client-support experience, serving as technical lead and lead developer for a tax-integration platform. Background includes requirements gathering, application upgrades, asynchronous performance improvements, and production migration to AWS, with Python, Django, PHP, and REST APIs among technical skills.",
+        "provenance": {
+          "jobId": "501380a2dabd4ddcb590c5ddf5a81a4d",
+          "runId": "ef4b98fc55d0431caf126546e6790dfe",
+          "sourceHighlights": []
+        }
+      }
+    ],
+    "masterHash": "fc43338fdda2febd9d42e684b6103acab690c8754099a80a629f920c1f6621c2",
+    "highlights": {
+      "aaae966642be4578b54f5781a35fa8c5": {
+        "defaultWording": "aaae966642be4578b54f5781a35fa8c5",
+        "wordings": [
+          {
+            "id": "aaae966642be4578b54f5781a35fa8c5",
+            "text": "Served as Lead Developer and Project Manager.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "e46e04f99466431ca81039dc59894cac": {
+        "defaultWording": "e46e04f99466431ca81039dc59894cac",
+        "wordings": [
+          {
+            "id": "e46e04f99466431ca81039dc59894cac",
+            "text": "Managed internal development projects and client-coordinated work, sharing integration updates, reporting status, and responding to questions and requests.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "5a43acbdfbbe41b0813442ffc7bb4ffc": {
+        "defaultWording": "5a43acbdfbbe41b0813442ffc7bb4ffc",
+        "wordings": [
+          {
+            "id": "5a43acbdfbbe41b0813442ffc7bb4ffc",
+            "text": "Supported end-to-end integration implementations, including requirements gathering, setup, troubleshooting, and go-live support.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "80604f227b4f4bc1893c6f263ed75063": {
+        "defaultWording": "80604f227b4f4bc1893c6f263ed75063",
+        "wordings": [
+          {
+            "id": "80604f227b4f4bc1893c6f263ed75063",
+            "text": "Develop integrations between financial platforms and tax providers.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "e9ce8eec310e4f62a320a043d11b3744": {
+        "defaultWording": "e9ce8eec310e4f62a320a043d11b3744",
+        "wordings": [
+          {
+            "id": "e9ce8eec310e4f62a320a043d11b3744",
+            "text": "Supported integrations with Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "02032f5bee6a488293226056ed74bf71": {
+        "defaultWording": "02032f5bee6a488293226056ed74bf71",
+        "wordings": [
+          {
+            "id": "02032f5bee6a488293226056ed74bf71",
+            "text": "Led the transition from Version 1 to Version 2 of the tax-integration platform.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "6d84029133724878965984a6410877fc": {
+        "defaultWording": "6d84029133724878965984a6410877fc",
+        "wordings": [
+          {
+            "id": "6d84029133724878965984a6410877fc",
+            "text": "Broadened tax-provider and financial-platform support.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "e66fff51a4fe4de99c991b7abb68151b": {
+        "defaultWording": "e66fff51a4fe4de99c991b7abb68151b",
+        "wordings": [
+          {
+            "id": "e66fff51a4fe4de99c991b7abb68151b",
+            "text": "Improved UI/UX.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "48bd1e3fa654496d81bb27e38eda2e9b": {
+        "defaultWording": "48bd1e3fa654496d81bb27e38eda2e9b",
+        "wordings": [
+          {
+            "id": "48bd1e3fa654496d81bb27e38eda2e9b",
+            "text": "Optimized asynchronous operations to improve performance and throughput.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "ae2c9f5cffc844629837ae37cec65ab8": {
+        "defaultWording": "ae2c9f5cffc844629837ae37cec65ab8",
+        "wordings": [
+          {
+            "id": "ae2c9f5cffc844629837ae37cec65ab8",
+            "text": "Migrated production workloads from DigitalOcean to AWS.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "4b86263d1f5e4ff7bc1d9aac4f3330bb": {
+        "defaultWording": "4b86263d1f5e4ff7bc1d9aac4f3330bb",
+        "wordings": [
+          {
+            "id": "4b86263d1f5e4ff7bc1d9aac4f3330bb",
+            "text": "Created and maintained client guides and knowledge-base articles.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "bb99e1c565244162ae2ff3d74c2dbc2b": {
+        "defaultWording": "bb99e1c565244162ae2ff3d74c2dbc2b",
+        "wordings": [
+          {
+            "id": "bb99e1c565244162ae2ff3d74c2dbc2b",
+            "text": "Fulfilled orders for more than 1000 restaurant and store clients.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "ed265385e17349de9fbca93826e1266d": {
+        "defaultWording": "ed265385e17349de9fbca93826e1266d",
+        "wordings": [
+          {
+            "id": "ed265385e17349de9fbca93826e1266d",
+            "text": "Updated invoices for inventory changes to help maintain accurate records.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "f58c5546c5ff4d1cb4ac595cf8e06379": {
+        "defaultWording": "f58c5546c5ff4d1cb4ac595cf8e06379",
+        "wordings": [
+          {
+            "id": "f58c5546c5ff4d1cb4ac595cf8e06379",
+            "text": "Partnered with the IT department to install and troubleshoot new point-of-sale nodes.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "d90a3b5b8af44b05a47aa4ef15d9b827": {
+        "defaultWording": "d90a3b5b8af44b05a47aa4ef15d9b827",
+        "wordings": [
+          {
+            "id": "d90a3b5b8af44b05a47aa4ef15d9b827",
+            "text": "Assisted with training new hires",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "88dcb2a1056744cc9ba510a97825070a": {
+        "defaultWording": "88dcb2a1056744cc9ba510a97825070a",
+        "wordings": [
+          {
+            "id": "88dcb2a1056744cc9ba510a97825070a",
+            "text": "Analyzed asset and facilities databases, identifying more than $10 million in previously unidentified asset value that informed the sale of unused assets before Komatsu's acquisition of Joy Global.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "b205588cb8f14f19b1afd2ace8aef3ce": {
+        "defaultWording": "b205588cb8f14f19b1afd2ace8aef3ce",
+        "wordings": [
+          {
+            "id": "b205588cb8f14f19b1afd2ace8aef3ce",
+            "text": "Evaluated, selected, and implemented a global mapping platform that provided facility information to employees and customers.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "d089b435ea77460b961b6f36853aa3c5": {
+        "defaultWording": "d089b435ea77460b961b6f36853aa3c5",
+        "wordings": [
+          {
+            "id": "d089b435ea77460b961b6f36853aa3c5",
+            "text": "Initiated web automations that reduced manual database-maintenance work.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "5a96de30b63e4ea7978b4b1d7a93c025": {
+        "defaultWording": "5a96de30b63e4ea7978b4b1d7a93c025",
+        "wordings": [
+          {
+            "id": "5a96de30b63e4ea7978b4b1d7a93c025",
+            "text": "Managed SharePoint sites and data and designed data-input forms to improve accessibility, reduce errors, and promote cross-department information sharing.",
+            "reviewStatus": "reviewed"
+          }
+        ]
+      },
+      "db205bfa53614940bf81cec50b998adf": {
+        "defaultWording": "db205bfa53614940bf81cec50b998adf",
+        "wordings": [
+          {
+            "id": "db205bfa53614940bf81cec50b998adf",
+            "text": "Developed integrations between financial platforms and tax providers, including Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
+            "reviewStatus": "unreviewed",
+            "provenance": {
+              "sourceHighlights": [],
+              "jobId": "501380a2dabd4ddcb590c5ddf5a81a4d",
+              "runId": "ef4b98fc55d0431caf126546e6790dfe"
+            }
+          }
+        ]
+      },
+      "ecd47f53ebe64fd3b31ad5ba6a43c1ca": {
+        "defaultWording": "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+        "wordings": [
+          {
+            "id": "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+            "text": "Led the transition from Version 1 to Version 2 of the tax-integration platform, broadening tax-provider and financial-platform support and improving UI/UX.",
+            "reviewStatus": "unreviewed",
+            "provenance": {
+              "sourceHighlights": [],
+              "jobId": "501380a2dabd4ddcb590c5ddf5a81a4d",
+              "runId": "ef4b98fc55d0431caf126546e6790dfe"
+            }
+          }
+        ]
+      },
+      "98f755c3a0314e5fa16ed4bb6890b878": {
+        "defaultWording": "98f755c3a0314e5fa16ed4bb6890b878",
+        "wordings": [
+          {
+            "id": "98f755c3a0314e5fa16ed4bb6890b878",
+            "text": "Assisted with training new hires.",
+            "reviewStatus": "unreviewed",
+            "provenance": {
+              "sourceHighlights": [],
+              "jobId": "501380a2dabd4ddcb590c5ddf5a81a4d",
+              "runId": "ef4b98fc55d0431caf126546e6790dfe"
+            }
+          }
+        ]
+      }
+    },
+    "masterIndent": {
+      "aaae966642be4578b54f5781a35fa8c5": 0,
+      "e46e04f99466431ca81039dc59894cac": 1,
+      "5a43acbdfbbe41b0813442ffc7bb4ffc": 1,
+      "80604f227b4f4bc1893c6f263ed75063": 0,
+      "e9ce8eec310e4f62a320a043d11b3744": 1,
+      "02032f5bee6a488293226056ed74bf71": 0,
+      "6d84029133724878965984a6410877fc": 1,
+      "e66fff51a4fe4de99c991b7abb68151b": 1,
+      "48bd1e3fa654496d81bb27e38eda2e9b": 1,
+      "ae2c9f5cffc844629837ae37cec65ab8": 1,
+      "4b86263d1f5e4ff7bc1d9aac4f3330bb": 0,
+      "bb99e1c565244162ae2ff3d74c2dbc2b": 0,
+      "ed265385e17349de9fbca93826e1266d": 0,
+      "f58c5546c5ff4d1cb4ac595cf8e06379": 0,
+      "d90a3b5b8af44b05a47aa4ef15d9b827": 0,
+      "88dcb2a1056744cc9ba510a97825070a": 0,
+      "b205588cb8f14f19b1afd2ace8aef3ce": 0,
+      "d089b435ea77460b961b6f36853aa3c5": 0,
+      "5a96de30b63e4ea7978b4b1d7a93c025": 0,
+      "db205bfa53614940bf81cec50b998adf": 0,
+      "ecd47f53ebe64fd3b31ad5ba6a43c1ca": 0,
+      "98f755c3a0314e5fa16ed4bb6890b878": 0
+    }
+  },
+  "revision": "39cbd18f738b0368d7abdf826f9d927d57478a5ced2c33f96692318ead0835e5",
+  "warning": ""
+}

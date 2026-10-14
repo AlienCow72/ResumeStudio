@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Loopback-only resume editor. PDF rendering uses the local Chrome browser."""
 import argparse, json
+from urllib.parse import urlsplit, parse_qs
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -60,6 +61,14 @@ from render import html_doc, pdf, pdf_preview
 
 def markdown(data,levels=None):
     return '\n\n'.join(('  '*int(k[2:])+'- ' if k.startswith('li') else {'h1':'# ','h2':'## ','h3':'### '}.get(k,''))+str(v).replace('<','&lt;') for k,v in blocks(data,levels))+'\n'
+def job_response(job):
+    status=generation().state(job['id'])
+    return {**{k:v for k,v in job.items() if k!='creationKeys'},'generation':status,'generationStatus':status['status'],
+            'versionId':status.get('versionId'),'reviewStatus':status.get('reviewStatus','unreviewed'),
+            'links':{'self':'/api/jobs/'+job['id'],'board':'/jobs?job='+job['id'],
+                     'resume':'/?version='+status['versionId'] if status.get('versionId') else None,
+                     'retry':'/api/jobs/'+job['id']+'/generate'}}
+
 class Handler(BaseHTTPRequestHandler):
     def respond(self, status, body, mime='application/json', filename=None):
         if not isinstance(body,bytes): body=body.encode()
@@ -68,13 +77,18 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers(); self.wfile.write(body)
     def do_GET(self):
         try:
+            parsed=urlsplit(self.path); query=parse_qs(parsed.query); self.path=parsed.path
             if self.path=='/': self.respond(200,(ROOT/'index.html').read_bytes(),'text/html; charset=utf-8')
             elif self.path in ('/jobs', '/jobs/'):
                 self.respond(200,(ROOT/'jobs.html').read_bytes(),'text/html; charset=utf-8')
             elif self.path in ('/jobs.js', '/jobs.css', '/application-review.js'):
                 self.respond(200,(ROOT/self.path[1:]).read_bytes(),'text/javascript; charset=utf-8' if self.path.endswith('.js') else 'text/css; charset=utf-8')
             elif self.path=='/api/jobs':
-                self.respond(200,json.dumps({'jobs':[{**job,'generation':generation().state(job['id'])} for job in JOBS.list()]}))
+                jobs=JOBS.list()
+                if 'url' in query:
+                    from jobs import url_key
+                    jobs=[j for j in jobs if url_key(j['url'])==url_key(query['url'][0])]
+                self.respond(200,json.dumps({'jobs':[job_response(job) for job in jobs]}))
             elif self.path.startswith('/api/jobs/') and '/drafts/' in self.path:
                 import application_drafts
                 parts=self.path.strip('/').split('/')
@@ -85,6 +99,8 @@ class Handler(BaseHTTPRequestHandler):
                 if len(parts)!=6 or parts[3]!='files':raise ValueError('Invalid document URL.')
                 body,mime,filename=generation().download(parts[2],parts[4],parts[5])
                 self.respond(200,body,mime,filename)
+            elif self.path.startswith('/api/jobs/'):
+                self.respond(200,json.dumps(job_response(JOBS.read(self.path[len('/api/jobs/'):]))))
             elif self.path=='/app.js': self.respond(200,(ROOT/'app.js').read_bytes(),'text/javascript; charset=utf-8')
             elif self.path=='/api/resume':
                 with LOCK:self.respond(200,json.dumps(STORE.load()))
@@ -100,6 +116,22 @@ class Handler(BaseHTTPRequestHandler):
             if not 0<length<=5_000_000:raise ValueError('Request must be under 5 MB.')
             request=json.loads(self.rfile.read(length))
             if not isinstance(request,dict):raise ValueError('Request must be an object.')
+            if self.path.startswith('/api/jobs/') and self.path.rsplit('/',1)[-1] in ('preview-import','import-studio'):
+                from studio_import import import_run
+                from application_drafts import read
+                parts=self.path.strip('/').split('/')
+                if len(parts)!=4:raise ValueError('Invalid import URL.')
+                service=generation();identifier=parts[2];run_id=request.get('runId')
+                with service.lock,LOCK:
+                    linked=any(v.get('provenance',{}).get('jobId')==identifier and v.get('provenance',{}).get('runId')==run_id for v in service.master.load()['state']['versions'])
+                    if parts[3]=='import-studio' and not linked and request.get('draftRevision')!=read(service,identifier,run_id)['revision']:
+                        raise FileExistsError('Job drafts changed after the preview. Preview again before importing.')
+                    result=import_run(service,identifier,run_id,parts[3]=='preview-import',request.get('revision'),request.get('acknowledgeChanges') is True,request.get('entryMap'))
+                    if parts[3]=='import-studio':
+                        status=service.state(identifier)
+                        if status.get('runId')==run_id:
+                            status['versionId']=result['versionId'];status.pop('importError',None);service.persist(identifier,status)
+                self.respond(200,json.dumps(result));return
             if self.path.startswith('/api/jobs/') and self.path.rsplit('/',1)[-1] in ('save-drafts','preview-drafts','download-application'):
                 import application_drafts
                 parts=self.path.strip('/').split('/')
@@ -126,16 +158,19 @@ class Handler(BaseHTTPRequestHandler):
                 if isinstance(job,dict) and 'sourceText' in request:
                     job={**job,'sourceText':request['sourceText']}
                 auto=not identifier and request.get('generate') is not False
-                if auto and isinstance(job,dict):
+                if not identifier and isinstance(job,dict):
                     job={**job,'company':job.get('company') or 'Pending extraction','title':job.get('title') or 'New application'}
-                result=JOBS.save(job,identifier,request.get('revision'),request.get('allowDuplicate') is True)
-                if auto:
+                if identifier:
+                    result=JOBS.save(job,identifier,request.get('revision'),request.get('allowDuplicate') is True);created=False
+                else:
+                    result,created=JOBS.create(job,request.get('allowDuplicate') is True,self.headers.get('Idempotency-Key'),request)
+                if auto and created:
                     try:result['generation']=generation().start(result['id'],result['sourceText'])
                     except Exception as error:
                         result['generation']={'status':'failed','files':[],'message':str(error)}
                         JOBS.write(JOBS.path(result['id']).parent/'generation.json',result['generation'])
                 else:result['generation']=generation().state(result['id'])
-                self.respond(200 if identifier else 201,json.dumps(result));return
+                self.respond(201 if created else 200,json.dumps(job_response(result)));return
             data=request['data'];state=request.get('state');active=request.get('active','master')
             validate_version(data,state)
             if self.path=='/api/save':
