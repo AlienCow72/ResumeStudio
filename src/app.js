@@ -1,12 +1,12 @@
 
 const schemas={basics:{name:'',label:'',email:'',phone:'',url:'',summary:'',location:{address:'',postalCode:'',city:'',region:'',countryCode:''},profiles:[{network:'',username:'',url:''}]},work:{name:'',position:'',location:'',url:'',startDate:'',endDate:'',summary:'',highlights:['']},education:{institution:'',studyType:'',area:'',startDate:'',endDate:'',score:'',url:'',courses:['']},skills:{name:'',level:'',keywords:['']},projects:{name:'',description:'',startDate:'',endDate:'',url:'',highlights:[''],keywords:[''],roles:[''],entity:'',type:''},volunteer:{organization:'',position:'',startDate:'',endDate:'',summary:'',url:'',highlights:['']},certificates:{name:'',issuer:'',date:'',url:''},awards:{title:'',awarder:'',date:'',summary:''},publications:{name:'',publisher:'',releaseDate:'',url:'',summary:''},languages:{language:'',fluency:''},interests:{name:'',keywords:['']},references:{name:'',reference:''}};
-let data,state,revision,active='master',section='basics',dirty=false,timer,previewVersion=0,busy=false;
+let data,state,revision,active=new URLSearchParams(location.search).get('version')||'master',section='basics',dirty=false,timer,previewVersion=0,busy=false;
 let baseline;const expanded=new Map();
 const $=id=>document.getElementById(id),copy=v=>structuredClone(v),title=k=>k.replace(/([a-z])([A-Z])/g,'$1 $2').replace(/^./,c=>c.toUpperCase());
 const nodeFor=v=>{const n={id:crypto.randomUUID()};if(Array.isArray(v))n.children=v.map(nodeFor);else if(v&&typeof v==='object')n.children=Object.fromEntries(Object.entries(v).map(([k,x])=>[k,nodeFor(x)]));return n};
 const version=()=>state.versions.find(v=>v.id===active);
 function status(message,error=false){$('status').textContent=message;$('status').className=error?'error':''}
-function mark(){dirty=true;status('Unsaved changes');++previewVersion;if(previewMode==='pdf'){previewStatus('PDF changes pending…');$('pdfPages').classList.add('stale')}clearTimeout(timer);timer=setTimeout(preview,previewMode==='pdf'?700:250)}
+function mark(){if(version()){version().reviewStatus='unreviewed';delete version().markReviewed}dirty=true;status('Unsaved changes');++previewVersion;if(previewMode==='pdf'){previewStatus('PDF changes pending…');$('pdfPages').classList.add('stale')}clearTimeout(timer);timer=setTimeout(preview,previewMode==='pdf'?700:250)}
 function button(text,fn,label){const b=document.createElement('button');b.textContent=text;b.onclick=fn;if(label){b.setAttribute('aria-label',label);b.title=label}return b}
 function pack(value,node){
   if(Array.isArray(value)){const pairs=value.map((v,i)=>pack(v,node.children[i])).filter(Boolean);return pairs.length?[pairs.map(p=>p[0]),{id:node.id,children:pairs.map(p=>p[1])}]:null}
@@ -14,7 +14,7 @@ function pack(value,node){
   return value===''?null:[value,node];
 }
 function payload(){if(active!=='master')return {data:baseline.data,state:{...state,tree:baseline.state.tree},revision,active};const [d,t]=pack(data,state.tree)||[{}, {id:state.tree.id,children:{}}];return {data:d,state:{...state,tree:t},revision,active}}
-async function request(path){const r=await fetch('/api/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload())});if(!r.ok)throw Error((await r.json()).error||'Request failed');return r}
+async function request(path){const r=await fetch('/api/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload())});if(!r.ok){const error=Error((await r.json()).error||'Request failed');error.code=r.status;throw error}return r}
 let previewMode='html',pdfInFlight=false,pdfQueued=false;
 function previewStatus(message,className=''){const el=$('previewStatus');el.textContent=message;el.className=className}
 async function preview(){
@@ -37,20 +37,23 @@ async function preview(){
 function setPreviewMode(mode){previewMode=mode;clearTimeout(timer);for(const kind of ['html','pdf']){const selected=kind===mode;$(kind+'Tab').setAttribute('aria-selected',String(selected));$(kind+'Tab').tabIndex=selected?0:-1;$(kind+'Panel').hidden=!selected}preview()}
 for(const mode of ['html','pdf']){const tab=$(mode+'Tab');tab.onclick=()=>setPreviewMode(mode);tab.onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const next=e.key==='Home'?'html':e.key==='End'?'pdf':mode==='html'?'pdf':'html';setPreviewMode(next);$(next+'Tab').focus()}}}
 function accept(result){data=result.data;state=result.state;revision=result.revision;baseline=copy({data,state});dirty=false;if(active!=='master'&&!version())active='master';status(result.warning||'All changes saved')}
-async function save(){if(busy)return false;busy=true;$('save').disabled=true;$('editPane').inert=true;document.querySelector('.version-picker').inert=true;$('export').disabled=true;try{const r=await request('save');accept(await r.json());render();status('Saved · backup created');return true}catch(e){status(e.message,true);return false}finally{busy=false;$('save').disabled=false;$('editPane').inert=false;document.querySelector('.version-picker').inert=false;$('export').disabled=false}}
+async function save(){if(busy)return false;busy=true;$('save').disabled=true;$('editPane').inert=true;document.querySelector('.version-picker').inert=true;$('export').disabled=true;try{const r=await request('save');accept(await r.json());render();status('Saved · backup created');return true}catch(e){status(e.message,true);if(e.code===409)$('reconcile').hidden=false;return false}finally{busy=false;$('save').disabled=false;$('editPane').inert=false;document.querySelector('.version-picker').inert=false;$('export').disabled=false}}
 function choose(message,options){return new Promise(resolve=>{const dialog=document.createElement('dialog');const text=document.createElement('p');text.textContent=message;dialog.append(text);const choices=document.createElement('div');choices.className='choices';for(const option of options)choices.append(button(option,()=>{dialog.close();dialog.remove();resolve(option)}));dialog.append(choices);dialog.oncancel=e=>{e.preventDefault();dialog.close();dialog.remove();resolve('Cancel')};document.body.append(dialog);dialog.showModal()})}
 async function guard(){if(!dirty)return true;const result=await choose('Save your changes before switching versions?', ['Save','Discard','Cancel']);if(result==='Save')return save();if(result==='Discard'){data=copy(baseline.data);state=copy(baseline.state);dirty=false;return true}return false}
 async function switchVersion(id){if(busy)return;if(!await guard()){$('version').value=active;return}active=id;if(active!=='master'&&!version())active='master';render();preview();status('All changes saved')}
 function selected(node){return active==='master'||!version().excluded.includes(node.id)}
 function check(node,label,blocked=false){const input=document.createElement('input');input.type='checkbox';input.checked=selected(node);input.disabled=blocked;input.setAttribute('aria-label','Include '+label);input.onchange=()=>{const v=version();v.excluded=v.excluded.filter(id=>id!==node.id);if(!input.checked)v.excluded.push(node.id);mark();render()};return input}
 function ensure(obj,n,key,value){if(!(key in obj)){obj[key]=copy(value);n.children[key]=nodeFor(obj[key])}return n.children[key]}
+function highlightGroup(n,text){state.highlights??={};state.masterIndent??={};return state.highlights[n.id]??={defaultWording:n.id,wordings:[{id:n.id,text,reviewStatus:'unreviewed'}]}}
 function refreshHeader(){
   const select=$('version');select.replaceChildren();for(const [id,name]of [['master','Master — All information'],...state.versions.map(v=>[v.id,v.name])]){const option=document.createElement('option');option.value=id;option.textContent=name;select.append(option)}select.value=active;select.disabled=false;
   $('destination').textContent=(active==='master'?'data/resume.json':`output/resume-${active}.json`);
   for(const id of ['renameVersion','deleteVersion'])$(id).disabled=active==='master';
   $('save').textContent=active==='master'?'Save master':'Save version';
   $('editMaster').hidden=active==='master';
-  $('modeHint').textContent=active==='master'?'Edit master facts here. All versions inherit this content. Dates: YYYY, YYYY-MM, or YYYY-MM-DD.':'Choose what this version includes. Text comes from the master; the objective can be customized. Unchecked content is retained in the master.';
+  $('markReviewed').hidden=active==='master';
+  $('reviewNotice').textContent=active==='master'?'':version().reviewStatus==='reviewed'?'Reviewed':'Unreviewed content · downloads remain available';
+  $('modeHint').textContent=active==='master'?'Edit master facts here. All versions inherit this content. Dates: YYYY, YYYY-MM, or YYYY-MM-DD.':'Choose content, wording, and order. Customize prose and indentation for this version. Unchecked content stays in Master.';
 }
 function render(){if(!state)return;refreshHeader();const nav=$('nav');nav.replaceChildren();const keys=[...new Set([...Object.keys(schemas),...Object.keys(data)])];for(const k of keys){const b=button(k==='basics'?'Objective & contact':title(k),()=>{section=k;render()});b.className=section===k?'active':'';nav.append(b)}nav.append(button('Advanced JSON',editJSON));
   $('sectionTitle').textContent=section==='basics'?'Objective & contact':title(section);const fields=$('fields');fields.replaceChildren();
@@ -70,7 +73,7 @@ function render(){if(!state)return;refreshHeader();const nav=$('nav');nav.replac
 }
 function objectFields(parent,obj,node,schema,blocked,path){
   for(const key of new Set([...Object.keys(schema),...Object.keys(obj)])){
-    if(active!=='master'&&!(key in obj)&&!(path.length===1&&path[0]==='basics'&&key==='summary'))continue;
+    if(active!=='master'&&!(key in obj)&&!(['summary','description'].includes(key)||(path.length===1&&path[0]==='basics'&&key==='label')))continue;
     const template=schema[key];const initial=Array.isArray(template)?[]:(template&&typeof template==='object'?{}:'');
     const n=ensure(obj,node,key,initial),value=obj[key],p=path.concat(key),off=blocked||!selected(n);
     if(Array.isArray(value)){
@@ -84,19 +87,20 @@ function objectFields(parent,obj,node,schema,blocked,path){
   }
 }
 function leaf(parent,obj,node,key,blocked,path){
-  const n=node.children[key];if(active!=='master'&&path.join('.')==='basics.summary'&&!Object.hasOwn(baseline.data.basics||{},'summary'))n.id=baseline.state.tree.children.basics.id+'-summary';const off=blocked||!selected(n),isSummary=path.join('.')==='basics.summary';
+  const n=node.children[key],isSummary=path.join('.')==='basics.summary',isProse=isSummary||['summary','description'].includes(key)||(path.join('.')==='basics.label');const originalParent=path.slice(0,-1).reduce((obj,k)=>obj?.[k],baseline.data);if(active!=='master'&&isProse&&!Object.hasOwn(originalParent||{},key))n.id=node.id+'-'+key;const selectionNode=active!=='master'&&version().excluded.includes(node.id+'-'+key)?{id:node.id+'-'+key}:n;const off=blocked||!selected(selectionNode);
   const wrapper=document.createElement('div');wrapper.className='field'+(off?' excluded':'');const label=document.createElement('label');const labelText=document.createElement('span');labelText.className='field-title';
-  if(active!=='master')labelText.append(check(n,isSummary?'Objective':path.join(' '),blocked));labelText.append(document.createTextNode(isSummary?'Objective':title(key)));
+  if(active!=='master')labelText.append(check(selectionNode,isSummary?'Objective':path.join(' '),blocked));labelText.append(document.createTextNode(isSummary?'Objective':title(key)));
   const multiline=['summary','description','reference'].includes(key);const input=document.createElement(multiline?'textarea':'input');
-  input.setAttribute('aria-label',isSummary?'Objective':path.join(' '));const custom=active!=='master'&&isSummary&&Object.hasOwn(version(),'summaryOverride');input.value=custom?version().summaryOverride:(obj[key]??'');input.readOnly=active!=='master'&&!custom;
+  input.setAttribute('aria-label',isSummary?'Objective':path.join(' '));const overrideKey=isSummary?'summaryOverride':Object.hasOwn(version()?.prose||{},node.id+'-'+key)?node.id+'-'+key:n.id,overrides=isSummary?version():version()?.prose;const custom=active!=='master'&&isProse&&Object.hasOwn(overrides||{},overrideKey);input.value=custom?overrides[overrideKey]:(obj[key]??'');input.readOnly=active!=='master'&&!custom;
   input.disabled=off;
-  input.oninput=()=>{if(custom)version().summaryOverride=input.value;else obj[key]=typeof obj[key]==='number'?Number(input.value):typeof obj[key]==='boolean'?input.value==='true':input.value;mark()};label.append(labelText,input);wrapper.append(label);
-  if(active!=='master'&&isSummary){const tools=document.createElement('div');tools.className='override-tools';const action=button(custom?'Reset to master':'Customize for this version',()=>{if(custom)delete version().summaryOverride;else version().summaryOverride=obj[key]||'';mark();render()});action.disabled=blocked;tools.append(action);const hint=document.createElement('span');hint.textContent=custom?'Custom objective':'Using master objective';tools.append(hint);wrapper.append(tools)}
+  input.oninput=()=>{if(custom)overrides[overrideKey]=input.value;else obj[key]=typeof obj[key]==='number'?Number(input.value):typeof obj[key]==='boolean'?input.value==='true':input.value;mark()};label.append(labelText,input);wrapper.append(label);
+  if(active!=='master'&&isProse){const tools=document.createElement('div');tools.className='override-tools';const action=button(custom?'Reset to master':'Customize for this version',()=>{version().prose??={};const target=isSummary?version():version().prose;if(custom)delete target[overrideKey];else target[overrideKey]=obj[key]||'';mark();render()});action.disabled=blocked;tools.append(action);const hint=document.createElement('span');hint.textContent=custom?'Custom prose':'Using master prose';tools.append(hint);wrapper.append(tools)}
   parent.append(wrapper)
 }
 function arrayFields(parent,arr,node,template,label,blocked,path){
   const redraw=()=>{if(parent.tagName==='DETAILS')expanded.set(node.id,parent.open);mark();render()};
-  arr.forEach((value,i)=>{
+  const display=arr.map((value,i)=>({value,i}));const ordering=version()?.order?.[node.id]||[];display.sort((a,b)=>(ordering.includes(node.children[a.i].id)?ordering.indexOf(node.children[a.i].id):ordering.length)-(ordering.includes(node.children[b.i].id)?ordering.indexOf(node.children[b.i].id):ordering.length));
+  display.forEach(({value,i},position)=>{
     const n=node.children[i],off=blocked||!selected(n),isObject=value&&typeof value==='object';const card=document.createElement(isObject?'fieldset':'div');card.className=(isObject?'':'compact-item')+(off?' excluded':'');
     const row=document.createElement('div');row.className='row';
     const move=delta=>{[arr[i],arr[i+delta]]=[arr[i+delta],arr[i]];[node.children[i],node.children[i+delta]]=[node.children[i+delta],node.children[i]];redraw()};
@@ -105,29 +109,48 @@ function arrayFields(parent,arr,node,template,label,blocked,path){
       const down=button('↓',()=>move(1),`Move ${label.toLowerCase()} item ${i+1} down`);down.disabled=i===arr.length-1;
       row.append(up,down,button(isObject?'Remove':'×',()=>{if(confirm('Remove this master item from all versions?')){arr.splice(i,1);node.children.splice(i,1);redraw()}},`Remove ${label.toLowerCase()} item ${i+1}`));
     }
+    if(active!=='master'){const moveVersion=delta=>{version().order??={};const ids=display.map(x=>node.children[x.i].id);[ids[position],ids[position+delta]]=[ids[position+delta],ids[position]];version().order[node.id]=ids;redraw()};const up=button('↑',()=>moveVersion(-1),`Move ${label.toLowerCase()} item ${position+1} up`),down=button('↓',()=>moveVersion(1),`Move ${label.toLowerCase()} item ${position+1} down`);up.disabled=position===0;down.disabled=position===display.length-1;row.append(up,down)}
     if(isObject){const legend=document.createElement('legend');if(active!=='master')legend.append(check(n,`${label} entry ${i+1}`,blocked));legend.append(document.createTextNode(value.name||value.position||value.institution||`${label} ${i+1}`));card.append(legend,row);objectFields(card,value,n,typeof template==='object'?template:{},off,path.concat(i))}
     else{
       if(active!=='master')card.append(check(n,`${label} item ${i+1}`,blocked));
-      const input=document.createElement(['Keywords','Roles'].includes(label)?'input':'textarea');input.setAttribute('aria-label',`${label} item ${i+1}`);input.value=value;input.readOnly=active!=='master';input.disabled=off;input.oninput=()=>{arr[i]=input.value;mark()};card.append(input);
-      if(active!=='master'&&path[0]==='work'&&label==='Highlights'){
-        const level=version().indent[n.id]||0;const number=document.createElement('span');number.className='indent-label';number.textContent='Level '+level;
-        const outdent=button('←',()=>{version().indent[n.id]=Math.max(0,level-1);redraw()},`Outdent highlight ${i+1}`);outdent.disabled=off||level===0;
-        const indent=button('→',()=>{version().indent[n.id]=Math.min(3,level+1);redraw()},`Indent highlight ${i+1}`);indent.disabled=off||level===3||i===0;
-        row.append(number,outdent,indent)
+      const isHighlight=label==='Highlights',group=isHighlight?highlightGroup(n,value):null;
+      const selectedWording=group?(group.wordings.find(w=>w.id===(version()?.wording?.[n.id]||group.defaultWording))||group.wordings[0]):null;
+      const input=document.createElement(['Keywords','Roles'].includes(label)?'input':'textarea');input.setAttribute('aria-label',`${label} item ${position+1}`);input.value=active==='master'?value:(selectedWording?.text??value);input.readOnly=active!=='master';input.disabled=off;input.oninput=()=>{arr[i]=input.value;if(group){const w=group.wordings.find(w=>w.id===group.defaultWording);w.text=input.value;w.reviewStatus='unreviewed'}mark()};card.append(input);
+      if(group){
+        const labelFor=w=>`${w.reviewStatus==='reviewed'?'Reviewed':'Needs review'}${w.provenance?.runId?' · Generated for job '+w.provenance.jobId:''}${w.provenance?.sourceHighlights?.length?' · Sources: '+w.provenance.sourceHighlights.join(', '):''}`;
+        const included=(v,current)=>{if(v.excluded.includes(current.id))return false;if(current.id===n.id)return true;const children=current.children;return children?Object.values(children).some(child=>included(v,child)):false};const affected=w=>state.versions.filter(v=>included(v,state.tree)&&(v.wording?.[n.id]||group.defaultWording)===w.id).map(v=>v.name).join(', ')||'None';
+        if(active==='master'){
+          const info=document.createElement('small');info.textContent=labelFor(group.wordings[0])+' · Versions using this wording: '+affected(group.wordings[0]);card.append(info);
+          for(const w of group.wordings.filter(w=>w.id!==group.defaultWording)){
+            const field=document.createElement('label');field.className='wording-alternative';field.textContent='Alternative · '+labelFor(w)+' · Affected versions: '+affected(w);const edit=document.createElement('textarea');edit.value=w.text;edit.setAttribute('aria-label','Alternative wording');edit.oninput=()=>{w.text=edit.value;w.reviewStatus='unreviewed';mark()};field.append(edit);card.append(field)
+          }
+          row.append(button('Add alternative',()=>{const text=prompt('Alternative wording');if(text&&!group.wordings.some(w=>w.text===text)){group.wordings.push({id:crypto.randomUUID(),text,reviewStatus:'unreviewed'});redraw()}}));
+        }else{
+          const select=document.createElement('select');select.setAttribute('aria-label',`Wording for highlight ${position+1}`);for(const w of group.wordings){const option=document.createElement('option');option.value=w.id;option.textContent=w.text;select.append(option)}select.value=selectedWording.id;select.disabled=off;select.onchange=()=>{version().wording??={};version().wording[n.id]=select.value;redraw()};card.append(select);
+          const info=document.createElement('small');info.textContent=labelFor(selectedWording);card.append(info);
+          const edit=button('Edit wording for this version',()=>{const text=prompt('Wording for this version',selectedWording.text);if(text===null||!text.trim())return;let w=group.wordings.find(w=>w.text===text);if(!w){w={id:crypto.randomUUID(),text,reviewStatus:'unreviewed'};group.wordings.push(w)}version().wording??={};version().wording[n.id]=w.id;redraw()});edit.disabled=off;row.append(edit);
+        }
+        const levels=active==='master'?state.masterIndent:version().indent;
+        const level=levels[n.id]??state.masterIndent[n.id]??0;const number=document.createElement('span');number.className='indent-label';number.textContent='Level '+level+(active!=='master'&&!Object.hasOwn(levels,n.id)?' · master':'');
+        const outdent=button('←',()=>{levels[n.id]=Math.max(0,level-1);redraw()},`Outdent highlight ${position+1}`);outdent.disabled=off||level===0;
+        const indent=button('→',()=>{levels[n.id]=Math.min(3,level+1);redraw()},`Indent highlight ${position+1}`);indent.disabled=off||level===3;
+        row.append(number,outdent,indent);
+        if(active!=='master')row.append(button('Reset to master',()=>{delete levels[n.id];redraw()}));
       }
       card.append(row)
     }
     parent.append(card)
   });
-  if(active==='master')parent.append(button('+ Add '+label.toLowerCase(),()=>{const value=typeof template==='object'?{}:'';arr.push(value);node.children.push(nodeFor(value));expanded.set(node.id,true);mark();render()}))
+  if(active==='master')parent.append(button('+ Add '+label.toLowerCase(),()=>{const value=typeof template==='object'?{}:'';arr.push(value);const added=nodeFor(value);node.children.push(added);if(label==='Highlights'){highlightGroup(added,value);state.versions.forEach(v=>v.excluded.push(added.id))}expanded.set(node.id,true);mark();render()}))
 }
 function slug(name){return name.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,50).replace(/-$/,'')||'version'}
 function uniqueId(name){const base=slug(name);let id=base,i=2;while(id==='master'||state.versions.some(v=>v.id===id))id=base+'-'+i++;return id}
 function askName(defaultValue=''){const name=prompt('Version name',defaultValue)?.trim();if(!name)return null;if(name.length>80||state.versions.some(v=>v.name.toLowerCase()===name.toLowerCase())){alert('Use a unique name with 1–80 characters.');return null}return name}
 async function createVersion(duplicate=false){if(!await guard())return;const from=version()?copy(version()):null;const name=askName(duplicate&&from?from.name+' copy':'');if(!name){render();return}const v=duplicate&&from?from:{excluded:[],indent:{}};v.id=uniqueId(name);v.name=name;state.versions.push(v);active=v.id;mark();render()}
 $('newVersion').onclick=()=>createVersion();$('duplicateVersion').onclick=()=>createVersion(true);
-$('renameVersion').onclick=()=>{if(!version())return;const name=askName(version().name);if(name){const v=version();v.name=name;v.id=uniqueId(name);active=v.id;mark();render()}};
-$('deleteVersion').onclick=async()=>{if(!version())return;const result=await choose('Delete this version? Master information is retained. Deletion takes effect when you save.', ['Delete','Cancel']);if(result==='Delete'){state.versions=state.versions.filter(v=>v.id!==active);active='master';mark();render()}};
+$('renameVersion').onclick=()=>{if(!version())return;const name=askName(version().name);if(name){const v=version();v.name=name;active=v.id;mark();render()}};
+$('deleteVersion').onclick=async()=>{if(!version())return;if(version().provenance?.jobId){alert('This version is linked to a job and must be retained.');return}const result=await choose('Delete this version? Master information is retained. Deletion takes effect when you save.', ['Delete','Cancel']);if(result==='Delete'){state.versions=state.versions.filter(v=>v.id!==active);active='master';mark();render()}};
+$('markReviewed').onclick=()=>{mark();version().markReviewed=true;version().reviewStatus='reviewed';render();status('Review will be recorded when saved')};
 $('version').onchange=e=>switchVersion(e.target.value);$('editMaster').onclick=()=>switchVersion('master');$('save').onclick=save;
 $('export').onclick=()=>{const menu=$('exportMenu');menu.hidden=!menu.hidden;$('export').setAttribute('aria-expanded',String(!menu.hidden))};
 document.querySelectorAll('[data-format]').forEach(b=>b.onclick=async()=>{try{const format=b.dataset.format;status('Exporting '+format.toUpperCase()+'…');const name=active==='master'?'resume':'resume-'+active;const r=await request('export/'+format);const url=URL.createObjectURL(await r.blob());const a=document.createElement('a');a.href=url;a.download=name+'.'+format;a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);$('exportMenu').hidden=true;$('export').setAttribute('aria-expanded','false');status('Exported '+format.toUpperCase()+(dirty?' · unsaved draft':''))}catch(e){status(e.message,true)}});
@@ -168,3 +191,15 @@ function editJSON(){
   }catch(e){error.textContent=e.message}}));
   actions.append(button('Close',close));dialog.append(actions);dialog.oncancel=e=>{e.preventDefault();close()};document.body.append(dialog);dialog.showModal();
 }
+
+function mergeSaved(base,local,remote,path=''){
+  const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+  if(same(local,base))return copy(remote);if(same(remote,base)||same(local,remote))return copy(local);
+  if([base,local,remote].every(x=>Array.isArray(x)&&x.every(item=>item&&typeof item==='object'&&typeof item.id==='string'))){const map=x=>Object.fromEntries(x.map(item=>[item.id,item])),b=map(base),l=map(local),r=map(remote);const common=x=>x.filter(item=>b[item.id]).map(item=>item.id);const baseOrder=base.map(item=>item.id),localOrder=common(local),remoteOrder=common(remote);if(!same(localOrder,baseOrder)&&!same(remoteOrder,baseOrder)&&!same(localOrder,remoteOrder))throw Error('Concurrent ordering changes at '+path+'. Your draft remains in the editor.');const first=same(localOrder,baseOrder)?remote:local;const ids=[...new Set([...first.map(item=>item.id),...remote.map(item=>item.id),...local.map(item=>item.id)])];return ids.map(id=>mergeSaved(b[id],l[id],r[id],path+'/'+id)).filter(item=>item!==undefined)}
+  if(base&&local&&remote&&[base,local,remote].every(x=>typeof x==='object'&&!Array.isArray(x))){const result={};for(const k of new Set([...Object.keys(base),...Object.keys(local),...Object.keys(remote)])){const next=mergeSaved(base[k],local[k],remote[k],path+'/'+k);if(next!==undefined)result[k]=next}return result}
+  throw Error('Concurrent changes overlap at '+path+'. Your draft remains in the editor. Export it before loading saved content.');
+}
+$('reconcile').onclick=async()=>{
+  try{const response=await fetch('/api/resume'),remote=await response.json();if(!response.ok)throw Error(remote.error);const local=payload();const merged=mergeSaved(baseline,{data:local.data,state:local.state},{data:remote.data,state:remote.state});data=merged.data;state=merged.state;state.versions.forEach(v=>{if(v.markReviewed){delete v.markReviewed;v.reviewStatus='unreviewed'}});revision=remote.revision;baseline=copy({data:remote.data,state:remote.state});mark();render();preview();status('Saved changes reconciled with your draft. Save to finish.');$('reconcile').hidden=true}catch(error){status(error.message,true)}
+};
+window.addEventListener('focus',async()=>{if(!state||busy)return;try{const r=await fetch('/api/resume'),next=await r.json();if(r.ok&&next.revision!==revision){status('Saved Studio content changed. Reconcile to keep your edits.',true);$('reconcile').hidden=false}}catch{}});

@@ -82,7 +82,7 @@
     if(mode==='coverLetter') {
       const field=el('label','Cover letter text'),input=el('textarea');input.id='reviewLetterText';input.setAttribute('aria-label','Cover letter text');input.value=draft.coverLetter;input.oninput=()=>{draft.coverLetter=input.value;changed();};field.append(input);editor.append(field);
     } else {
-      fields(editor,draft.resume,next=>{draft.resume=next;},[]);
+      const notice=el('p',draft.versionId?'This résumé uses the current saved Studio version. Edit wording, selections, and indentation in Studio.':'Import this historical résumé into Studio from the job card to edit it.');editor.append(notice);if(draft.versionId){const link=el('a','Open résumé in Studio ↗');link.href='/?version='+encodeURIComponent(draft.versionId);link.target='_blank';link.rel='noopener';editor.append(link)}const source=el('pre',JSON.stringify(draft.resume,null,2));source.style.whiteSpace='pre-wrap';source.style.overflowWrap='anywhere';editor.append(source);
 
     }
   }
@@ -91,7 +91,7 @@
     job=selected;dirty=false;draft=null;mode='resume';++sequence;clearTimeout(timer);
     $('reviewEditor').replaceChildren();$('reviewPreview').replaceChildren();$('reviewJob').textContent=job.title+' · '+job.company;
     $('reviewDialog').showModal();setBusy(true);message('Loading application drafts…');
-    try {const response=await fetch(`/api/jobs/${job.id}/drafts/${job.generation.runId}`);const data=await response.json();if(!response.ok)throw Error(data.error);draft=data;render();message('Review and edit both documents. Changes apply only to this application.');preview();}
+    try {const response=await fetch(`/api/jobs/${job.id}/drafts/${job.generation.runId}`);const data=await response.json();if(!response.ok)throw Error(data.error);draft=data;render();message(draft.reviewStatus==='reviewed'?'Résumé reviewed. Cover letter is editable here.':'Unreviewed résumé · downloads available. Review in Studio; cover letter is editable here.');preview();}
     catch(error){message(error.message,true);}
     finally{setBusy(false);if(!draft){$('reviewSave').disabled=true;$('reviewDownload').disabled=true;}}
   };
@@ -102,6 +102,7 @@
     const response=await request('save-drafts');draft=await response.json();dirty=false;
     const scroll=$('reviewEditor').scrollTop;render();$('reviewEditor').scrollTop=scroll;preview();
   }
+  $('reviewReconcile').onclick=async()=>{if(!draft||busy)return;const letter=draft.coverLetter;try{const response=await fetch(`/api/jobs/${job.id}/drafts/${draft.runId}`),latest=await response.json();if(!response.ok)throw Error(latest.error);draft={...latest,coverLetter:letter};dirty=true;render();preview();message('Loaded saved Studio content and kept your cover-letter edits. Save to finish.')}catch(error){message(error.message,true)}};
   $('reviewSave').onclick=async()=>{
     if(busy || !draft)return;setBusy(true);clearTimeout(timer);++sequence;
     try{await save();message('Drafts saved.');}catch(error){message(error.message,true);}finally{setBusy(false);}
@@ -113,7 +114,7 @@
       const response=await request('download-application',{runId:draft.runId,revision:draft.revision});
       const blob=await response.blob(),url=URL.createObjectURL(blob),link=el('a');
       link.href=url;link.download=response.headers.get('Content-Disposition')?.match(/filename="([^"]+)"/)?.[1] || 'application.zip';link.click();setTimeout(()=>URL.revokeObjectURL(url),10000);
-      message('Downloaded application ZIP with your saved edits.');
+      message('Downloaded application ZIP with your saved edits.'+(draft.reviewStatus==='reviewed'?'':' Résumé remains unreviewed.'));
     }catch(error){message(error.message+' Your saved drafts are retained.',true);}finally{setBusy(false);}
   };
   window.addEventListener('beforeunload',event=>{if(dirty || busy){event.preventDefault();event.returnValue='';}});

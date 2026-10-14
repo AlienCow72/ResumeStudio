@@ -10,7 +10,7 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
-STAGES = ('applying', 'waiting', 'interview')
+STAGES = ('applying', 'waiting', 'interview', 'rejected')
 LOCK = threading.RLock()
 
 
@@ -38,7 +38,7 @@ def url_key(value):
     parts = urlsplit(posting_url(value))
     # Preserve requisition/query IDs; ignore only known campaign parameters.
     query = [(k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True)
-             if not k.lower().startswith('utm_') and k.lower() not in ('gclid', 'fbclid')]
+             if not k.lower().startswith('utm_') and k.lower() not in ('gclid', 'fbclid', 'msclkid', 'dclid', 'mc_cid', 'mc_eid')]
     netloc = parts.netloc.lower()
     if (parts.scheme == 'https' and parts.port == 443) or (parts.scheme == 'http' and parts.port == 80):
         netloc = netloc.rsplit(':', 1)[0]
@@ -63,7 +63,7 @@ def fields(data):
     result['url'] = posting_url(data.get('url'))
     result['stage'] = data.get('stage', 'applying')
     if result['stage'] not in STAGES:
-        raise ValueError('Choose Applying, Waiting on response, or Interview.')
+        raise ValueError('Choose Applying, Waiting on response, Interview, or Rejected.')
     result['appliedOn'] = data.get('appliedOn', '')
     if result['appliedOn']:
         try:
@@ -118,7 +118,32 @@ class JobStore:
             if os.path.exists(name):
                 os.unlink(name)
 
-    def save(self, data, identifier=None, expected=None, allow_duplicate=False):
+    def create(self, data, allow_duplicate=False, idempotency_key=None, request_input=None):
+        with LOCK:
+            if idempotency_key is not None and (not isinstance(idempotency_key,str) or not 1 <= len(idempotency_key) <= 200):
+                raise ValueError('Idempotency-Key must contain 1–200 characters.')
+            digest=hashlib.sha256(json.dumps(request_input if request_input is not None else data,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+            keyhash=hashlib.sha256(idempotency_key.encode()).hexdigest() if idempotency_key else None
+            if keyhash:
+                prior=next((j for j in self.list() if keyhash in j.get('creationKeys',{})),None)
+                if prior:
+                    if prior['creationKeys'][keyhash]!=digest: raise FileExistsError('Idempotency-Key was already used with different input.')
+                    return prior,False
+            clean=fields(data)
+            matches=[j for j in self.list() if url_key(j['url'])==url_key(clean['url'])]
+            if matches and not allow_duplicate:
+                if len(matches)>1: raise DuplicateJob(matches)
+                job=matches[0];created=False
+            else:
+                job=self.save(data,allow_duplicate=allow_duplicate,creation_keys={keyhash:digest} if keyhash else None);created=True
+            if keyhash and not created:
+                record={k:v for k,v in job.items() if k!='revision'}
+                record.setdefault('creationKeys',{})[keyhash]=digest
+                self.write(self.path(job['id']),record)
+                job=self.read(job['id'])
+            return job,created
+
+    def save(self, data, identifier=None, expected=None, allow_duplicate=False, creation_keys=None):
         with LOCK:
             old = self.read(identifier) if identifier else None
             if old and expected != old['revision']:
@@ -134,9 +159,10 @@ class JobStore:
             history = list(old['history']) if old else []
             if old is None or old['stage'] != clean['stage']:
                 history.append({'at': now, 'from': old['stage'] if old else None, 'to': clean['stage']})
-            record = {**clean, 'schemaVersion': 1, 'id': identifier,
+            record = {**{k:v for k,v in (old or {}).items() if k not in ('revision','generation')}, **clean, 'schemaVersion': 1, 'id': identifier,
                       'createdAt': old['createdAt'] if old else now,
                       'updatedAt': now, 'history': history}
+            if creation_keys and not old:record['creationKeys']=creation_keys
             path = self.path(identifier)
             if old:
                 backup = path.parent / 'backups' / (now.replace(':', '-') + '-' + uuid.uuid4().hex + '.json')

@@ -1,0 +1,27 @@
+{
+  "runId": "89c4ee94a19e4b109d2f0078d16dd798",
+  "createdAt": "2026-10-14T18:29:17.132052+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://jobportal.reyesholdings.com/mb/jobs/36219?lang=en-US",
+  "previous": null,
+  "masterHash": "fc43338fdda2febd9d42e684b6103acab690c8754099a80a629f920c1f6621c2",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-10-14T18:30:16.475035+00:00",
+  "reviewNotes": "Emphasizes technical leadership, business-system integrations, AWS migration, asynchronous performance, and operational automation. The master does not establish the required three years of production AI/ML implementation, agent frameworks, RAG, prompt engineering, vector databases, ML frameworks, AI mentoring, or enterprise-scale architecture design. It also does not document Microsoft Graph API, Snowflake, infrastructure automation, or the preferred Azure and data-platform technologies. Listed AI tools do not establish production AI engineering experience.",
+  "versionId": "job-89c4ee94a19e4b109d2f0078d16dd798"
+}

@@ -1,7 +1,7 @@
 (() => {
   const $ = id => document.getElementById(id);
-  const stages = {applying: 'Applying', waiting: 'Waiting on response', interview: 'Interview'};
-  const hints = {applying: 'Prepare your next application', waiting: 'Applications sent. Stay in the loop.', interview: 'Make the next conversation count'};
+  const stages = {applying: 'Applying', waiting: 'Waiting on response', interview: 'Interview', rejected: 'Rejected'};
+  const hints = {applying: 'Prepare your next application', waiting: 'Applications sent. Stay in the loop.', interview: 'Make the next conversation count', rejected: 'Employer declined the application'};
   let jobs = [], editing = null, changed = false, saving = false, loading = false;
   const pending = new Set();
   const generationActive = state => ['queued','extracting','writing','rendering','cancelling'].includes(state?.status);
@@ -32,8 +32,8 @@
       for (const job of group) column.append(card(job));
       if (!group.length) {
         const empty = element('div', 'empty-column');
-        empty.append(element('strong', '', query ? 'No matching applications' : stage === 'applying' ? 'Your next opportunity starts here' : stage === 'waiting' ? 'Room for your first application' : 'Conversations ahead'));
-        empty.append(document.createTextNode(query ? 'Try another company or role.' : stage === 'applying' ? 'Save a posting you want to pursue.' : stage === 'waiting' ? 'Mark a job applied once you’ve sent it.' : 'Move a job here when an interview is arranged.'));
+        empty.append(element('strong', '', query ? 'No matching applications' : stage === 'applying' ? 'Your next opportunity starts here' : stage === 'waiting' ? 'Room for your first application' : stage === 'rejected' ? 'No declined applications' : 'Conversations ahead'));
+        empty.append(document.createTextNode(query ? 'Try another company or role.' : stage === 'applying' ? 'Save a posting you want to pursue.' : stage === 'waiting' ? 'Mark a job applied once you’ve sent it.' : stage === 'rejected' ? 'Move a job here if the employer declines it.' : 'Move a job here when an interview is arranged.'));
         if (!query && stage === 'applying') empty.append(button('＋ Add a job', () => open()));
         column.append(empty);
       }
@@ -119,7 +119,7 @@
   $('jobDialog').addEventListener('cancel', event => {event.preventDefault(); close();});
   $('search').oninput = render; $('refresh').onclick = () => load();
   window.addEventListener('beforeunload', event => {if (changed || saving || pending.size) {event.preventDefault(); event.returnValue = '';}});
-  load();
+  load().then(()=>{const id=new URLSearchParams(location.search).get('job');if(id){const job=jobs.find(j=>j.id===id);if(job)open(job)}});
   setInterval(() => {if (!saving && jobs.some(job => generationActive(job.generation))) load(true);}, 2000);
 
   function generationPanel(job, detail = false) {
@@ -129,6 +129,9 @@
     panel.append(element('p', 'generation-heading ' + (active ? 'running' : ''), labels[state.status] || state.status));
     if (state.message) panel.append(element('p', 'generation-message', state.message));
     if (state.sourceChanged) panel.append(element('p', 'error', 'These files use the previous posting link. Generate a new set for this link.'));
+    if(state.versionId){const link=element('a','posting-link','Open résumé in Studio ↗');link.href='/?version='+encodeURIComponent(state.versionId);panel.append(link,element('p','generation-message',state.reviewStatus==='reviewed'?'Résumé reviewed':'Unreviewed résumé · downloads available'));}
+    if(state.importError)panel.append(element('p','error',state.importError));
+    if(state.status==='ready'&&!state.versionId)panel.append(button('Preview import into Studio',()=>importStudio(job)));
     if (state.status === 'ready') panel.append(button('Review & edit documents', () => window.openApplicationReview(job), 'primary'));
     if (detail && state.reviewNotes) {const review = element('details'); review.append(element('summary', '', 'Tailoring notes & qualification gaps'), element('p', 'review-notes', state.reviewNotes)); panel.append(review);}
     const actions = element('div', 'generation-actions');
@@ -138,6 +141,20 @@
       actions.append(button(label, () => state.status === 'needs_input' && !detail ? open(job) : runGeneration(job, 'generate', detail, state.status === 'ready')));
     }
     panel.append(actions); return panel;
+  }
+  async function importStudio(job){
+    try{
+      const result=await api(`/api/jobs/${job.id}/preview-import`,{runId:job.generation.runId});
+      if(result.alreadyImported){await load();return}
+      const dialog=element('dialog'),heading=element('h2','','Import résumé into Studio'),notice=element('p','','This uses the latest saved job draft, otherwise the generated original. New wording requires review.');
+      const conflicts=element('p','error',result.conflicts.join('\n'));
+      const details=element('details'),pre=element('pre','',JSON.stringify(result.resume,null,2));pre.style.whiteSpace='pre-wrap';pre.style.overflowWrap='anywhere';details.append(element('summary','','Preview résumé content'),pre);
+      dialog.append(heading,notice,conflicts,details,element('p','',`${result.additions.length} new highlight wordings`));
+      const entryMap={};
+      for(const conflict of result.conflicts.filter(x=>x.startsWith('Choose a master entry for '))){const path=conflict.slice('Choose a master entry for '.length),label=element('label','',path),select=element('select');select.append(new Option('Choose an entry',''));for(const entry of result.entries[path.split('/')[0]]||[])select.append(new Option(entry.label,entry.id));select.onchange=()=>{entryMap[path]=select.value};label.append(select);dialog.append(label)}
+      const acknowledgment=element('label',''),checkbox=element('input');checkbox.type='checkbox';checkbox.style.width='auto';acknowledgment.append(checkbox,document.createTextNode('I reviewed source changes and want to import against current Master.'));if(result.conflicts.length)dialog.append(acknowledgment);
+      const error=element('p','error');dialog.append(error,button('Cancel',()=>dialog.close()),button('Import',async()=>{try{if(result.conflicts.length&&!checkbox.checked)throw Error('Review and acknowledge the source changes first.');await api(`/api/jobs/${job.id}/import-studio`,{runId:job.generation.runId,revision:result.revision,draftRevision:result.draftRevision,acknowledgeChanges:checkbox.checked,entryMap});dialog.close();await load();status('Imported into Studio. Review the linked résumé.')}catch(e){error.textContent=e.message}}));dialog.onclose=()=>dialog.remove();document.body.append(dialog);dialog.showModal();
+    }catch(error){status(error.message,true)}
   }
   function detailGeneration(job) {
     $('detailGeneration').hidden = !job; $('detailGeneration').replaceChildren();

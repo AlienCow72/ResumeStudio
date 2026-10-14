@@ -25,7 +25,7 @@
       <p class="form-intro" id="formIntro">Save the posting now. Keep your next step in sight.</p>
       <label>Job posting link<input id="jobUrl" name="url" type="url" required maxlength="4000" placeholder="https://company.com/careers/role"></label>
       <div class="form-grid"><label>Company <span class="optional">(auto-detected if blank)</span><input id="jobCompany" name="company" maxlength="200" autocomplete="organization" placeholder="Company name"></label><label>Role <span class="optional">(auto-detected if blank)</span><input id="jobTitle" name="title" maxlength="300" placeholder="Position title"></label></div>
-      <div class="form-grid"><label>Stage<select id="jobStage" name="stage"><option value="applying">Applying</option><option value="waiting">Waiting on response</option><option value="interview">Interview</option></select></label><label>Applied on <span class="optional">(optional)</span><input id="jobApplied" name="appliedOn" type="date"></label></div>
+      <div class="form-grid"><label>Stage<select id="jobStage" name="stage"><option value="applying">Applying</option><option value="waiting">Waiting on response</option><option value="interview">Interview</option><option value="rejected">Rejected</option></select></label><label>Applied on <span class="optional">(optional)</span><input id="jobApplied" name="appliedOn" type="date"></label></div>
       <label>Notes <span class="optional">(optional)</span><textarea id="jobNotes" name="notes" rows="4" maxlength="20000" placeholder="What interests you, next steps, or interview details…"></textarea></label>
       <details id="postingTextSection"><summary>Paste job description <span class="optional">(optional, for blocked sites)</span></summary><label class="source-label">Full posting text<textarea id="postingText" rows="6" maxlength="120000" placeholder="Include the title, company, responsibilities, qualifications, and other posting details."></textarea></label></details>
       <p id="generationNotice" class="form-intro">Saving starts generation automatically. The posting and a snapshot of your master résumé are sent to OpenAI through your Codex subscription.</p>
@@ -41,7 +41,7 @@
     <div class="review-tabs"><button id="reviewResume" type="button" aria-pressed="true">Résumé</button><button id="reviewLetter" type="button" aria-pressed="false">Cover letter</button></div>
     <p id="reviewStatus" role="status" aria-live="polite"></p>
     <div class="review-layout"><section id="reviewEditor" aria-label="Document editor"></section><section class="review-preview"><p id="reviewPreviewStatus" role="status">PDF preview</p><div id="reviewPreview" aria-label="Application PDF pages" aria-busy="false"></div></section></div>
-    <div class="review-footer"><span>ZIP includes job description JSON, résumé PDF, and cover-letter PDF.</span><button id="reviewSave" type="button">Save drafts</button><button id="reviewDownload" type="button" class="primary">Download application ZIP</button></div>
+    <div class="review-footer"><span>ZIP includes job description JSON, résumé PDF, and cover-letter PDF.</span><button id="reviewReconcile" type="button">Reconcile saved Studio content</button><button id="reviewSave" type="button">Save drafts</button><button id="reviewDownload" type="button" class="primary">Download application ZIP</button></div>
   </dialog>
   <script src="/application-review.js"></script>
   <script src="/jobs.js"></script>

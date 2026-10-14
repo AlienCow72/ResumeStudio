@@ -2,7 +2,7 @@
 
 Date: 2026-10-14
 
-Status: Proposed implementation plan, saved for review. The product decisions below were accepted during planning; implementation has not started.
+Status: Implemented. The existing model, stores, renderer, job endpoints, and UI were extended; regression tests use stubbed generation.
 
 ## Objective
 
@@ -149,4 +149,4 @@ Use stubbed generation in automated tests. Run the existing suite and inspect th
 
 Follow the phases above: data model and migration first, editing and generation integration next, then job integration and API completion. This makes generated content importable only after Studio can represent it correctly.
 
-Implementation remains pending confirmation of this plan. Saving this document does not start implementation.
+Implementation is complete. See `docs/assistant-api.md` for the local API workflow.

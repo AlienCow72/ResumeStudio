@@ -21,6 +21,8 @@
   "status": "ready",
   "message": "Drafts ready. Review and edit before downloading.",
   "error": "",
-  "updatedAt": "2026-10-09T22:32:32.319672+00:00",
-  "reviewNotes": "Emphasized integration development, platform upgrades, asynchronous performance, AWS migration, troubleshooting, and client coordination. Selected relevant technical skills and shortened earlier roles. The master does not establish two years of Python/Django experience, Django-specific REST API development, Kubernetes/EKS, production scale, AdTech experience, code reviews, QA collaboration, or junior-engineer mentoring. Chicago onsite attendance and variable-schedule availability are unconfirmed."
+  "updatedAt": "2026-10-14T16:59:07.361837+00:00",
+  "reviewNotes": "Emphasized integration development, platform upgrades, asynchronous performance, AWS migration, troubleshooting, and client coordination. Selected relevant technical skills and shortened earlier roles. The master does not establish two years of Python/Django experience, Django-specific REST API development, Kubernetes/EKS, production scale, AdTech experience, code reviews, QA collaboration, or junior-engineer mentoring. Chicago onsite attendance and variable-schedule availability are unconfirmed.",
+  "sourceChanged": false,
+  "versionId": "job-ef4b98fc55d0431caf126546e6790dfe"
 }

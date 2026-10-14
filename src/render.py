@@ -71,11 +71,11 @@ def html_doc(data,levels=None):
     levels=levels or {}
     b=data.get('basics',{})
     skills=''
-    for e in data.get('skills',[]):
-        skills+='<div class="skill-group"><h3>'+esc(e.get('name',''))+'</h3><div class="tags">'+''.join('<span class="tag">'+esc(x)+'</span>' for x in e.get('keywords',[]))+'</div>'+extras(e,{'name','keywords'})+'</div>'
+    for i,e in enumerate(data.get('skills',[])):
+        skills+='<div class="skill-group"><h3>'+esc(e.get('name',''))+'</h3><div class="tags">'+''.join('<span class="tag">'+esc(x)+'</span>' for x in e.get('keywords',[]))+'</div>'+(highlight_list(e['highlights'],levels.get(f'skills/{i}/highlights',[])) if e.get('highlights') else '')+extras(e,{'name','keywords','highlights'})+'</div>'
     education=''
-    for e in data.get('education',[]):
-        education+='<div class="education"><h3>'+esc(e.get('institution',''))+'</h3><p>'+esc(', '.join(e[k] for k in ['studyType','area'] if e.get(k)))+'<br>'+dates(e)+'</p>'+extras(e,{'institution','studyType','area','startDate','endDate'})+'</div>'
+    for i,e in enumerate(data.get('education',[])):
+        education+='<div class="education"><h3>'+esc(e.get('institution',''))+'</h3><p>'+esc(', '.join(e[k] for k in ['studyType','area'] if e.get(k)))+'<br>'+dates(e)+'</p>'+(highlight_list(e['highlights'],levels.get(f'education/{i}/highlights',[])) if e.get('highlights') else '')+extras(e,{'institution','studyType','area','startDate','endDate','highlights'})+'</div>'
     aside=heading('Education',education)+heading('Skills',skills)
     main=heading('Objective','<p class="summary">'+esc(b['summary'])+'</p>' if b.get('summary') else '')
     main+=extras(b,{'name','label','location','phone','email','url','profiles','summary','image'})
