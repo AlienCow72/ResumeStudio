@@ -1,0 +1,21 @@
+{
+  "runId": "864a745b7ee747df870e470068886d56",
+  "createdAt": "2026-10-16T14:59:26.671442+00:00",
+  "files": [],
+  "sourceUrl": "https://campingworld.dejobs.org/lincolnshire-il/it-systems-integration-developer/93E1D5B3AB05421A956A717C1E2C7D14/job/",
+  "previous": null,
+  "masterHash": "fc43338fdda2febd9d42e684b6103acab690c8754099a80a629f920c1f6621c2",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "needs_input",
+  "message": "The posting text could not be isolated. Paste the full description to continue.",
+  "error": "The posting text could not be isolated. Paste the full description to continue.",
+  "updatedAt": "2026-10-16T14:59:26.851715+00:00"
+}

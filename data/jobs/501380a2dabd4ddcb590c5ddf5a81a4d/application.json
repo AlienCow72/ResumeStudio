@@ -1,20 +1,25 @@
 {
-  "company": "FreeWheel, a Comcast company",
-  "title": "Python Engineer (Django) - Chicago - ONSITE 2X Week- FreeWheel",
+  "company": "FreeWheel/Comcast",
+  "title": "Python Engineer (Django)",
   "notes": "",
   "sourceText": "",
   "url": "https://jobs.comcast.com/job/-/-/45483/101581741232?source=directemp_at",
-  "stage": "applying",
-  "appliedOn": "",
+  "stage": "waiting",
+  "appliedOn": "2026-10-15",
   "schemaVersion": 1,
   "id": "501380a2dabd4ddcb590c5ddf5a81a4d",
   "createdAt": "2026-10-09T22:31:30.976406+00:00",
-  "updatedAt": "2026-10-09T22:31:59.989808+00:00",
+  "updatedAt": "2026-10-15T19:24:38.904135+00:00",
   "history": [
     {
       "at": "2026-10-09T22:31:30.976406+00:00",
       "from": null,
       "to": "applying"
+    },
+    {
+      "at": "2026-10-15T19:24:38.904135+00:00",
+      "from": "applying",
+      "to": "waiting"
     }
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "runId": "42f8ed882ead4deb954482ed7cd17b76",
+  "createdAt": "2026-10-16T15:02:45.726547+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://campingworld.dejobs.org/lincolnshire-il/it-systems-integration-developer/93E1D5B3AB05421A956A717C1E2C7D14/job/",
+  "previous": null,
+  "masterHash": "fc43338fdda2febd9d42e684b6103acab690c8754099a80a629f920c1f6621c2",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-10-16T15:03:52.271437+00:00",
+  "reviewNotes": "Emphasizes financial and web-platform integrations, implementation support, performance improvements, project communication, and POS troubleshooting. Prioritizes PHP, C#, REST APIs, Microsoft SQL Server, Git, Docker, and GitLab CI/CD. The master does not establish backend specialization, system programming or data-structure depth, Oracle, SOAP, the specified IDEs/frameworks, Agile/Waterfall methodologies, Jira/Confluence, Kubernetes, Jenkins, automated testing, or rotational on-call experience. The BBA is in Information Technology Management rather than Computer Science; hybrid-office and scheduling availability are unspecified.",
+  "versionId": "job-42f8ed882ead4deb954482ed7cd17b76"
+}

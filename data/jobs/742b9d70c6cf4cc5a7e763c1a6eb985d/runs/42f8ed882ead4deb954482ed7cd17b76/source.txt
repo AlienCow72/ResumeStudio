@@ -1,0 +1,103 @@
+Job Summary & Reporting
+
+Company: Camping World
+
+Job Title: IT Integrations Developer
+
+Department: Information Technology (Integrations Team)
+
+Reports To: Development Manager
+
+Location : Hybrid in downtown Chicago or Lincolnshire office
+
+The Integrations Developer is a key contributor responsible for developing, maintaining, and connecting the critical application and system interfaces that power our enterprise. This senior development role requires an exceptionally strong focus on backend development, system programming, and data integrity across core platforms including CRM, ERP, POS, and various web systems.
+
+Key Responsibilities
+
+Development & Integration
+
+Develop, maintain, and manage systems, software tools, applications, and interfaces between internal and external systems.
+
+Integrate systems using internal and third-party APIs (Application Programming Interfaces).
+
+Monitor, analyze, design, and develop modifications and changes to existing systems to enhance overall performance and functionality.
+
+Participate in the full software development lifecycle (SDLC), focusing primarily on development and testing activities, and assisting with requirements gathering and solution design.
+
+Collaboration & Support
+
+Provide clear communication and support to various internal customers.
+
+Work with a cross-functional team, embracing feedback as part of the design process, and able to give and receive constructive criticism to improve designs.
+
+Perform rotational on-call duties, supporting 24/7 processes critical to retail operations and system monitoring.
+
+Required Qualifications
+
+Technical Expertise (Backend Focus)
+
+Bachelor’s degree in Computer Science or equivalent experience.
+
+Minimum of 5-10 years of software development experience.
+
+Seeking a Full Stack Developer with exceptionally strong Backend Development experience.
+
+Must have strong skills in system programming and data structures.
+
+Mandatory programming experience with one or more of the following: .NET Core, C#, JAVA, JavaScript, PHP.
+
+Extensive experience interacting with and building robust web APIs (REST/SOAP).
+
+Strong relational database skills using SQL Server and Oracle.
+
+Experience with source-control integration using GIT.
+
+Experience with one or more key IDE environments/frameworks: Visual Studio IDE, NestJS, Symfony, ReactJS, Angular.
+
+Process & Soft Skills
+
+Development experience using a combination of Agile and Waterfall project methodologies.
+
+Highly motivated, detail-oriented individual with excellent problem-solving skills.
+
+Strong interpersonal skills, including written, electronic, and verbal communication.
+
+Ability to work well on multiple projects frequently with competing and shifting priorities.
+
+Experience with project management platforms including Confluence and Jira is strongly preferred.
+
+Preferred Skills & Background (DevOps & Modernization)
+
+Experience working with containers in a build and test environment.
+
+Experience in Docker and writing Docker files.
+
+Experience with Kubernetes (K8s) Administration, especially app data management, deployment, cloning, backups, and monitoring.
+
+Experience working with Jenkins.
+
+Experience with CI/CD (Continuous Integration/Continuous Delivery) is a plus.
+
+Experience writing automated tests.
+
+Work Conditions
+
+Environment: Usual office environment; includes sitting for extended periods of time.
+
+Support: Flexible scheduling is required, including evening and weekend work as needed for critical support or project deadlines. Required to participate in on-call and system monitoring.
+
+Flexibility: Flexible scheduling sometimes required, including evening and weekend work as needed for system support or deployment.
+
+Physical: Dexterity of hands and fingers required to operate a computer keyboard, mouse, and handle system components.
+
+Travel: Occasional travel (less than 5%).
+
+General Compensation Disclosure
+
+The pay range for this role considers several factors in making compensation decisions including but not limited to skill sets; experience and training; licensure and certifications; and other business and organizational needs. At Camping World, it is not typical for an individual to be hired at or near the top of the range for their role and compensation decisions are dependent on the factors stated. A reasonable estimate of the current range is listed below.
+
+Pay Range:
+
+$111,100.00-$170,300.00 Annual
+
+In addition to competitive pay, we offer Paid Time Off, 401(k), an Employee Assistance Program, Good Sam Roadside Assistance, discounts, paid parental leave (if eligibility is met), Tuition Reimbursement (if eligibility is met), and on the job training opportunities. Full-time associates are offered a comprehensive benefit package including medical, dental, vision and more! Part-time associates are offered access to dental & vision coverage! For more information please visit: www.mycampingworldbenefits.com
