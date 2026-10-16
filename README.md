@@ -43,6 +43,7 @@ Run tests from the repository root:
 
 ```sh
 PYTHONPATH=src .venv/bin/python3 -m unittest discover -s tests -v
+node --test tests/test_reordering.cjs
 ```
 
 Paths resolve relative to the application files, so the server can also be
@@ -176,10 +177,16 @@ Within a version:
   the edited wording to be reviewed again.
 - The objective can use **Customize for this version** or **Reset to master**. A custom objective does not change when the master objective changes.
 - Headline and entry summaries/descriptions support **Customize for this
-  version**. Arrow controls reorder content within the version.
+  version**. Drag a grip to reorder content within its list for this version.
 - All highlight lists have indentation levels 0–3 in Master and versions.
   **Reset to master** removes an override. Rendering normalizes orphan children
   after exclusions without changing saved indentation settings.
+- Drag the grip beside a highlight or entry to move it within its list in Master
+  or a version. A green line shows where it will drop; dragging near the editor’s
+  top or bottom scrolls the list. Touch dragging works from the grip. For keyboard
+  ordering, focus a grip, press Space or Enter, choose a position with Up/Down
+  (or Home/End), then press Space or Enter to drop. Escape cancels. Save to keep
+  the new order. Wording, selections, and indentation stay attached to each item.
 - Highlights, keywords, courses, profiles, and other nested lists are collapsible.
 
 If background import changes saved Studio content, **Reconcile saved changes**
