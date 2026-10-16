@@ -1,7 +1,7 @@
 
 const schemas={basics:{name:'',label:'',email:'',phone:'',url:'',summary:'',location:{address:'',postalCode:'',city:'',region:'',countryCode:''},profiles:[{network:'',username:'',url:''}]},work:{name:'',position:'',location:'',url:'',startDate:'',endDate:'',summary:'',highlights:['']},education:{institution:'',studyType:'',area:'',startDate:'',endDate:'',score:'',url:'',courses:['']},skills:{name:'',level:'',keywords:['']},projects:{name:'',description:'',startDate:'',endDate:'',url:'',highlights:[''],keywords:[''],roles:[''],entity:'',type:''},volunteer:{organization:'',position:'',startDate:'',endDate:'',summary:'',url:'',highlights:['']},certificates:{name:'',issuer:'',date:'',url:''},awards:{title:'',awarder:'',date:'',summary:''},publications:{name:'',publisher:'',releaseDate:'',url:'',summary:''},languages:{language:'',fluency:''},interests:{name:'',keywords:['']},references:{name:'',reference:''}};
 let data,state,revision,active=new URLSearchParams(location.search).get('version')||'master',section='basics',dirty=false,timer,previewVersion=0,busy=false;
-let baseline;const expanded=new Map();
+let baseline,cancelReorder;const expanded=new Map();
 const $=id=>document.getElementById(id),copy=v=>structuredClone(v),title=k=>k.replace(/([a-z])([A-Z])/g,'$1 $2').replace(/^./,c=>c.toUpperCase());
 const nodeFor=v=>{const n={id:crypto.randomUUID()};if(Array.isArray(v))n.children=v.map(nodeFor);else if(v&&typeof v==='object')n.children=Object.fromEntries(Object.entries(v).map(([k,x])=>[k,nodeFor(x)]));return n};
 const version=()=>state.versions.find(v=>v.id===active);
@@ -55,7 +55,7 @@ function refreshHeader(){
   $('reviewNotice').textContent=active==='master'?'':version().reviewStatus==='reviewed'?'Reviewed':'Unreviewed content · downloads remain available';
   $('modeHint').textContent=active==='master'?'Edit master facts here. All versions inherit this content. Dates: YYYY, YYYY-MM, or YYYY-MM-DD.':'Choose content, wording, and order. Customize prose and indentation for this version. Unchecked content stays in Master.';
 }
-function render(){if(!state)return;refreshHeader();const nav=$('nav');nav.replaceChildren();const keys=[...new Set([...Object.keys(schemas),...Object.keys(data)])];for(const k of keys){const b=button(k==='basics'?'Objective & contact':title(k),()=>{section=k;render()});b.className=section===k?'active':'';nav.append(b)}nav.append(button('Advanced JSON',editJSON));
+function render(){cancelReorder?.();if(!state)return;refreshHeader();const nav=$('nav');nav.replaceChildren();const keys=[...new Set([...Object.keys(schemas),...Object.keys(data)])];for(const k of keys){const b=button(k==='basics'?'Objective & contact':title(k),()=>{section=k;render()});b.className=section===k?'active':'';nav.append(b)}nav.append(button('Advanced JSON',editJSON));
   $('sectionTitle').textContent=section==='basics'?'Objective & contact':title(section);const fields=$('fields');fields.replaceChildren();
   const schema=schemas[section];let n;
   if(!(section in data)){
@@ -97,19 +97,118 @@ function leaf(parent,obj,node,key,blocked,path){
   if(active!=='master'&&isProse){const tools=document.createElement('div');tools.className='override-tools';const action=button(custom?'Reset to master':'Customize for this version',()=>{version().prose??={};const target=isSummary?version():version().prose;if(custom)delete target[overrideKey];else target[overrideKey]=obj[key]||'';mark();render()});action.disabled=blocked;tools.append(action);const hint=document.createElement('span');hint.textContent=custom?'Custom prose':'Using master prose';tools.append(hint);wrapper.append(tools)}
   parent.append(wrapper)
 }
+// Reordering uses IDs; moving a master item must move its value and tree node together.
+function reorderItems(arr,node,ids,from,to,currentVersion){
+  if(from===to)return false;
+  const ordered=ids.slice();ordered.splice(to,0,ordered.splice(from,1)[0]);
+  if(currentVersion){currentVersion.order??={};currentVersion.order[node.id]=ordered}
+  else{
+    const items=new Map(node.children.map((child,i)=>[child.id,{value:arr[i],node:child}]));
+    arr.splice(0,arr.length,...ordered.map(id=>items.get(id).value));
+    node.children.splice(0,node.children.length,...ordered.map(id=>items.get(id).node));
+  }
+  return true;
+}
+function reorderHandle(list,card,label,position,disabled,commit){
+  const handle=button('⠿',()=>{},`Move ${label.toLowerCase()} item ${position+1}`);
+  handle.className='drag-handle';handle.disabled=disabled;
+  handle.setAttribute('aria-describedby','reorderHelp');
+  const announce=message=>{$('reorderStatus').textContent=message};
+  let drag;
+  const clearMarkers=()=>{for(const item of list.children)item.classList.remove('drop-before','drop-after')};
+  const cleanup=()=>{
+    if(!drag)return;
+    cancelAnimationFrame(drag.frame);drag.badge?.remove();clearMarkers();card.classList.remove('drag-source');
+    handle.setAttribute('aria-pressed','false');
+    const pointerId=drag.pointerId;drag=null;cancelReorder=null;
+    if(pointerId!==undefined&&handle.hasPointerCapture(pointerId))handle.releasePointerCapture(pointerId);
+  };
+  const showTarget=()=>{
+    clearMarkers();
+    if(!drag.valid||drag.to===position)return;
+    const remaining=[...list.children].filter(item=>item!==card);
+    const target=remaining[drag.to]||remaining.at(-1);
+    target?.classList.add(remaining[drag.to]?'drop-before':'drop-after');
+  };
+  const begin=keyboard=>{
+    cancelReorder?.();drag={to:position,valid:true,keyboard};cancelReorder=cleanup;
+    handle.setAttribute('aria-pressed','true');card.classList.add('drag-source');
+    announce(`Picked up ${label.toLowerCase()} item ${position+1} of ${list.children.length}. ${keyboard?'Use arrow keys to choose a position, Space to drop, or Escape to cancel.':''}`);
+  };
+  const finish=()=>{
+    const {to,valid}=drag;cleanup();
+    if(valid&&to!==position){commit(to);announce(`Moved ${label.toLowerCase()} item to position ${to+1} of ${list.children.length}.`)}
+    else announce('Order unchanged.');
+  };
+  const updatePointer=()=>{
+    const bounds=list.getBoundingClientRect(),pane=$('editPane').getBoundingClientRect();
+    drag.valid=drag.x>=bounds.left&&drag.x<=bounds.right&&drag.y>=Math.max(bounds.top,pane.top,0)&&drag.y<=Math.min(bounds.bottom,pane.bottom,innerHeight);
+    const remaining=[...list.children].filter(item=>item!==card);
+    drag.to=remaining.findIndex(item=>{const rect=item.getBoundingClientRect();return drag.y<rect.top+rect.height/2});
+    if(drag.to===-1)drag.to=remaining.length;
+    drag.badge.style.left=`${Math.max(12,Math.min(drag.x+14,innerWidth-drag.badge.offsetWidth-12))}px`;drag.badge.style.top=`${Math.max(12,Math.min(drag.y+14,innerHeight-drag.badge.offsetHeight-12))}px`;
+    showTarget();
+  };
+  const scroll=()=>{
+    if(!drag||drag.keyboard)return;
+    const pane=$('editPane'),rect=pane.getBoundingClientRect();
+    if(drag.x>=rect.left&&drag.x<=rect.right){
+      const edge=48,top=Math.max(0,rect.top),bottom=Math.min(innerHeight,rect.bottom);
+      const speed=drag.y<top+edge?-Math.min(18,(top+edge-drag.y)/3):drag.y>bottom-edge?Math.min(18,(drag.y-bottom+edge)/3):0;
+      if(speed){pane.scrollTop+=speed;updatePointer()}
+    }
+    drag.frame=requestAnimationFrame(scroll);
+  };
+  handle.onpointerdown=e=>{
+    if(disabled||!e.isPrimary||e.button!==0)return;
+    e.preventDefault();handle.focus({preventScroll:true});begin(false);
+    Object.assign(drag,{pointerId:e.pointerId,startX:e.clientX,startY:e.clientY,x:e.clientX,y:e.clientY,started:false});
+    // Keep touch scrolling available everywhere except the grip itself.
+    handle.setPointerCapture(e.pointerId);
+  };
+  handle.onpointermove=e=>{
+    if(!drag||drag.keyboard||e.pointerId!==drag.pointerId)return;
+    drag.x=e.clientX;drag.y=e.clientY;
+    if(!drag.started){
+      if(Math.hypot(drag.x-drag.startX,drag.y-drag.startY)<5)return;
+      drag.started=true;drag.badge=document.createElement('div');drag.badge.className='drag-badge';drag.badge.textContent=`Moving ${label.toLowerCase()} item ${position+1}`;drag.badge.setAttribute('aria-hidden','true');document.body.append(drag.badge);scroll();
+    }
+    updatePointer();
+  };
+  handle.onpointerup=e=>{if(drag&&!drag.keyboard&&e.pointerId===drag.pointerId){if(drag.started){drag.x=e.clientX;drag.y=e.clientY;updatePointer();finish()}else{cleanup();announce('Order unchanged.')}}};
+  handle.onpointercancel=handle.onlostpointercapture=()=>{if(drag&&!drag.keyboard){cleanup();announce('Move canceled.')}};
+  handle.onkeydown=e=>{
+    if(e.key==='Escape'&&drag){e.preventDefault();cleanup();announce('Move canceled.');return}
+    if([' ','Enter'].includes(e.key)){
+      e.preventDefault();if(drag?.keyboard)finish();else if(!drag)begin(true);return;
+    }
+    if(!drag?.keyboard||!['ArrowUp','ArrowDown','Home','End'].includes(e.key))return;
+    e.preventDefault();drag.to=Math.max(0,Math.min(list.children.length-1,e.key==='Home'?0:e.key==='End'?list.children.length-1:drag.to+(e.key==='ArrowUp'?-1:1)));
+    showTarget();announce(`Position ${drag.to+1} of ${list.children.length}. Space to drop, Escape to cancel.`);
+    const remaining=[...list.children].filter(item=>item!==card);(remaining[drag.to]||remaining.at(-1))?.scrollIntoView({block:'nearest'});
+  };
+  handle.onblur=()=>{if(drag?.keyboard){cleanup();announce('Move canceled.')}};
+  handle.setAttribute('aria-pressed','false');
+  return handle;
+}
 function arrayFields(parent,arr,node,template,label,blocked,path){
   const redraw=()=>{if(parent.tagName==='DETAILS')expanded.set(node.id,parent.open);mark();render()};
   const display=arr.map((value,i)=>({value,i}));const ordering=version()?.order?.[node.id]||[];display.sort((a,b)=>(ordering.includes(node.children[a.i].id)?ordering.indexOf(node.children[a.i].id):ordering.length)-(ordering.includes(node.children[b.i].id)?ordering.indexOf(node.children[b.i].id):ordering.length));
+  const list=document.createElement('div');list.className='reorder-list';list.dataset.reorderList=node.id;parent.append(list);
+  const ids=display.map(({i})=>node.children[i].id);
   display.forEach(({value,i},position)=>{
     const n=node.children[i],off=blocked||!selected(n),isObject=value&&typeof value==='object';const card=document.createElement(isObject?'fieldset':'div');card.className=(isObject?'':'compact-item')+(off?' excluded':'');
     const row=document.createElement('div');row.className='row';
-    const move=delta=>{[arr[i],arr[i+delta]]=[arr[i+delta],arr[i]];[node.children[i],node.children[i+delta]]=[node.children[i+delta],node.children[i]];redraw()};
-    if(active==='master'){
-      const up=button('↑',()=>move(-1),`Move ${label.toLowerCase()} item ${i+1} up`);up.disabled=i===0;
-      const down=button('↓',()=>move(1),`Move ${label.toLowerCase()} item ${i+1} down`);down.disabled=i===arr.length-1;
-      row.append(up,down,button(isObject?'Remove':'×',()=>{if(confirm('Remove this master item from all versions?')){arr.splice(i,1);node.children.splice(i,1);redraw()}},`Remove ${label.toLowerCase()} item ${i+1}`));
-    }
-    if(active!=='master'){const moveVersion=delta=>{version().order??={};const ids=display.map(x=>node.children[x.i].id);[ids[position],ids[position+delta]]=[ids[position+delta],ids[position]];version().order[node.id]=ids;redraw()};const up=button('↑',()=>moveVersion(-1),`Move ${label.toLowerCase()} item ${position+1} up`),down=button('↓',()=>moveVersion(1),`Move ${label.toLowerCase()} item ${position+1} down`);up.disabled=position===0;down.disabled=position===display.length-1;row.append(up,down)}
+    const handle=reorderHandle(list,card,label,position,blocked||arr.length<2,to=>{
+      const pane=$('editPane'),scrollTop=pane.scrollTop;
+      if(reorderItems(arr,node,ids,position,to,version())){
+        redraw();pane.scrollTop=scrollTop;
+        const next=[...document.querySelectorAll('.reorder-list')].find(el=>el.dataset.reorderList===node.id);
+        next?.children[to]?.querySelector('.drag-handle')?.focus({preventScroll:true});
+      }
+    });
+    if(active==='master')row.append(button(isObject?'Remove':'×',()=>{if(confirm('Remove this master item from all versions?')){arr.splice(i,1);node.children.splice(i,1);redraw()}},`Remove ${label.toLowerCase()} item ${i+1}`));
+    if(isObject)row.prepend(handle);else card.append(handle);
     if(isObject){const legend=document.createElement('legend');if(active!=='master')legend.append(check(n,`${label} entry ${i+1}`,blocked));legend.append(document.createTextNode(value.name||value.position||value.institution||`${label} ${i+1}`));card.append(legend,row);objectFields(card,value,n,typeof template==='object'?template:{},off,path.concat(i))}
     else{
       if(active!=='master')card.append(check(n,`${label} item ${i+1}`,blocked));
@@ -139,7 +238,7 @@ function arrayFields(parent,arr,node,template,label,blocked,path){
       }
       card.append(row)
     }
-    parent.append(card)
+    list.append(card)
   });
   if(active==='master')parent.append(button('+ Add '+label.toLowerCase(),()=>{const value=typeof template==='object'?{}:'';arr.push(value);const added=nodeFor(value);node.children.push(added);if(label==='Highlights'){highlightGroup(added,value);state.versions.forEach(v=>v.excluded.push(added.id))}expanded.set(node.id,true);mark();render()}))
 }
