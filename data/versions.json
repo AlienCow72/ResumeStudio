@@ -134,6 +134,9 @@
                     "id": "ecd47f53ebe64fd3b31ad5ba6a43c1ca"
                   }
                 ]
+              },
+              "endDate": {
+                "id": "3cdeddb7-fa13-4df5-a423-4f99b2902f5d"
               }
             }
           },
@@ -290,6 +293,9 @@
                   },
                   {
                     "id": "f89ffbb2f30f466f98977628a34b1f98"
+                  },
+                  {
+                    "id": "612bde08-357a-4c30-9ac9-fea2879b36cf"
                   }
                 ]
               }
@@ -306,6 +312,9 @@
                 "children": [
                   {
                     "id": "f669dec66e6440fb91dbc1430cf2a87f"
+                  },
+                  {
+                    "id": "706ac7ee-f470-464d-a24b-a0bb0af6aed2"
                   }
                 ]
               }
@@ -334,6 +343,9 @@
                   },
                   {
                     "id": "5590d2f5d3ef413394a61e83f2380db5"
+                  },
+                  {
+                    "id": "39c533f5-30c6-45fa-adc7-2d9deb8b4373"
                   }
                 ]
               }
@@ -381,6 +393,12 @@
                   },
                   {
                     "id": "055095084158445f97efa17d403f4988"
+                  },
+                  {
+                    "id": "ef602ed8-653b-4725-9544-4906832708d4"
+                  },
+                  {
+                    "id": "1c8b721b-9374-4c61-83ab-d599dda4cbbe"
                   }
                 ]
               }
@@ -426,7 +444,7 @@
     },
     {
       "id": "job-ef4b98fc55d0431caf126546e6790dfe",
-      "name": "FreeWheel, a Comcast company — Python Engineer (Django) - Chicago ef4b98fc",
+      "name": "FreeWheel/Comcast — Python Engineer (Django)",
       "excluded": [
         "aaae966642be4578b54f5781a35fa8c5",
         "80604f227b4f4bc1893c6f263ed75063",
@@ -438,7 +456,6 @@
         "d90a3b5b8af44b05a47aa4ef15d9b827",
         "e2b694be02e14a1893188923381b32ee",
         "f89ffbb2f30f466f98977628a34b1f98",
-        "5787ef4b-4dd8-42b9-ba03-3ee848b10ae5",
         "bb99e1c565244162ae2ff3d74c2dbc2b",
         "dd553373f5d84759ae16378a24a654af",
         "1d0db203e8a94406afb0a31470769570"
@@ -689,9 +706,160 @@
           ]
         ]
       }
+    },
+    {
+      "id": "job-42f8ed882ead4deb954482ed7cd17b76",
+      "name": "Camping World — IT Integrations Developer 42f8ed88",
+      "excluded": [
+        "aaae966642be4578b54f5781a35fa8c5",
+        "80604f227b4f4bc1893c6f263ed75063",
+        "e9ce8eec310e4f62a320a043d11b3744",
+        "02032f5bee6a488293226056ed74bf71",
+        "e66fff51a4fe4de99c991b7abb68151b",
+        "bb99e1c565244162ae2ff3d74c2dbc2b",
+        "98f755c3a0314e5fa16ed4bb6890b878",
+        "5787ef4b-4dd8-42b9-ba03-3ee848b10ae5",
+        "dd553373f5d84759ae16378a24a654af",
+        "1d0db203e8a94406afb0a31470769570",
+        "e46e04f99466431ca81039dc59894cac"
+      ],
+      "indent": {},
+      "wording": {
+        "db205bfa53614940bf81cec50b998adf": "db205bfa53614940bf81cec50b998adf",
+        "5a43acbdfbbe41b0813442ffc7bb4ffc": "5a43acbdfbbe41b0813442ffc7bb4ffc",
+        "ecd47f53ebe64fd3b31ad5ba6a43c1ca": "db36fd93-7e6d-4b89-a8cc-110e8b45cdaf",
+        "48bd1e3fa654496d81bb27e38eda2e9b": "48bd1e3fa654496d81bb27e38eda2e9b",
+        "e46e04f99466431ca81039dc59894cac": "e46e04f99466431ca81039dc59894cac",
+        "ae2c9f5cffc844629837ae37cec65ab8": "ba3f16ce-448a-4c62-bc78-f66f8f599db2",
+        "4b86263d1f5e4ff7bc1d9aac4f3330bb": "4b86263d1f5e4ff7bc1d9aac4f3330bb",
+        "f58c5546c5ff4d1cb4ac595cf8e06379": "f58c5546c5ff4d1cb4ac595cf8e06379",
+        "d089b435ea77460b961b6f36853aa3c5": "d089b435ea77460b961b6f36853aa3c5",
+        "5a96de30b63e4ea7978b4b1d7a93c025": "5a96de30b63e4ea7978b4b1d7a93c025",
+        "b205588cb8f14f19b1afd2ace8aef3ce": "b205588cb8f14f19b1afd2ace8aef3ce",
+        "6d84029133724878965984a6410877fc": "b71ba7ba-b52f-4e33-97e1-016eae8ad5af"
+      },
+      "prose": {
+        "01b2442887184e2d97663e9a90ca5862": "As Development Manager, I remained actively involved in backend development and integration architecture while coordinating development initiatives and client implementations."
+      },
+      "order": {
+        "792165a598744608b0c1c025eecd6ef6": [
+          "247fceceac5e43c1a06dc36e7547b2ec",
+          "df11ca815d6443d799e5573e67f292b2"
+        ],
+        "eb741b67ed5c4ff7a4b44aa14d1d370d": [
+          "db205bfa53614940bf81cec50b998adf",
+          "5a43acbdfbbe41b0813442ffc7bb4ffc",
+          "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+          "48bd1e3fa654496d81bb27e38eda2e9b",
+          "e46e04f99466431ca81039dc59894cac",
+          "aaae966642be4578b54f5781a35fa8c5",
+          "ae2c9f5cffc844629837ae37cec65ab8",
+          "4b86263d1f5e4ff7bc1d9aac4f3330bb",
+          "6d84029133724878965984a6410877fc",
+          "e9ce8eec310e4f62a320a043d11b3744",
+          "80604f227b4f4bc1893c6f263ed75063",
+          "02032f5bee6a488293226056ed74bf71",
+          "e66fff51a4fe4de99c991b7abb68151b"
+        ],
+        "a98452a026d94369bf8dff0f9d75933d": [
+          "f58c5546c5ff4d1cb4ac595cf8e06379"
+        ],
+        "a24fedc7606f4d0289623958312d5248": [
+          "d089b435ea77460b961b6f36853aa3c5",
+          "5a96de30b63e4ea7978b4b1d7a93c025",
+          "b205588cb8f14f19b1afd2ace8aef3ce"
+        ],
+        "d694e1a8d98a454fa948ab28c4176ab8": [
+          "9c4d9197842e46818524ba18f1cb7af3",
+          "c4bd20db5a92458192aa64fa179c8e50",
+          "be6d8b20680a46eeb263a30c4377d2f8"
+        ],
+        "ef08b787df874d8bb07ac66858c5271e": [
+          "a52e764572fd4e67ade61a361ee47f16",
+          "94d3781ee25a42239cbc13d107839261"
+        ],
+        "b3e592979f6443e5954379cd54a22196": [
+          "f669dec66e6440fb91dbc1430cf2a87f"
+        ],
+        "ee2850783141482a992aea96c0a4b3ff": [
+          "7476a11fea2c4d9493221c71dc132321",
+          "e2b694be02e14a1893188923381b32ee",
+          "cd7a924b56cd4a36b05e414c2bf9e85e",
+          "d075e96317b043e18b46980fa66eb069",
+          "71150368ef664343a75c39ebe1f03c63",
+          "f89ffbb2f30f466f98977628a34b1f98"
+        ],
+        "38ac1d591fd04a54ae7115b1d12059b2": [
+          "849ce00c10c34198aad7b7041f05d92b",
+          "88ed4a18b22b4743a03b62f600ee9ce6",
+          "c402926af373434c9477d2d6ba7f7048"
+        ],
+        "eb7c441d79834f0b8e1bcd34fb700dc7": [
+          "9a0851fc15bc49c9a387831e3ad78efd",
+          "0484377309a140ac91a5b13c8ceb14c4",
+          "f95beb3f4ca845ffad212db71b6164ac",
+          "055095084158445f97efa17d403f4988"
+        ],
+        "0b205ad84755441bba512e07b224bcf8": [
+          "da57bba075b742fe8a271056fb1072d8",
+          "a3707f5a6d03477f86cec9d07c985bb1",
+          "5091b4865d434ea182736b5e80ad465e",
+          "5590d2f5d3ef413394a61e83f2380db5",
+          "971290a070574c98a79c87330300f989",
+          "39c533f5-30c6-45fa-adc7-2d9deb8b4373"
+        ],
+        "225ef2ecce56486cbf5732f727364997": [
+          "aa28418b28ee4610bba2bc778def8f65",
+          "78b1881e42bd44fe875cc7ca1a655da9",
+          "e4b45c9a3b304ef286cc970648564f7a",
+          "f94b4d3331934182bc37ba3ffe66e5a1",
+          "078b175f28af4449a6f1f82b6bcdc0cf"
+        ]
+      },
+      "reviewStatus": "unreviewed",
+      "summaryOverride": "Software Development Manager and backend developer with 6+ years of experience designing, developing, and maintaining enterprise integrations and API-driven applications. Experienced in integrating ERP, financial, e-commerce, and tax systems using REST/SOAP APIs. Background includes API architecture, database development, performance optimization, cloud infrastructure, CI/CD, and technical project leadership.",
+      "provenance": {
+        "jobId": "742b9d70c6cf4cc5a7e763c1a6eb985d",
+        "runId": "42f8ed882ead4deb954482ed7cd17b76",
+        "sourceHighlights": [
+          [
+            "db205bfa53614940bf81cec50b998adf"
+          ],
+          [
+            "5a43acbdfbbe41b0813442ffc7bb4ffc"
+          ],
+          [
+            "ecd47f53ebe64fd3b31ad5ba6a43c1ca"
+          ],
+          [
+            "48bd1e3fa654496d81bb27e38eda2e9b"
+          ],
+          [
+            "e46e04f99466431ca81039dc59894cac"
+          ],
+          [
+            "ae2c9f5cffc844629837ae37cec65ab8"
+          ],
+          [
+            "4b86263d1f5e4ff7bc1d9aac4f3330bb"
+          ],
+          [
+            "f58c5546c5ff4d1cb4ac595cf8e06379"
+          ],
+          [
+            "d089b435ea77460b961b6f36853aa3c5"
+          ],
+          [
+            "5a96de30b63e4ea7978b4b1d7a93c025"
+          ],
+          [
+            "b205588cb8f14f19b1afd2ace8aef3ce"
+          ]
+        ]
+      }
     }
   ],
-  "masterHash": "fc43338fdda2febd9d42e684b6103acab690c8754099a80a629f920c1f6621c2",
+  "masterHash": "6a2d433ea52ae60478e43b17ccb179582c56fc5a7e8324c3abc8f9090aeb7ef7",
   "highlights": {
     "aaae966642be4578b54f5781a35fa8c5": {
       "defaultWording": "aaae966642be4578b54f5781a35fa8c5",
@@ -700,6 +868,11 @@
           "id": "aaae966642be4578b54f5781a35fa8c5",
           "text": "Served as Lead Developer and Project Manager.",
           "reviewStatus": "reviewed"
+        },
+        {
+          "id": "65450367-a637-4099-9826-cab253b7357a",
+          "text": "As Development Manager, I remained actively involved in backend development and integration architecture while coordinating development initiatives and client implementations.",
+          "reviewStatus": "unreviewed"
         }
       ]
     },
@@ -750,6 +923,11 @@
           "id": "02032f5bee6a488293226056ed74bf71",
           "text": "Led the transition from Version 1 to Version 2 of the tax-integration platform.",
           "reviewStatus": "reviewed"
+        },
+        {
+          "id": "2426222e-f7eb-4e7b-8c8f-0db2a3317e50",
+          "text": "Migrated production infrastructure from DigitalOcean to AWS, supporting the continued operation and scalability of integration services.",
+          "reviewStatus": "unreviewed"
         }
       ]
     },
@@ -760,6 +938,11 @@
           "id": "6d84029133724878965984a6410877fc",
           "text": "Broadened tax-provider and financial-platform support.",
           "reviewStatus": "reviewed"
+        },
+        {
+          "id": "b71ba7ba-b52f-4e33-97e1-016eae8ad5af",
+          "text": " broadening tax-provider and financial-platform support and improving UI/UX.",
+          "reviewStatus": "unreviewed"
         }
       ]
     },
@@ -789,6 +972,11 @@
         {
           "id": "ae2c9f5cffc844629837ae37cec65ab8",
           "text": "Migrated production workloads from DigitalOcean to AWS.",
+          "reviewStatus": "reviewed"
+        },
+        {
+          "id": "ba3f16ce-448a-4c62-bc78-f66f8f599db2",
+          "text": "Migrated production infrastructure from DigitalOcean to AWS, supporting the continued operation and scalability of integration services.",
           "reviewStatus": "reviewed"
         }
       ]
@@ -889,7 +1077,7 @@
         {
           "id": "db205bfa53614940bf81cec50b998adf",
           "text": "Developed integrations between financial platforms and tax providers, including Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
-          "reviewStatus": "unreviewed",
+          "reviewStatus": "reviewed",
           "provenance": {
             "sourceHighlights": [],
             "jobId": "501380a2dabd4ddcb590c5ddf5a81a4d",
@@ -904,12 +1092,27 @@
         {
           "id": "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
           "text": "Led the transition from Version 1 to Version 2 of the tax-integration platform, broadening tax-provider and financial-platform support and improving UI/UX.",
-          "reviewStatus": "unreviewed",
+          "reviewStatus": "reviewed",
           "provenance": {
             "sourceHighlights": [],
             "jobId": "501380a2dabd4ddcb590c5ddf5a81a4d",
             "runId": "ef4b98fc55d0431caf126546e6790dfe"
           }
+        },
+        {
+          "id": "97955204-f2d7-4200-bd82-3c476e545356",
+          "text": "Led the evolution of the company's integration platform from Version 1 to Version 2, expanding compatibility with financial systems and tax providers while improving application functionality and user experience.",
+          "reviewStatus": "unreviewed"
+        },
+        {
+          "id": "d7fcd138-63b5-4c30-a859-8225399d0c63",
+          "text": "Led the upgrade of the company's integration platform from Version 1 to Version 2, expanding compatibility with financial systems and tax providers while improving application functionality and user experience.",
+          "reviewStatus": "reviewed"
+        },
+        {
+          "id": "db36fd93-7e6d-4b89-a8cc-110e8b45cdaf",
+          "text": "Led the transition from Version 1 to Version 2 of the tax-integration platform",
+          "reviewStatus": "unreviewed"
         }
       ]
     },
@@ -919,7 +1122,7 @@
         {
           "id": "98f755c3a0314e5fa16ed4bb6890b878",
           "text": "Assisted with training new hires.",
-          "reviewStatus": "unreviewed",
+          "reviewStatus": "reviewed",
           "provenance": {
             "sourceHighlights": [],
             "jobId": "501380a2dabd4ddcb590c5ddf5a81a4d",

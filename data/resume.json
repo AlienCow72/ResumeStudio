@@ -27,7 +27,7 @@
     {
       "name": "DSTax Technologies",
       "location": "Warrenville, IL",
-      "position": "Manager",
+      "position": "Development Manager",
       "startDate": "2020-05",
       "summary": "Manager serving as a technical lead and lead developer for a tax-integration platform, with responsibilities spanning integration development, project coordination, client support, troubleshooting, implementation assistance, and documentation.",
       "highlights": [
@@ -44,7 +44,8 @@
         "Created and maintained client guides and knowledge-base articles.",
         "Developed integrations between financial platforms and tax providers, including Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
         "Led the transition from Version 1 to Version 2 of the tax-integration platform, broadening tax-provider and financial-platform support and improving UI/UX."
-      ]
+      ],
+      "endDate": "2026-09"
     },
     {
       "name": "Colectivo Coffee Roasters",
@@ -99,13 +100,15 @@
         "Flask",
         "PHP",
         "C#",
-        "C"
+        "C",
+        ".NET"
       ]
     },
     {
       "name": "Integrations & APIs",
       "keywords": [
-        "REST APIs"
+        "REST APIs",
+        "SOAP APIs"
       ]
     },
     {
@@ -115,7 +118,8 @@
         "DigitalOcean",
         "Docker",
         "NGINX",
-        "GitLab CI/CD"
+        "GitLab CI/CD",
+        "Github Actions CI/CD"
       ]
     },
     {
@@ -132,7 +136,9 @@
         "Git",
         "GitLab",
         "SharePoint",
-        "Microsoft 365 Enterprise"
+        "Microsoft 365 Enterprise",
+        "Agile",
+        "Jira & Confluence"
       ]
     },
     {

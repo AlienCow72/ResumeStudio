@@ -1,0 +1,63 @@
+{
+  "title": "IT Integrations Developer",
+  "company": "Camping World",
+  "description": "The Integrations Developer develops, maintains, and connects critical application and system interfaces across the enterprise. This senior development role emphasizes backend development, system programming, and data integrity across CRM, ERP, POS, and web systems. The role is part of the Information Technology Integrations Team and reports to the Development Manager. Work is hybrid in the downtown Chicago or Lincolnshire office.",
+  "remote": "Hybrid",
+  "experience": "Senior development role; minimum of 5-10 years of software development experience.",
+  "salary": "$111,100.00-$170,300.00 Annual. Compensation decisions consider skill sets, experience and training, licensure and certifications, and other business and organizational needs. It is not typical for an individual to be hired at or near the top of the range; compensation decisions depend on these factors.",
+  "responsibilities": [
+    "Develop, maintain, and manage systems, software tools, applications, and interfaces between internal and external systems.",
+    "Integrate systems using internal and third-party APIs (Application Programming Interfaces).",
+    "Monitor, analyze, design, and develop modifications and changes to existing systems to enhance overall performance and functionality.",
+    "Participate in the full software development lifecycle (SDLC), focusing primarily on development and testing activities, and assisting with requirements gathering and solution design.",
+    "Provide clear communication and support to various internal customers.",
+    "Work with a cross-functional team, embracing feedback as part of the design process, and give and receive constructive criticism to improve designs.",
+    "Perform rotational on-call duties, supporting 24/7 processes critical to retail operations and system monitoring."
+  ],
+  "qualifications": [
+    "Required: Bachelor’s degree in Computer Science or equivalent experience.",
+    "Required: Minimum of 5-10 years of software development experience.",
+    "Required: Full Stack Developer with exceptionally strong Backend Development experience.",
+    "Required: Strong skills in system programming and data structures.",
+    "Required: Programming experience with one or more of .NET Core, C#, JAVA, JavaScript, or PHP.",
+    "Required: Extensive experience interacting with and building robust web APIs (REST/SOAP).",
+    "Required: Strong relational database skills using SQL Server and Oracle.",
+    "Required: Experience with source-control integration using GIT.",
+    "Required: Experience with one or more key IDE environments/frameworks: Visual Studio IDE, NestJS, Symfony, ReactJS, Angular.",
+    "Required: Development experience using a combination of Agile and Waterfall project methodologies.",
+    "Required: Highly motivated, detail-oriented individual with excellent problem-solving skills.",
+    "Required: Strong interpersonal skills, including written, electronic, and verbal communication.",
+    "Required: Ability to work well on multiple projects frequently with competing and shifting priorities.",
+    "Strongly preferred: Experience with project management platforms including Confluence and Jira.",
+    "Preferred: Experience working with containers in a build and test environment.",
+    "Preferred: Experience in Docker and writing Docker files.",
+    "Preferred: Experience with Kubernetes (K8s) Administration, especially app data management, deployment, cloning, backups, and monitoring.",
+    "Preferred: Experience working with Jenkins.",
+    "A plus: Experience with CI/CD (Continuous Integration/Continuous Delivery).",
+    "Preferred: Experience writing automated tests."
+  ],
+  "workConditions": [
+    "Hybrid in downtown Chicago or Lincolnshire office.",
+    "Usual office environment; includes sitting for extended periods of time.",
+    "Flexible scheduling is required, including evening and weekend work as needed for critical support, project deadlines, system support, or deployment.",
+    "Required to participate in on-call and system monitoring, including rotational support for 24/7 processes critical to retail operations.",
+    "Dexterity of hands and fingers required to operate a computer keyboard, mouse, and handle system components.",
+    "Occasional travel (less than 5%)."
+  ],
+  "benefits": [
+    "Paid Time Off.",
+    "401(k).",
+    "Employee Assistance Program.",
+    "Good Sam Roadside Assistance.",
+    "Discounts.",
+    "Paid parental leave, if eligibility is met.",
+    "Tuition Reimbursement, if eligibility is met.",
+    "On the job training opportunities.",
+    "Full-time associates are offered a comprehensive benefit package including medical, dental, vision and more.",
+    "Part-time associates are offered access to dental and vision coverage.",
+    "Benefits information: www.mycampingworldbenefits.com."
+  ],
+  "meta": {
+    "canonical": "https://campingworld.dejobs.org/lincolnshire-il/it-systems-integration-developer/93E1D5B3AB05421A956A717C1E2C7D14/job/"
+  }
+}

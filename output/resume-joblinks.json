@@ -15,7 +15,7 @@
     {
       "name": "DSTax Technologies",
       "location": "Warrenville, IL",
-      "position": "Manager",
+      "position": "Development Manager",
       "startDate": "2020-05",
       "summary": "Manager serving as a technical lead and lead developer for a tax-integration platform, with responsibilities spanning integration development, project coordination, client support, troubleshooting, implementation assistance, and documentation.",
       "highlights": [
@@ -30,7 +30,8 @@
         "Optimized asynchronous operations to improve performance and throughput.",
         "Migrated production workloads from DigitalOcean to AWS.",
         "Created and maintained client guides and knowledge-base articles."
-      ]
+      ],
+      "endDate": "2026-09"
     },
     {
       "name": "Colectivo Coffee Roasters",
@@ -84,13 +85,15 @@
         "Flask",
         "PHP",
         "C#",
-        "C"
+        "C",
+        ".NET"
       ]
     },
     {
       "name": "Integrations & APIs",
       "keywords": [
-        "REST APIs"
+        "REST APIs",
+        "SOAP APIs"
       ]
     },
     {
@@ -100,7 +103,8 @@
         "DigitalOcean",
         "Docker",
         "NGINX",
-        "GitLab CI/CD"
+        "GitLab CI/CD",
+        "Github Actions CI/CD"
       ]
     },
     {
@@ -117,7 +121,9 @@
         "Git",
         "GitLab",
         "SharePoint",
-        "Microsoft 365 Enterprise"
+        "Microsoft 365 Enterprise",
+        "Agile",
+        "Jira & Confluence"
       ]
     },
     {
