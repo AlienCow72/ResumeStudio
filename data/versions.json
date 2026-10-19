@@ -750,12 +750,12 @@
           "db205bfa53614940bf81cec50b998adf",
           "5a43acbdfbbe41b0813442ffc7bb4ffc",
           "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+          "6d84029133724878965984a6410877fc",
           "48bd1e3fa654496d81bb27e38eda2e9b",
           "e46e04f99466431ca81039dc59894cac",
           "aaae966642be4578b54f5781a35fa8c5",
           "ae2c9f5cffc844629837ae37cec65ab8",
           "4b86263d1f5e4ff7bc1d9aac4f3330bb",
-          "6d84029133724878965984a6410877fc",
           "e9ce8eec310e4f62a320a043d11b3744",
           "80604f227b4f4bc1893c6f263ed75063",
           "02032f5bee6a488293226056ed74bf71",
@@ -941,7 +941,7 @@
         },
         {
           "id": "b71ba7ba-b52f-4e33-97e1-016eae8ad5af",
-          "text": " broadening tax-provider and financial-platform support and improving UI/UX.",
+          "text": " Broadening tax-provider and financial-platform support and improving UI/UX.",
           "reviewStatus": "unreviewed"
         }
       ]

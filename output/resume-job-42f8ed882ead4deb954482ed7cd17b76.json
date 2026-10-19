@@ -32,10 +32,10 @@
         "Developed integrations between financial platforms and tax providers, including Acumatica, Chargebee, Sage Intacct, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
         "Supported end-to-end integration implementations, including requirements gathering, setup, troubleshooting, and go-live support.",
         "Led the transition from Version 1 to Version 2 of the tax-integration platform",
+        " Broadening tax-provider and financial-platform support and improving UI/UX.",
         "Optimized asynchronous operations to improve performance and throughput.",
         "Migrated production infrastructure from DigitalOcean to AWS, supporting the continued operation and scalability of integration services.",
-        "Created and maintained client guides and knowledge-base articles.",
-        " broadening tax-provider and financial-platform support and improving UI/UX."
+        "Created and maintained client guides and knowledge-base articles."
       ],
       "endDate": "2026-09"
     },
