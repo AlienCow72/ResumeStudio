@@ -1,0 +1,27 @@
+{
+  "runId": "cf311c2581c44363acc5f1d96883e8cd",
+  "createdAt": "2026-11-02T18:03:08.228231+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://directsupply.wd501.myworkdayjobs.com/en-US/direct-supply-careers/job/Milwaukee-WI/Product-Owner_REQ-2026-2442?src=JB-10022",
+  "previous": null,
+  "masterHash": "aee6be84d56aed3c8a9b840229aef6d5b22b8dc6c037200a6b2491c741630453",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-11-02T18:03:56.494734+00:00",
+  "reviewNotes": "Emphasizes software delivery, requirements gathering, platform upgrades, stakeholder communication, and process automation. Prioritizes Agile, Jira & Confluence, and listed AI tools. The master does not establish direct backlog ownership, user-story or acceptance-criteria writing, sprint tracking, AI-assisted product workflows, healthcare experience, or CSPO certification.",
+  "versionId": "job-cf311c2581c44363acc5f1d96883e8cd"
+}

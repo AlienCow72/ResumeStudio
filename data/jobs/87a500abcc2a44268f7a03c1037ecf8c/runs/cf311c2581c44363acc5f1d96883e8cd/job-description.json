@@ -1,0 +1,76 @@
+{
+  "title": "Product Owner",
+  "company": "Direct Supply",
+  "description": "Direct Supply is building healthcare technology products, solutions and platforms to improve the lives of seniors and those who care for them. The Product Owner owns tactical execution of the product roadmap, translates high-level strategy into actionable stories, ensures backlog quality, collaborates with technical teams, and applies AI-first practices to optimize delivery. The role serves as the voice of the customer and business, keeping product development aligned with company goals and user needs.",
+  "responsibilities": [
+    "Own the execution of roadmap features, managing scope and alignment to delivery timelines and business goals.",
+    "Translate product roadmap items into clear user stories with defined acceptance criteria.",
+    "Manage and prioritize the team backlog, ensuring it reflects business value, technical feasibility, and sequencing needs.",
+    "Collaborate with developers and tech leads to clarify requirements, remove blockers, and ensure delivery readiness.",
+    "Use AI-enabled tools for backlog grooming, customer insight analysis, and story creation to improve speed and quality.",
+    "Track team progress against sprint goals, identify risks early, and support the team in maintaining velocity.",
+    "Embed automation or AI functionality into features where it enhances product value or efficiency.",
+    "Partner with the Product Manager to ensure work aligns to product vision, goals, and key metrics.",
+    "Lead by example in maintaining high standards for execution, backlog quality, and delivery clarity within the team.",
+    "Communicate trade-offs and delivery updates with stakeholders in a clear and confident manner."
+  ],
+  "qualifications": [
+    "Bachelor’s degree in Business, Technology, or a related field.",
+    "2+ years in a product owner, business analyst, or software delivery role.",
+    "Experience working in Agile environments with backlog management tools (e.g., Jira, Confluence, Aha!).",
+    "Familiarity with AI tools, prompt engineering, or low-code platforms is a plus.",
+    "Experience collaborating with developers and technical stakeholders.",
+    "Additional item of interest: Certified Scrum Product Owner (CSPO) or equivalent Agile certification.",
+    "Additional item of interest: Experience in healthcare, B2B SaaS, or digital platforms."
+  ],
+  "skills": [
+    {
+      "name": "Provides Customer Value",
+      "keywords": [
+        "Delivers cutting-edge, tech-driven solutions paired with outrageous customer service with an eye to profitability.",
+        "Seizes opportunities that reward both the customer and DS, fostering robust customer relationships."
+      ]
+    },
+    {
+      "name": "Makes Quality Decisions",
+      "keywords": [
+        "Makes swift and sound decisions that propel objectives forward.",
+        "Hunts for crucial qualitative and quantitative data.",
+        "Balances thorough analysis with wisdom, experience, and judgment for informed decision-making."
+      ]
+    },
+    {
+      "name": "Applies AI and Technology",
+      "keywords": [
+        "Identifies opportunities to boost efficiency and add value using AI and tech.",
+        "Embraces and applies digital innovations and tech solutions to build business.",
+        "Eagerly learns and integrates new technologies where they matter most."
+      ]
+    },
+    {
+      "name": "Effectively Collaborates",
+      "keywords": [
+        "Forges strong partnerships and works productively with others to achieve common goals.",
+        "Finds common ground to solve problems and seeks out diverse perspectives to inform decisions.",
+        "Quickly earns trust, puts others at ease, and shows empathy."
+      ]
+    },
+    {
+      "name": "Optimizes Work Processes",
+      "keywords": [
+        "Streamlines workflows by harnessing data, AI, and technology.",
+        "Identifies opportunities for efficiency and incorporates new processes and technology.",
+        "Defines new success measures."
+      ]
+    },
+    {
+      "name": "Product strategy and roadmap execution",
+      "keywords": [
+        "Strong ability to translate product strategy and roadmap into actionable development work."
+      ]
+    }
+  ],
+  "meta": {
+    "canonical": "https://directsupply.wd501.myworkdayjobs.com/en-US/direct-supply-careers/job/Milwaukee-WI/Product-Owner_REQ-2026-2442?src=JB-10022"
+  }
+}

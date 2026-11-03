@@ -1,0 +1,10 @@
+Dear Hiring Team,
+
+I am applying for the Acumatica Solutions Developer Lead role with Pine Services Group’s portfolio company. My background combines software development, systems integration, technical project coordination, and client implementation support. As Development Manager at DSTax Technologies, I served as technical lead and lead developer for a tax-integration platform connecting financial systems and tax providers, including Acumatica and Sage Intacct. The role’s combination of hands-on development and direct client requirements work closely relates to that experience.
+
+At DSTax Technologies, I developed integrations and supported implementations through requirements gathering, setup, troubleshooting, and go-live. I also managed internal development projects and client-coordinated work, communicating integration updates, reporting status, and responding to questions and requests. Leading the platform’s transition from Version 1 to Version 2 involved broadening financial-platform and tax-provider support while improving UI/UX. That work provides a concrete example of combining technical delivery with implementation support and client communication. A second example comes from Komatsu Mining Corp. (Joy Global), where I evaluated, selected, and implemented a global mapping platform that made facility information available to employees and customers. I also managed SharePoint sites and data and designed input forms to improve accessibility, reduce errors, and support cross-department information sharing. These experiences connect technical implementation with the operational needs of the people using the resulting systems.
+
+I welcome the opportunity to discuss how this background could support your Acumatica client engagements. The position’s emphasis on clarifying business requirements, choosing appropriate technical solutions, and staying involved through delivery offers a clear connection to my integration and implementation work. Thank you for considering my application and for the opportunity to discuss your team’s needs.
+
+Sincerely,
+Kyle M. Anderson

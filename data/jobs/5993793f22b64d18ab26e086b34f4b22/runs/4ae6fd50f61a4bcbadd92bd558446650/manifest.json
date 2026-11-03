@@ -1,0 +1,27 @@
+{
+  "runId": "4ae6fd50f61a4bcbadd92bd558446650",
+  "createdAt": "2026-10-20T15:12:42.757591+00:00",
+  "files": [
+    "job-description.json",
+    "resume.json",
+    "cover-letter.md"
+  ],
+  "sourceUrl": "https://jobs.lever.co/pine-services/47a07464-223b-415a-889a-62cd32cd13c5",
+  "previous": null,
+  "masterHash": "6a2d433ea52ae60478e43b17ccb179582c56fc5a7e8324c3abc8f9090aeb7ef7",
+  "schema": {
+    "repository": "https://github.com/jsonresume/jsonresume.org",
+    "revision": "8e4947d2030db8bba22d2b897461dc5587ee7125",
+    "path": "packages/schema"
+  },
+  "skillHashes": {
+    "json-resume": "083fd7ae9387dee31cb9fd03f8504ac96560944315c86013ce7c2a6d975a7310",
+    "json-job-description": "da1634709ac33d8bc9a03206c651a3b8681008e3ad320034ef58ffadc18ceed2"
+  },
+  "status": "ready",
+  "message": "Drafts ready. Review and edit before downloading.",
+  "error": "",
+  "updatedAt": "2026-10-20T15:13:46.870725+00:00",
+  "reviewNotes": "Emphasizes Acumatica and Sage Intacct integrations, requirements gathering, client delivery, platform leadership, and operational experience. Retains C#, Microsoft SQL Server, and AI tools as listed skills without assigning them to specific projects. The master does not establish several years of Acumatica customization development using C# and SQL Server, Acumatica certification or implementation-consulting depth, developer mentoring or code review, a client pushback example, GitHub Copilot experience, demonstrated AI workflow fluency, or order-to-cash and procure-to-pay expertise.",
+  "versionId": "job-4ae6fd50f61a4bcbadd92bd558446650"
+}

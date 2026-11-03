@@ -1,0 +1,43 @@
+{
+  "title": "Acumatica Solutions Developer Lead",
+  "company": "Pine Services Group",
+  "type": "Full-Time",
+  "date": "2026-09-22",
+  "description": "An unnamed Pine Services Group portfolio company, a full-service IT consulting and managed services organization and leading Acumatica Cloud ERP partner, seeks an Acumatica Solutions Developer Lead to own client technical solutioning from requirements through delivery and oversee and mentor a small development team. The company serves manufacturing, distribution, healthcare, senior living, government, and finance clients. This player-coach role spends roughly 25–50% of time on billable client-facing solutioning and customization work, with the remainder directing and reviewing the development team's work. The role is fully remote, ideally based in the Eastern or Central time zone, and reports to the EVP of Technology & Business Innovation. The desired candidate has grown from development into functional, client-facing ERP consulting and can advise clients when customization is not the right answer.",
+  "remote": "Full",
+  "salary": "Posted range: $130,000–$150,000 a year. The offer section separately states a base salary of $130,000 and an annual bonus of up to 20%.",
+  "responsibilities": [
+    "Meet directly with clients post-handoff to gather and clarify requirements for Acumatica customizations, pushing back with a business rationale when a request is not the right solution.",
+    "Translate business requirements into clear, buildable technical designs and specifications.",
+    "Build customizations, extensions, and integrations when that is the fastest path to a good result.",
+    "Direct, oversee, and review other developers' work on customization projects, mentoring them on code quality and client communication.",
+    "Use AI development tools, including Claude and GitHub Copilot, to write specifications, generate and review code, and modernize existing customizations.",
+    "Partner with the Solutions Architecture and Consulting teams on scoping and delivery for larger engagements.",
+    "Serve as the technical point of contact for client customization conversations, ensuring outcomes are clearly defined and expectations are set accurately."
+  ],
+  "qualifications": [
+    "Required: Several years of hands-on Acumatica development experience using C# and SQL Server, including APIs and third-party integrations.",
+    "Required: Acumatica certification, or a background in Acumatica implementation consulting with strong technical depth.",
+    "Required: Direct experience gathering and clarifying requirements from business stakeholders, not just working from a ticket or specification someone else wrote.",
+    "Required: A track record of pushing back on client requests when a simpler or better solution exists, with a specific example of when and why.",
+    "Required: Experience mentoring, directing, or reviewing the work of other developers.",
+    "Required: Genuine fluency with AI coding and productivity tools and real interest in using them to improve customization work.",
+    "Required: Working understanding of core business processes such as order-to-cash, procure-to-pay, and inventory management.",
+    "Required: Comfort operating in a client-facing capacity with strong written and verbal communication skills.",
+    "Nice to have: Experience with Dynamics, NetSuite, Sage, or another mid-market ERP platform.",
+    "Nice to have: Exposure to distribution, manufacturing, construction, or field service operations.",
+    "Nice to have: Former Acumatica end user who has transitioned into a consulting or development role, bringing a business-side perspective."
+  ],
+  "benefits": [
+    "Medical, dental, and vision insurance",
+    "401(k) with employer match",
+    "Paid time off and paid holidays",
+    "Paid parental leave",
+    "Company laptop",
+    "Paid training and certification support"
+  ],
+  "hiringProcess": "The employer may use AI tools to support application review, resume analysis, response assessment, and identification of potential inconsistencies or verification signals in application materials based on available information. These tools assist recruitment staff and do not replace human judgment; humans make final hiring decisions. Applicants may contact the employer for more information about data processing.",
+  "meta": {
+    "canonical": "https://jobs.lever.co/pine-services/47a07464-223b-415a-889a-62cd32cd13c5"
+  }
+}

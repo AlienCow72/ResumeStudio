@@ -1,0 +1,88 @@
+JobPosting structured data:
+[{"@context": "http://schema.org", "@type": "JobPosting", "title": "Acumatica Solutions Developer Lead", "hiringOrganization": {"@type": "Organization", "name": "Pine Services Group", "logo": "https://lever-client-logos.s3.us-west-2.amazonaws.com/6b2a50ef-3e00-4faa-9a29-0edded323c1b-1762461347392.png"}, "jobLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressLocality": "Remote", "addressRegion": null, "addressCountry": null, "postalCode": null}}, "employmentType": "Full-Time", "datePosted": "2026-09-22", "description": "<p>\n</p><p dir=\"ltr\">One of Pine's portfolio companies is a full-service IT consulting and managed services organization and a leading Acumatica Cloud ERP partner. Built on a people-centric culture and a high, personalized level of client care, they serve clients across manufacturing, distribution, healthcare, senior living, government, and finance. They're looking for an <strong>Acumatica Solutions Developer Lead</strong> to own the technical solutioning conversation with clients — from requirements through delivery — while providing oversight and mentorship to a small development team.</p>\n<p dir=\"ltr\">This is a player-coach role: roughly 25–50% of the time is billable on client-facing solutioning and customization work, with the remainder focused on directing and reviewing the work of the development team. The right candidate comes from a development background and has grown into the functional, client-facing side of ERP consulting — technically credible, commercially sharp, and comfortable telling a client when a customization isn't the right answer.</p>\n<p dir=\"ltr\">This is a <strong>full-time remote role</strong>, ideally based in the Eastern or Central time zone, reporting to the EVP of Technology &amp; Business Innovation.</p>\n<p></p>\\n<p></p><p><br></p><b>What You'll Do</b><div>\n<ul>\n<li>Meet directly with clients post-handoff to gather and clarify requirements for Acumatica customizations — pushing back with a business rationale when a request isn't the right solution.</li>\n<li>Translate business requirements into clear, buildable technical designs and specifications.</li>\n<li>Build customizations, extensions, and integrations yourself when that's the fastest path to a good result.</li>\n<li>Direct, oversee, and review the work of other developers on customization projects — mentoring them on both code quality and client communication.</li>\n<li>Use AI development tools, including Claude and GitHub Copilot, as part of how you write specs, generate and review code, and modernize existing customizations.</li>\n<li>Partner with the Solutions Architecture and Consulting teams on scoping and delivery for larger engagements.</li>\n<li>Serve as the technical point of contact for client customization conversations, ensuring outcomes are clearly defined and expectations are set accurately.</li>\n</ul>\n</div><p><br></p><b>What They're Looking For</b><div>\n<p dir=\"ltr\"><strong>Required</strong></p>\n<ul dir=\"ltr\">\n<li>Several years of hands-on Acumatica development experience (C#, SQL Server), including APIs and third-party integrations.</li>\n<li>Acumatica certification, or a background in Acumatica implementation consulting with strong technical depth.</li>\n<li>Direct experience gathering and clarifying requirements from business stakeholders — not just working from a ticket or spec someone else wrote.</li>\n<li>A track record of pushing back on client requests when a simpler or better solution exists, with a specific example of when and why.</li>\n<li>Experience mentoring, directing, or reviewing the work of other developers.</li>\n<li>Genuine fluency with AI coding and productivity tools and real interest in using them to improve how customization work gets done.</li>\n<li>Working understanding of core business processes such as order-to-cash, procure-to-pay, and inventory management.</li>\n<li>Comfortable operating in a client-facing capacity with strong written and verbal communication skills.</li>\n</ul>\n<p dir=\"ltr\"><strong>Nice to Have</strong></p>\n<ul dir=\"ltr\">\n<li>Experience with Dynamics, NetSuite, Sage, or another mid-market ERP platform.</li>\n<li>Exposure to distribution, manufacturing, construction, or field service operations.</li>\n<li>Former Acumatica end user who has transitioned into a consulting or development role — that business-side perspective translates well.</li>\n</ul>\n</div><p><br></p><p></p>\\n<div>$130,000 - $150,000 a year</div><small><div>\n<h4 dir=\"ltr\">What They Offer</h4>\n<ul dir=\"ltr\">\n<li><strong>Location:</strong> Remote (ET/CT preferred)</li>\n<li><strong>Employment Type:</strong> Full-Time</li>\n<li><strong>Base Salary:</strong> $130,000</li>\n<li><strong>Bonus:</strong> Up to 20% annual bonus</li>\n<li><strong>Benefits:</strong> Medical, dental, and vision insurance; 401(k) with employer match; paid time off and paid holidays; paid parental leave; company laptop; and paid training and certification support</li>\n</ul>\n</div></small>\\n"}]
+
+Page text:
+Pine Services Group - Acumatica Solutions Developer Lead
+
+Acumatica Solutions Developer Lead
+
+Remote
+
+Consulting – Technical /
+
+Full-Time /
+
+Remote
+
+apply for this job
+
+One of Pine's portfolio companies is a full-service IT consulting and managed services organization and a leading Acumatica Cloud ERP partner. Built on a people-centric culture and a high, personalized level of client care, they serve clients across manufacturing, distribution, healthcare, senior living, government, and finance. They're looking for an Acumatica Solutions Developer Lead to own the technical solutioning conversation with clients — from requirements through delivery — while providing oversight and mentorship to a small development team.
+
+This is a player-coach role: roughly 25–50% of the time is billable on client-facing solutioning and customization work, with the remainder focused on directing and reviewing the work of the development team. The right candidate comes from a development background and has grown into the functional, client-facing side of ERP consulting — technically credible, commercially sharp, and comfortable telling a client when a customization isn't the right answer.
+
+This is a full-time remote role, ideally based in the Eastern or Central time zone, reporting to the EVP of Technology & Business Innovation.
+
+What You'll Do
+
+Meet directly with clients post-handoff to gather and clarify requirements for Acumatica customizations — pushing back with a business rationale when a request isn't the right solution.
+
+Translate business requirements into clear, buildable technical designs and specifications.
+
+Build customizations, extensions, and integrations yourself when that's the fastest path to a good result.
+
+Direct, oversee, and review the work of other developers on customization projects — mentoring them on both code quality and client communication.
+
+Use AI development tools, including Claude and GitHub Copilot, as part of how you write specs, generate and review code, and modernize existing customizations.
+
+Partner with the Solutions Architecture and Consulting teams on scoping and delivery for larger engagements.
+
+Serve as the technical point of contact for client customization conversations, ensuring outcomes are clearly defined and expectations are set accurately.
+
+What They're Looking For
+
+Required
+
+Several years of hands-on Acumatica development experience (C#, SQL Server), including APIs and third-party integrations.
+
+Acumatica certification, or a background in Acumatica implementation consulting with strong technical depth.
+
+Direct experience gathering and clarifying requirements from business stakeholders — not just working from a ticket or spec someone else wrote.
+
+A track record of pushing back on client requests when a simpler or better solution exists, with a specific example of when and why.
+
+Experience mentoring, directing, or reviewing the work of other developers.
+
+Genuine fluency with AI coding and productivity tools and real interest in using them to improve how customization work gets done.
+
+Working understanding of core business processes such as order-to-cash, procure-to-pay, and inventory management.
+
+Comfortable operating in a client-facing capacity with strong written and verbal communication skills.
+
+Nice to Have
+
+Experience with Dynamics, NetSuite, Sage, or another mid-market ERP platform.
+
+Exposure to distribution, manufacturing, construction, or field service operations.
+
+Former Acumatica end user who has transitioned into a consulting or development role — that business-side perspective translates well.
+
+$130,000 - $150,000 a year
+
+What They Offer
+
+Location: Remote (ET/CT preferred)
+
+Employment Type: Full-Time
+
+Base Salary: $130,000
+
+Bonus: Up to 20% annual bonus
+
+Benefits: Medical, dental, and vision insurance; 401(k) with employer match; paid time off and paid holidays; paid parental leave; company laptop; and paid training and certification support
+
+We may use artificial intelligence (AI) tools to support parts of the hiring process, such as reviewing applications, analyzing resumes, or assessing responses and identifying potential inconsistencies or verification signals in application materials based on available information. These tools assist our recruitment team but do not replace human judgment. Final hiring decisions are ultimately made by humans. If you would like more information about how your data is processed, please contact us.
+
+apply for this job
+
+Pine Services Group Home Page
+Jobs powered by

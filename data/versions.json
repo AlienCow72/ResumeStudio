@@ -175,6 +175,9 @@
                   },
                   {
                     "id": "98f755c3a0314e5fa16ed4bb6890b878"
+                  },
+                  {
+                    "id": "2b41500e71db4f42b3a35be1140f1443"
                   }
                 ]
               }
@@ -435,7 +438,8 @@
         "792165a598744608b0c1c025eecd6ef6",
         "db205bfa53614940bf81cec50b998adf",
         "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
-        "98f755c3a0314e5fa16ed4bb6890b878"
+        "98f755c3a0314e5fa16ed4bb6890b878",
+        "2b41500e71db4f42b3a35be1140f1443"
       ],
       "indent": {},
       "id": "joblinks",
@@ -458,7 +462,8 @@
         "f89ffbb2f30f466f98977628a34b1f98",
         "bb99e1c565244162ae2ff3d74c2dbc2b",
         "dd553373f5d84759ae16378a24a654af",
-        "1d0db203e8a94406afb0a31470769570"
+        "1d0db203e8a94406afb0a31470769570",
+        "2b41500e71db4f42b3a35be1140f1443"
       ],
       "indent": {},
       "wording": {
@@ -568,7 +573,8 @@
         "ed265385e17349de9fbca93826e1266d",
         "d90a3b5b8af44b05a47aa4ef15d9b827",
         "98f755c3a0314e5fa16ed4bb6890b878",
-        "88dcb2a1056744cc9ba510a97825070a"
+        "88dcb2a1056744cc9ba510a97825070a",
+        "2b41500e71db4f42b3a35be1140f1443"
       ],
       "indent": {},
       "wording": {
@@ -721,7 +727,8 @@
         "5787ef4b-4dd8-42b9-ba03-3ee848b10ae5",
         "dd553373f5d84759ae16378a24a654af",
         "1d0db203e8a94406afb0a31470769570",
-        "e46e04f99466431ca81039dc59894cac"
+        "e46e04f99466431ca81039dc59894cac",
+        "2b41500e71db4f42b3a35be1140f1443"
       ],
       "indent": {},
       "wording": {
@@ -857,9 +864,322 @@
           ]
         ]
       }
+    },
+    {
+      "id": "job-4ae6fd50f61a4bcbadd92bd558446650",
+      "name": "Pine Services Group — Acumatica Solutions Developer Lead 4ae6fd50",
+      "excluded": [
+        "aaae966642be4578b54f5781a35fa8c5",
+        "80604f227b4f4bc1893c6f263ed75063",
+        "e9ce8eec310e4f62a320a043d11b3744",
+        "02032f5bee6a488293226056ed74bf71",
+        "6d84029133724878965984a6410877fc",
+        "e66fff51a4fe4de99c991b7abb68151b",
+        "bb99e1c565244162ae2ff3d74c2dbc2b",
+        "ed265385e17349de9fbca93826e1266d",
+        "d90a3b5b8af44b05a47aa4ef15d9b827",
+        "98f755c3a0314e5fa16ed4bb6890b878",
+        "88dcb2a1056744cc9ba510a97825070a",
+        "f89ffbb2f30f466f98977628a34b1f98",
+        "055095084158445f97efa17d403f4988",
+        "a3707f5a6d03477f86cec9d07c985bb1",
+        "971290a070574c98a79c87330300f989"
+      ],
+      "indent": {},
+      "wording": {
+        "db205bfa53614940bf81cec50b998adf": "5faf9b7088334700855a0c22ba56808b",
+        "5a43acbdfbbe41b0813442ffc7bb4ffc": "5a43acbdfbbe41b0813442ffc7bb4ffc",
+        "e46e04f99466431ca81039dc59894cac": "e46e04f99466431ca81039dc59894cac",
+        "ecd47f53ebe64fd3b31ad5ba6a43c1ca": "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+        "48bd1e3fa654496d81bb27e38eda2e9b": "48bd1e3fa654496d81bb27e38eda2e9b",
+        "4b86263d1f5e4ff7bc1d9aac4f3330bb": "4b86263d1f5e4ff7bc1d9aac4f3330bb",
+        "ae2c9f5cffc844629837ae37cec65ab8": "ae2c9f5cffc844629837ae37cec65ab8",
+        "2b41500e71db4f42b3a35be1140f1443": "2b41500e71db4f42b3a35be1140f1443",
+        "f58c5546c5ff4d1cb4ac595cf8e06379": "f58c5546c5ff4d1cb4ac595cf8e06379",
+        "b205588cb8f14f19b1afd2ace8aef3ce": "b205588cb8f14f19b1afd2ace8aef3ce",
+        "5a96de30b63e4ea7978b4b1d7a93c025": "5a96de30b63e4ea7978b4b1d7a93c025",
+        "d089b435ea77460b961b6f36853aa3c5": "d089b435ea77460b961b6f36853aa3c5"
+      },
+      "prose": {
+        "01b2442887184e2d97663e9a90ca5862": "Technical lead and lead developer for a tax-integration platform, with responsibilities spanning development, project coordination, client support, implementation assistance, and documentation."
+      },
+      "order": {
+        "792165a598744608b0c1c025eecd6ef6": [
+          "247fceceac5e43c1a06dc36e7547b2ec",
+          "df11ca815d6443d799e5573e67f292b2"
+        ],
+        "eb741b67ed5c4ff7a4b44aa14d1d370d": [
+          "db205bfa53614940bf81cec50b998adf",
+          "5a43acbdfbbe41b0813442ffc7bb4ffc",
+          "e46e04f99466431ca81039dc59894cac",
+          "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+          "48bd1e3fa654496d81bb27e38eda2e9b",
+          "4b86263d1f5e4ff7bc1d9aac4f3330bb",
+          "ae2c9f5cffc844629837ae37cec65ab8"
+        ],
+        "a98452a026d94369bf8dff0f9d75933d": [
+          "2b41500e71db4f42b3a35be1140f1443",
+          "f58c5546c5ff4d1cb4ac595cf8e06379"
+        ],
+        "a24fedc7606f4d0289623958312d5248": [
+          "b205588cb8f14f19b1afd2ace8aef3ce",
+          "5a96de30b63e4ea7978b4b1d7a93c025",
+          "d089b435ea77460b961b6f36853aa3c5"
+        ],
+        "d694e1a8d98a454fa948ab28c4176ab8": [
+          "9c4d9197842e46818524ba18f1cb7af3",
+          "c4bd20db5a92458192aa64fa179c8e50",
+          "be6d8b20680a46eeb263a30c4377d2f8"
+        ],
+        "ef08b787df874d8bb07ac66858c5271e": [
+          "a52e764572fd4e67ade61a361ee47f16",
+          "94d3781ee25a42239cbc13d107839261"
+        ],
+        "ee2850783141482a992aea96c0a4b3ff": [
+          "e2b694be02e14a1893188923381b32ee",
+          "612bde08-357a-4c30-9ac9-fea2879b36cf",
+          "cd7a924b56cd4a36b05e414c2bf9e85e",
+          "7476a11fea2c4d9493221c71dc132321",
+          "d075e96317b043e18b46980fa66eb069",
+          "71150368ef664343a75c39ebe1f03c63"
+        ],
+        "38ac1d591fd04a54ae7115b1d12059b2": [
+          "849ce00c10c34198aad7b7041f05d92b",
+          "88ed4a18b22b4743a03b62f600ee9ce6",
+          "c402926af373434c9477d2d6ba7f7048"
+        ],
+        "b3e592979f6443e5954379cd54a22196": [
+          "f669dec66e6440fb91dbc1430cf2a87f",
+          "706ac7ee-f470-464d-a24b-a0bb0af6aed2"
+        ],
+        "0358e0f0-9777-494e-b355-e7369947c056": [
+          "cfc42b1c-f7ba-4b82-8d86-caf54df3c224",
+          "80a70ebe-46d6-4598-ba0a-5ec7d8591f05"
+        ],
+        "eb7c441d79834f0b8e1bcd34fb700dc7": [
+          "9a0851fc15bc49c9a387831e3ad78efd",
+          "0484377309a140ac91a5b13c8ceb14c4",
+          "ef602ed8-653b-4725-9544-4906832708d4",
+          "1c8b721b-9374-4c61-83ab-d599dda4cbbe",
+          "f95beb3f4ca845ffad212db71b6164ac"
+        ],
+        "0b205ad84755441bba512e07b224bcf8": [
+          "da57bba075b742fe8a271056fb1072d8",
+          "5091b4865d434ea182736b5e80ad465e",
+          "5590d2f5d3ef413394a61e83f2380db5",
+          "39c533f5-30c6-45fa-adc7-2d9deb8b4373"
+        ],
+        "225ef2ecce56486cbf5732f727364997": [
+          "78b1881e42bd44fe875cc7ca1a655da9",
+          "e4b45c9a3b304ef286cc970648564f7a",
+          "aa28418b28ee4610bba2bc778def8f65",
+          "5787ef4b-4dd8-42b9-ba03-3ee848b10ae5",
+          "f94b4d3331934182bc37ba3ffe66e5a1",
+          "078b175f28af4449a6f1f82b6bcdc0cf"
+        ]
+      },
+      "reviewStatus": "unreviewed",
+      "summaryOverride": "Technical professional with experience leading development of a tax-integration platform and supporting client implementations from requirements gathering through go-live. Background includes integrations with Acumatica and Sage Intacct, technical project coordination, troubleshooting, and client documentation.",
+      "provenance": {
+        "jobId": "5993793f22b64d18ab26e086b34f4b22",
+        "runId": "4ae6fd50f61a4bcbadd92bd558446650",
+        "sourceHighlights": [
+          [
+            "db205bfa53614940bf81cec50b998adf"
+          ],
+          [
+            "5a43acbdfbbe41b0813442ffc7bb4ffc"
+          ],
+          [
+            "e46e04f99466431ca81039dc59894cac"
+          ],
+          [
+            "ecd47f53ebe64fd3b31ad5ba6a43c1ca"
+          ],
+          [
+            "48bd1e3fa654496d81bb27e38eda2e9b"
+          ],
+          [
+            "4b86263d1f5e4ff7bc1d9aac4f3330bb"
+          ],
+          [
+            "ae2c9f5cffc844629837ae37cec65ab8"
+          ],
+          [
+            "bb99e1c565244162ae2ff3d74c2dbc2b",
+            "ed265385e17349de9fbca93826e1266d"
+          ],
+          [
+            "f58c5546c5ff4d1cb4ac595cf8e06379"
+          ],
+          [
+            "b205588cb8f14f19b1afd2ace8aef3ce"
+          ],
+          [
+            "5a96de30b63e4ea7978b4b1d7a93c025"
+          ],
+          [
+            "d089b435ea77460b961b6f36853aa3c5"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "job-cf311c2581c44363acc5f1d96883e8cd",
+      "name": "Direct Supply — Product Owner cf311c25",
+      "excluded": [
+        "aaae966642be4578b54f5781a35fa8c5",
+        "80604f227b4f4bc1893c6f263ed75063",
+        "e9ce8eec310e4f62a320a043d11b3744",
+        "02032f5bee6a488293226056ed74bf71",
+        "6d84029133724878965984a6410877fc",
+        "e66fff51a4fe4de99c991b7abb68151b",
+        "ae2c9f5cffc844629837ae37cec65ab8",
+        "bb99e1c565244162ae2ff3d74c2dbc2b",
+        "ed265385e17349de9fbca93826e1266d",
+        "d90a3b5b8af44b05a47aa4ef15d9b827",
+        "98f755c3a0314e5fa16ed4bb6890b878",
+        "88dcb2a1056744cc9ba510a97825070a",
+        "f89ffbb2f30f466f98977628a34b1f98",
+        "a3707f5a6d03477f86cec9d07c985bb1",
+        "971290a070574c98a79c87330300f989"
+      ],
+      "indent": {},
+      "wording": {
+        "e46e04f99466431ca81039dc59894cac": "e46e04f99466431ca81039dc59894cac",
+        "5a43acbdfbbe41b0813442ffc7bb4ffc": "5a43acbdfbbe41b0813442ffc7bb4ffc",
+        "ecd47f53ebe64fd3b31ad5ba6a43c1ca": "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+        "db205bfa53614940bf81cec50b998adf": "db205bfa53614940bf81cec50b998adf",
+        "48bd1e3fa654496d81bb27e38eda2e9b": "48bd1e3fa654496d81bb27e38eda2e9b",
+        "4b86263d1f5e4ff7bc1d9aac4f3330bb": "4b86263d1f5e4ff7bc1d9aac4f3330bb",
+        "f58c5546c5ff4d1cb4ac595cf8e06379": "f58c5546c5ff4d1cb4ac595cf8e06379",
+        "2b41500e71db4f42b3a35be1140f1443": "2b41500e71db4f42b3a35be1140f1443",
+        "b205588cb8f14f19b1afd2ace8aef3ce": "b205588cb8f14f19b1afd2ace8aef3ce",
+        "d089b435ea77460b961b6f36853aa3c5": "d089b435ea77460b961b6f36853aa3c5",
+        "5a96de30b63e4ea7978b4b1d7a93c025": "5a96de30b63e4ea7978b4b1d7a93c025"
+      },
+      "prose": {
+        "01b2442887184e2d97663e9a90ca5862": "Technical lead and lead developer for a tax-integration platform, coordinating development projects and supporting client implementations."
+      },
+      "order": {
+        "792165a598744608b0c1c025eecd6ef6": [
+          "247fceceac5e43c1a06dc36e7547b2ec",
+          "df11ca815d6443d799e5573e67f292b2"
+        ],
+        "eb741b67ed5c4ff7a4b44aa14d1d370d": [
+          "e46e04f99466431ca81039dc59894cac",
+          "5a43acbdfbbe41b0813442ffc7bb4ffc",
+          "ecd47f53ebe64fd3b31ad5ba6a43c1ca",
+          "db205bfa53614940bf81cec50b998adf",
+          "48bd1e3fa654496d81bb27e38eda2e9b",
+          "4b86263d1f5e4ff7bc1d9aac4f3330bb"
+        ],
+        "a98452a026d94369bf8dff0f9d75933d": [
+          "f58c5546c5ff4d1cb4ac595cf8e06379",
+          "2b41500e71db4f42b3a35be1140f1443"
+        ],
+        "a24fedc7606f4d0289623958312d5248": [
+          "b205588cb8f14f19b1afd2ace8aef3ce",
+          "d089b435ea77460b961b6f36853aa3c5",
+          "5a96de30b63e4ea7978b4b1d7a93c025"
+        ],
+        "d694e1a8d98a454fa948ab28c4176ab8": [
+          "9c4d9197842e46818524ba18f1cb7af3",
+          "c4bd20db5a92458192aa64fa179c8e50",
+          "be6d8b20680a46eeb263a30c4377d2f8"
+        ],
+        "ef08b787df874d8bb07ac66858c5271e": [
+          "a52e764572fd4e67ade61a361ee47f16",
+          "94d3781ee25a42239cbc13d107839261"
+        ],
+        "eb7c441d79834f0b8e1bcd34fb700dc7": [
+          "ef602ed8-653b-4725-9544-4906832708d4",
+          "1c8b721b-9374-4c61-83ab-d599dda4cbbe",
+          "f95beb3f4ca845ffad212db71b6164ac",
+          "055095084158445f97efa17d403f4988",
+          "9a0851fc15bc49c9a387831e3ad78efd",
+          "0484377309a140ac91a5b13c8ceb14c4"
+        ],
+        "0358e0f0-9777-494e-b355-e7369947c056": [
+          "80a70ebe-46d6-4598-ba0a-5ec7d8591f05",
+          "cfc42b1c-f7ba-4b82-8d86-caf54df3c224"
+        ],
+        "b3e592979f6443e5954379cd54a22196": [
+          "f669dec66e6440fb91dbc1430cf2a87f",
+          "706ac7ee-f470-464d-a24b-a0bb0af6aed2"
+        ],
+        "ee2850783141482a992aea96c0a4b3ff": [
+          "cd7a924b56cd4a36b05e414c2bf9e85e",
+          "d075e96317b043e18b46980fa66eb069",
+          "71150368ef664343a75c39ebe1f03c63",
+          "7476a11fea2c4d9493221c71dc132321",
+          "e2b694be02e14a1893188923381b32ee",
+          "612bde08-357a-4c30-9ac9-fea2879b36cf"
+        ],
+        "38ac1d591fd04a54ae7115b1d12059b2": [
+          "849ce00c10c34198aad7b7041f05d92b",
+          "88ed4a18b22b4743a03b62f600ee9ce6",
+          "c402926af373434c9477d2d6ba7f7048"
+        ],
+        "0b205ad84755441bba512e07b224bcf8": [
+          "da57bba075b742fe8a271056fb1072d8",
+          "5091b4865d434ea182736b5e80ad465e",
+          "5590d2f5d3ef413394a61e83f2380db5",
+          "39c533f5-30c6-45fa-adc7-2d9deb8b4373"
+        ],
+        "225ef2ecce56486cbf5732f727364997": [
+          "f94b4d3331934182bc37ba3ffe66e5a1",
+          "5787ef4b-4dd8-42b9-ba03-3ee848b10ae5",
+          "aa28418b28ee4610bba2bc778def8f65",
+          "78b1881e42bd44fe875cc7ca1a655da9",
+          "e4b45c9a3b304ef286cc970648564f7a",
+          "078b175f28af4449a6f1f82b6bcdc0cf"
+        ]
+      },
+      "reviewStatus": "unreviewed",
+      "summaryOverride": "Technical professional with software delivery, project management, systems integration, and client-support experience. Background includes leading a platform upgrade, gathering implementation requirements, coordinating development and client work, and communicating delivery updates. Combines hands-on development experience with operational process improvements and customer-facing documentation.",
+      "provenance": {
+        "jobId": "87a500abcc2a44268f7a03c1037ecf8c",
+        "runId": "cf311c2581c44363acc5f1d96883e8cd",
+        "sourceHighlights": [
+          [
+            "e46e04f99466431ca81039dc59894cac"
+          ],
+          [
+            "5a43acbdfbbe41b0813442ffc7bb4ffc"
+          ],
+          [
+            "ecd47f53ebe64fd3b31ad5ba6a43c1ca"
+          ],
+          [
+            "db205bfa53614940bf81cec50b998adf"
+          ],
+          [
+            "48bd1e3fa654496d81bb27e38eda2e9b"
+          ],
+          [
+            "4b86263d1f5e4ff7bc1d9aac4f3330bb"
+          ],
+          [
+            "f58c5546c5ff4d1cb4ac595cf8e06379"
+          ],
+          [
+            "2b41500e71db4f42b3a35be1140f1443"
+          ],
+          [
+            "b205588cb8f14f19b1afd2ace8aef3ce"
+          ],
+          [
+            "d089b435ea77460b961b6f36853aa3c5"
+          ],
+          [
+            "5a96de30b63e4ea7978b4b1d7a93c025"
+          ]
+        ]
+      }
     }
   ],
-  "masterHash": "6a2d433ea52ae60478e43b17ccb179582c56fc5a7e8324c3abc8f9090aeb7ef7",
+  "masterHash": "aee6be84d56aed3c8a9b840229aef6d5b22b8dc6c037200a6b2491c741630453",
   "highlights": {
     "aaae966642be4578b54f5781a35fa8c5": {
       "defaultWording": "aaae966642be4578b54f5781a35fa8c5",
@@ -1083,6 +1403,18 @@
             "jobId": "501380a2dabd4ddcb590c5ddf5a81a4d",
             "runId": "ef4b98fc55d0431caf126546e6790dfe"
           }
+        },
+        {
+          "id": "5faf9b7088334700855a0c22ba56808b",
+          "text": "Developed integrations between financial platforms and tax providers, including Acumatica, Sage Intacct, Chargebee, WooCommerce, Magento/Adobe Commerce, Thomson Reuters, Vertex, Sovos, and SureTax.",
+          "reviewStatus": "unreviewed",
+          "provenance": {
+            "sourceHighlights": [
+              "db205bfa53614940bf81cec50b998adf"
+            ],
+            "jobId": "5993793f22b64d18ab26e086b34f4b22",
+            "runId": "4ae6fd50f61a4bcbadd92bd558446650"
+          }
         }
       ]
     },
@@ -1130,6 +1462,24 @@
           }
         }
       ]
+    },
+    "2b41500e71db4f42b3a35be1140f1443": {
+      "defaultWording": "2b41500e71db4f42b3a35be1140f1443",
+      "wordings": [
+        {
+          "id": "2b41500e71db4f42b3a35be1140f1443",
+          "text": "Fulfilled orders for more than 1000 restaurant and store clients and updated invoices for inventory changes to help maintain accurate records.",
+          "reviewStatus": "unreviewed",
+          "provenance": {
+            "sourceHighlights": [
+              "bb99e1c565244162ae2ff3d74c2dbc2b",
+              "ed265385e17349de9fbca93826e1266d"
+            ],
+            "jobId": "5993793f22b64d18ab26e086b34f4b22",
+            "runId": "4ae6fd50f61a4bcbadd92bd558446650"
+          }
+        }
+      ]
     }
   },
   "masterIndent": {
@@ -1154,6 +1504,7 @@
     "5a96de30b63e4ea7978b4b1d7a93c025": 0,
     "db205bfa53614940bf81cec50b998adf": 0,
     "ecd47f53ebe64fd3b31ad5ba6a43c1ca": 0,
-    "98f755c3a0314e5fa16ed4bb6890b878": 0
+    "98f755c3a0314e5fa16ed4bb6890b878": 0,
+    "2b41500e71db4f42b3a35be1140f1443": 0
   }
 }

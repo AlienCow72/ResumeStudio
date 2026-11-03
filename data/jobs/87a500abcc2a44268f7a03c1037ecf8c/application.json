@@ -1,0 +1,30 @@
+{
+  "company": "Direct Supply",
+  "title": "Product Owner",
+  "notes": "",
+  "sourceText": "",
+  "url": "https://directsupply.wd501.myworkdayjobs.com/en-US/direct-supply-careers/job/Milwaukee-WI/Product-Owner_REQ-2026-2442?src=JB-10022",
+  "stage": "interview",
+  "appliedOn": "2026-11-02",
+  "schemaVersion": 1,
+  "id": "87a500abcc2a44268f7a03c1037ecf8c",
+  "createdAt": "2026-11-02T17:51:05.599055+00:00",
+  "updatedAt": "2026-11-02T19:31:37.833697+00:00",
+  "history": [
+    {
+      "at": "2026-11-02T17:51:05.599055+00:00",
+      "from": null,
+      "to": "applying"
+    },
+    {
+      "at": "2026-11-02T18:03:38.214378+00:00",
+      "from": "applying",
+      "to": "waiting"
+    },
+    {
+      "at": "2026-11-02T19:31:37.833697+00:00",
+      "from": "waiting",
+      "to": "interview"
+    }
+  ]
+}

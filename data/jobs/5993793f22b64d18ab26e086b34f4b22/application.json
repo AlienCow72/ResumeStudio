@@ -1,0 +1,30 @@
+{
+  "company": "Pine Services Group",
+  "title": "Acumatica Solutions Developer Lead",
+  "notes": "",
+  "sourceText": "",
+  "url": "https://jobs.lever.co/pine-services/47a07464-223b-415a-889a-62cd32cd13c5",
+  "stage": "interview",
+  "appliedOn": "2026-10-20",
+  "schemaVersion": 1,
+  "id": "5993793f22b64d18ab26e086b34f4b22",
+  "createdAt": "2026-10-20T15:12:42.755709+00:00",
+  "updatedAt": "2026-10-26T13:26:26.763385+00:00",
+  "history": [
+    {
+      "at": "2026-10-20T15:12:42.755709+00:00",
+      "from": null,
+      "to": "applying"
+    },
+    {
+      "at": "2026-10-20T15:26:49.583254+00:00",
+      "from": "applying",
+      "to": "waiting"
+    },
+    {
+      "at": "2026-10-26T13:26:26.763385+00:00",
+      "from": "waiting",
+      "to": "interview"
+    }
+  ]
+}
